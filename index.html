@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>iGEM 2026 Top 10 Workflow Atlas — GEMS Research</title>
+<meta name="description" content="How the ten Top 10 Undergraduate teams at iGEM 2026 actually ran their wet lab and dry lab. One overview analysis and one page per team, read from their own wikis. Bilingual, figure-led. GEMS Research (Taiwan).">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="iGEM 2026 Top 10 Workflow Atlas — GEMS Research">
+<meta property="og:description" content="Wet-lab and dry-lab workflows of the 10 Top 10 Undergrad teams at the iGEM 2026 Grand Jamboree: assembly routes, measurement discipline, model stacks, and the failures they published.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230167EF'/%3E%3Cpath d='M12 20h14M19 20v12l-9 18a4 4 0 0 0 3.6 6h22.8' stroke='white' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='46' cy='22' r='7' fill='%2300C98A'/%3E%3Cpath d='M46 36v18' stroke='%2300C98A' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+/* ============================================================
+   GEMS Protein Design Atlas — design system
+   UI chrome palette inherits the GEMS Research house style.
+   Data-visualisation palette is the validated categorical set
+   (checked with the dataviz validator against a #FFFFFF surface:
+    lightness band / chroma floor / CVD ΔE / normal-vision ΔE all PASS;
+    contrast WARN on 3 slots → relief shipped as direct value labels
+    plus a table view on every figure).
+   ============================================================ */
+:root{
+  /* brand + ink */
+  --blue:#0167EF; --blue2:#2887FF; --sky:#61ABFE; --ink-blue:#0A2540;
+  --green:#00A86B; --green2:#00C98A; --mint:#E8F8F1;
+  --violet:#7C5CFF; --amber:#E08700; --rose:#E5484D; --teal:#0E9BA8;
+  --ink:#10151C; --ink2:#525E6E; --ink3:#8792A3; --ink4:#A9B2BF;
+  --bg:#FFFFFF; --panel:#F6F8FA; --panel2:#FBFCFD; --card:#FFFFFF;
+  --line:rgba(16,24,40,.10); --line2:rgba(16,24,40,.06);
+  --r:16px; --rs:10px; --rxs:7px;
+  --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
+  --shadow2:0 2px 6px rgba(16,24,40,.06),0 18px 46px rgba(16,24,40,.10);
+  --max:1180px;
+
+  /* ---- data-viz tokens ---- */
+  --surface-1:#FFFFFF;
+  --viz-grid:#E6E8EC;
+  --viz-axis:#C3C6CC;
+  --viz-muted:#898781;
+  --s1:#2a78d6;  /* blue    */
+  --s2:#eb6834;  /* orange  */
+  --s3:#1baf7a;  /* aqua    */
+  --s4:#eda100;  /* yellow  */
+  --s5:#e87ba4;  /* magenta */
+  --s6:#008300;  /* green   */
+  --s7:#6250d6;  /* violet  */
+  --s8:#e34948;  /* red     */
+  --dim:#CBD2DB;             /* de-emphasis gray for emphasis charts */
+  /* sequential blue ramp */
+  --q100:#cde2fb; --q150:#b7d3f6; --q200:#9ec5f4; --q250:#86b6ef;
+  --q300:#6da7ec; --q350:#5598e7; --q400:#3987e5; --q450:#2a78d6;
+  --q500:#256abf; --q550:#1c5cab; --q600:#184f95; --q650:#104281; --q700:#0d366b;
+  /* status (reserved — never a series) */
+  --ok:#0ca30c; --warn:#fab219; --serious:#ec835a; --crit:#d03b3b;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Helvetica Neue","PingFang TC","Noto Sans TC",Arial,sans-serif;
+  font-size:16.5px;line-height:1.55;letter-spacing:-.011em;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+html[lang="zh-Hant"] body{line-height:1.78;letter-spacing:.005em}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+img,svg{max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- header ---------- */
+.nav{position:sticky;top:0;z-index:60;height:60px;background:rgba(255,255,255,.82);
+  backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);
+  border-bottom:1px solid var(--line2)}
+.nav .wrap{height:100%;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:11px;min-width:0;overflow:hidden}
+.mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--green));
+  display:grid;place-items:center;flex:none;box-shadow:0 2px 8px rgba(1,103,239,.25)}
+.mark svg{width:19px;height:19px;display:block}
+.bt{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.bt b{font-size:15.5px;font-weight:660;letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bt span{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink3);white-space:nowrap}
+.navsp{flex:1}
+.lang{display:inline-flex;position:relative;background:var(--panel);border-radius:999px;padding:3px;
+  border:1px solid var(--line2);flex:none}
+.lang button{position:relative;z-index:1;border:0;background:none;cursor:pointer;font:inherit;
+  font-size:12.5px;font-weight:600;padding:5px 11px;border-radius:999px;color:var(--ink2);transition:color .18s}
+.lang button[aria-pressed="true"]{color:#fff}
+.lang .thumb{position:absolute;top:3px;bottom:3px;border-radius:999px;background:var(--ink);transition:left .22s cubic-bezier(.4,0,.2,1),width .22s}
+.ghb{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--ink);
+  border:1px solid var(--line);border-radius:999px;padding:7px 13px;background:var(--card);flex:none}
+.ghb:hover{text-decoration:none;box-shadow:var(--shadow)}
+.ghb svg{width:15px;height:15px}
+
+/* ---------- tab bar ---------- */
+.tabs{position:sticky;top:60px;z-index:55;background:rgba(255,255,255,.9);
+  backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);
+  border-bottom:1px solid var(--line2)}
+.tabs .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.tabs .wrap::-webkit-scrollbar{display:none}
+.tab{appearance:none;border:0;background:none;cursor:pointer;font:inherit;font-size:13.8px;font-weight:570;
+  color:var(--ink2);padding:13px 13px 12px;position:relative;white-space:nowrap;display:flex;align-items:center;gap:7px;
+  transition:color .16s}
+.tab svg{width:16px;height:16px;flex:none;opacity:.78}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink);font-weight:650}
+.tab[aria-selected="true"] svg{opacity:1}
+.tab[aria-selected="true"]::after{content:"";position:absolute;left:9px;right:9px;bottom:-1px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,var(--blue),var(--green))}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:58px 0 40px;overflow:hidden;border-bottom:1px solid var(--line2)}
+.hero::before{content:"";position:absolute;inset:-180px -10% auto -10%;height:460px;pointer-events:none;
+  background:radial-gradient(420px 260px at 82% 8%,rgba(0,168,107,.13),transparent 70%),
+             radial-gradient(520px 300px at 12% 0%,rgba(1,103,239,.13),transparent 72%)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:650;text-transform:uppercase;
+  letter-spacing:.13em;color:var(--ink2);margin:0 0 16px}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(0,201,138,.18)}
+h1.big{margin:0 0 16px;font-size:clamp(32px,5.2vw,56px);line-height:1.06;font-weight:700;letter-spacing:-.032em;max-width:17em}
+.gt{background:linear-gradient(100deg,var(--blue),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{margin:0;font-size:clamp(16.5px,1.5vw,19.5px);line-height:1.52;color:var(--ink2);max-width:46em}
+html[lang="zh-Hant"] .lede{line-height:1.8}
+.herometa{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px}
+
+/* ---------- sections ---------- */
+section.sec{padding:52px 0;border-top:1px solid var(--line2)}
+section.sec:first-of-type{border-top:0}
+.kick{font-size:11.5px;font-weight:680;text-transform:uppercase;letter-spacing:.13em;color:var(--blue);margin:0 0 10px}
+h2{margin:0 0 12px;font-size:clamp(24px,3vw,35px);line-height:1.14;font-weight:700;letter-spacing:-.026em}
+h3.sub{margin:34px 0 12px;font-size:20px;font-weight:660;letter-spacing:-.018em}
+h4.sub4{margin:22px 0 8px;font-size:16.5px;font-weight:650}
+.seclede{margin:0 0 22px;font-size:17px;color:var(--ink2);max-width:52em}
+p{margin:0 0 13px}
+.prose{max-width:56em}
+.prose p{font-size:16px;color:var(--ink2)}
+.prose strong{color:var(--ink);font-weight:640}
+.prose ul,.prose ol{margin:0 0 14px;padding-left:1.25em;color:var(--ink2);font-size:16px}
+.prose li{margin:0 0 6px}
+.small{font-size:13.5px;color:var(--ink3)}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92em}
+
+/* ---------- grids / cards ---------- */
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(206px,1fr));gap:14px}
+.card{background:var(--card);border-radius:var(--r);padding:20px 21px;box-shadow:inset 0 0 0 1px var(--line),var(--shadow)}
+.card h4{margin:0 0 7px;font-size:16.5px;font-weight:660;letter-spacing:-.015em}
+.card p{margin:0;font-size:14.8px;color:var(--ink2);line-height:1.56}
+.card p+p{margin-top:9px}
+.lift{transition:box-shadow .2s,transform .2s}
+.lift:hover{box-shadow:inset 0 0 0 1px var(--line),var(--shadow2);transform:translateY(-2px)}
+.panel{background:var(--panel);border-radius:var(--r);padding:20px 21px;box-shadow:inset 0 0 0 1px var(--line2)}
+.take{border-radius:var(--r);padding:17px 19px;margin:18px 0;
+  background:linear-gradient(100deg,rgba(1,103,239,.05),rgba(0,168,107,.05));
+  box-shadow:inset 0 0 0 1px rgba(1,103,239,.16)}
+.take b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.11em;color:var(--blue);margin-bottom:5px}
+.take p{margin:0;font-size:15.2px;color:var(--ink);line-height:1.58}
+.note{border-radius:var(--rs);padding:13px 15px;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line2);
+  font-size:14px;color:var(--ink2);margin:14px 0}
+.warnbox{border-radius:var(--rs);padding:13px 15px;margin:14px 0;font-size:14.2px;color:var(--ink);
+  background:rgba(250,178,25,.09);box-shadow:inset 0 0 0 1px rgba(224,135,0,.26)}
+.warnbox b{color:#9A5A00}
+
+/* ---------- chips ---------- */
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:620;padding:4px 9px;border-radius:999px;
+  background:var(--panel);color:var(--ink2);box-shadow:inset 0 0 0 1px var(--line2);white-space:nowrap}
+.chip.b{background:rgba(1,103,239,.08);color:#0356C4;box-shadow:inset 0 0 0 1px rgba(1,103,239,.18)}
+.chip.g{background:var(--mint);color:#067a51;box-shadow:inset 0 0 0 1px rgba(0,168,107,.2)}
+.chip.v{background:rgba(124,92,255,.09);color:#5B3BD4;box-shadow:inset 0 0 0 1px rgba(124,92,255,.2)}
+.chip.a{background:rgba(224,135,0,.1);color:#9A5A00;box-shadow:inset 0 0 0 1px rgba(224,135,0,.22)}
+.chip.r{background:rgba(229,72,77,.08);color:#C02B30;box-shadow:inset 0 0 0 1px rgba(229,72,77,.2)}
+.chip.t{background:rgba(14,155,168,.09);color:#0A7C86;box-shadow:inset 0 0 0 1px rgba(14,155,168,.2)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+
+/* ---------- stat tiles ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(144px,1fr));gap:14px;margin:26px 0 0}
+.stat{background:var(--card);border-radius:var(--r);padding:16px 17px;box-shadow:inset 0 0 0 1px var(--line),var(--shadow)}
+.stat b{display:block;font-size:30px;font-weight:700;letter-spacing:-.03em;line-height:1.05;
+  background:linear-gradient(100deg,var(--blue),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{display:block;font-size:12.6px;color:var(--ink2);margin-top:5px;line-height:1.35}
+.hero-fig{font-size:clamp(48px,7vw,74px);font-weight:700;letter-spacing:-.04em;line-height:1;
+  background:linear-gradient(100deg,var(--blue),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- tables ---------- */
+.scrollx{overflow-x:auto;border-radius:var(--r);box-shadow:inset 0 0 0 1px var(--line);background:var(--card)}
+.tbl{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+.tbl th{text-align:left;font-size:10.6px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink3);
+  font-weight:680;padding:11px 13px;border-bottom:1px solid var(--line);background:var(--panel2);position:sticky;top:0}
+.tbl td{padding:11px 13px;border-bottom:1px solid var(--line2);color:var(--ink2);vertical-align:top}
+.tbl tr:last-child td{border-bottom:0}
+.tbl tbody tr:hover td{background:var(--panel2)}
+.tbl td b,.tbl td strong{color:var(--ink);font-weight:620}
+.tbl td.num,.tbl th.num{text-align:right;font-variant-numeric:tabular-nums}
+.swipe{font-size:11.5px;color:var(--ink4);margin:7px 0 0;display:none}
+@media(max-width:760px){.swipe{display:block}}
+
+/* ---------- figures ---------- */
+figure.fg{margin:24px 0;background:var(--card);border-radius:var(--r);box-shadow:inset 0 0 0 1px var(--line),var(--shadow);overflow:hidden}
+figure.fg .fgh{padding:16px 19px 0}
+figure.fg .fgn{font-size:10.6px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+figure.fg .fgt{font-size:15.4px;font-weight:650;letter-spacing:-.014em;margin:4px 0 0;color:var(--ink)}
+figure.fg .fgs{font-size:13.4px;color:var(--ink2);margin:5px 0 0;line-height:1.5}
+figure.fg .fgbody{padding:14px 19px 4px}
+figure.fg svg{display:block;width:100%;height:auto;overflow:visible}
+figure.fg figcaption{padding:11px 19px 15px;font-size:12.6px;color:var(--ink3);line-height:1.5;border-top:1px solid var(--line2);margin-top:10px}
+figure.fg figcaption b{color:var(--ink2);font-weight:620}
+.fgtools{display:flex;gap:7px;align-items:center;padding:0 19px 14px;flex-wrap:wrap}
+.fgtools button{appearance:none;border:0;background:var(--panel);box-shadow:inset 0 0 0 1px var(--line2);
+  border-radius:999px;padding:4px 11px;font:inherit;font-size:11.6px;font-weight:620;color:var(--ink2);cursor:pointer}
+.fgtools button[aria-pressed="true"]{background:var(--ink);color:#fff;box-shadow:none}
+.fgtable{display:none;padding:0 19px 16px}
+.fgtable[data-open="1"]{display:block}
+.fgtable table{width:100%;border-collapse:collapse;font-size:13px}
+.fgtable th{text-align:left;font-size:10.4px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);
+  padding:7px 10px;border-bottom:1px solid var(--line)}
+.fgtable td{padding:7px 10px;border-bottom:1px solid var(--line2);color:var(--ink2);font-variant-numeric:tabular-nums}
+.leg{display:flex;flex-wrap:wrap;gap:12px;padding:2px 19px 12px;font-size:12.4px;color:var(--ink2)}
+.leg i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.leg i.ln{height:3px;border-radius:2px;width:15px;vertical-align:3px}
+.vzt{position:fixed;z-index:200;pointer-events:none;background:rgba(16,21,28,.95);color:#fff;border-radius:9px;
+  padding:8px 11px;font-size:12.4px;line-height:1.45;box-shadow:0 8px 28px rgba(16,24,40,.28);max-width:260px;
+  opacity:0;transition:opacity .12s}
+.vzt b{display:block;font-weight:650;margin-bottom:3px}
+.vzt span{color:#C9D2DE}
+
+/* ---------- timeline ---------- */
+.tl{position:relative;margin:26px 0 0;padding-left:0}
+.tl .era{margin:0 0 34px}
+.tl .erah{display:flex;align-items:baseline;gap:12px;margin:0 0 4px}
+.tl .erah b{font-size:21px;font-weight:700;letter-spacing:-.02em}
+.tl .erah span{font-size:12px;color:var(--ink3);font-weight:600;letter-spacing:.04em}
+.tl .erad{font-size:14.6px;color:var(--ink2);margin:0 0 16px;max-width:54em}
+.tl ol{list-style:none;margin:0;padding:0 0 0 26px;position:relative}
+.tl ol::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;border-radius:2px;
+  background:linear-gradient(180deg,var(--blue),var(--green))}
+.tl li{position:relative;padding:0 0 18px 0}
+.tl li::before{content:"";position:absolute;left:-26px;top:7px;width:12px;height:12px;border-radius:50%;
+  background:var(--card);box-shadow:0 0 0 2.5px var(--blue)}
+.tl li.hi::before{background:var(--blue);box-shadow:0 0 0 3px rgba(1,103,239,.22)}
+.tl li .yr{font-size:12.4px;font-weight:700;color:var(--blue);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.tl li .ti{font-size:16px;font-weight:640;letter-spacing:-.014em;margin:1px 0 3px}
+.tl li .de{font-size:14.4px;color:var(--ink2);line-height:1.56;max-width:52em}
+.tl li .ci{font-size:12.2px;color:var(--ink3);margin-top:5px}
+
+/* ---------- in-page section nav ---------- */
+.toc{position:sticky;top:109px;z-index:40;background:rgba(255,255,255,.92);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line2);margin:0 0 0}
+.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding:9px 22px;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc a{font-size:12.4px;font-weight:600;color:var(--ink2);background:var(--panel);border-radius:999px;
+  padding:5px 11px;white-space:nowrap;box-shadow:inset 0 0 0 1px var(--line2)}
+.toc a:hover{text-decoration:none;color:var(--ink)}
+.toc a.on{background:var(--ink);color:#fff;box-shadow:none}
+
+/* ---------- case / tool cards ---------- */
+.casehead{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 6px}
+.casenum{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;flex:none;color:#fff;
+  font-size:14px;font-weight:700;background:linear-gradient(135deg,var(--blue),var(--teal))}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:13.8px;margin:12px 0}
+.kv dt{color:var(--ink3);font-weight:620;white-space:nowrap}
+.kv dd{margin:0;color:var(--ink2)}
+.phase{display:flex;gap:14px;align-items:flex-start;margin:0 0 16px}
+.phase .pn{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;flex:none;color:#fff;
+  font-size:14px;font-weight:700;background:linear-gradient(135deg,var(--blue),var(--teal))}
+.struct{width:100%;height:280px;border-radius:var(--rs);background:var(--panel);position:relative;overflow:hidden}
+.struct .ph{position:absolute;inset:0;display:grid;place-items:center;font-size:12.6px;color:var(--ink3);text-align:center;padding:16px}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line2);padding:34px 0 46px;margin-top:20px;background:var(--panel2)}
+footer .fl{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:13.4px;color:var(--ink2)}
+footer p{font-size:12.6px;color:var(--ink3);max-width:60em}
+
+/* ---------- utils ---------- */
+.spin{width:22px;height:22px;border-radius:50%;border:2.5px solid var(--line);border-top-color:var(--blue);
+  animation:sp .7s linear infinite;margin:50px auto}
+@keyframes sp{to{transform:rotate(360deg)}}
+@media(max-width:470px){
+  .ghb span{display:none}
+  .ghb{padding:7px 10px}
+  .lang button{padding:5px 9px;font-size:12px}
+}
+@media(max-width:760px){
+  .wrap{padding:0 16px}
+  .nav{height:54px}.tabs{top:54px}.toc{top:99px}
+  section.sec{padding:40px 0}
+  .hero{padding:40px 0 30px}
+  .bt span{display:none}
+  .toc .wrap{padding:9px 16px}
+  figure.fg .fgh,figure.fg .fgbody,.fgtools,.fgtable,.leg{padding-left:14px;padding-right:14px}
+  figure.fg figcaption{padding-left:14px;padding-right:14px}
+}
+@media print{.nav,.tabs,.toc,.fgtools{display:none}figure.fg{break-inside:avoid}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:0s!important;transition-duration:0s!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#overview">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 46c6-18 12-10 18-20s9-14 18-12" stroke="white" stroke-width="7" fill="none" stroke-linecap="round"/><circle cx="17" cy="44" r="5" fill="#9BFFD6"/></svg></span>
+      <span class="bt"><b data-en="iGEM 2026 Top 10 Workflows" data-zh="iGEM 2026 前十名工作流程">iGEM 2026 Top 10 Workflows</b><span data-en="GEMS Research · Undergraduate section" data-zh="GEMS Research · 大學部組">GEMS Research · Undergraduate section</span></span>
+    </a>
+    <span class="navsp"></span>
+    <div class="lang" role="group" aria-label="Language">
+      <span class="thumb" aria-hidden="true"></span>
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+    </div>
+    <a class="ghb" id="ghlink" href="https://github.com/Timmy97-TW/igem-2026-top10-workflows" target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.07-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.15 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A7.995 7.995 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      <span>GitHub</span>
+    </a>
+  </div>
+</header>
+<nav class="tabs" id="tabs" role="tablist" aria-label="Sections"></nav>
+<main id="app"><div class="spin" aria-label="Loading"></div></main>
+<footer>
+  <div class="wrap">
+    <div class="fl" id="footlinks"></div>
+    <p id="footnote" style="margin-top:14px"></p>
+  </div>
+</footer>
+<noscript>
+  <div class="wrap" style="padding:40px 22px">
+    <h2>JavaScript required / 需要 JavaScript</h2>
+    <p>This report renders client-side, so it needs JavaScript enabled. The source,
+    including every chapter as plain text in <code>data/</code>, is on
+    <a href="https://github.com/Timmy97-TW/igem-2026-top10-workflows">GitHub</a>.</p>
+    <p>本報告於瀏覽器端渲染，需要啟用 JavaScript。原始碼（含 <code>data/</code> 目錄中各章節的純文字）
+    放在 <a href="https://github.com/Timmy97-TW/igem-2026-top10-workflows">GitHub</a>。</p>
+  </div>
+</noscript>
+<script src="data/meta.js?v=20261121"></script>
+<script src="data/overview.js?v=20261121"></script>
+<script src="data/compare.js?v=20261121"></script>
+<script src="data/t-stanford.js?v=20261121"></script>
+<script src="data/t-ucas.js?v=20261121"></script>
+<script src="data/t-princeton.js?v=20261121"></script>
+<script src="data/t-heidelberg.js?v=20261121"></script>
+<script src="data/t-cornell.js?v=20261121"></script>
+<script src="data/t-lyon.js?v=20261121"></script>
+<script src="data/t-nus.js?v=20261121"></script>
+<script src="data/t-ualberta.js?v=20261121"></script>
+<script src="data/t-ucnz.js?v=20261121"></script>
+<script src="data/t-uottawa.js?v=20261121"></script>
+<script src="fig.js?v=20261121"></script>
+<script src="wf.js?v=20261121"></script>
+<script src="app.js?v=20261121"></script>
+</body>
+</html>
