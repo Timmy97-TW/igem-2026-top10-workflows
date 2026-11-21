@@ -328,8 +328,8 @@
             { en: '**And one direct collision.** LYON took Best Bioremediation Project in the Undergraduate section and WageningenUR took it in the Overgraduate section — **both attacking TFA, the shortest PFAS, in the same year.** LYON\'s model said degradation would not work and the project pivoted to capture only; Wageningen kept all three legs and reported each one\'s exact distance from working. Two Top 10s and two village awards from opposite answers to the same question, which is the most useful thing a cross-division comparison can show.', zh: '**還有一次正面相撞。**LYON 拿下大學部的最佳生物復育專案，而 WageningenUR 拿下研究生部的同一個獎——**兩隊在同一年對付同一個分子：最短的 PFAS，TFA。**LYON 的模型判定降解行不通，專案因此轉向只做捕捉；Wageningen 則保留三條腿，並報告每一條距離「能用」還有多遠。對同一個問題給出相反答案，卻各自得到前十名與村獎——這是跨組比較最能展示的事。' }
           ]) +
           h.note({
-            en: 'The Undergraduate section is one click away, in the switch at the top of the page. Both divisions use the same page template, the same figure engine and the same bilingual layer, so the differences above are differences in the wikis rather than in how we read them.',
-            zh: '大學部就在頁面頂端的切換鈕上，一鍵即到。兩個組別使用相同的頁面模板、相同的圖表引擎與相同的雙語層，所以上述差異是 wiki 之間的差異，而不是我們閱讀方式的差異。'
+            en: 'The [Undergraduate](#overview) and [High School](#hs-overview) sections are one click away, in the switch at the top of the page, and the **Across tiers** section compares all three in [Three tiers](#x-tiers) and turns them into a [2027 roadmap](#x-roadmap). All three sections use the same page template, the same figure engine and the same bilingual layer, so the differences above are differences in the wikis rather than in how we read them.',
+            zh: '[大學部](#overview)與[高中部](#hs-overview)就在頁面頂端的切換鈕上，一鍵即到；而**三層比較**那一區在[三層分析](#x-tiers)裡把三個組別一起比較，並整理成一份[2027 選題指南](#x-roadmap)。三個組別都使用相同的頁面模板、相同的圖表引擎與相同的雙語層，所以上述差異是 wiki 之間的差異，而不是我們閱讀方式的差異。'
           })
       });
 

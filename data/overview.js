@@ -86,8 +86,8 @@
               '</div>';
           }).join('') + '</div>' +
           h.note({
-            en: 'Also announced on the same page: TU Delft took the Overgrad Grand Prize and Lambert-GA the High School Grand Prize. **The ten Overgraduate teams have their own section of this site** — use the Undergrad / Overgrad switch above the tabs, or go straight to the [Overgraduate overview](#og-overview). The full official list is at [competition.igem.org/results/2026](https://competition.igem.org/results/2026).',
-            zh: '同一頁公布的其他結果：TU Delft 取得研究生組首獎，Lambert-GA 取得高中組首獎。**研究生部的十支隊伍在本站有自己的一區**——使用分頁列上方的 Undergrad／Overgrad 切換鈕，或直接前往[研究生部總覽](#og-overview)。完整官方名單見 [competition.igem.org/results/2026](https://competition.igem.org/results/2026)。'
+            en: 'Also announced on the same page: TU Delft took the Overgrad Grand Prize and Lambert-GA the High School Grand Prize. **All three sections now have their own part of this site** — use the switch above the tabs, or go straight to the [Overgraduate overview](#og-overview) or the [High School overview](#hs-overview). The **Across tiers** section reads all thirty wikis against each other in [Three tiers](#x-tiers) and turns them into a [2027 roadmap](#x-roadmap). The full official list is at [competition.igem.org/results/2026](https://competition.igem.org/results/2026).',
+            zh: '同一頁公布的其他結果：TU Delft 取得研究生組首獎，Lambert-GA 取得高中組首獎。**三個組別現在在本站都有自己的一區**——使用分頁列上方的切換鈕，或直接前往[研究生部總覽](#og-overview)或[高中部總覽](#hs-overview)。**三層比較**那一區把三十個 wiki 互相對讀，成果在[三層分析](#x-tiers)，並整理成一份[2027 選題指南](#x-roadmap)。完整官方名單見 [competition.igem.org/results/2026](https://competition.igem.org/results/2026)。'
           })
       });
 

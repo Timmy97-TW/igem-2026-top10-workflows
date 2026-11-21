@@ -215,7 +215,7 @@
       team: 'M4 7h5v5H4zM15 7h5v5h-5zM9.5 9.5h5M7 12v5h10v-5',
       wet: 'M12 3v6l-5 9a4 4 0 0 0 3.6 6h2.8A4 4 0 0 0 17 18l-5-9',
       dry: 'M4 19V9m5 10V5m5 14v-7m5 7V8'
-    }[String(name).replace(/^og-/, '')] || p2(name);
+    }[String(name).replace(/^(og|hs|x)-/, '')] || p2(name);
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + p + '"/></svg>';
   }
 
@@ -254,7 +254,8 @@
     /* brand subtitle names the division you are reading */
     var dv = curDiv(), bs = d.querySelector('.brand .bt span');
     if (bs && dv.sub) bs.textContent = T(dv.sub);
-    var note = (dv.key === 'og' && PD.meta.footer.noteOG) ? PD.meta.footer.noteOG : PD.meta.footer.note;
+    var byDiv = { og: PD.meta.footer.noteOG, hs: PD.meta.footer.noteHS, xd: PD.meta.footer.noteXD };
+    var note = byDiv[dv.key] || PD.meta.footer.note;
     d.getElementById('footnote').innerHTML = md(note) +
       ' <span class="mono">' + T({ en: 'Updated', zh: '更新於' }) + ' ' + PD.meta.updated + '</span>';
   }
@@ -398,7 +399,8 @@
              than to a dead id */
           var here = (curPage || '').replace(divOf(curPage).prefix, '');
           var target = ds[i].prefix + here;
-          location.hash = '#' + (PD.pages[target] ? target : ds[i].prefix + 'overview');
+          var home = ds[i].tabs && ds[i].tabs[0] ? ds[i].tabs[0].id : ds[i].prefix + 'overview';
+          location.hash = '#' + (PD.pages[target] ? target : home);
         }
         return;
       }

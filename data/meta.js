@@ -298,6 +298,154 @@
     }
   ];
 
+  /* ------------------------------------------------------------------ *
+   * High School Top 10, iGEM 2026.                                      *
+   * Grand Prize first, 1st Runner-up second, then the remaining eight   *
+   * alphabetically — the order the official results page uses.          *
+   * ------------------------------------------------------------------ */
+  PD.teamsHS = [
+    {
+      id: 'lambert', slug: 'lambert-ga', name: 'Lambert-GA',
+      project: 'SWARM', country: { en: 'United States', zh: '美國' }, flag: '🇺🇸',
+      village: { en: 'Conservation', zh: '保育' },
+      award: { en: 'Grand Prize', zh: '總冠軍' }, rank: 1,
+      one: {
+        en: 'Attack both halves of the bee problem — a minibinder against the virus, multiplexed RNAi against the mite — and size every claim to the assay that produced it.',
+        zh: '同時處理蜜蜂問題的兩半——用 minibinder 對病毒、用多重 RNAi 對蟎——並讓每個主張的大小剛好等於產生它的那個實驗。'
+      },
+      chassis: 'E. coli (reporter + expression) · Sf9 insect cells (RNAi) · external BLI at Adaptyv Bio',
+      assembly: { en: 'HiFi assembly of the reporter plasmid, published as unverified: four colonies pooled, no diagnostic digest or sequencing reported', zh: '報告質體用 HiFi 組裝，並公開寫明未經驗證：四個菌落混合，未報告任何診斷酶切或定序' },
+      dry: { en: 'PRINCE epitope-patch ranker, validated on a homology-controlled split (6,937 interfaces, 1,549 antigen clusters) + dosing, RNAi and a six-year colony epidemiology model', zh: 'PRINCE 抗原表位patch排序器，以同源性受控切分驗證（6,937 個界面、1,549 個抗原分群）＋劑量、RNAi 與六年蜂群流病模型' },
+      wetN: 2, dryN: 4, hw: true, sw: true
+    },
+    {
+      id: 'jss', slug: 'hongkong-jss', name: 'HongKong-JSS',
+      project: 'MerMAID', country: { en: 'Hong Kong', zh: '香港' }, flag: '🇭🇰',
+      village: { en: 'Agriculture', zh: '農業' },
+      award: { en: '1st Runner-up', zh: '亞軍' }, rank: 2,
+      one: {
+        en: 'A mercury biosensor with a real dose–response across five matched runs, and a sentence saying that 1 ppb is the lowest concentration tested, not a validated detection limit.',
+        zh: '一個在五組配對實驗中都做出真實劑量反應的汞生物感測器，並附上一句話：1 ppb 是測過的最低濃度，不是已驗證的偵測極限。'
+      },
+      chassis: 'E. coli, MerR / pMer driving mRFP1e',
+      assembly: { en: 'Design 429 built and sequence-verified; an RNA-switch route dropped, with the untested assumption behind it named', zh: '建出並定序確認 Design 429；放棄 RNA 開關路線，並指名背後那個未經測試的假設' },
+      dry: { en: 'Dose–response fitting over 0.005–5 µM across five matched runs; Spearman ρ = 1.00 between the two pellet readouts', zh: '0.005–5 µM、五組配對實驗的劑量反應擬合；兩種菌體沉澱讀值之間 Spearman ρ = 1.00' },
+      wetN: 3, dryN: 2, hw: true, sw: false
+    },
+    {
+      id: 'eton', slug: 'eton-college-uk', name: 'Eton-College-UK',
+      project: 'ProteaSign', country: { en: 'United Kingdom', zh: '英國' }, flag: '🇬🇧',
+      village: { en: 'Diagnostics', zh: '診斷' },
+      award: { en: 'Top 10', zh: '前十名' }, rank: 3,
+      one: {
+        en: 'Read a wound electrochemically: tethered peptide probes cut by MMP-9, under a model that publishes each of its checks as either a pass or a caveat.',
+        zh: '用電化學讀傷口：被 MMP-9 切斷的繫鏈肽探針，底下那個模型把自己的每一項檢查都公布為「通過」或「有保留」。'
+      },
+      chassis: 'E. coli sfGFP reporter constructs; bench work hosted at Greenwich and KCL',
+      assembly: { en: 'Reporter proteins quantified by Ni-NTA depletion rather than by a cleavage assay', zh: '報告蛋白以 Ni-NTA 耗竭法定量，而不是用切割試驗' },
+      dry: { en: '10,472 confirmed cleavage windows across 7 proteases; an exact square-wave voltammetry solution with 10 automated checks', zh: '橫跨 7 種蛋白酶的 10,472 個已確認切割窗口；一個方波伏安法的精確解，配 10 項自動化檢查' },
+      wetN: 2, dryN: 4, hw: true, sw: true
+    },
+    {
+      id: 'gcgs', slug: 'gcgs', name: 'GCGS',
+      project: 'Dual-response EcN', country: { en: 'China', zh: '中國' }, flag: '🇨🇳',
+      village: { en: 'Diagnostics', zh: '診斷' },
+      award: { en: 'Top 10', zh: '前十名' }, rank: 4,
+      one: {
+        en: 'An AND gate that fires only where cystic fibrosis mucus is both iron-starved and full of Pseudomonas signal — characterised one module at a time.',
+        zh: '一個只在囊狀纖維化黏液「缺鐵」且「充滿假單胞菌訊號」時才啟動的 AND 閘——而且是一個模組一個模組分別特性化的。'
+      },
+      chassis: 'E. coli Nissle 1917 (therapeutic chassis) · BL21(DE3) for enzyme production',
+      assembly: { en: 'Three modules characterised separately, then assembled; the improved part RhlR-SsrA-ASV + P_rhl(LR) came out of a four-tag screen', zh: '三個模組分別特性化後再組裝；改良元件 RhlR-SsrA-ASV ＋ P_rhl(LR) 出自一次四種標籤的篩選' },
+      dry: { en: 'Dose–response fitting of the assembled gate: C4-HSL LOD 53.1 nM at R² = 0.894, plus a cross-reactivity panel against other AHLs', zh: '對組裝後閘的劑量反應擬合：C4-HSL 偵測極限 53.1 nM、R² = 0.894，另有對其他 AHL 的交叉反應測試' },
+      wetN: 4, dryN: 2, hw: false, sw: false
+    },
+    {
+      id: 'gems', slug: 'gems-taiwan', name: 'GEMS-Taiwan',
+      project: 'ReLEAF', country: { en: 'Taiwan', zh: '台灣' }, flag: '🇹🇼',
+      village: { en: 'Biomanufacturing', zh: '生物製造' },
+      award: { en: 'Top 10', zh: '前十名' }, rank: 5,
+      one: {
+        en: 'Move the sensing out of the cell: electronics and a forecast decide when to make ACC deaminase, and green light tells the bacteria inside a contained reactor.',
+        zh: '把感測從細胞裡搬出來：由電子元件與預報決定何時製造 ACC 去胺酶，再用綠光去告訴密閉反應器裡的細菌。'
+      },
+      chassis: 'B. subtilis WB800 (secretion-deficient-protease host), CcaSR green-light optogenetics',
+      assembly: { en: 'A first design that released DesK–DesR sensing bacteria into soil was abandoned on expert advice, over containment and sensing precision', zh: '最初那個把帶 DesK–DesR 感測的細菌釋放到土壤的設計，在專家建議下因圍阻與感測精度而放棄' },
+      dry: { en: 'AIoT stress prediction from leaf sensors plus weather forecasts, a digital twin of the rig, and MD on BoPEP4', zh: '以葉片感測器加氣象預報做 AIoT 逆境預測、該設備的數位孿生，以及 BoPEP4 的分子動力學' },
+      wetN: 3, dryN: 3, hw: true, sw: true
+    },
+    {
+      id: 'ghcis', slug: 'ghcis', name: 'GHCIS',
+      project: 'HoldeX', country: { en: 'China', zh: '中國' }, flag: '🇨🇳',
+      village: { en: 'Conservation', zh: '保育' },
+      award: { en: 'Top 10', zh: '前十名' }, rank: 6,
+      one: {
+        en: 'Three resistance genes, three colours on filter paper — and a summary that refuses to call any of it a detection limit.',
+        zh: '三個抗藥性基因、濾紙上三種顏色——而它的總結拒絕把其中任何一項稱為偵測極限。'
+      },
+      chassis: 'E. coli cell-free (PURE-style extract) on Whatman filter paper; DH5α and BL21(DE3) for cloning and reporters',
+      assembly: { en: 'Nine first-round switches gave no separation with or without trigger; redesigned, and MCR1_4 / NDM1_4 / KPC2_4 were kept', zh: '第一輪九個開關在有無觸發 RNA 下都分不開；重新設計後留下 MCR1_4／NDM1_4／KPC2_4' },
+      dry: { en: 'ViennaRNA + Python switch design, then ARGUS: RGB → CIELAB → CIEDE2000 colour difference on the paper reactions', zh: 'ViennaRNA ＋ Python 設計開關，再用 ARGUS：把紙上反應從 RGB 轉 CIELAB、算 CIEDE2000 色差' },
+      wetN: 4, dryN: 2, hw: true, sw: true
+    },
+    {
+      id: 'hangzhou', slug: 'hangzhoufourteenap', name: 'HangzhouFourteenAP',
+      project: 'Dental biofilm glycosidases', country: { en: 'China', zh: '中國' }, flag: '🇨🇳',
+      village: { en: 'Biomanufacturing', zh: '生物製造' },
+      award: { en: 'Top 10', zh: '前十名' }, rank: 7,
+      one: {
+        en: 'Two glycosidases with complementary linkage specificity, each proved specific against its own heat-inactivated control before anything was combined.',
+        zh: '兩個鍵結專一性互補的糖苷酶，在任何東西被組合起來之前，各自先用自己的熱去活對照證明了專一性。'
+      },
+      chassis: 'E. coli Rosetta(DE3), pET-32a Trx-His fusions, on-bead enterokinase cleavage',
+      assembly: { en: 'Four Gibson constructs; the 21aa peptide expressed and the 18aa peptide gave no detectable induced band, so the 18aa was dropped', zh: '四個 Gibson 構築；21aa 肽有表達，18aa 肽則測不到誘導後的條帶，因此棄用 18aa' },
+      dry: { en: 'Structure → conservation → FoldX pipeline on CoGH66 (PDB 8IUB, 18 pocket residues, 12 mutants against a pre-declared threshold) — and the bench reversed its ranking', zh: '針對 CoGH66 的「結構→保守性→FoldX」管線（PDB 8IUB、18 個口袋殘基、12 個突變體對上事先宣告的門檻）——而實驗檯把它的排序翻轉了' },
+      wetN: 3, dryN: 2, hw: false, sw: false
+    },
+    {
+      id: 'hfi', slug: 'hfi', name: 'HFI',
+      project: 'LYSERA', country: { en: 'China', zh: '中國' }, flag: '🇨🇳',
+      village: { en: 'Therapeutics', zh: '治療' },
+      award: { en: 'Top 10', zh: '前十名' }, rank: 8,
+      one: {
+        en: 'Split one metabolic pathway across two bacteria, staple them together with SpyTag–SpyCatcher — then report that the stapling helped less than expected.',
+        zh: '把一條代謝路徑拆給兩株細菌，用 SpyTag–SpyCatcher 把它們釘在一起——然後回報：釘在一起的幫助比預期小。'
+      },
+      chassis: 'E. coli Nissle 1917 ΔldcC, eCPX outer-membrane display',
+      assembly: { en: 'Chassis knockout first (ldcC, to clear the endogenous background), then the binding module, then the split pathway', zh: '先做底盤剔除（ldcC，清掉內源背景），再做結合模組，最後才是拆開的代謝路徑' },
+      dry: { en: 'NetLogo agent-based simulation of cluster formation, which predicted the free single cells the microscopy then found', zh: '用 NetLogo 做群聚形成的個體模擬，而它預測到的游離單細胞後來真的在顯微鏡下看到了' },
+      wetN: 4, dryN: 2, hw: false, sw: false
+    },
+    {
+      id: 'hkssc', slug: 'hkssc', name: 'HKSSC',
+      project: 'Paraben esterase for food waste', country: { en: 'Hong Kong', zh: '香港' }, flag: '🇭🇰',
+      village: { en: 'Food & Nutrition', zh: '食品與營養' },
+      award: { en: 'Top 10', zh: '前十名' }, rank: 9,
+      one: {
+        en: 'One enzyme, one question, one readout chosen on its merits: does prbA let E. coli grow in paraben that would otherwise stop it?',
+        zh: '一個酵素、一個問題、一個經過理由挑選的讀值：prbA 能不能讓大腸桿菌在原本會擋住它的對羥基苯甲酸酯中生長？'
+      },
+      chassis: 'E. coli BL21(DE3) carrying prbA paraben esterase',
+      assembly: { en: 'Three-arm MIC design — positive control, paraben-only negative control, and the transgenic arm', zh: '三組 MIC 設計——陽性對照、只加對羥基苯甲酸酯的陰性對照、以及轉基因組' },
+      dry: { en: 'CFU standard curves built first, so enzyme activity could be normalised per viable cell rather than per OD', zh: '先建立 CFU 標準曲線，讓酵素活性能以每個存活細胞、而不是每單位 OD 做標準化' },
+      wetN: 3, dryN: 1, hw: false, sw: false
+    },
+    {
+      id: 'hkhs', slug: 'hongkong-hs', name: 'HongKong-HS',
+      project: 'AmpliRen', country: { en: 'Hong Kong', zh: '香港' }, flag: '🇭🇰',
+      village: { en: 'Diagnostics', zh: '診斷' },
+      award: { en: 'Top 10', zh: '前十名' }, rank: 10,
+      one: {
+        en: 'Urinary miRNA for chronic kidney disease, amplified without an enzyme cascade: hybridisation chain reaction read in a cell-free system.',
+        zh: '用尿液 miRNA 看慢性腎病，而放大不靠酵素級聯：在無細胞系統中讀出的雜交鏈反應。'
+      },
+      chassis: 'Cell-free expression with toehold switches; E. coli cloning hosts',
+      assembly: { en: 'Two miRNA targets carried in parallel rather than one, so a failure in one route did not end the project', zh: '兩個 miRNA 標的並行而不是只做一個，使其中一條路線失敗時專案不會因此結束' },
+      dry: { en: 'Toehold and HCR hairpin design, with the detection route documented as design-then-evidence on one page', zh: 'Toehold 與 HCR 髮夾設計，並把偵測路線以「先設計、後證據」的方式寫在同一頁上' },
+      wetN: 3, dryN: 2, hw: false, sw: false
+    }
+  ];
+
   /* The two divisions, keyed by the prefix their page ids carry. */
   PD.divisions = [
     {
@@ -311,6 +459,22 @@
       label: { en: 'Overgrad', zh: '研究生部' },
       sub: { en: 'GEMS Research · Overgraduate section', zh: 'GEMS Research · 研究生部組' },
       head: { en: 'Top 10 Overgraduate', zh: '研究生部前十名' }
+    },
+    {
+      key: 'hs', prefix: 'hs-', teams: PD.teamsHS,
+      label: { en: 'High School', zh: '高中部' },
+      sub: { en: 'GEMS Research · High School section', zh: 'GEMS Research · 高中部組' },
+      head: { en: 'Top 10 High School', zh: '高中部前十名' }
+    },
+    {
+      key: 'xd', prefix: 'x-', teams: [],
+      label: { en: 'Across tiers', zh: '三層比較' },
+      sub: { en: 'GEMS Research · All three sections', zh: 'GEMS Research · 三個組別合看' },
+      head: { en: 'All three sections', zh: '三個組別' },
+      tabs: [
+        { id: 'x-tiers', label: { en: 'Three tiers', zh: '三層分析' } },
+        { id: 'x-roadmap', label: { en: '2027 roadmap', zh: '2027 選題指南' } }
+      ]
     }
   ];
 
@@ -322,7 +486,8 @@
       return { id: div.prefix + t.id, label: { en: t.name, zh: t.name }, team: true };
     }));
   }
-  PD.divisions.forEach(function (d) { d.tabs = tabsFor(d); });
+  /* A division may ship its own tab list (the cross-tier one does); otherwise it is derived. */
+  PD.divisions.forEach(function (d) { if (!d.tabs) d.tabs = tabsFor(d); });
 
   PD.meta = {
     siteTitle: { en: 'iGEM 2026 Top 10 Workflow Atlas', zh: 'iGEM 2026 前十名工作流程圖譜' },
@@ -337,6 +502,16 @@
         { t: { en: 'Paris Jamboree report', zh: '巴黎 Jamboree 報告' }, u: 'https://timmy97-tw.github.io/igem-paris-2026-reports/' },
         { t: { en: 'iGEM', zh: 'iGEM 官網' }, u: 'https://igem.org/' }
       ],
+      /* The High School wording of the same note. */
+      noteHS: {
+        en: 'A workflow study of the ten teams named to the **Top 10 High School** list at the iGEM 2026 Grand Jamboree, compiled by **GEMS Research (Taiwan)** in November 2026. Everything here is read from each team\'s own public 2026 wiki and the official results page; nothing was measured by us and no result on this site is ours. **GEMS-Taiwan is our own team, and its page says so at the top** — read our judgements about it with that in mind, and read the team\'s own wiki rather than taking ours for it. Each team page links to the wiki it was read from. Where a number appears it is the team\'s own number; where a judgement appears it is labelled as ours and can be disagreed with. iGEM publishes only the first two places in order; the remaining eight are listed alphabetically here, as they are on the official results page. Not affiliated with, or endorsed by, iGEM or any team named here.',
+        zh: '\u672c\u7ad9\u662f\u5c0d iGEM 2026 Grand Jamboree **\u9ad8\u4e2d\u90e8\u524d\u5341\u540d**\u5341\u652f\u5718\u968a\u7684\u5de5\u4f5c\u6d41\u7a0b\u7814\u7a76\uff0c\u7531 **GEMS Research\uff08\u53f0\u7063\uff09** \u65bc 2026 \u5e74 11 \u6708\u5f59\u7de8\u3002\u6240\u6709\u5167\u5bb9\u90fd\u8b80\u81ea\u5404\u968a 2026 \u5e74\u516c\u958b wiki \u8207\u5b98\u65b9\u6210\u7e3e\u9801\uff1b\u6211\u5011\u6c92\u6709\u91cf\u6e2c\u4efb\u4f55\u6578\u64da\uff0c\u672c\u7ad9\u4e5f\u6c92\u6709\u4efb\u4f55\u7d50\u679c\u5c6c\u65bc\u6211\u5011\u3002**GEMS-Taiwan \u662f\u6211\u5011\u81ea\u5df1\u7684\u5718\u968a\uff0c\u90a3\u4e00\u9801\u7684\u6700\u4e0a\u65b9\u6703\u76f4\u63a5\u5beb\u660e\u9019\u4ef6\u4e8b**\u2014\u2014\u8acb\u5e36\u8457\u9019\u4e00\u9ede\u8b80\u6211\u5011\u5c0d\u5b83\u7684\u5224\u65ad\uff0c\u4e5f\u8acb\u53bb\u8b80\u8a72\u968a\u81ea\u5df1\u7684 wiki\uff0c\u800c\u4e0d\u662f\u76f8\u4fe1\u6211\u5011\u7684\u8aaa\u6cd5\u3002\u6bcf\u500b\u5718\u968a\u9801\u90fd\u9644\u4e0a\u5176 wiki \u9023\u7d50\u3002\u6587\u4e2d\u51fa\u73fe\u7684\u6578\u5b57\u90fd\u662f\u8a72\u968a\u81ea\u5df1\u7684\u6578\u5b57\uff1b\u6587\u4e2d\u51fa\u73fe\u7684\u5224\u65ad\u90fd\u6a19\u793a\u70ba\u6211\u5011\u7684\u770b\u6cd5\uff0c\u6b61\u8fce\u4e0d\u540c\u610f\u3002iGEM \u53ea\u516c\u5e03\u524d\u4e8c\u540d\u7684\u540d\u6b21\uff0c\u5176\u9918\u516b\u968a\u5728\u5b98\u65b9\u6210\u7e3e\u9801\u8207\u672c\u7ad9\u5747\u4f9d\u5b57\u6bcd\u5e8f\u5217\u51fa\u3002\u672c\u7ad9\u8207 iGEM \u53ca\u6587\u4e2d\u4efb\u4f55\u5718\u968a\u5747\u7121\u96b6\u5c6c\u95dc\u4fc2\uff0c\u4ea6\u672a\u7d93\u5176\u80cc\u66f8\u3002'
+      },
+      /* The cross-tier wording: these two pages are argument, not reporting. */
+      noteXD: {
+        en: 'These two pages are **our argument**, not a report of anybody\'s results. They read across the thirty Top 10 wikis of 2026 — High School, Undergraduate and Overgraduate — and draw conclusions from them. The facts underneath are each team\'s own, and each one links back to the team page and the wiki it came from; the patterns, the rankings of what matters, and the 2027 advice are ours, and a reasonable person can disagree with any of it. **We are a competitor**: GEMS-Taiwan placed in the High School Top 10 in 2026, which is both why this study exists and a reason to check it. Not affiliated with, or endorsed by, iGEM or any team named here.',
+        zh: '\u9019\u5169\u9801\u662f**\u6211\u5011\u7684\u8a96\u8b70**\uff0c\u4e0d\u662f\u4efb\u4f55\u4eba\u7d50\u679c\u7684\u8f49\u8ff0\u3002\u5b83\u5011\u6a6a\u8b80 2026 \u5e74\u4e09\u5341\u500b\u524d\u5341\u540d wiki\u2014\u2014\u9ad8\u4e2d\u90e8\u3001\u5927\u5b78\u90e8\u3001\u7814\u7a76\u751f\u90e8\u2014\u2014\u4e26\u5f9e\u4e2d\u5f97\u51fa\u7d50\u8ad6\u3002\u5e95\u5c64\u7684\u4e8b\u5be6\u90fd\u5c6c\u65bc\u5404\u968a\u81ea\u5df1\uff0c\u6bcf\u4e00\u9ede\u90fd\u56de\u9023\u5230\u5718\u968a\u9801\u8207\u5b83\u7684\u4f86\u6e90 wiki\uff1b\u800c\u90a3\u4e9b\u6a21\u5f0f\u3001\u4ec0\u9ebc\u6bd4\u8f03\u91cd\u8981\u7684\u6392\u5e8f\uff0c\u4ee5\u53ca 2027 \u7684\u5efa\u8b70\uff0c\u90fd\u662f\u6211\u5011\u7684\uff0c\u4e14\u4efb\u4f55\u4e00\u9ede\u90fd\u53ef\u4ee5\u88ab\u5408\u7406\u5730\u53cd\u5c0d\u3002**\u6211\u5011\u662f\u53c3\u8cfd\u8005**\uff1aGEMS-Taiwan \u5728 2026 \u5e74\u9032\u5165\u9ad8\u4e2d\u90e8\u524d\u5341\u540d\u2014\u2014\u9019\u65e2\u662f\u9019\u4efd\u7814\u7a76\u5b58\u5728\u7684\u539f\u56e0\uff0c\u4e5f\u662f\u4f60\u8a72\u6aa2\u67e5\u5b83\u7684\u7406\u7531\u3002\u672c\u7ad9\u8207 iGEM \u53ca\u6587\u4e2d\u4efb\u4f55\u5718\u968a\u5747\u7121\u96b6\u5c6c\u95dc\u4fc2\uff0c\u4ea6\u672a\u7d93\u5176\u80cc\u66f8\u3002'
+      },
       /* The Overgraduate wording of the same note; app.js picks by division. */
       noteOG: {
         en: 'A workflow study of the ten teams named to the **Top 10 Overgraduate** list at the iGEM 2026 Grand Jamboree, compiled by **GEMS Research (Taiwan)** in November 2026. Everything here is read from each team\'s own public 2026 wiki and the official results page; nothing was measured by us and no result on this site is ours. Each team page links to the wiki it was read from. Where a number appears it is the team\'s own number; where a judgement appears \u2014 what we think a workflow does well, what we would copy \u2014 it is labelled as ours and can be disagreed with. iGEM publishes only the first two places in order; the remaining eight are listed alphabetically here, as they are on the official results page. Not affiliated with, or endorsed by, iGEM or any team named here.',
