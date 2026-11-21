@@ -86,8 +86,8 @@
               '</div>';
           }).join('') + '</div>' +
           h.note({
-            en: 'Also announced on the same page: TU Delft took the Overgrad Grand Prize and Lambert-GA the High School Grand Prize. The full official list is at [competition.igem.org/results/2026](https://competition.igem.org/results/2026).',
-            zh: '同一頁公布的其他結果：TU Delft 取得研究生組首獎，Lambert-GA 取得高中組首獎。完整官方名單見 [competition.igem.org/results/2026](https://competition.igem.org/results/2026)。'
+            en: 'Also announced on the same page: TU Delft took the Overgrad Grand Prize and Lambert-GA the High School Grand Prize. **The ten Overgraduate teams have their own section of this site** — use the Undergrad / Overgrad switch above the tabs, or go straight to the [Overgraduate overview](#og-overview). The full official list is at [competition.igem.org/results/2026](https://competition.igem.org/results/2026).',
+            zh: '同一頁公布的其他結果：TU Delft 取得研究生組首獎，Lambert-GA 取得高中組首獎。**研究生部的十支隊伍在本站有自己的一區**——使用分頁列上方的 Undergrad／Overgrad 切換鈕，或直接前往[研究生部總覽](#og-overview)。完整官方名單見 [competition.igem.org/results/2026](https://competition.igem.org/results/2026)。'
           })
       });
 

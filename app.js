@@ -8,6 +8,7 @@
   PD.pages = PD.pages || {};
 
   var LANG = 'en';
+  var curPage = null;
   function T(v) {
     if (v == null) return '';
     if (typeof v === 'string' || typeof v === 'number') return String(v);
@@ -188,6 +189,23 @@
   };
   PD.h = h;
 
+  /* ---------------- divisions ---------------- */
+  /* A page id carries its division as a prefix ('og-delft'), so the hash alone
+     decides which roster, which tab bar and which footer note apply, and every
+     deep link keeps working. */
+  function divList() { return PD.divisions || [{ key: 'ug', prefix: '', teams: PD.teams, tabs: PD.meta.tabs }]; }
+  function divOf(id) {
+    var ds = divList(), i, best = ds[0];
+    for (i = 0; i < ds.length; i++) {
+      if (ds[i].prefix && String(id || '').indexOf(ds[i].prefix) === 0) best = ds[i];
+    }
+    return best;
+  }
+  /* the division of whatever is on screen, or of the hash before the first render */
+  function curDiv() { return divOf(curPage || (location.hash || '').replace(/^#/, '')); }
+  /* the roster the page modules should read */
+  PD.teamsOf = function (id) { return divOf(id).teams || []; };
+
   /* ---------------- tab bar ---------------- */
   function p2(name) { return 'M4 7h5v5H4zM15 7h5v5h-5zM9.5 9.5h5M7 12v5h10v-5'; }
   function icon(name) {
@@ -197,17 +215,23 @@
       team: 'M4 7h5v5H4zM15 7h5v5h-5zM9.5 9.5h5M7 12v5h10v-5',
       wet: 'M12 3v6l-5 9a4 4 0 0 0 3.6 6h2.8A4 4 0 0 0 17 18l-5-9',
       dry: 'M4 19V9m5 10V5m5 14v-7m5 7V8'
-    }[name] || p2(name);
+    }[String(name).replace(/^og-/, '')] || p2(name);
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + p + '"/></svg>';
   }
 
   function buildTabs(active) {
     var el = d.getElementById('tabs');
-    el.innerHTML = '<div class="wrap">' + PD.meta.tabs.map(function (t) {
-      var p = PD.pages[t.id];
+    var div = divOf(active);
+    var ds = divList();
+    var sw = ds.length < 2 ? '' :
+      '<div class="divsw" role="group" aria-label="Section">' + ds.map(function (x) {
+        return '<button type="button" data-div="' + x.key + '" aria-pressed="' +
+          (x.key === div.key ? 'true' : 'false') + '">' + esc(T(x.label)) + '</button>';
+      }).join('') + '</div>';
+    el.innerHTML = '<div class="wrap">' + sw + '<div class="tablist">' + (div.tabs || []).map(function (t) {
       return '<button class="tab" role="tab" type="button" data-go="' + t.id + '" aria-selected="' +
         (t.id === active ? 'true' : 'false') + '">' + icon(t.id) + '<span>' + esc(T(t.label)) + '</span></button>';
-    }).join('') + '</div>';
+    }).join('') + '</div></div>';
   }
 
   /* ---------------- language ---------------- */
@@ -227,7 +251,11 @@
     d.getElementById('footlinks').innerHTML = PD.meta.footer.links.map(function (l) {
       return '<a href="' + l.u + '"' + (/^https?:/.test(l.u) ? ' target="_blank" rel="noopener"' : '') + '>' + esc(T(l.t)) + '</a>';
     }).join('');
-    d.getElementById('footnote').innerHTML = md(PD.meta.footer.note) +
+    /* brand subtitle names the division you are reading */
+    var dv = curDiv(), bs = d.querySelector('.brand .bt span');
+    if (bs && dv.sub) bs.textContent = T(dv.sub);
+    var note = (dv.key === 'og' && PD.meta.footer.noteOG) ? PD.meta.footer.noteOG : PD.meta.footer.note;
+    d.getElementById('footnote').innerHTML = md(note) +
       ' <span class="mono">' + T({ en: 'Updated', zh: '更新於' }) + ' ' + PD.meta.updated + '</span>';
   }
   function moveThumb() {
@@ -268,7 +296,6 @@
     return null;
   }
   function current() { return pageFromHash() || firstAvailable(); }
-  var curPage = null;
   var rendering = false;
   function render(id, keepScroll) {
     rendering = true;
@@ -285,6 +312,7 @@
     }
     app.innerHTML = page.render(h);
     buildTabs(id);
+    applyStatic();
     w.FIG.mount(app, LANG);
     wireToc();
     wireRefFilter();
@@ -360,6 +388,20 @@
     d.addEventListener('click', function (e) {
       var g = e.target.closest ? e.target.closest('[data-go]') : null;
       if (g) { location.hash = '#' + g.getAttribute('data-go'); return; }
+      var dvb = e.target.closest ? e.target.closest('[data-div]') : null;
+      if (dvb) {
+        var want = dvb.getAttribute('data-div'), ds = divList(), i;
+        for (i = 0; i < ds.length; i++) {
+          if (ds[i].key !== want) continue;
+          /* land on the same kind of page in the other division where one exists,
+             so switching from a team page goes to that division's overview rather
+             than to a dead id */
+          var here = (curPage || '').replace(divOf(curPage).prefix, '');
+          var target = ds[i].prefix + here;
+          location.hash = '#' + (PD.pages[target] ? target : ds[i].prefix + 'overview');
+        }
+        return;
+      }
       var lb = e.target.closest ? e.target.closest('.lang button') : null;
       if (lb) { setLang(lb.getAttribute('data-lang')); }
     });
