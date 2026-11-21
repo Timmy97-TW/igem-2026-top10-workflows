@@ -256,8 +256,8 @@
           }) +
           h.h3({ en: '1 · The Phage Refinery model, in Python with 52 tests', zh: '1 · Phage Refinery 模型：Python 寫成，附 52 項測試' }) +
           h.p({
-            en: 'A mechanistic simulation of the Jumpstart assay, built to explain why the ratio inverted. Seven Python files are named on the wiki — `jumpstart.py`, `jumpstart_mechanistic.py`, `passage.py`, `phase2.py`, `recursion.py` as the orchestrator, `plotstyle.py`, and `test_model.py` with **52 automated checks** — and `python3 recursion.py` runs the whole assay end to end.',
-            zh: '這是對 Jumpstart 試驗的機制模擬，目的就是解釋比值為什麼會反轉。wiki 上列出七個 Python 檔——`jumpstart.py`、`jumpstart_mechanistic.py`、`passage.py`、`phase2.py`、作為總控的 `recursion.py`、`plotstyle.py`，以及含 **52 項自動測試**的 `test_model.py`——而 `python3 recursion.py` 能從頭到尾跑完整個試驗。'
+            en: 'A mechanistic simulation of the Jumpstart assay, built to explain why the ratio inverted. Seven Python files are named on the wiki — **jumpstart.py**, **jumpstart_mechanistic.py**, **passage.py**, **phase2.py**, **recursion.py** as the orchestrator, **plotstyle.py**, and **test_model.py** with **52 automated checks** — and one command, python3 recursion.py, runs the whole assay end to end.',
+            zh: '這是對 Jumpstart 試驗的機制模擬，目的就是解釋比值為什麼會反轉。wiki 上列出七個 Python 檔——**jumpstart.py**、**jumpstart_mechanistic.py**、**passage.py**、**phase2.py**、作為總控的 **recursion.py**、**plotstyle.py**，以及含 **52 項自動測試**的 **test_model.py**——而只要一道指令 python3 recursion.py，就能從頭到尾跑完整個試驗。'
           }) +
           h.ul([
             { en: '**Jumpstart stage: 4 ODE states** — phagemid-only cells, dual-infected cells, and two free-particle pools — with a **pilus saturation term** (a cell has only a few pili however many particles surround it), a carrying-capacity term, a **growth penalty on infected cells**, and kanamycin killing uninfected cells at t = 75 min.', zh: '**Jumpstart 階段：4 個 ODE 狀態**——只帶 phagemid 的細胞、雙重感染的細胞，以及兩個游離顆粒池——並包含一個**菌毛飽和項**（不論周圍有多少顆粒，一個細胞只有幾根菌毛）、一個承載容量項、一個**對受感染細胞的生長懲罰**，以及在 t = 75 分鐘讓卡那黴素殺死未感染細胞。' },
