@@ -15,27 +15,27 @@
   PD.pages = PD.pages || {};
 
   PD.pages.next = {
-    label: { en: 'Take it to 2027', zh: '帶到 2027' },
-    title: { en: 'Take it to 2027', zh: '帶到 2027' },
+    label: { en: 'Bench gate sheet', zh: '實驗關卡表' },
+    title: { en: 'The bench gate sheet', zh: '實驗關卡表' },
     render: function (h) {
       var out = '';
 
       out += '<div class="hero"><div class="wrap">' +
-        '<p class="eyebrow"><i></i>' + h.esc(h.T({ en: 'TRANSFER · WHAT WE DO WITH ALL THIS', zh: '轉用 · 我們拿這些來做什麼' })) + '</p>' +
+        '<p class="eyebrow"><i></i>' + h.esc(h.T({ en: 'TRANSFER · FROM THESE TEN TO OUR BENCH', zh: '轉用 · 從這十隊到我們的實驗台' })) + '</p>' +
         '<h1 class="big">' + h.md({
-          en: 'The useful output of reading ten wikis is not admiration. It is ==a screen, a gate sheet and a calendar==.',
-          zh: '讀完十個 wiki，有用的產出不是佩服，而是==一張篩選表、一張關卡表、一份行事曆==。'
+          en: 'Once a topic is chosen, the next decision is ==what counts as a result== — and that is settled before the experiment runs, or not at all.',
+          zh: '題目定下來之後，下一個決定是==什麼才算一個結果==——而這件事要嘛在實驗跑之前就決定，要嘛永遠不會被決定。'
         }) + '</h1>' +
         '<p class="lede">' + h.md({
-          en: 'This page turns the workflows and the dry-lab toolbox into something a team can run next January. Six questions that kill an idea early, four archetypes to choose between **before** the topic is fixed, a one-page gate sheet for every planned result, and a twelve-month calendar with the dry lab in it. Every rule names the team it came from, so you can go and disagree with the evidence rather than with us.',
-          zh: '這一頁把前面的工作流程與乾式工具箱，變成一支隊伍明年一月就能執行的東西：六個能早早殺掉一個點子的問題、在題目定下來**之前**就要先選的四種原型、每個預定結果都要填的一頁關卡表，以及一份把乾式實驗排進去的十二個月行事曆。每一條規則都註明它來自哪一隊，你可以直接去跟證據吵，而不是跟我們吵。'
+          en: 'Three things, all drawn from the ten Undergraduate workflows: what crosses the gap from an Undergraduate lab to a High School one and what does not, six cheap questions to ask of an idea before anyone books bench time, and **a six-column sheet filled in for every planned result before the experiment runs**. Every rule names the team it came from, so you can go and disagree with the evidence rather than with us.',
+          zh: '三件事，全部來自大學部那十條工作流程：從大學部實驗室到高中實驗室，什麼過得來、什麼過不來；在有人預約實驗台之前要先問一個點子的六個便宜問題；以及**每個預定結果在實驗開跑前都要填好的六欄表格**。每一條規則都註明它來自哪一隊，你可以直接去跟證據吵，而不是跟我們吵。'
         }) + '</p>' +
         '<div class="herometa">' + h.chips([
-          { t: { en: 'An idea screen', zh: '點子篩選' }, k: 'b' },
-          { t: { en: 'Archetype first', zh: '先選原型' }, k: 'v' },
-          { t: { en: 'A gate sheet', zh: '關卡表' }, k: 'g' },
-          { t: { en: 'A 12-month calendar', zh: '十二個月行事曆' }, k: 'a' },
-          { t: { en: 'A failure budget', zh: '失敗額度' }, k: 'r' }
+          { t: { en: 'What transfers', zh: '什麼帶得走' }, k: 'b' },
+          { t: { en: 'An idea screen', zh: '點子篩選' }, k: 'v' },
+          { t: { en: 'A six-column gate sheet', zh: '六欄關卡表' }, k: 'g' },
+          { t: { en: 'A failure budget', zh: '失敗額度' }, k: 'a' },
+          { t: { en: 'Scored on our own 2026 project', zh: '拿我們自己的 2026 專案打分' }, k: 'r' }
         ]) + '</div>' +
         '<p class="small" style="margin-top:16px">' + h.md({
           en: 'Written by **GEMS Research (Taiwan)**, a High School team, reading Undergraduate work. The first section is about what that difference costs.',
@@ -46,13 +46,16 @@
       out += h.toc([
         { id: 'nx-rule', t: { en: 'What transfers', zh: '什麼帶得走' } },
         { id: 'nx-screen', t: { en: 'The idea screen', zh: '點子篩選' } },
-        { id: 'nx-arch', t: { en: 'Pick the archetype', zh: '選原型' } },
         { id: 'nx-gate', t: { en: 'The gate sheet', zh: '關卡表' } },
-        { id: 'nx-cal', t: { en: 'The calendar', zh: '行事曆' } },
         { id: 'nx-fail', t: { en: 'The failure budget', zh: '失敗額度' } },
         { id: 'nx-work', t: { en: 'A worked example', zh: '完整範例' } },
         { id: 'nx-off', t: { en: 'What is not here', zh: '沒放上來的' } }
       ]);
+
+      out += '<div class="wrap" style="padding-top:26px">' + h.note({
+        en: '**This page and the [2027 roadmap](#x-roadmap) answer different questions.** The roadmap reads all thirty Top 10 wikis and helps you *choose a topic*: five gates, six project shapes, a scoring sheet and a season calendar. This page reads only the ten Undergraduate workflows and picks up afterwards, at the bench: once the topic exists, what counts as a result, and who writes that down before the plate goes in the incubator.',
+        zh: '**這一頁和[2027 選題指南](#x-roadmap)回答的是不同的問題。** 選題指南讀的是全部三十個前十名 wiki，幫你*選出題目*：五道關卡、六種專案形狀、一張計分表與一份賽季行事曆。這一頁只讀大學部那十條工作流程，接在它後面、從實驗台開始：題目已經存在之後，什麼才算一個結果，以及誰要在培養盤進培養箱之前把它寫下來。'
+      }) + '</div>';
 
       /* ---------------- what transfers ---------------- */
       out += h.sec({
@@ -167,48 +170,6 @@
       });
 
       /* ---------------- archetype ---------------- */
-      out += h.sec({
-        id: 'nx-arch',
-        kick: { en: 'Shape', zh: '形狀' },
-        h2: { en: 'Choose the archetype before the topic, not after', zh: '在題目之前選原型，不是之後' },
-        lede: {
-          en: 'All four archetypes on the Overview page produced a Top 10 finish in 2026. They are not equally available to every team, and the precondition is the whole question.',
-          zh: '總覽頁上那四種原型，在 2026 年都產出了前十名。但它們對每支隊伍並非同樣可得，而「前提條件」就是全部的問題所在。'
-        },
-        body:
-          h.tbl({
-            cols: [
-              { t: { en: 'Archetype', zh: '原型' }, w: '18%' },
-              { t: { en: 'Available to us if…', zh: '在什麼條件下我們可用' }, w: '30%' },
-              { t: { en: 'The first deliverable it forces', zh: '它逼出的第一個交付物' }, w: '26%' },
-              { t: { en: 'How it fails', zh: '它怎麼失敗' } }
-            ],
-            rows: [
-              [{ en: '**Model-first targeting**', zh: '**模型先選標靶**' },
-               { en: 'A public dataset exists *for our organism* and answers our question rather than a neighbouring one.', zh: '存在一個*針對我們生物*的公開資料集，而且回答的是我們的問題、不是旁邊那個問題。' },
-               { en: 'A ranked shortlist with the disqualifying rule written at every stage.', zh: '一份排序候選名單，每一關的淘汰規則都寫出來。' },
-               { en: 'The ranking is produced, and then the team builds something else anyway. If the shortlist does not change the order form, the archetype was decoration.', zh: '排名做出來了，但隊伍還是去做別的東西。如果候選名單沒有改變訂購單，這個原型就只是裝飾。' }],
-              [{ en: '**Design-and-gate**', zh: '**設計再篩選**' },
-               { en: 'Someone on the team can defend a threshold, and at least one threshold can be calibrated against a measurement we can actually take.', zh: '隊上有人辯護得了一條門檻，而且至少有一條門檻能對著我們真的量得到的東西校正。' },
-               { en: 'A table of candidates in, candidates out, and the cut value at each gate.', zh: '一張表：每一關進來幾個、出去幾個、截斷值是多少。' },
-               { en: 'Ten thousand designs and five builds with no stated reason for those five. Heidelberg and LYON avoid this by publishing both counts in the same place.', zh: '一萬個設計、五個實作，而且說不出為什麼是那五個。Heidelberg 與 LYON 的做法是把兩個數字登在同一個地方。' }],
-              [{ en: '**Assay-first**', zh: '**量測優先**' },
-               { en: 'We are willing to spend weeks producing no biology, and an adviser will defend that to the school.', zh: '我們願意花好幾週完全不產出生物學結果，而且有指導老師願意對學校解釋這件事。' },
-               { en: 'A calibration curve, a limit of detection, and a control that the assay itself failed.', zh: '一條校正曲線、一個偵測極限，以及一個「連這個試驗本身都沒通過」的對照。' },
-               { en: 'The assay is built and then never used to reject anything. An assay that has never rejected a sample has not been tested.', zh: '試驗做好了，卻從來沒有用它否決過任何東西。一個從沒刷掉過樣本的試驗，等於沒有被檢驗過。' }],
-              [{ en: '**Process-out**', zh: '**製程導向**' },
-               { en: 'The unit operation is specific enough to cost — a column, a reactor, a fibre, a patch — and somebody will do the arithmetic.', zh: '那個單元操作具體到可以算成本——一根管柱、一座反應器、一條纖維、一片貼片——而且有人願意做那些算術。' },
-               { en: 'A dimension and a rate: litres, hours, °C, €/m³.', zh: '一個尺寸和一個速率：公升、小時、攝氏度、每立方公尺多少錢。' },
-               { en: 'A beautiful CAD render of a device nobody has costed. UOttawa avoided it by publishing a P&ID and a module-costed TEA.', zh: '一張漂亮的 CAD 算圖，而那台裝置沒有人算過成本。UOttawa 的做法是貼出 P&ID 和一份按模組計價的技術經濟分析。' }]
-            ],
-            min: 860,
-            source: { en: 'Archetypes are ours (see the Overview page); the preconditions and failure modes are read off what the ten teams did and did not manage.', zh: '原型分類是我們的（見總覽頁）；前提條件與失敗模式則是從十隊做到與沒做到的事情讀出來的。' }
-          }) +
-          h.take({ en: 'The combination we would aim for', zh: '我們會瞄準的組合' },
-            { en: '**Assay-first plus process-out.** Neither needs a dataset we do not have, neither needs a cluster, both produce numbers a judge can check, and together they cover the Measurement and Hardware ground without competing with teams who have a protein-design pipeline and a GPU. Four of the ten sit in exactly this pair — LYON, UCNZ, Cornell and UOttawa — and three of them are not from the richest labs on the list.',
-              zh: '**量測優先加上製程導向。** 兩者都不需要我們沒有的資料集，都不需要運算叢集，都產出評審可以檢查的數字；合起來能蓋住 Measurement 與 Hardware 的地盤，又不必和手上有蛋白設計流程與 GPU 的隊伍硬碰。十隊裡正好有四隊落在這個組合——LYON、UCNZ、Cornell、UOttawa——其中三隊並不是名單上最有錢的實驗室。' })
-      });
-
       /* ---------------- gate sheet ---------------- */
       out += h.sec({
         id: 'nx-gate',
@@ -255,41 +216,6 @@
       });
 
       /* ---------------- calendar ---------------- */
-      out += h.sec({
-        id: 'nx-cal',
-        kick: { en: 'Scheduling', zh: '排程' },
-        h2: { en: 'The dry lab has to be on the calendar, or it happens in September', zh: '乾式實驗必須排進行事曆，否則它只會發生在九月' },
-        lede: {
-          en: 'The failure mode we are guarding against is specific: the model gets written after the data, to explain it, and therefore cannot have changed anything.',
-          zh: '我們要防的失敗模式很具體：模型在數據之後才寫，目的是解釋數據，因此它不可能改變過任何事。'
-        },
-        body:
-          h.fig({
-            kind: 'gantt',
-            tag: { en: 'OUR PLAN', zh: '我們的計畫' },
-            title: { en: 'Twelve months, with the dry lab placed so it can still change something', zh: '十二個月，而乾式實驗被放在它還能改變某件事的位置' },
-            sub: { en: 'Months from kick-off along the axis. Blue is dry, green is wet, amber is hardware and process, violet is writing.', zh: '橫軸為自啟動起算的月份。藍為乾式、綠為濕式、琥珀為硬體與製程、紫為書寫。' },
-            data: [
-              { label: { en: 'Idea screen, six questions on forty ideas', zh: '六問篩選，對四十個點子' }, start: 0, end: 1, tone: 'b', note: { en: 'Two weeks. Output: two surviving ideas and a written reason for each kill.', zh: '兩週。產出：兩個存活點子，以及每次淘汰的書面理由。' } },
-              { label: { en: 'The killing calculation', zh: '能殺掉它的那個計算' }, start: 0.7, end: 1.6, tone: 'b', note: { en: 'One page, published parameters, before any ordering.', zh: '一頁、用已發表參數、在任何下單之前。' } },
-              { label: { en: 'Assay built and calibrated', zh: '建立並校正量測' }, start: 1, end: 3.5, tone: 'g', note: { en: 'Calibration curve, LOD, and a control the assay itself fails.', zh: '校正曲線、偵測極限，以及一個連試驗本身都不通過的對照。' } },
-              { label: { en: 'First constructs ordered and verified', zh: '第一批構建體下單與驗證' }, start: 2, end: 4, tone: 'g', note: { en: 'Sequence-verification gate before anything downstream runs.', zh: '下游開跑前先過定序驗證關卡。' } },
-              { label: { en: 'Device / process sized', zh: '裝置與製程定規格' }, start: 2, end: 5, tone: 'a', note: { en: 'A dimension and a rate, early enough that the biology can still be chosen to fit it.', zh: '一個尺寸、一個速率，早到還來得及讓生物學去配合它。' } },
-              { label: { en: 'DBTL round 1 — the model changes an order', zh: 'DBTL 第一輪——模型改變一次下單' }, start: 4, end: 6, tone: 'b', note: { en: 'This is the deadline that matters. After month six a model can only explain.', zh: '這是真正有意義的死線。過了第六個月，模型就只能用來解釋了。' } },
-              { label: { en: 'DBTL round 2 — the data refits the model', zh: 'DBTL 第二輪——數據重新擬合模型' }, start: 6, end: 8, tone: 'g' },
-              { label: { en: 'Hardware frozen', zh: '硬體凍結' }, start: 5, end: 7.5, tone: 'a' },
-              { label: { en: 'Software packaged for someone else', zh: '把軟體包裝給別人用' }, start: 7, end: 9.5, tone: 'b', note: { en: 'A repository, a README with the gates, one worked example.', zh: '一個 repo、一份寫明關卡的 README、一個完整範例。' } },
-              { label: { en: 'Failure write-ups, with causes', zh: '失敗的書面紀錄，連同原因' }, start: 8, end: 10, tone: 'r' },
-              { label: { en: 'Wiki, in the same register as the results', zh: 'Wiki，與結果同一種語氣' }, start: 8.5, end: 11.5, tone: 'v' }
-            ],
-            opts: { min: 0, max: 12 },
-            caption: {
-              en: '**The only hard deadline on this chart is month six.** A dry lab that produces its first output after month six cannot have chosen anything — it can only account for what was already built. On the ten wikis, every dry-lab result that changed what the wet lab ordered came from a model that existed before the order did.',
-              zh: '**這張圖上唯一真正的死線是第六個月。** 一個在第六個月之後才產出第一個結果的乾式實驗，不可能選擇過任何東西——它只能替已經做出來的東西作帳。在這十個 wiki 上，每一個真的改變了濕式下單內容的乾式結果，都來自一個在下單之前就存在的模型。'
-            }
-          })
-      });
-
       /* ---------------- failure budget ---------------- */
       out += h.sec({
         id: 'nx-fail',

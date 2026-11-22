@@ -141,7 +141,7 @@
       var out = '';
 
       out += '<div class="hero"><div class="wrap">' +
-        '<p class="eyebrow"><i></i>' + h.esc(h.T({ en: 'TOOL EXTRACTION · ALL TEN TEAMS', zh: '工具萃取 · 十支隊伍' })) + '</p>' +
+        '<p class="eyebrow"><i></i>' + h.esc(h.T({ en: 'TOOL EXTRACTION · THE UNDERGRADUATE TEN', zh: '工具萃取 · 大學部十支隊伍' })) + '</p>' +
         '<h1 class="big">' + h.md({
           en: 'Twenty-three jobs a dry lab can do, and the ==tool each team reached for==.',
           zh: '乾式實驗能做的二十三種工作，以及==每支隊伍伸手拿了哪個工具==。'
@@ -191,6 +191,9 @@
             { chips: [{ t: { en: 'does not count', zh: '不算' }, k: 'r' }],
               h: { en: 'A logo, a list, or "we also used…"', zh: '一個標誌、一份清單，或「我們也用了……」' },
               p: { en: 'Attributions pages and sponsor blocks name software that never appears again. We left all of it out, which is why some cells that a team would fill in are blank here.', zh: 'Attributions 頁和贊助區塊會列出後面再也沒出現過的軟體。這些我們全部不算，所以有些該隊自己會填的格子，在這裡是空的。' } },
+            { chips: [{ t: { en: 'scope', zh: '範圍' }, k: 'b' }],
+              h: { en: 'The Undergraduate ten only, for now', zh: '目前只涵蓋大學部那十隊' },
+              p: { en: 'This extraction covers the ten teams in this section. The Overgraduate and High School sections have twenty more wikis and the same matrix has not yet been built for them — when it is, the interesting comparison will be between the rows, not within them.', zh: '這份萃取只涵蓋本組的十支隊伍。研究生部與高中部還有另外二十個 wiki，同樣的矩陣尚未為它們建立——等建好之後，有趣的比較會發生在列與列之間，而不是列的內部。' } },
             { chips: [{ t: { en: 'the honest caveat', zh: '誠實的但書' }, k: 'a' }],
               h: { en: 'A blank cell is about us, not about them', zh: '空格說的是我們，不是他們' },
               p: { en: 'It means we could not point to a use on a public page, read in one pass, in November 2026. Wikis are long and ours is a reading, not an audit.', zh: '它代表我們在 2026 年 11 月、讀過一輪之後，無法在公開頁面上指出它的使用。wiki 很長，而我們做的是一次閱讀，不是稽核。' } }
