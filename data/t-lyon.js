@@ -74,6 +74,7 @@
       out += h.toc([
         { id: 'ly-idea', t: { en: 'The idea', zh: '核心想法' } },
         { id: 'ly-swim', t: { en: 'Wet ↔ dry', zh: '濕式↔乾式' } },
+        { id: 'lyon-wik', t: { en: 'Their figures', zh: '他們的圖' } },
         { id: 'ly-wet', t: { en: 'Wet lab', zh: '濕式流程' } },
         { id: 'ly-meas', t: { en: 'Measurement', zh: '量測紀律' } },
         { id: 'ly-dry', t: { en: 'Dry lab', zh: '乾式流程' } },
@@ -129,6 +130,9 @@
           svg: function (W) { return w.WF.swim(W, SWIM); }
         })
       });
+
+      /* ---------------- the figures they drew themselves ---------------- */
+      out += h.wikifigs('lyon');
 
       /* ---------------- wet lab ---------------- */
       out += h.sec({

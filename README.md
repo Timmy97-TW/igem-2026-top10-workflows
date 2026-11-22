@@ -57,7 +57,9 @@ Source: [competition.igem.org/results/2026](https://competition.igem.org/results
 |---|---|
 | Overview | Six findings across all ten, the four places a dry lab attaches to a DBTL cycle, the measurement ladder, failure as method, four workflow archetypes, and the design funnels |
 | Side by side | Chassis and assembly route, what each team decided a result was, the dry-lab stacks, a documented-practice matrix, and the named failure on every wiki |
-| One page per team | The design decision · a wet/dry swimlane diagram · the wet-lab pipeline step by step · the measurement discipline · the model and software stack · what failed · what we would copy |
+| **Dry-lab toolbox** | Twenty-three capabilities against ten teams as a matrix, the five jobs a dry lab can do, a reference table with what each capability costs to reach, and the order we would install them in |
+| **Take it to 2027** | Six questions to screen ideas with, the archetype choice, a one-page gate sheet for every planned result, a twelve-month calendar with the dry lab on it, a failure budget, and the screen run backwards on our own 2026 project |
+| One page per team | The design decision · a wet/dry swimlane diagram · **the overview figures from their own wiki** · the wet-lab pipeline step by step · the measurement discipline · the model and software stack · what failed · what we would copy |
 
 ## Structure
 
@@ -70,9 +72,26 @@ wf.js             workflow diagrams: the wet/dry swimlane, the DBTL attachment r
 data/meta.js      site metadata, tab order, and the one row per team every page reads from
 data/overview.js  the comparative analysis
 data/compare.js   the side-by-side tables
+data/toolbox.js   the dry-lab tool extraction: 23 capabilities x 10 teams
+data/next.js      the 2027 transfer method: idea screen, gate sheet, calendar
+data/figs.js      the figures lifted from each team's wiki, with our reading of each
 data/t-<team>.js  one page module per team
+assets/wiki/      30 overview figures downloaded from the ten wikis, unmodified, CC BY 4.0
 notes/            the raw working notes each page was written from, one file per team
 ```
+
+## The figures
+
+`assets/wiki/` holds thirty figures downloaded from the ten team wikis on 22 November 2026 and
+stored here unmodified, so the site does not depend on anyone else's CDN. iGEM team wiki content is
+published under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — nine of the ten wikis
+state this on the page itself; UAlberta's carries no statement we could find, and its figure is used
+on the same terms. Every figure on the site names the team and links to the page it came from.
+The titles and captions next to them are **ours**: a reading of what the figure shows, not the
+team's own caption. Any team who would rather a figure were removed can open an issue here.
+
+Where a team drew no overview figure of their own, the wet/dry swimlane at the top of their page is
+our drawing of the same thing.
 
 Every page is a plain object with a `render(h)` function, and every string is a
 `{ en: '…', zh: '…' }` pair. There is no framework, no bundler and no network call at runtime: open

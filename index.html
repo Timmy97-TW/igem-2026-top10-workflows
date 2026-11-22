@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>iGEM 2026 Top 10 Workflow Atlas — GEMS Research</title>
-<meta name="description" content="How the ten Top 10 Undergraduate teams at iGEM 2026 actually ran their wet lab and dry lab. One overview analysis and one page per team, read from their own wikis. Bilingual, figure-led. GEMS Research (Taiwan).">
+<meta name="description" content="How the ten Top 10 Undergraduate teams at iGEM 2026 actually ran their wet lab and dry lab: one page per team with their own overview figures, a 23-capability dry-lab tool atlas, and a method for applying all of it to a 2027 project. Bilingual, figure-led. GEMS Research (Taiwan).">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="iGEM 2026 Top 10 Workflow Atlas — GEMS Research">
-<meta property="og:description" content="Wet-lab and dry-lab workflows of the 10 Top 10 Undergrad teams at the iGEM 2026 Grand Jamboree: assembly routes, measurement discipline, model stacks, and the failures they published.">
+<meta property="og:description" content="Wet-lab and dry-lab workflows of the 10 Top 10 Undergrad teams at the iGEM 2026 Grand Jamboree: assembly routes, measurement discipline, model stacks, the failures they published, their own overview figures, a dry-lab tool atlas, and how to take it into 2027.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230167EF'/%3E%3Cpath d='M12 20h14M19 20v12l-9 18a4 4 0 0 0 3.6 6h22.8' stroke='white' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='46' cy='22' r='7' fill='%2300C98A'/%3E%3Cpath d='M46 36v18' stroke='%2300C98A' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
@@ -212,6 +212,17 @@ figure.fg figcaption b{color:var(--ink2);font-weight:620}
 .fgtools button[aria-pressed="true"]{background:var(--ink);color:#fff;box-shadow:none}
 .fgtable{display:none;padding:0 19px 16px}
 .fgtable[data-open="1"]{display:block}
+/* ---------- figures lifted from a team wiki ---------- */
+figure.fg a.shot{position:relative;display:block;border-radius:10px;overflow:hidden;background:#fff;
+  box-shadow:inset 0 0 0 1px var(--line2);text-decoration:none}
+figure.fg a.shot img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain;
+  background:#fff;padding:6px}
+figure.fg a.shot .shotz{position:absolute;right:9px;bottom:9px;font-size:10.6px;font-weight:650;
+  letter-spacing:.04em;color:#fff;background:rgba(16,21,28,.72);border-radius:999px;padding:4px 9px;
+  opacity:0;transition:opacity .16s ease;pointer-events:none}
+figure.fg a.shot:hover .shotz,figure.fg a.shot:focus-visible .shotz{opacity:1}
+figure.fg a.shot:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+@media (max-width:760px){figure.fg a.shot img{max-height:380px}}
 .fgtable table{width:100%;border-collapse:collapse;font-size:13px}
 .fgtable th{text-align:left;font-size:10.4px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink3);
   padding:7px 10px;border-bottom:1px solid var(--line)}
@@ -333,21 +344,24 @@ footer p{font-size:12.6px;color:var(--ink3);max-width:60em}
     放在 <a href="https://github.com/Timmy97-TW/igem-2026-top10-workflows">GitHub</a>。</p>
   </div>
 </noscript>
-<script src="data/meta.js?v=20261121"></script>
-<script src="data/overview.js?v=20261121"></script>
-<script src="data/compare.js?v=20261121"></script>
-<script src="data/t-stanford.js?v=20261121"></script>
-<script src="data/t-ucas.js?v=20261121"></script>
-<script src="data/t-princeton.js?v=20261121"></script>
-<script src="data/t-heidelberg.js?v=20261121"></script>
-<script src="data/t-cornell.js?v=20261121"></script>
-<script src="data/t-lyon.js?v=20261121"></script>
-<script src="data/t-nus.js?v=20261121"></script>
-<script src="data/t-ualberta.js?v=20261121"></script>
-<script src="data/t-ucnz.js?v=20261121"></script>
-<script src="data/t-uottawa.js?v=20261121"></script>
-<script src="fig.js?v=20261121"></script>
-<script src="wf.js?v=20261121"></script>
-<script src="app.js?v=20261121"></script>
+<script src="data/meta.js?v=20261122b"></script>
+<script src="data/figs.js?v=20261122b"></script>
+<script src="data/overview.js?v=20261122b"></script>
+<script src="data/compare.js?v=20261122b"></script>
+<script src="data/toolbox.js?v=20261122b"></script>
+<script src="data/next.js?v=20261122b"></script>
+<script src="data/t-stanford.js?v=20261122b"></script>
+<script src="data/t-ucas.js?v=20261122b"></script>
+<script src="data/t-princeton.js?v=20261122b"></script>
+<script src="data/t-heidelberg.js?v=20261122b"></script>
+<script src="data/t-cornell.js?v=20261122b"></script>
+<script src="data/t-lyon.js?v=20261122b"></script>
+<script src="data/t-nus.js?v=20261122b"></script>
+<script src="data/t-ualberta.js?v=20261122b"></script>
+<script src="data/t-ucnz.js?v=20261122b"></script>
+<script src="data/t-uottawa.js?v=20261122b"></script>
+<script src="fig.js?v=20261122b"></script>
+<script src="wf.js?v=20261122b"></script>
+<script src="app.js?v=20261122b"></script>
 </body>
 </html>

@@ -136,7 +136,11 @@
             { chips: [{ t: { en: 'engineering economics', zh: '工程經濟' }, k: 'a' }],
               h: { en: 'One team costed the plant', zh: '有一隊把廠房算了成本' },
               p: { en: 'UOttawa runs Turton module costing and an openLCA 2 model with IPCC 2021 GWP100, and reports the mass balance per kilogram of sulfur removed. LYON sizes a real column and derives a closed-form rule for its service life. Both treat the unit operation as the object of design.', zh: 'UOttawa 採用 Turton 模組成本法，並用 openLCA 2 搭配 IPCC 2021 GWP100 建模，報告每公斤脫硫的質量平衡。LYON 則把一座真的管柱算出尺寸，並導出其使用壽命的封閉解。兩者都把單元操作本身當成設計對象。' } }
-          ])
+          ]) +
+          h.note({
+            en: 'This table lists the stacks as the teams name them. The **[dry-lab toolbox](#toolbox)** takes the same material apart the other way: twenty-three capabilities sorted by the question each one answers, with what it costs to get at and which teams we can show using it.',
+            zh: '這張表按各隊自己的命名列出堆疊。**[乾式工具箱](#toolbox)**則用另一個方向把同一批材料拆開：二十三項能力，按「每一項回答什麼問題」排序，附上取得成本，以及我們能舉證哪幾隊用過它。'
+          })
       });
 
       /* ---------------- practice matrix ---------------- */

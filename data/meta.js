@@ -154,7 +154,9 @@
     repo: 'https://github.com/Timmy97-TW/igem-2026-top10-workflows',
     tabs: [
       { id: 'overview', label: { en: 'Overview', zh: '總覽' } },
-      { id: 'compare',  label: { en: 'Side by side', zh: '橫向比較' } }
+      { id: 'compare',  label: { en: 'Side by side', zh: '橫向比較' } },
+      { id: 'toolbox',  label: { en: 'Dry-lab toolbox', zh: '乾式工具箱' } },
+      { id: 'next',     label: { en: 'Take it to 2027', zh: '帶到 2027' } }
     ].concat(PD.teams.map(function (t) {
       return { id: t.id, label: { en: t.name, zh: t.name }, team: true };
     })),
@@ -167,8 +169,8 @@
         { t: { en: 'iGEM', zh: 'iGEM 官網' }, u: 'https://igem.org/' }
       ],
       note: {
-        en: 'A workflow study of the ten teams named to the **Top 10 Undergraduate** list at the iGEM 2026 Grand Jamboree, compiled by **GEMS Research (Taiwan)** on 21 November 2026. Everything here is read from each team\'s own public 2026 wiki and the official results page; nothing was measured by us and no result on this site is ours. Each team page links to the wiki it was read from. Where a number appears it is the team\'s own number; where a judgement appears — what we think a workflow does well, what we would copy — it is labelled as ours and can be disagreed with. Not affiliated with, or endorsed by, iGEM or any team named here.',
-        zh: '本站是對 iGEM 2026 Grand Jamboree **大學部前十名**十支團隊的工作流程研究，由 **GEMS Research（台灣）** 於 2026 年 11 月 21 日彙編。所有內容都讀自各隊 2026 年公開 wiki 與官方成績頁；我們沒有量測任何數據，本站也沒有任何結果屬於我們。每個團隊頁都附上其 wiki 連結。文中出現的數字都是該隊自己的數字；文中出現的判斷——我們認為某個流程哪裡做得好、我們會抄哪一段——都標示為我們的看法，歡迎不同意。本站與 iGEM 及文中任何團隊均無隸屬關係，亦未經其背書。'
+        en: 'A workflow study of the ten teams named to the **Top 10 Undergraduate** list at the iGEM 2026 Grand Jamboree, compiled by **GEMS Research (Taiwan)** on 21 November 2026. Everything here is read from each team\'s own public 2026 wiki and the official results page; nothing was measured by us and no result on this site is ours. Each team page links to the wiki it was read from. Where a number appears it is the team\'s own number; where a judgement appears — what we think a workflow does well, what we would copy — it is labelled as ours and can be disagreed with. Figures reproduced from a team\'s wiki are unmodified, credited to that team, and used under the Creative Commons Attribution 4.0 licence that nine of the ten wikis state on the page itself; UAlberta\'s wiki carries no licence statement we could find, and that figure is used on the same terms as the rest. Any team who would rather a figure were removed can open an issue on the repository and we will take it down. Not affiliated with, or endorsed by, iGEM or any team named here.',
+        zh: '本站是對 iGEM 2026 Grand Jamboree **大學部前十名**十支團隊的工作流程研究，由 **GEMS Research（台灣）** 於 2026 年 11 月 21 日彙編。所有內容都讀自各隊 2026 年公開 wiki 與官方成績頁；我們沒有量測任何數據，本站也沒有任何結果屬於我們。每個團隊頁都附上其 wiki 連結。文中出現的數字都是該隊自己的數字；文中出現的判斷——我們認為某個流程哪裡做得好、我們會抄哪一段——都標示為我們的看法，歡迎不同意。轉載自各隊 wiki 的圖片均未經修改、標註該隊出處，並依十個 wiki 中有九個在頁面上自行聲明的「創用 CC 姓名標示 4.0」授權使用；UAlberta 的 wiki 我們找不到授權聲明，該圖以與其餘相同的條件使用。任何團隊若希望撤下某張圖，可在本專案 repo 開 issue，我們會移除。本站與 iGEM 及文中任何團隊均無隸屬關係，亦未經其背書。'
       }
     }
   };

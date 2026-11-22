@@ -74,6 +74,7 @@
       out += h.toc([
         { id: 's-idea', t: { en: 'The idea', zh: '核心想法' } },
         { id: 's-swim', t: { en: 'Wet ↔ dry', zh: '濕式↔乾式' } },
+        { id: 'stanford-wik', t: { en: 'Their figures', zh: '他們的圖' } },
         { id: 's-wet', t: { en: 'Wet lab', zh: '濕式流程' } },
         { id: 's-meas', t: { en: 'Measurement', zh: '量測紀律' } },
         { id: 's-dry', t: { en: 'Dry lab', zh: '乾式流程' } },
@@ -126,6 +127,9 @@
           svg: function (W) { return w.WF.swim(W, SWIM); }
         })
       });
+
+      /* ---------------- the figures they drew themselves ---------------- */
+      out += h.wikifigs('stanford');
 
       /* ---------------- wet lab ---------------- */
       out += h.sec({

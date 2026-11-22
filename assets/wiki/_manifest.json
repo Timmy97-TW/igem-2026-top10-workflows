@@ -1,0 +1,212 @@
+[
+ {
+  "slug": "stanford",
+  "role": "mech",
+  "src": "https://static.igem.wiki/teams/6278/wiki/andgate-mechanism.webp",
+  "file": "stanford-mech.webp",
+  "bytes": 72768
+ },
+ {
+  "slug": "stanford",
+  "role": "build",
+  "src": "https://static.igem.wiki/teams/6278/wiki/r3-fig1-architecture.webp",
+  "file": "stanford-build.webp",
+  "bytes": 69342
+ },
+ {
+  "slug": "stanford",
+  "role": "dry",
+  "src": "https://static.igem.wiki/teams/6278/wiki/m2-fig1-framework.webp",
+  "file": "stanford-dry.webp",
+  "bytes": 141002
+ },
+ {
+  "slug": "ucas",
+  "role": "mech",
+  "src": "https://static.igem.wiki/teams/6157/wiki/design/design-overview1021.avif",
+  "file": "ucas-mech.avif",
+  "bytes": 259095
+ },
+ {
+  "slug": "ucas",
+  "role": "dry",
+  "src": "https://static.igem.wiki/teams/6157/wiki/software/pipe-fig-2.avif",
+  "file": "ucas-dry.avif",
+  "bytes": 270700
+ },
+ {
+  "slug": "ucas",
+  "role": "sw",
+  "src": "https://static.igem.wiki/teams/6157/wiki/software/architecture-1.avif",
+  "file": "ucas-sw.avif",
+  "bytes": 583056
+ },
+ {
+  "slug": "princeton",
+  "role": "mech",
+  "src": "https://static.igem.wiki/teams/6295/wiki/figures/description-capture-workflow.webp",
+  "file": "princeton-mech.webp",
+  "bytes": 146384
+ },
+ {
+  "slug": "princeton",
+  "role": "build",
+  "src": "https://static.igem.wiki/teams/6295/wiki/figures/design-rationale-sortase-mechanism.webp",
+  "file": "princeton-build.webp",
+  "bytes": 88048
+ },
+ {
+  "slug": "princeton",
+  "role": "dry",
+  "src": "https://static.igem.wiki/teams/6295/wiki/posters/poster-drylab-full.avif",
+  "file": "princeton-dry.avif",
+  "bytes": 1294283
+ },
+ {
+  "slug": "heidelberg",
+  "role": "mech",
+  "src": "https://static.igem.wiki/teams/6249/wiki/img/description/graphical-abstract-1a9a26c995.svg",
+  "file": "heidelberg-mech.svg",
+  "bytes": 713814
+ },
+ {
+  "slug": "heidelberg",
+  "role": "dry",
+  "src": "https://static.igem.wiki/teams/6249/wiki/img/model/pipeline-fuer-biosensing-d62ff500b4.svg",
+  "file": "heidelberg-dry.svg",
+  "bytes": 199087
+ },
+ {
+  "slug": "heidelberg",
+  "role": "dry2",
+  "src": "https://static.igem.wiki/teams/6249/wiki/img/model/principles-of-the-gvpa-binder-pipeline-71fe440e68.svg",
+  "file": "heidelberg-dry2.svg",
+  "bytes": 68346
+ },
+ {
+  "slug": "cornell",
+  "role": "mech",
+  "src": "https://static.igem.wiki/teams/6122/wiki/description/simple-1.avif",
+  "file": "cornell-mech.avif",
+  "bytes": 114836
+ },
+ {
+  "slug": "cornell",
+  "role": "build",
+  "src": "https://static.igem.wiki/teams/6122/wiki/eng-success/wetlab/810a/810-workflow.avif",
+  "file": "cornell-build.avif",
+  "bytes": 324111
+ },
+ {
+  "slug": "cornell",
+  "role": "dry",
+  "src": "https://static.igem.wiki/teams/6122/wiki/modeling/productdev-14-spinning-viability-alginate-peo-classifier-map.avif",
+  "file": "cornell-dry.avif",
+  "bytes": 24861
+ },
+ {
+  "slug": "lyon",
+  "role": "build",
+  "src": "https://static.igem.wiki/teams/6280/wiki/engineering/design-production-validation-workflow.svg",
+  "file": "lyon-build.svg",
+  "bytes": 395905
+ },
+ {
+  "slug": "lyon",
+  "role": "dry",
+  "src": "https://static.igem.wiki/teams/6280/wiki/drylab/column-schematic.avif",
+  "file": "lyon-dry.avif",
+  "bytes": 177039
+ },
+ {
+  "slug": "lyon",
+  "role": "impl",
+  "src": "https://static.igem.wiki/teams/6280/wiki/entrepreuneurship/biothetis-system-workflow-1.avif",
+  "file": "lyon-impl.avif",
+  "bytes": 100988
+ },
+ {
+  "slug": "nus",
+  "role": "mech",
+  "src": "https://static.igem.wiki/teams/6395/wiki/pages/description/desc-page-startimage-2.avif",
+  "file": "nus-mech.avif",
+  "bytes": 89638
+ },
+ {
+  "slug": "nus",
+  "role": "build",
+  "src": "https://static.igem.wiki/teams/6395/wiki/pages/contribution/wetlab.avif",
+  "file": "nus-build.avif",
+  "bytes": 289488
+ },
+ {
+  "slug": "nus",
+  "role": "dry",
+  "src": "https://static.igem.wiki/teams/6395/wiki/pages/model/ml-stuff/sable-slide-06-time-model-fit.avif",
+  "file": "nus-dry.avif",
+  "bytes": 47691
+ },
+ {
+  "slug": "ualberta",
+  "role": "mech",
+  "src": "https://static.igem.wiki/teams/6254/wiki/project-overview-page/overview-figure1.avif",
+  "file": "ualberta-mech.avif",
+  "bytes": 287805
+ },
+ {
+  "slug": "ualberta",
+  "role": "build",
+  "src": "https://static.igem.wiki/teams/6254/wiki/proof-of-concept-page/schematic.avif",
+  "file": "ualberta-build.avif",
+  "bytes": 367758
+ },
+ {
+  "slug": "ualberta",
+  "role": "dry",
+  "src": "https://static.igem.wiki/teams/6254/wiki/model-page/glare-fig1.avif",
+  "file": "ualberta-dry.avif",
+  "bytes": 12413
+ },
+ {
+  "slug": "ucnz",
+  "role": "mech",
+  "src": "https://static.igem.wiki/teams/6301/wiki/description/description-fig-01.avif",
+  "file": "ucnz-mech.avif",
+  "bytes": 61442
+ },
+ {
+  "slug": "ucnz",
+  "role": "build",
+  "src": "https://static.igem.wiki/teams/6301/wiki/design/plasmiddesign-fig1.avif",
+  "file": "ucnz-build.avif",
+  "bytes": 11168
+ },
+ {
+  "slug": "ucnz",
+  "role": "cycle",
+  "src": "https://static.igem.wiki/teams/6301/wiki/engineering/00-engineering-cycle.avif",
+  "file": "ucnz-cycle.avif",
+  "bytes": 33121
+ },
+ {
+  "slug": "uottawa",
+  "role": "mech",
+  "src": "https://static.igem.wiki/teams/6077/wiki/wet-lab/desc/fig1.avif",
+  "file": "uottawa-mech.avif",
+  "bytes": 36818
+ },
+ {
+  "slug": "uottawa",
+  "role": "dry",
+  "src": "https://static.igem.wiki/teams/6077/wiki/design/mutant-scoring-trimmed.avif",
+  "file": "uottawa-dry.avif",
+  "bytes": 79407
+ },
+ {
+  "slug": "uottawa",
+  "role": "hw",
+  "src": "https://static.igem.wiki/teams/6077/wiki/process/igem-p-id-final.avif",
+  "file": "uottawa-hw.avif",
+  "bytes": 89472
+ }
+]
