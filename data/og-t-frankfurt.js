@@ -7,13 +7,13 @@
 
   var SWIM = {
     wet: [
-      { l: { en: 'BIND — validate the receptor core, not the binder', zh: 'BIND——先驗證受體核心，不是結合蛋白' },
+      { l: { en: 'BIND: validate the receptor core, not the binder', zh: 'BIND——先驗證受體核心，不是結合蛋白' },
         s: { en: 'SNAP-tag on benzylguanine beads in place of the HLA binder, so synNotch is tested alone', zh: '用接在苄基鳥嘌呤珠上的 SNAP-tag 取代 HLA 結合蛋白，讓 synNotch 單獨被測試' } },
       { l: { en: 'Invert the reporter, because Pol III cannot make one', zh: '把報告系統反過來，因為 Pol III 做不出報告蛋白' },
         s: { en: 'Stable eGFP HEK293T + anti-eGFP shRNA: loss of green means the receptor fired', zh: '穩定表達 eGFP 的 HEK293T＋anti-eGFP shRNA：綠色消失就代表受體啟動了' }, tone: 'g' },
-      { l: { en: 'TRIGGER — characterise the vesicles', zh: 'TRIGGER——把囊泡特性化' },
+      { l: { en: 'TRIGGER: characterise the vesicles', zh: 'TRIGGER——把囊泡特性化' },
         s: { en: 'Nanoparticle tracking analysis plus Western blots confirm they are exosomes', zh: '奈米顆粒追蹤分析加上西方墨點，確認它們是外泌體' } },
-      { l: { en: 'SILENCE — co-transfect HLA and shRNA', zh: 'SILENCE——共轉染 HLA 與 shRNA' },
+      { l: { en: 'SILENCE: co-transfect HLA and shRNA', zh: 'SILENCE——共轉染 HLA 與 shRNA' },
         s: { en: 'Different resistance cassettes on the two plasmids, to avoid cross-contamination during prep', zh: '兩個質體用不同的抗性卡匣，避免製備時交叉污染' } },
       { l: { en: 'Read protein and transcript', zh: '讀蛋白，也讀轉錄本' },
         s: { en: 'Anti-FLAG Western normalised to vinculin, then RT-qPCR; harvest window set by its own timecourse', zh: '以 anti-FLAG 西方墨點對 vinculin 正規化，再做 RT-qPCR；收樣時間由自己的時序實驗決定' } }
@@ -56,7 +56,7 @@
           { t: { en: 'CD4+ T cell chassis', zh: 'CD4+ T 細胞底盤' }, k: 't' }
         ],
         stats: [
-          { v: '50 %', l: { en: 'Of transplanted organs lost within ten years — the gap they attack', zh: '十年內失去功能的移植器官比例——他們要解決的缺口' } },
+          { v: '50 %', l: { en: 'Of transplanted organs lost within ten years, the gap they attack', zh: '十年內失去功能的移植器官比例——他們要解決的缺口' } },
           { v: '14.6 %', l: { en: 'Of the European population carrying HLA-A*01, their first target', zh: '歐洲人口中帶有其首個標靶 HLA-A*01 的比例' } },
           { v: '12 h', l: { en: 'When expression and knockdown were already detectable, against 24 h in the literature', zh: '表達與抑制已可偵測的時間點，而文獻為 24 小時' } },
           { v: '4', l: { en: 'Recombinant plasmids designed; one never assembled', zh: '設計的重組質體數；其中一個始終沒接起來' } },
@@ -108,16 +108,16 @@
             caption: { en: 'Drawn by us from the team\'s Project Description and Wetlab Overview.', zh: '由我們依該隊 Project Description 與 Wetlab Overview 繪製。' }
           }) +
           h.take({ en: 'The novelty, stated precisely', zh: '被精確陳述的新穎性' }, {
-            en: 'synNotch receptors are established and shRNA cassettes are established. Their claim is the join: **"What is very novel about HIDE is the combination of a synNotch receptor and an shRNA cassette, something that has not been done before."** And the engineering consequence is a promoter problem — U6 is a constitutive Pol III promoter, so they **replaced its enhancer element with a Gal4 upstream activating sequence**, making a constitutive promoter inducible while keeping it recognisable to polymerase III.',
+            en: 'synNotch receptors are established and shRNA cassettes are established. Their claim is the join: **"What is very novel about HIDE is the combination of a synNotch receptor and an shRNA cassette, something that has not been done before."** And the engineering consequence is a promoter problem. U6 is a constitutive Pol III promoter, so they **replaced its enhancer element with a Gal4 upstream activating sequence**, making a constitutive promoter inducible while keeping it recognisable to polymerase III.',
             zh: 'synNotch 受體是既有技術，shRNA 卡匣也是。他們主張的是兩者的接合：**「HIDE 真正新穎的地方，是把 synNotch 受體與 shRNA 卡匣結合起來，這件事以前沒有人做過。」**而工程上的後果是一個啟動子問題——U6 是組成型的 Pol III 啟動子，所以他們**把它的增強子元件換成 Gal4 上游活化序列**，讓一個組成型啟動子變成可誘導的，同時仍然能被聚合酶 III 辨識。'
           }) +
           h.h3({ en: 'The binder design, and the aim they had to give up', zh: '結合蛋白設計，以及他們不得不放棄的那個目標' }) +
           h.p({
-            en: 'HLAs can differ by only a few amino acids, so the binders are deliberately small — **nanobodies and fully de novo multi-helix binders, 5 to 15 kDa** — because the differences sit in the peptide-binding groove and a binder has to reach in. The target is two-sided: selective enough to enrich cells at the organ, and **high-affinity enough to exert the mechanical pulling force synNotch requires.**',
+            en: 'HLAs can differ by only a few amino acids, so the binders are deliberately small. They are **nanobodies and fully de novo multi-helix binders, 5 to 15 kDa**, because the differences sit in the peptide-binding groove and a binder has to reach in. The target is two-sided: selective enough to enrich cells at the organ, and **high-affinity enough to exert the mechanical pulling force synNotch requires.**',
             zh: 'HLA 之間可能只差幾個胺基酸，所以結合蛋白被刻意做小——**奈米抗體與完全從零設計的多螺旋結合蛋白，5 到 15 kDa**——因為那些差異位在肽結合溝裡，結合蛋白必須伸得進去。目標是雙面的：既要有足夠的選擇性把細胞富集在器官處，**又要有足夠的親和力去施加 synNotch 所需的機械拉力。**'
           }) +
           h.warn({
-            en: '**The original aim was a binder specific for the HLA and completely independent of the peptide. It was not achievable**, and the reason is written down: because the amino-acid differences lie mostly in the peptide-binding cleft, the peptide itself is heavily affected by them and is involved in forming the epitope. So they **also designed binders against an HLA + organ-specific-peptide combination**, to stay organ-specific — a scope change reported as a scope change.',
+            en: '**The original aim was a binder specific for the HLA and completely independent of the peptide. It was not achievable**, and the reason is written down: because the amino-acid differences lie mostly in the peptide-binding cleft, the peptide itself is heavily affected by them and is involved in forming the epitope. So they **also designed binders against an HLA + organ-specific-peptide combination**, to stay organ-specific. A scope change reported as a scope change.',
             zh: '**原本的目標是一個只認 HLA、完全與肽無關的結合蛋白。這件事做不到**，而理由被寫了下來：因為胺基酸差異大多落在肽結合溝裡，那個肽本身受這些差異影響很大，而且參與構成抗原決定位。所以他們**另外設計了針對「HLA＋器官特有肽」組合的結合蛋白**，以維持器官專一性——一次被當成範圍變更來報告的範圍變更。'
           })
       });
@@ -148,36 +148,36 @@
         h2: { en: 'Three verbs, and the reporter problem that shaped all of them', zh: '三個動詞，以及形塑了它們全部的那個報告系統問題' },
         body:
           h.phases([
-            { h: { en: 'BIND — validate the machine before the specificity', zh: 'BIND——先驗證機器，再驗證專一性' },
+            { h: { en: 'BIND: validate the machine before the specificity', zh: 'BIND——先驗證機器，再驗證專一性' },
               p: { en: 'The synNotch core is the only fixed part; the extracellular and intracellular ends can be freely exchanged. They tested de novo binders, nanobodies **and a SNAP-tag** for the extracellular domain, always with the Gal4–Oct-2 fusion inside.', zh: 'synNotch 核心是唯一固定的部分；胞外與胞內兩端都可以自由替換。他們在胞外域測試了從零設計的結合蛋白、奈米抗體**以及一個 SNAP-tag**，而胞內一律是 Gal4–Oct-2 融合蛋白。' },
               items: [
-                { en: 'For the initial test the binder was **replaced with a SNAP-tag, activated by covalent binding to benzylguanine-covered beads** — so the general functionality of the synNotch could be established on a synthetic ligand, **and the binders validated separately.**', zh: '在最初的測試中，結合蛋白被**換成 SNAP-tag，並以與苄基鳥嘌呤包覆珠的共價結合來活化**——這樣 synNotch 的一般功能性就能在一個人工配體上建立起來，**而結合蛋白則另外單獨驗證。**' },
-                { en: 'And the reporter had to be inverted, because of the biology. Since the U6 promoter and the Oct-2 transcription factor recruit **polymerase III**, "we could not express a reporter protein" — Pol III does not make mRNA for one. So they used **stably eGFP-expressing HEK293T cells and replaced the anti-HLA shRNA with an anti-eGFP shRNA**: loss of fluorescence means the receptor fired.', zh: '而報告系統必須被反過來做，原因出在生物學。因為 U6 啟動子與 Oct-2 轉錄因子招募的是**聚合酶 III**，「我們沒辦法表達一個報告蛋白」——Pol III 不會為它做出 mRNA。所以他們用了**穩定表達 eGFP 的 HEK293T 細胞，並把 anti-HLA shRNA 換成 anti-eGFP shRNA**：螢光消失就代表受體啟動了。' }
+                { en: 'For the initial test the binder was **replaced with a SNAP-tag, activated by covalent binding to benzylguanine-covered beads**. That way the general functionality of the synNotch could be established on a synthetic ligand, **and the binders validated separately.**', zh: '在最初的測試中，結合蛋白被**換成 SNAP-tag，並以與苄基鳥嘌呤包覆珠的共價結合來活化**——這樣 synNotch 的一般功能性就能在一個人工配體上建立起來，**而結合蛋白則另外單獨驗證。**' },
+                { en: 'And the reporter had to be inverted, because of the biology. Since the U6 promoter and the Oct-2 transcription factor recruit **polymerase III**, "we could not express a reporter protein". Pol III does not make mRNA for one. So they used **stably eGFP-expressing HEK293T cells and replaced the anti-HLA shRNA with an anti-eGFP shRNA**: loss of fluorescence means the receptor fired.', zh: '而報告系統必須被反過來做，原因出在生物學。因為 U6 啟動子與 Oct-2 轉錄因子招募的是**聚合酶 III**，「我們沒辦法表達一個報告蛋白」——Pol III 不會為它做出 mRNA。所以他們用了**穩定表達 eGFP 的 HEK293T 細胞，並把 anti-HLA shRNA 換成 anti-eGFP shRNA**：螢光消失就代表受體啟動了。' }
               ],
               done: { en: 'A readout in which the absence of a signal is the positive result, built because the obvious readout was unavailable.', zh: '一個「訊號消失才是陽性結果」的讀值，而它之所以存在，是因為顯而易見的那種讀值做不出來。' } },
-            { h: { en: 'TRIGGER — characterise the vesicles rather than assume them', zh: 'TRIGGER——把囊泡特性化，而不是假設它們是什麼' },
+            { h: { en: 'TRIGGER: characterise the vesicles rather than assume them', zh: 'TRIGGER——把囊泡特性化，而不是假設它們是什麼' },
               p: { en: 'Delivery uses the cell\'s own extracellular vesicle pathway: the effector cell produces vesicles containing siRNA, which enter the organ tissue.', zh: '遞送利用細胞自己的胞外囊泡途徑：效應細胞產生含 siRNA 的囊泡，進入移植器官的組織。' },
               items: [
-                { en: 'Using **nanoparticle tracking analysis and Western blots**, they confirmed the vesicles were **exosomes** — a characterisation step, where a "we used EVs" claim would have been easier.', zh: '他們用**奈米顆粒追蹤分析與西方墨點**確認那些囊泡是**外泌體**——這是一個特性化步驟，而寫一句「我們用了胞外囊泡」會容易得多。' }
+                { en: 'Using **nanoparticle tracking analysis and Western blots**, they confirmed the vesicles were **exosomes**. That is a characterisation step, where a "we used EVs" claim would have been easier.', zh: '他們用**奈米顆粒追蹤分析與西方墨點**確認那些囊泡是**外泌體**——這是一個特性化步驟，而寫一句「我們用了胞外囊泡」會容易得多。' }
               ] },
-            { h: { en: 'SILENCE — targets chosen by prevalence and cross-reactivity', zh: 'SILENCE——依盛行率與交叉反應性挑標靶' },
+            { h: { en: 'SILENCE: targets chosen by prevalence and cross-reactivity', zh: 'SILENCE——依盛行率與交叉反應性挑標靶' },
               p: { en: 'First target **HLA-A\\*01:01:01**, chosen because HLA-A\\*01 affects **14.6 % of the European population** and is also common across North and South Africa, South West Asia and North America.', zh: '首個標靶是 **HLA-A\\*01:01:01**，之所以選它，是因為 HLA-A\\*01 影響**歐洲人口的 14.6%**，而且在北非、南非、西南亞與北美也很常見。' },
               items: [
-                { en: 'The non-targets were chosen on the same logic, inverted: HLA-A\\*02, \\*03, \\*11 and \\*24 are among the most common worldwide, so *"our medication would have high probability to encounter them, which makes them perfect examples to test our shRNA specificity"* — with **HLA-A\\*24 at 30–40 % in Japan and Southeast Asia against 8.6 % in Europe.**', zh: '非標靶的選擇用的是同一套邏輯的反面：HLA-A\\*02、\\*03、\\*11、\\*24 是全球最常見的幾種，所以*「我們的藥物有很高機率會遇到它們，這讓它們成為測試 shRNA 專一性的完美例子」*——其中 **HLA-A\\*24 在日本與東南亞達 30–40%，而歐洲是 8.6%。**' },
+                { en: 'The non-targets were chosen on the same logic, inverted: HLA-A\\*02, \\*03, \\*11 and \\*24 are among the most common worldwide, so *"our medication would have high probability to encounter them, which makes them perfect examples to test our shRNA specificity"*. **HLA-A\\*24 is at 30–40 % in Japan and Southeast Asia against 8.6 % in Europe.**', zh: '非標靶的選擇用的是同一套邏輯的反面：HLA-A\\*02、\\*03、\\*11、\\*24 是全球最常見的幾種，所以*「我們的藥物有很高機率會遇到它們，這讓它們成為測試 shRNA 專一性的完美例子」*——其中 **HLA-A\\*24 在日本與東南亞達 30–40%，而歐洲是 8.6%。**' },
                 { en: 'And the design accounts for known cross-reactivity, so the hard cases are deliberately in the panel: **A\\*03 cross-reacts with A\\*01, and A\\*02 with A\\*24.**', zh: '而且設計考慮了已知的交叉反應性，所以困難的案例是刻意被放進測試組合的：**A\\*03 與 A\\*01 交叉反應，A\\*02 與 A\\*24 交叉反應。**' }
               ] },
             { h: { en: 'The positive control is the construct\'s own architecture', zh: '陽性對照就是這個構建體自己的架構' },
-              p: { en: 'Because every HLA construct is a **covalent HLA–β2m fusion**, one mRNA encodes both — so an **anti-β2m shRNA should knock down every HLA in the panel**, establishing the maximum downregulation achievable in that system.', zh: '因為每個 HLA 構建體都是**共價的 HLA–β2m 融合蛋白**，一條 mRNA 同時編碼兩者——所以一個 **anti-β2m shRNA 應該會把測試組合中的每一個 HLA 都壓下來**，從而界定在那個系統中可達到的最大下調幅度。' },
+              p: { en: 'Because every HLA construct is a **covalent HLA–β2m fusion**, one mRNA encodes both. So an **anti-β2m shRNA should knock down every HLA in the panel**, establishing the maximum downregulation achievable in that system.', zh: '因為每個 HLA 構建體都是**共價的 HLA–β2m 融合蛋白**，一條 mRNA 同時編碼兩者——所以一個 **anti-β2m shRNA 應該會把測試組合中的每一個 HLA 都壓下來**，從而界定在那個系統中可達到的最大下調幅度。' },
               items: [
                 { en: 'The negative control is a **scrambled shRNA designed to lack complementarity to anything in the human genome**, which also tests that shRNA production and its machinery are not themselves toxic or expression-altering.', zh: '陰性對照是一個**刻意設計成與人類基因體中任何序列都沒有互補性的打亂 shRNA**，它同時也在測試 shRNA 的生產與相關機制本身是否有毒、或是否會改變表達量。' },
-                { en: 'Detection designed against its own failure mode: the HLA construct terminates in a **FLAG-tag** so it is detected by anti-FLAG, *"whilst ruling out non-specific binding of the antibody to the HLA construct"*. Loading normalised to **vinculin**, with the reason given — cytoskeletal, so evenly expressed.', zh: '偵測方式是針對自身失敗模式設計的：HLA 構建體以 **FLAG-tag** 結尾，所以由 anti-FLAG 偵測，*「同時排除抗體與 HLA 構建體的非專一性結合」*。上樣量以 **vinculin** 正規化，並寫明理由——它是細胞骨架蛋白，所以表達均勻。' },
+                { en: 'Detection designed against its own failure mode: the HLA construct terminates in a **FLAG-tag** so it is detected by anti-FLAG, *"whilst ruling out non-specific binding of the antibody to the HLA construct"*. Loading normalised to **vinculin**, with the reason given: cytoskeletal, so evenly expressed.', zh: '偵測方式是針對自身失敗模式設計的：HLA 構建體以 **FLAG-tag** 結尾，所以由 anti-FLAG 偵測，*「同時排除抗體與 HLA 構建體的非專一性結合」*。上樣量以 **vinculin** 正規化，並寫明理由——它是細胞骨架蛋白，所以表達均勻。' },
                 { en: 'And the antibody\'s specificity is **demonstrated rather than assumed**: control transfections of shRNA cassettes **without** any HLA construct gave **no detectable FLAG signal**.', zh: '而抗體的專一性是**被證明的，不是被假設的**：**不含**任何 HLA 構建體、只有 shRNA 卡匣的對照轉染，**完全沒有可偵測的 FLAG 訊號**。' },
-                { en: 'Plasmid prep hygiene is part of the design: the two co-transfected plasmids carry **different resistance cassettes — carbenicillin for the HLA plasmids, kanamycin for the shRNA plasmids — "to avoid cross contamination during plasmid production."**', zh: '質體製備的衛生也是設計的一部分：兩個共轉染的質體帶**不同的抗性卡匣——HLA 質體用羧苄青黴素、shRNA 質體用卡那黴素——「以避免質體生產過程中的交叉污染」。**' }
+                { en: 'Plasmid prep hygiene is part of the design. The two co-transfected plasmids carry **different resistance cassettes: carbenicillin for the HLA plasmids, kanamycin for the shRNA plasmids, "to avoid cross contamination during plasmid production."**', zh: '質體製備的衛生也是設計的一部分：兩個共轉染的質體帶**不同的抗性卡匣——HLA 質體用羧苄青黴素、shRNA 質體用卡那黴素——「以避免質體生產過程中的交叉污染」。**' }
               ] },
             { h: { en: 'A scaled-down plan, and the person who talked them out of the bigger one', zh: '一個縮小後的計畫，以及勸他們別做大版本的那個人' },
               p: { en: 'They had planned stable single-HLA cell lines. After consulting postdoc Philipp Münick from the Dötsch lab on the experimental design, they concluded **co-transfection was sufficient for initial candidate screening.**', zh: '他們原本計畫做穩定表達單一 HLA 的細胞株。在就實驗設計諮詢 Dötsch 實驗室的博士後 Philipp Münick 之後，他們的結論是**共轉染對初步候選篩選已經足夠。**' },
               items: [
-                { en: 'The harvest window of 36–48 h was set after consulting Prof. Robert Tampé **plus their own optimisation experiments** — advice and data, not advice alone. The HLA construct design itself came with advice from Dr. Simon Trowitzsch of the same lab.', zh: '36–48 小時的收樣視窗是在諮詢 Robert Tampé 教授**並加上他們自己的最佳化實驗**之後定下的——是建議加數據，不是只有建議。而 HLA 構建體本身的設計也得到同一實驗室 Simon Trowitzsch 博士的建議。' },
+                { en: 'The harvest window of 36–48 h was set after consulting Prof. Robert Tampé **plus their own optimisation experiments**. Advice and data, not advice alone. The HLA construct design itself came with advice from Dr. Simon Trowitzsch of the same lab.', zh: '36–48 小時的收樣視窗是在諮詢 Robert Tampé 教授**並加上他們自己的最佳化實驗**之後定下的——是建議加數據，不是只有建議。而 HLA 構建體本身的設計也得到同一實驗室 Simon Trowitzsch 博士的建議。' },
                 { en: 'A timecourse at 0, 4, 12, 24, 36, 48 and 60 h then **contradicted the literature and said so**: published work suggested expression and downregulation become detectable at 24 h, and **both were already detectable at 12 h**, with both still detectable at 60 h.', zh: '接著在 0、4、12、24、36、48、60 小時做的時序實驗**與文獻矛盾，而他們把這點說出來**：已發表的研究指出表達與下調在 24 小時才變得可偵測，而**兩者在 12 小時就已經可偵測**，到 60 小時仍然可偵測。' },
                 { en: 'The span was capped at 60 h **for a stated biological reason: the cells began to overgrow and die after two days.** Three biological repeats, normalised to vinculin, with extended data published separately.', zh: '時間範圍被限制在 60 小時，**理由是生物學上的：細胞在兩天之後開始過度生長並死亡。**三次生物重複，以 vinculin 正規化，延伸數據另外公開。' }
               ] }
@@ -195,11 +195,11 @@
         },
         body:
           h.p({
-            en: 'Their argument, in full: protein expression levels depend on transfection efficiency and on HLA plasmid amount. **Each transfection uses the same total amount of plasmid, but in a co-transfection the individual amount of each plasmid is half as much as in a single-plasmid transfection.** And since shRNA must always be co-transfected with HLA, every comparison is normalised **to the co-transfection of the corresponding HLA with scrambled shRNA** — not to a single-plasmid control, which would have made the knockdown look larger than it is. Samples were additionally normalised to **cell count** and, by BCA assay, to **total protein**.',
+            en: 'Their argument, in full: protein expression levels depend on transfection efficiency and on HLA plasmid amount. **Each transfection uses the same total amount of plasmid, but in a co-transfection the individual amount of each plasmid is half as much as in a single-plasmid transfection.** And since shRNA must always be co-transfected with HLA, every comparison is normalised **to the co-transfection of the corresponding HLA with scrambled shRNA**. Not to a single-plasmid control, which would have made the knockdown look larger than it is. Samples were additionally normalised to **cell count** and, by BCA assay, to **total protein**.',
             zh: '他們的完整論點是：蛋白表達量取決於轉染效率與 HLA 質體的量。**每次轉染使用的質體總量相同，但在共轉染中，每個質體各自的量只有單質體轉染時的一半。**而既然 shRNA 永遠必須與 HLA 共轉染，所以每一個比較都是**以「對應的 HLA 加打亂 shRNA 的共轉染」為基準正規化**——而不是以單質體對照為基準，否則抑制效果看起來會比實際更大。樣品另外還以**細胞數**正規化，並以 BCA 分析對**總蛋白量**正規化。'
           }) +
           h.take({ en: 'The choice of comparison group is what changes the answer', zh: '會改變答案的是比較組的選擇' }, {
-            en: 'Three normalisations in series — housekeeping protein, cell count, total protein — are good practice. The comparison group is the part most knockdown figures get wrong by quietly comparing a co-transfection against a single transfection. Writing the arithmetic out is what makes their percentages mean anything.',
+            en: 'Three normalisations in series (housekeeping protein, cell count, total protein) are good practice. The comparison group is the part most knockdown figures get wrong by quietly comparing a co-transfection against a single transfection. Writing the arithmetic out is what makes their percentages mean anything.',
             zh: '串接三道正規化——內參蛋白、細胞數、總蛋白——是好做法。而比較組才是大多數抑制圖表最容易出錯的地方：悄悄拿共轉染去比單獨轉染。把這個算術寫出來，才是讓他們的百分比有意義的原因。'
           }) +
           h.warn({
@@ -207,7 +207,7 @@
             zh: '還有一個針對自己結果提出的偽陽性風險：**HLA-A\\*24 的表達量低於 A\\*01 與 A\\*02**，而這「雖然被納入表達量比較，但可能因為西方墨點分析的偵測極限而導致偽陽性的下調結果」。一條靠近偵測極限的帶，看起來永遠都像被抑制了。'
           }) +
           h.p({
-            en: 'Two levels of evidence, not one: protein by anti-FLAG Western blot, and transcript by **RT-qPCR** — because siRNA binding promotes degradation of the target mRNA, so a reduction should be visible at both levels if the mechanism is what they claim.',
+            en: 'Two levels of evidence, not one: protein by anti-FLAG Western blot, and transcript by **RT-qPCR**. siRNA binding promotes degradation of the target mRNA, so a reduction should be visible at both levels if the mechanism is what they claim.',
             zh: '兩個層級的證據，而不是一個：蛋白層級用 anti-FLAG 西方墨點，轉錄本層級用 **RT-qPCR**——因為 siRNA 的結合會促使標靶 mRNA 降解，所以如果機制如他們所主張，兩個層級都應該看得到下降。'
           })
       });
@@ -225,7 +225,7 @@
           h.cards([
             { chips: [{ t: { en: 'reason 1', zh: '理由 1' }, k: 'v' }],
               h: { en: 'Nothing handles polymorphic families', zh: '沒有工具能處理高多型性家族' },
-              p: { en: 'HLA coding sequences can differ by a few base pairs, and **no available design tool accounts for that.** They bridged it manually with multiple sequence alignments — and found **no way to integrate that step into any tool they could find.**', zh: 'HLA 的編碼序列可能只差幾個鹼基對，而**現有的設計工具沒有一個處理這件事。**他們用多序列比對手動補上這一步——然後發現**找不到任何工具能把那一步整合進去。**' } },
+              p: { en: 'HLA coding sequences can differ by a few base pairs, and **no available design tool accounts for that.** They bridged it manually with multiple sequence alignments, and found **no way to integrate that step into any tool they could find.**', zh: 'HLA 的編碼序列可能只差幾個鹼基對，而**現有的設計工具沒有一個處理這件事。**他們用多序列比對手動補上這一步——然後發現**找不到任何工具能把那一步整合進去。**' } },
             { chips: [{ t: { en: 'reason 2', zh: '理由 2' }, k: 'b' }],
               h: { en: 'The commercial ones are black boxes', zh: '商用的那些是黑盒子' },
               p: { en: 'Algorithms and selection criteria are proprietary, and option sets vary between platforms **"usually without any reasoning given that would be clear to the user."** Even siDirect, the non-commercial tool they actually used first, is **neither open-source nor pipeline-integrable.**', zh: '演算法與篩選標準都是閉源的，而各平台提供的選項不一致，**「通常也沒有給出使用者看得懂的理由」**。即使是他們最初真正使用的非商業工具 siDirect，也**既非開源、也無法整合進流程。**' } },
@@ -235,12 +235,12 @@
           ]) +
           h.h3({ en: 'Three tenets, each with teeth', zh: '三條原則，每一條都有牙齒' }) +
           h.kv([
-            [{ en: 'Research-first', zh: '研究優先' }, { en: 'Every design choice carries the research it comes from and how to use it, so the tool is auditable rather than a black box — plus a **novel analysis package for polymorphic protein families**, which is the part no other tool has.', zh: '每一個設計選擇都附上它的研究來源與使用方式，所以這個工具是可稽核的，而不是黑盒子——另外還有一個**針對高多型性蛋白家族的新分析套件**，那是其他工具都沒有的部分。' }],
-            [{ en: 'Accessibility', zh: '可用性' }, { en: 'A guided wizard that **proposes optimal choices from the sequence\'s own characteristics**, including converting designed siRNAs into shRNAs with guidance on which hairpin loop to use and **thermodynamic evaluation of the structure\'s integrity** — plus a compact **expert mode** exposing thermodynamic constants and selection rules for pipeline integration.', zh: '一個引導式精靈，會**依序列自身的特性提出最佳選擇**，包括把設計好的 siRNA 轉成 shRNA，並指引該用哪一種髮夾環，以及**對結構完整性做熱力學評估**——另外還有一個精簡的**專家模式**，把熱力學常數與篩選規則攤開，供整合進流程使用。' }],
-            [{ en: 'Safety', zh: '安全' }, { en: 'Argued from the pharmacology: siRNA effects last days, but **shRNA can silence for considerably longer, which is desirable clinically and is exactly what makes an off-target dangerous.** So HUSH filters candidates by comparative sequence analysis **against NCBI human RefSeq using the open-source aligner Bowtie**, chosen explicitly for transparency — and they **propose extending off-target screening to known SNPs**, which standard practice does not cover.', zh: '這條原則是從藥理學推出來的：siRNA 的效果持續數天，但 **shRNA 可以沉默相當長的時間，這在臨床上是想要的，而這正是脫靶之所以危險的原因。**所以 HUSH 會以比較序列分析篩選候選，**比對 NCBI 人類 RefSeq，使用開源比對器 Bowtie**，而選它明確是為了透明——他們還**提議把脫靶篩檢擴及已知的單核苷酸多型性（SNP）**，那是標準做法沒有涵蓋的。' }]
+            [{ en: 'Research-first', zh: '研究優先' }, { en: 'Every design choice carries the research it comes from and how to use it, so the tool is auditable rather than a black box. There is also a **novel analysis package for polymorphic protein families**, which is the part no other tool has.', zh: '每一個設計選擇都附上它的研究來源與使用方式，所以這個工具是可稽核的，而不是黑盒子——另外還有一個**針對高多型性蛋白家族的新分析套件**，那是其他工具都沒有的部分。' }],
+            [{ en: 'Accessibility', zh: '可用性' }, { en: 'A guided wizard that **proposes optimal choices from the sequence\'s own characteristics**, including converting designed siRNAs into shRNAs with guidance on which hairpin loop to use and **thermodynamic evaluation of the structure\'s integrity**. A compact **expert mode** exposes thermodynamic constants and selection rules for pipeline integration.', zh: '一個引導式精靈，會**依序列自身的特性提出最佳選擇**，包括把設計好的 siRNA 轉成 shRNA，並指引該用哪一種髮夾環，以及**對結構完整性做熱力學評估**——另外還有一個精簡的**專家模式**，把熱力學常數與篩選規則攤開，供整合進流程使用。' }],
+            [{ en: 'Safety', zh: '安全' }, { en: 'Argued from the pharmacology: siRNA effects last days, but **shRNA can silence for considerably longer, which is desirable clinically and is exactly what makes an off-target dangerous.** So HUSH filters candidates by comparative sequence analysis **against NCBI human RefSeq using the open-source aligner Bowtie**, chosen explicitly for transparency. They also **propose extending off-target screening to known SNPs**, which standard practice does not cover.', zh: '這條原則是從藥理學推出來的：siRNA 的效果持續數天，但 **shRNA 可以沉默相當長的時間，這在臨床上是想要的，而這正是脫靶之所以危險的原因。**所以 HUSH 會以比較序列分析篩選候選，**比對 NCBI 人類 RefSeq，使用開源比對器 Bowtie**，而選它明確是為了透明——他們還**提議把脫靶篩檢擴及已知的單核苷酸多型性（SNP）**，那是標準做法沒有涵蓋的。' }]
           ]) +
           h.p({
-            en: 'Four interfaces over one core (`HushSession`): a **web app** with a guided wizard, a **CLI** for one-shot design in a pipeline, a **persistent terminal shell** with saved input and panels, and — unusually for an iGEM tool — an **MCP server so an AI agent can drive HUSH**. Input is **FASTA**, with the choice justified rather than assumed: established in 1985, universal across the IPD-IMGT/HLA database, the NCBI databases and industry. The input is separated into a target sequence and **an optional sequence panel required by the MSA module** — which is the part that makes allele-selective design possible at all.',
+            en: 'Four interfaces over one core (`HushSession`): a **web app** with a guided wizard, a **CLI** for one-shot design in a pipeline, a **persistent terminal shell** with saved input and panels, and, unusually for an iGEM tool, an **MCP server so an AI agent can drive HUSH**. Input is **FASTA**, with the choice justified rather than assumed: established in 1985, universal across the IPD-IMGT/HLA database, the NCBI databases and industry. The input is separated into a target sequence and **an optional sequence panel required by the MSA module**. That panel is what makes allele-selective design possible at all.',
             zh: '一個核心（`HushSession`）上有四種介面：帶引導精靈的**網頁應用**、可在流程中一次性設計的 **CLI**、一個會保存輸入與面板的**常駐終端介面**，以及——在 iGEM 工具中相當罕見的——一個 **MCP 伺服器，讓 AI 代理可以驅動 HUSH**。輸入格式是 **FASTA**，而這個選擇是被論證過的、不是預設的：1985 年即確立，在 IPD-IMGT/HLA 資料庫、NCBI 各資料庫與產業界通用。輸入被分成標靶序列，以及**一個 MSA 模組所需的可選序列面板**——而那正是「依等位基因做選擇性設計」之所以可能的關鍵。'
           }) +
           h.h3({ en: 'The validation table, which does not flatter the tool', zh: '那張對工具並不客氣的驗證表' }) +
@@ -249,7 +249,7 @@
             zh: '五個由 HUSH 設計的 shRNA（A03、A24、A02+A24、A03+A24、A01+A02+A24）對上四個 HLA-A 等位基因，而**每一格都標示了該結果是否為預期，以及是由西方墨點或 RT-qPCR 確認的。**他們自己的結論是：**所有他們預期會打到的標靶都被下調了**，但*「對設計組合中其他 HLA 亞型的脫靶效應幅度很難評估」*；RT-qPCR 實驗*「只是支持、但低報了」*預期的下調幅度，而西方墨點*「結果混雜，整體上顯示有廣泛的脫靶命中，同時也支持了預期的標靶」*。'
           }) +
           h.warn({
-            en: 'And then the limit on all of it, stated by them: **"as all experiments were only conducted once, however, this does not represent a definitive verdict on whether specific, allele-selective shRNA designs are feasible."** A software team publishing that its own validation is n = 1 — and leaving the sentence in rather than running a smaller claim past it.',
+            en: 'And then the limit on all of it, stated by them: **"as all experiments were only conducted once, however, this does not represent a definitive verdict on whether specific, allele-selective shRNA designs are feasible."** A software team publishing that its own validation is n = 1, and leaving the sentence in rather than running a smaller claim past it.',
             zh: '接著是他們自己為這一切設下的界線：**「然而，由於所有實驗都只做了一次，這並不構成『專一的、依等位基因選擇性的 shRNA 設計是否可行』的最終結論。」**一個軟體團隊把自己的驗證是 n = 1 這件事公開出來——而且把這句話留著，而不是改寫一個比較小的主張繞過它。'
           }) +
           h.h3({ en: 'The outlook is a transfer list, not a vision', zh: 'Outlook 是一張移轉清單，不是一個願景' }) +
@@ -281,7 +281,7 @@
             ],
             rows: [
               [{ en: 'HLA sequence into **PiggyBac**', zh: 'HLA 序列接入 **PiggyBac**' },
-               { en: 'Stable cell lines consistently expressing the target HLA, by transposase integration at TTAA sites — so that downregulation experiments would be more reliable.', zh: '透過轉位酶在 TTAA 位點整合，建立穩定且持續表達目標 HLA 的細胞株——讓下調實驗更可靠。' },
+               { en: 'Stable cell lines consistently expressing the target HLA, by transposase integration at TTAA sites, so that downregulation experiments would be more reliable.', zh: '透過轉位酶在 TTAA 位點整合，建立穩定且持續表達目標 HLA 的細胞株——讓下調實驗更可靠。' },
                { en: '**Never assembled**, despite multiple HiFi attempts. Dropped for time.', zh: '**始終沒接起來**，雖然試了多次 HiFi。因時間而放棄。' }],
               [{ en: '**SNAP-synNotch** with anti-eGFP shRNA', zh: '**SNAP-synNotch** 加 anti-eGFP shRNA' },
                { en: 'A prototype using a SNAP-tag instead of an HLA binder, for initial testing of the receptor\'s activation.', zh: '以 SNAP-tag 取代 HLA 結合蛋白的原型，用於受體活化的初步測試。' },
@@ -290,14 +290,14 @@
                { en: 'The complete HIDE receptor, with the dry lab\'s binders in place of the SNAP-tag.', zh: '完整的 HIDE 受體，用乾式實驗設計的結合蛋白取代 SNAP-tag。' },
                { en: 'Built.', zh: '完成。' }],
               [{ en: '**HLA binder fused to GFP**', zh: '**HLA 結合蛋白融合 GFP**' },
-               { en: 'Testing the binders alone, measuring their attachment to HLAs by FACS — binding separated from signalling.', zh: '單獨測試結合蛋白，以 FACS 量測它們與 HLA 的附著——把結合與訊號傳遞分開。' },
+               { en: 'Testing the binders alone, measuring their attachment to HLAs by FACS. Binding separated from signalling.', zh: '單獨測試結合蛋白，以 FACS 量測它們與 HLA 的附著——把結合與訊號傳遞分開。' },
                { en: 'Built.', zh: '完成。' }]
             ],
             min: 700,
             source: { en: 'Read from the team\'s Cloning page.', zh: '讀自該隊 Cloning 頁。' }
           }) +
           h.take({ en: 'A failure with two reasons why it was tolerable', zh: '一個失敗，附帶兩個「為什麼還可以接受」的理由' }, {
-            en: 'The PiggyBac construct never assembled. Rather than leaving that as a gap, they give two reasons it was not fatal: even a successful cloning would still have needed **at least four weeks** to establish and verify a stable line, "without considering complications"; and **co-transfection of the HLA and binder plasmids worked**, so the plasmid stopped being essential. The other three form a deliberate ladder — does the core work, does the binder work, does the whole thing work — and the ladder survived losing its top rung.',
+            en: 'The PiggyBac construct never assembled. Rather than leaving that as a gap, they give two reasons it was not fatal: even a successful cloning would still have needed **at least four weeks** to establish and verify a stable line, "without considering complications"; and **co-transfection of the HLA and binder plasmids worked**, so the plasmid stopped being essential. The other three form a deliberate ladder: does the core work, does the binder work, does the whole thing work. The ladder survived losing its top rung.',
             zh: 'PiggyBac 構建體始終沒接起來。但他們沒有把它留成一個缺口，而是給出兩個「這不致命」的理由：即使選殖成功，建立並驗證一株穩定細胞株仍需要**至少四週**，「而這還沒把各種意外算進去」；以及 **HLA 與結合蛋白質體的共轉染成功了**，所以那個質體不再是必要的。其餘三個構成一個刻意設計的階梯——核心能不能用、結合蛋白能不能用、整套能不能用——而這個階梯在失去最上面一階之後依然成立。'
           })
       });
@@ -306,14 +306,14 @@
       out += h.sec({
         id: 'f-fail',
         kick: { en: 'Failure', zh: '失敗' },
-        h2: { en: 'What is open, in their own words', zh: '用他們自己的話說，哪些還沒解決' },
+        h2: { en: 'Nothing ran in a T cell, and the tool\'s validation is n = 1', zh: '沒有任何東西在 T 細胞裡跑過，而工具的驗證是 n = 1' },
         body:
           h.ul([
             { en: 'The whole proof of concept runs in **HEK293T, not in T cells**, and **component by component rather than as an assembled system**. Declared at the top of the wet lab, not buried.', zh: '整個概念驗證是在 **HEK293T 而不是 T 細胞**中進行的，而且是**逐元件測試，不是整套系統一起測**。這一點寫在濕式實驗的開頭，不是埋在後面。' },
             { en: '**HUSH validation experiments were each run once.** Western blots indicated **broad off-target hits**; RT-qPCR **underreported** the expected effect.', zh: '**HUSH 的驗證實驗每一個都只做了一次。**西方墨點顯示有**廣泛的脫靶命中**；RT-qPCR **低報**了預期效應。' },
-            { en: '**HLA-A\\*24\'s lower expression could produce false-positive downregulation** at the blot\'s detection limit — flagged by them against their own data.', zh: '**HLA-A\\*24 較低的表達量，在墨點的偵測極限附近可能造成偽陽性的下調**——這是他們自己針對自己的數據提出的。' },
+            { en: '**HLA-A\\*24\'s lower expression could produce false-positive downregulation** at the blot\'s detection limit. They flagged it themselves, against their own data.', zh: '**HLA-A\\*24 較低的表達量，在墨點的偵測極限附近可能造成偽陽性的下調**——這是他們自己針對自己的數據提出的。' },
             { en: '**The PiggyBac stable-line plasmid never assembled**, so no stable line exists.', zh: '**PiggyBac 穩定細胞株質體始終沒接起來**，所以不存在穩定細胞株。' },
-            { en: '**The peptide-independent binder was not achievable**, so peptide-dependent binders had to be designed alongside — a change to the project\'s own premise, reported as one.', zh: '**與肽無關的結合蛋白做不到**，所以必須同時設計依賴肽的結合蛋白——這是對專案自身前提的一次修改，而他們就把它當成修改來報告。' },
+            { en: '**The peptide-independent binder was not achievable**, so peptide-dependent binders had to be designed alongside. A change to the project\'s own premise, reported as one.', zh: '**與肽無關的結合蛋白做不到**，所以必須同時設計依賴肽的結合蛋白——這是對專案自身前提的一次修改，而他們就把它當成修改來報告。' },
             { en: '**The SNP extension to off-target screening is proposed, not implemented.**', zh: '**把脫靶篩檢擴及 SNP 這件事是「提議」，不是「已實作」。**' }
           ])
       });
@@ -329,11 +329,11 @@
             { en: '**Validate the machine before the specificity.** A SNAP-tag on benzylguanine beads tests the synNotch core without involving any binder at all.', zh: '**先驗證機器，再驗證專一性。**接在苄基鳥嘌呤珠上的 SNAP-tag，可以在完全不牽涉任何結合蛋白的情況下測試 synNotch 核心。' },
             { en: '**Turn your construct\'s architecture into the positive control.** A covalent HLA–β2m fusion means an anti-β2m shRNA defines the maximum achievable knockdown *in your own system*, which no literature value can give you.', zh: '**把你的構建體架構本身變成陽性對照。**共價的 HLA–β2m 融合蛋白意味著，一個 anti-β2m shRNA 就能界定*在你自己系統中*可達到的最大抑制幅度——這是任何文獻數值都給不了你的。' },
             { en: '**Pick the non-targets by prevalence and known cross-reactivity**, so a specificity claim is tested exactly where it is most likely to break.', zh: '**依盛行率與已知交叉反應性去挑非標靶**，讓專一性主張正好在它最可能破掉的地方被檢驗。' },
-            { en: '**Normalise to the co-transfection, not the single transfection** — because equal total plasmid mass means unequal individual plasmid dose, and the comparison is otherwise wrong.', zh: '**以共轉染而不是單獨轉染為正規化基準**——因為質體總量相同代表每個質體各自的劑量不同，否則那個比較從一開始就錯了。' },
+            { en: '**Normalise to the co-transfection, not the single transfection.** Equal total plasmid mass means unequal individual plasmid dose, and the comparison is otherwise wrong.', zh: '**以共轉染而不是單獨轉染為正規化基準**——因為質體總量相同代表每個質體各自的劑量不同，否則那個比較從一開始就錯了。' },
             { en: '**Give co-transfected plasmids different resistance markers** so plasmid prep cannot cross-contaminate. A two-minute design decision that removes an invisible failure mode.', zh: '**讓共轉染的質體帶不同的抗性標記**，這樣質體製備就不可能交叉污染。一個兩分鐘的設計決定，消掉一個看不見的失敗模式。' },
             { en: '**Prove the antibody.** shRNA-only transfections with no FLAG signal are what make every other FLAG band mean something.', zh: '**證明你的抗體。**只有 shRNA、沒有 FLAG 訊號的對照轉染，才是讓其他每一條 FLAG 帶有意義的東西。' },
             { en: '**Say which number sits at your detection limit** before a reader notices it for you.', zh: '**在讀者替你發現之前，先說清楚哪個數字落在你的偵測極限上。**' },
-            { en: '**Let the tool gap justify the tool.** Proprietary algorithms, no MSA integration, no pipeline hooks, and a documented stagnation in implementing new research — four specific reasons, and then an open-source tool.', zh: '**讓工具的缺口去正當化你的工具。**閉源演算法、無法整合多序列比對、沒有流程接口，以及新研究遲遲未被實作的停滯——四個具體理由，然後才是一個開源工具。' },
+            { en: '**Let the tool gap justify the tool.** Proprietary algorithms, no MSA integration, no pipeline hooks, and a documented stagnation in implementing new research. Four specific reasons, and then an open-source tool.', zh: '**讓工具的缺口去正當化你的工具。**閉源演算法、無法整合多序列比對、沒有流程接口，以及新研究遲遲未被實作的停滯——四個具體理由，然後才是一個開源工具。' },
             { en: '**Choose the transparent dependency on purpose.** NCBI RefSeq plus Bowtie, named as the choice that makes the safety filter auditable by someone else.', zh: '**刻意選擇透明的相依元件。**NCBI RefSeq 加 Bowtie，而且明說選它就是為了讓安全篩選能被別人稽核。' },
             { en: '**Publish the validation table with "expected" marked separately from "observed", and state the n.** A table that shows where the tool was wrong is worth more than a paragraph that says it works.', zh: '**公開驗證表，把「預期」與「觀察到」分開標示，並寫出 n。**一張能看出工具在哪裡錯了的表，比一段說它有效的文字更有價值。' },
             { en: '**Explain a deviation from the community standard instead of ignoring it.** RFC10 and Type IIS were set aside for a project-specific reason, and that reason is on the page.', zh: '**解釋你為什麼偏離社群標準，而不是無視它。**RFC10 與 Type IIS 因為一個專案特有的理由被擱置，而那個理由就寫在頁面上。' }
