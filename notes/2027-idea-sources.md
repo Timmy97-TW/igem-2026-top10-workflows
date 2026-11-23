@@ -474,3 +474,33 @@ matrix** — it raises the type II error, i.e. makes you more likely to miss a r
 two-sided interval half-width is ≈2.5 SD, so **5–6 replicates buy more than extra family members**. Order the
 heatmap rows and columns **by mismatch count, on a log colour scale**. And steal DETECTR's control: deliberately
 include something designed to cross-react and show that it does.
+
+## The comparator is not perfect either — added to SPLITFISH after the research re-reported
+
+* **EN ISO 19343:2017** is the European standard for histamine in fishery products (perchloric acid, dansyl
+  chloride pre-column, HPLC-UV). Validation: Duflos et al. 2019, *Int J Food Microbiol* 288:97–101,
+  [PMID 30170760](https://pubmed.ncbi.nlm.nih.gov/30170760/) — a 2013 inter-laboratory study, **nine
+  laboratories in seven countries, eighteen samples each**, on tuna, mackerel and herring.
+* **Annex B recoveries, nine participants**, at 25 / 100 / 220 mg/kg spikes: **tuna 96 / 93 / 91 %**
+  (RSD_R 31 / 12 / 9 %), **mackerel 73 / 70 / 67 %** (15 / 9 / 10 %), **herring 44 / 27 / 41 %**
+  (28 / 4 / 9 %). Verbatim: "results for tuna are excellent… recoveries for herring were **unacceptable
+  low** (27 to 44 %)". **So species is a design decision**: a disagreement measured in herring is a statement
+  about the comparator, not about the student assay.
+* **The regulation's own prescribed method has never been ring-tested** — JRC EUR 26605 EN: "The method has
+  not been validated by collaborative study." JRC LOD/LOQ: tuna 3.6/21, mackerel 3.1/25, herring 3.1/25,
+  cod 1/4 mg/kg; day-to-day RSD 11–14 %; recovery with the prescribed internal standard **103–140 %**.
+* **The two official methods are not equivalent**, verbatim: "the two methods are **not fully equivalent**.
+  The EU mandated method has a tendency to **overestimate**, while the Codex method has a tendency to
+  **underestimate**." One Deming regression puts the European method about **35 %** high.
+* **Reference-method precision degrades near a low decision threshold**: Morello et al. 2024, *Toxins*
+  16(11):456, [PMID 39591211](https://pubmed.ncbi.nlm.nih.gov/39591211/) — within-laboratory reproducibility
+  RSD **16.5 % at 20 mg/kg, 15.4 % at 50, 2.8 % at 200**; LOD 6.2, LOQ 20.3; recovery 89.9–94.2 % over
+  20–400 mg/kg.
+* **The ±26 % acceptance band this site uses checks out**: AOAC 977.13 modified, sixteen laboratories at
+  50 ppm, RSD_r 3.6 % and **RSD_R 9.4 %** (Rogers & Staruszkiewicz 1997). Other interlaboratory RSD_R for
+  comparison: Beljaars 1998 HPLC-OPA 2.2–7.1 %; the German HPLC method 6.8–17.2 % at 12–18 mg/kg.
+* **12–19 % of laboratories fail a histamine proficiency round**: Rachidi et al. 2011, *Int J Metrol Qual Eng*
+  2(2):91–100 — 26 Moroccan laboratories on spiked canned ground mackerel, 23/26 satisfactory at one level
+  and 21/26 at the other. The actionable consequence is to **ask a prospective partner laboratory which
+  proficiency scheme it joins and what its last score was.**
+* **No dedicated EU Reference Laboratory for histamine was found** — do not assert one exists.

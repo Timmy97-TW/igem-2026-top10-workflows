@@ -69,6 +69,7 @@
         { id: 'sf-why', t: { en: 'Why it is a project', zh: '為什麼這是個專案' } },
         { id: 'sf-limit', t: { en: 'The limits', zh: '那些限量' } },
         { id: 'sf-enz', t: { en: 'Which enzyme', zh: '選哪個酵素' } },
+        { id: 'sf-ref', t: { en: 'The comparator', zh: '那個比較方法' } },
         { id: 'sf-split', t: { en: 'Splitting the fish', zh: '把魚分樣' } },
         { id: 'sf-stat', t: { en: 'How it gets reported', zh: '怎麼報告' } },
         { id: 'sf-prior', t: { en: 'Who got closest', zh: '誰最接近' } },
@@ -185,6 +186,50 @@
           ])
       });
 
+      /* ---------------- the comparator ---------------- */
+      out += h.sec({
+        id: 'sf-ref',
+        kick: { en: 'Key data', zh: '關鍵數據' },
+        h2: { en: 'The reference method is not perfect either, and which fish you choose decides how imperfect', zh: '參考方法本身也不完美，而你挑哪種魚決定了它有多不完美' },
+        lede: {
+          en: 'We nearly published this page as though the accredited result were the truth and any gap were the student assay\'s fault. It is not that simple, and the numbers are public.',
+          zh: '我們差點把這一頁寫成「認證結果就是真相，任何落差都是學生試驗的錯」。事情沒那麼簡單，而那些數字是公開的。'
+        },
+        body:
+          h.tbl({
+            cols: [
+              { t: { en: 'Species', zh: '魚種' }, w: '18%' },
+              { t: { en: 'Recovery in the European standard\'s own ring test', zh: '歐盟標準自己的循環測試中的回收率' } },
+              { t: { en: 'Between-laboratory spread', zh: '實驗室間變異' }, w: '24%' }
+            ],
+            rows: [
+              [{ en: '**Tuna**', zh: '**鮪魚**' },
+               { en: '**91 to 96 %** across spikes at 25, 100 and 220 mg/kg. The authors\' own verdict: "results for tuna are excellent".', zh: '在 25、100 與 220 mg/kg 的加標下為 **91 到 96%**。作者自己的判定是：「鮪魚的結果極佳」。' },
+               { en: '9 to 31 %, worst at the lowest spike', zh: '9 到 31%，在最低加標時最差' }],
+              [{ en: '**Mackerel**', zh: '**鯖魚**' },
+               { en: '**67 to 73 %** — "quite acceptable", in their words.', zh: '**67 到 73%**——用他們的話說是「相當可接受」。' },
+               { en: '9 to 15 %', zh: '9 到 15%' }],
+              [{ en: '**Herring**', zh: '**鯡魚**' },
+               { en: '**27 to 44 %.** Verbatim: "recoveries for herring were **unacceptable low**". The European reference method recovers roughly **a third** of the histamine in herring.', zh: '**27 到 44%。**原文：「鯡魚的回收率**低到不可接受**」。歐盟的參考方法在鯡魚上只回收了大約**三分之一**的組織胺。' },
+               { en: '4 to 28 %', zh: '4 到 28%' }]
+            ],
+            min: 880,
+            source: { en: 'Collaborative-study data from Annex B of the European standard, nine participating laboratories, reported via an AOAC conference poster; the validation study itself is Duflos et al. 2019, *Int J Food Microbiol* 288:97–101, [PMID 30170760](https://pubmed.ncbi.nlm.nih.gov/30170760/) — a 2013 inter-laboratory study across nine laboratories in seven countries, eighteen samples each, on tuna, mackerel and herring.', zh: '協同研究數據出自該歐盟標準的附錄 B，九間參與實驗室，經由一份 AOAC 會議海報報告；驗證研究本身是 Duflos 等，2019，*Int J Food Microbiol* 288:97–101，[PMID 30170760](https://pubmed.ncbi.nlm.nih.gov/30170760/)——一項 2013 年的實驗室間研究，橫跨七個國家的九間實驗室、每間十八個樣本，對象為鮪魚、鯖魚與鯡魚。' }
+          }) +
+          h.kv([
+            [{ en: 'So choose tuna, and say why in the methods', zh: '所以挑鮪魚，並在方法一節說明理由' },
+             { en: 'This is the single most actionable line on the page. **A disagreement measured in herring tells you almost nothing**, because the comparator itself is only recovering a third of the analyte there — your assay could be right and still look wrong. **In tuna the comparator is near-quantitative, so a disagreement is informative.** Pick the species where the reference method works, and record the species for every fish.', zh: '這是本頁最可以直接行動的一行。**在鯡魚上量到的不一致幾乎什麼也沒告訴你**，因為在那裡比較方法本身只回收了三分之一的分析物——你的試驗可能是對的，卻看起來像錯的。**在鮪魚上，比較方法接近定量，所以不一致才有資訊量。**請挑那個參考方法行得通的魚種，並為每一條魚記錄魚種。' }],
+            [{ en: 'The two official methods disagree with each other', zh: '兩個官方方法彼此不一致' },
+             { en: 'A European Commission research-centre study compared the regulation\'s prescribed method against the international fluorometric one and concluded, verbatim, that "the two methods are **not fully equivalent**. The EU mandated method has a tendency to **overestimate**, while the Codex method has a tendency to **underestimate**." On one regression the European method ran about **35 % high**. **So "the reference value" depends on which reference you used, and your write-up should name the method, not just the laboratory.**', zh: '歐盟執委會一個研究中心的研究，把法規所指定的方法與國際螢光法相比，結論原文是：「這兩個方法**並非完全等效**。歐盟指定的方法傾向**高估**，而 Codex 的方法傾向**低估**。」在其中一條回歸上，歐盟方法大約**高出 35%**。**所以「參考值」取決於你用的是哪一個參考；而你的書寫應該指名那個方法，不只是那間實驗室。**' }],
+            [{ en: 'And the regulation\'s own method has never been ring-tested', zh: '而法規自己的方法從未做過循環測試' },
+             { en: 'The same study states it plainly: "The method has not been validated by collaborative study." **A student project that pre-registers an acceptance band, runs a homogeneity check and publishes its paired data would, on that one axis, be better characterised than the method it is being judged against.** Say that carefully and only once — it is true, and it is the kind of sentence that has to be exactly right.', zh: '同一份研究說得很直接：「該方法未經協同研究驗證。」**一個會事先登記接受帶、做均質性檢查、並公開配對數據的學生專案，單就那一個面向而言，會比它被拿去比較的那個方法被特性化得更完整。**這句話請小心地、而且只說一次——它是真的，而這正是那種必須說得精確的句子。' }],
+            [{ en: 'What the comparator\'s precision looks like near your threshold', zh: '在你的門檻附近，比較方法的精密度長什麼樣' },
+             { en: 'A five-year accredited survey in northern Italy reports within-laboratory reproducibility of **16.5 % at 20 mg/kg, 15.4 % at 50, and 2.8 % at 200** — so the reference method is at its least precise exactly where a low-level decision sits, and at its best near Taiwan\'s limit. **Set the acceptance band from the comparator\'s precision at your decision concentration, not from a single headline figure.** For the record, the band this page uses — roughly **±26 %**, from a sixteen-laboratory reproducibility of **9.4 %** at 50 ppm for the international fluorometric method — sits inside that picture rather than contradicting it.', zh: '義大利北部一份五年期的認證調查報告的實驗室內再現性為：**20 mg/kg 時 16.5%、50 時 15.4%、200 時 2.8%**——所以參考方法在「低濃度判定」所在的位置精密度最差，而在台灣限值附近最好。**請依比較方法在你的判定濃度下的精密度來設定接受帶，不要用單一個招牌數字。**附帶說明：本頁所用的那個帶——約 **±26%**，源自國際螢光法在 50 ppm、十六間實驗室的再現性 **9.4%**——落在這個圖像之內，而不是與它矛盾。' }],
+            [{ en: 'One more sobering number about the comparator', zh: '關於比較方法，還有一個令人清醒的數字' },
+             { en: 'In a proficiency round run across **twenty-six laboratories** on spiked canned mackerel, **three failed at one level and five at the other** — so **roughly twelve to nineteen per cent of participating laboratories fail a histamine proficiency test.** That is not an argument for distrusting your accredited partner; it is an argument for **asking which proficiency scheme they participate in and what their last score was**, which is a question a student team is entitled to ask and almost never does.', zh: '在一次橫跨**二十六間實驗室**、以加標罐頭鯖魚進行的能力試驗中，**一個濃度有三間不合格、另一個濃度有五間不合格**——所以**大約百分之十二到十九的參與實驗室在組織胺能力試驗中不合格。**這不是「不要信任你的認證夥伴」的理由；這是「去問他們參加哪個能力試驗計畫、上一次分數是多少」的理由——而那是一支學生團隊有權問、卻幾乎從不問的問題。' }]
+          ])
+      });
+
       /* ---------------- splitting ---------------- */
       out += h.sec({
         id: 'sf-split',
@@ -199,7 +244,8 @@
             { h: { en: 'Sample where the regulator says to sample', zh: '在主管機關說要取樣的地方取樣' },
               p: { en: 'The lower, anterior portion of the loin, not the belly flap; edible portion only, no skin or bone. Record the species, the outlet, the size class and the catch season.', zh: '魚腰的下前段，不是腹鰭片；只取可食部分，不含皮與骨。記錄魚種、販售場所、體型級別與捕獲季節。' },
               items: [
-                { en: 'Size class and season are not incidental: one published study found about **nine-fold** between seasons and **six-and-a-half-fold** between size classes **within the same batch**. Block on them or record them, or they will turn up inside your limits of agreement.', zh: '體型級別與季節不是附帶條件：有一份已發表研究發現，**同一批貨內**季節之間差約**九倍**、體型級別之間差約**六點五倍**。要嘛分層、要嘛記錄，否則它們會跑進你的一致性界限裡。' }
+                { en: 'Size class and season are not incidental: one published study found about **nine-fold** between seasons and **six-and-a-half-fold** between size classes **within the same batch**. Block on them or record them, or they will turn up inside your limits of agreement.', zh: '體型級別與季節不是附帶條件：有一份已發表研究發現，**同一批貨內**季節之間差約**九倍**、體型級別之間差約**六點五倍**。要嘛分層、要嘛記錄，否則它們會跑進你的一致性界限裡。' },
+                { en: 'And **species is a design decision, not a label** — see the section above. In the European standard\'s own ring test the reference method recovered 91 to 96 % from tuna and only 27 to 44 % from herring, so a comparison run on the wrong species measures the comparator rather than your assay.', zh: '而**魚種是一個設計決定，不是一個標籤**——見上一節。在歐盟標準自己的循環測試中，參考方法從鮪魚回收 91 到 96%，從鯡魚只回收 27 到 44%；所以在錯的魚種上做比較，量到的是比較方法，而不是你的試驗。' }
               ],
               done: { en: 'A sampling sheet with the site, species, outlet, size and season for every fish, filled in at the market.', zh: '一張取樣表，每條魚都有部位、魚種、販售場所、體型與季節，在市場現場就填好。' } },
             { h: { en: 'Homogenise the whole edible portion, once, per fish', zh: '每條魚，整個可食部分，均質一次' },
