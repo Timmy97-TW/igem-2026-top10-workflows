@@ -76,6 +76,7 @@
       out += h.toc([
         { id: 'ns-idea', t: { en: 'The idea', zh: '核心想法' } },
         { id: 'ns-swim', t: { en: 'Wet ↔ dry', zh: '濕式↔乾式' } },
+        { id: 'nus-wik', t: { en: 'Their figures', zh: '他們的圖' } },
         { id: 'ns-wet', t: { en: 'Wet lab', zh: '濕式流程' } },
         { id: 'ns-meas', t: { en: 'Measurement', zh: '量測紀律' } },
         { id: 'ns-dry', t: { en: 'Dry lab', zh: '乾式流程' } },
@@ -131,6 +132,9 @@
           svg: function (W) { return w.WF.swim(W, SWIM); }
         })
       });
+
+      /* ---------------- the figures they drew themselves ---------------- */
+      out += h.wikifigs('nus');
 
       /* ---------------- wet lab ---------------- */
       out += h.sec({

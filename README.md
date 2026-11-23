@@ -106,7 +106,9 @@ teams and villages APIs, read 2026-11-22.
 |---|---|
 | Overview (per section) | The findings across that section's ten, the measurement ladder, failure as method, the workflow archetypes, and what we would take from it |
 | Side by side (per section) | Chassis and assembly route, what each team decided a result was, the dry-lab stacks, a documented-practice matrix, and what each team shipped that another team can use |
-| One page per team | The design decision · a wet/dry swimlane diagram · the wet-lab pipeline step by step · the measurement discipline · the model and software stack · what failed · what we would copy |
+| One page per team | The design decision · a wet/dry swimlane diagram · **the overview figures from their own wiki** · the wet-lab pipeline step by step · the measurement discipline · the model and software stack · what failed · what we would copy |
+| Dry-lab toolbox (Undergrad) | Twenty-three capabilities against the Undergraduate ten as a matrix, the five jobs a dry lab can do, a reference table with what each capability costs to reach, and the order we would install them in |
+| Bench gate sheet (Undergrad) | What crosses from an Undergraduate lab to a High School one, six cheap questions to screen an idea with, a six-column sheet filled in before every experiment, a failure budget, and the screen run backwards on our own 2026 project |
 | Three tiers | All thirty wikis read against each other: field sizes and odds by section, country and village conversion, three currencies of proof, the one practice shared by all thirty, and what each tier should steal from the others |
 | 2027 roadmap | A project-selection guide built from the thirty: five gates a candidate topic must pass, six project shapes with their evidence cost, a scoring sheet, a season calendar read backwards from the wiki freeze, and six anti-patterns |
 | Five ideas | Five candidate 2027 topics of our own, each derived from an empty cell in one of the tables above, each put through the five gates, with the five we rejected and the gate that killed each one. Nothing on these pages has been run |
@@ -133,6 +135,9 @@ data/meta.js        site metadata, all three team rosters, the four sections and
 data/overview.js    the comparative analysis, Undergraduate
 data/compare.js     the side-by-side tables, Undergraduate
 data/t-<team>.js    one page module per Undergraduate team
+data/figs.js        the overview figures lifted from each Undergraduate wiki, with our reading
+data/toolbox.js     the dry-lab tool extraction: 23 capabilities x the Undergraduate ten
+data/next.js        the bench gate sheet and what transfers to a High School lab
 data/og-overview.js the comparative analysis, Overgraduate
 data/og-compare.js  the side-by-side tables, Overgraduate
 data/og-t-<team>.js one page module per Overgraduate team
@@ -141,10 +146,24 @@ data/hs-compare.js  the side-by-side tables, High School
 data/hs-t-<team>.js one page module per High School team
 data/x-tiers.js     the cross-tier analysis across all thirty
 data/x-roadmap.js   the 2027 project-selection guide
+assets/wiki/        30 overview figures downloaded from the Undergraduate ten, unmodified, CC BY 4.0
 notes/              the raw working notes each page was written from, one file per team
 tools/qa.py         checks every data file: no arrow functions, no Simplified characters,
                     matched en/zh key counts, every table-of-contents id has a section
 ```
+
+## The figures
+
+`assets/wiki/` holds thirty figures downloaded from the ten team wikis on 22 November 2026 and
+stored here unmodified, so the site does not depend on anyone else's CDN. iGEM team wiki content is
+published under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — nine of the ten wikis
+state this on the page itself; UAlberta's carries no statement we could find, and its figure is used
+on the same terms. Every figure on the site names the team and links to the page it came from.
+The titles and captions next to them are **ours**: a reading of what the figure shows, not the
+team's own caption. Any team who would rather a figure were removed can open an issue here.
+
+Where a team drew no overview figure of their own, the wet/dry swimlane at the top of their page is
+our drawing of the same thing.
 
 Every page is a plain object with a `render(h)` function, and every string is a
 `{ en: '…', zh: '…' }` pair. There is no framework, no bundler and no network call at runtime: open

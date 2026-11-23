@@ -450,6 +450,11 @@
   PD.divisions = [
     {
       key: 'ug', prefix: '', teams: PD.teams,
+      /* two pages that belong to this section's ten teams rather than to a team */
+      extra: [
+        { id: 'toolbox', label: { en: 'Dry-lab toolbox', zh: '乾式工具箱' } },
+        { id: 'next', label: { en: 'Bench gate sheet', zh: '實驗關卡表' } }
+      ],
       label: { en: 'Undergrad', zh: '大學部' },
       sub: { en: 'GEMS Research · Undergraduate section', zh: 'GEMS Research · 大學部組' },
       head: { en: 'Top 10 Undergraduate', zh: '大學部前十名' }
@@ -488,7 +493,7 @@
     return [
       { id: div.prefix + 'overview', label: { en: 'Overview', zh: '總覽' } },
       { id: div.prefix + 'compare', label: { en: 'Side by side', zh: '橫向比較' } }
-    ].concat(div.teams.map(function (t) {
+    ].concat(div.extra || []).concat(div.teams.map(function (t) {
       return { id: div.prefix + t.id, label: { en: t.name, zh: t.name }, team: true };
     }));
   }
@@ -524,8 +529,8 @@
         zh: '\u672c\u7ad9\u662f\u5c0d iGEM 2026 Grand Jamboree **\u7814\u7a76\u751f\u90e8\u524d\u5341\u540d**\u5341\u652f\u5718\u968a\u7684\u5de5\u4f5c\u6d41\u7a0b\u7814\u7a76\uff0c\u7531 **GEMS Research\uff08\u53f0\u7063\uff09** \u65bc 2026 \u5e74 11 \u6708\u5f59\u7de8\u3002\u6240\u6709\u5167\u5bb9\u90fd\u8b80\u81ea\u5404\u968a 2026 \u5e74\u516c\u958b wiki \u8207\u5b98\u65b9\u6210\u7e3e\u9801\uff1b\u6211\u5011\u6c92\u6709\u91cf\u6e2c\u4efb\u4f55\u6578\u64da\uff0c\u672c\u7ad9\u4e5f\u6c92\u6709\u4efb\u4f55\u7d50\u679c\u5c6c\u65bc\u6211\u5011\u3002\u6bcf\u500b\u5718\u968a\u9801\u90fd\u9644\u4e0a\u5176 wiki \u9023\u7d50\u3002\u6587\u4e2d\u51fa\u73fe\u7684\u6578\u5b57\u90fd\u662f\u8a72\u968a\u81ea\u5df1\u7684\u6578\u5b57\uff1b\u6587\u4e2d\u51fa\u73fe\u7684\u5224\u65ad\u2014\u2014\u6211\u5011\u8a8d\u70ba\u67d0\u500b\u6d41\u7a0b\u54ea\u88e1\u505a\u5f97\u597d\u3001\u6211\u5011\u6703\u6284\u54ea\u4e00\u6bb5\u2014\u2014\u90fd\u6a19\u793a\u70ba\u6211\u5011\u7684\u770b\u6cd5\uff0c\u6b61\u8fce\u4e0d\u540c\u610f\u3002iGEM \u53ea\u516c\u5e03\u524d\u4e8c\u540d\u7684\u540d\u6b21\uff0c\u5176\u9918\u516b\u968a\u5728\u5b98\u65b9\u6210\u7e3e\u9801\u8207\u672c\u7ad9\u5747\u4f9d\u5b57\u6bcd\u5e8f\u5217\u51fa\u3002\u672c\u7ad9\u8207 iGEM \u53ca\u6587\u4e2d\u4efb\u4f55\u5718\u968a\u5747\u7121\u96b6\u5c6c\u95dc\u4fc2\uff0c\u4ea6\u672a\u7d93\u5176\u80cc\u66f8\u3002'
       },
       note: {
-        en: 'A workflow study of the ten teams named to the **Top 10 Undergraduate** list at the iGEM 2026 Grand Jamboree, compiled by **GEMS Research (Taiwan)** on 21 November 2026. Everything here is read from each team\'s own public 2026 wiki and the official results page; nothing was measured by us and no result on this site is ours. Each team page links to the wiki it was read from. Where a number appears it is the team\'s own number; where a judgement appears — what we think a workflow does well, what we would copy — it is labelled as ours and can be disagreed with. Not affiliated with, or endorsed by, iGEM or any team named here.',
-        zh: '本站是對 iGEM 2026 Grand Jamboree **大學部前十名**十支團隊的工作流程研究，由 **GEMS Research（台灣）** 於 2026 年 11 月 21 日彙編。所有內容都讀自各隊 2026 年公開 wiki 與官方成績頁；我們沒有量測任何數據，本站也沒有任何結果屬於我們。每個團隊頁都附上其 wiki 連結。文中出現的數字都是該隊自己的數字；文中出現的判斷——我們認為某個流程哪裡做得好、我們會抄哪一段——都標示為我們的看法，歡迎不同意。本站與 iGEM 及文中任何團隊均無隸屬關係，亦未經其背書。'
+        en: 'A workflow study of the ten teams named to the **Top 10 Undergraduate** list at the iGEM 2026 Grand Jamboree, compiled by **GEMS Research (Taiwan)** on 21 November 2026. Everything here is read from each team\'s own public 2026 wiki and the official results page; nothing was measured by us and no result on this site is ours. Each team page links to the wiki it was read from. Where a number appears it is the team\'s own number; where a judgement appears — what we think a workflow does well, what we would copy — it is labelled as ours and can be disagreed with. Figures reproduced from a team\'s wiki are unmodified, credited to that team, and used under the Creative Commons Attribution 4.0 licence that nine of the ten wikis state on the page itself; UAlberta\'s wiki carries no licence statement we could find, and that figure is used on the same terms as the rest. Any team who would rather a figure were removed can open an issue on the repository and we will take it down. Not affiliated with, or endorsed by, iGEM or any team named here.',
+        zh: '本站是對 iGEM 2026 Grand Jamboree **大學部前十名**十支團隊的工作流程研究，由 **GEMS Research（台灣）** 於 2026 年 11 月 21 日彙編。所有內容都讀自各隊 2026 年公開 wiki 與官方成績頁；我們沒有量測任何數據，本站也沒有任何結果屬於我們。每個團隊頁都附上其 wiki 連結。文中出現的數字都是該隊自己的數字；文中出現的判斷——我們認為某個流程哪裡做得好、我們會抄哪一段——都標示為我們的看法，歡迎不同意。轉載自各隊 wiki 的圖片均未經修改、標註該隊出處，並依十個 wiki 中有九個在頁面上自行聲明的「創用 CC 姓名標示 4.0」授權使用；UAlberta 的 wiki 我們找不到授權聲明，該圖以與其餘相同的條件使用。任何團隊若希望撤下某張圖，可在本專案 repo 開 issue，我們會移除。本站與 iGEM 及文中任何團隊均無隸屬關係，亦未經其背書。'
       }
     }
   };

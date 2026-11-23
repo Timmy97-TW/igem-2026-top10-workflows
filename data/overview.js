@@ -337,7 +337,15 @@
           h.take({ en: 'The one-line version', zh: '一句話版本' }, {
             en: 'What the 2026 Top 10 have in common is not better equipment or cleverer biology. It is that each of them can tell you, in writing, why a number on their page is allowed to mean what they say it means.',
             zh: '2026 年前十名的共同點，不是更好的設備或更聰明的生物學，而是每一隊都能用文字告訴你：為什麼他們頁面上的某個數字，被允許代表他們說它代表的那個意思。'
-          })
+          }) +
+          h.cards([
+            { chips: [{ t: { en: 'next page', zh: '下一頁' }, k: 'b' }],
+              h: { en: 'The dry-lab toolbox →', zh: '乾式工具箱 →' },
+              p: { en: 'Twenty-three capabilities against these ten teams, sorted by the question each tool answers, with what it costs to reach and the order we would install them in. [Open it](#toolbox).', zh: '二十三項能力對這十支隊伍，按「每個工具回答什麼問題」排序，附上取得成本以及我們會採用的安裝順序。[開啟](#toolbox)。' } },
+            { chips: [{ t: { en: 'next page', zh: '下一頁' }, k: 'g' }],
+              h: { en: 'The bench gate sheet →', zh: '實驗關卡表 →' },
+              p: { en: 'What crosses from an Undergraduate lab to a High School one, six cheap questions to ask of an idea, and a six-column sheet filled in for every planned result before the experiment runs. [Open it](#next).', zh: '從大學部實驗室到高中實驗室什麼過得來、問一個點子的六個便宜問題，以及每個預定結果在實驗開跑前就填好的六欄表格。[開啟](#next)。' } }
+          ], 'g2')
       });
 
       return out;

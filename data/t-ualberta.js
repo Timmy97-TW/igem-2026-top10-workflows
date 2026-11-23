@@ -74,6 +74,7 @@
       out += h.toc([
         { id: 'ua-idea', t: { en: 'The idea', zh: '核心想法' } },
         { id: 'ua-swim', t: { en: 'Wet and dry', zh: '濕式與乾式' } },
+        { id: 'ualberta-wik', t: { en: 'Their figures', zh: '他們的圖' } },
         { id: 'ua-wet', t: { en: 'Wet lab', zh: '濕式流程' } },
         { id: 'ua-meas', t: { en: 'Measurement', zh: '量測紀律' } },
         { id: 'ua-dry', t: { en: 'Dry lab', zh: '乾式流程' } },
@@ -126,6 +127,9 @@
           svg: function (W) { return w.WF.swim(W, SWIM); }
         })
       });
+
+      /* ---------------- the figures they drew themselves ---------------- */
+      out += h.wikifigs('ualberta');
 
       /* ---------------- wet lab ---------------- */
       out += h.sec({

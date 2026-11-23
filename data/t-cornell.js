@@ -76,6 +76,7 @@
       out += h.toc([
         { id: 'c-idea', t: { en: 'The idea', zh: '核心想法' } },
         { id: 'c-swim', t: { en: 'Wet ↔ dry', zh: '濕式↔乾式' } },
+        { id: 'cornell-wik', t: { en: 'Their figures', zh: '他們的圖' } },
         { id: 'c-wet', t: { en: 'Wet lab', zh: '濕式流程' } },
         { id: 'c-meas', t: { en: 'Measurement', zh: '量測紀律' } },
         { id: 'c-dry', t: { en: 'Dry lab', zh: '乾式流程' } },
@@ -128,6 +129,9 @@
           svg: function (W) { return w.WF.swim(W, SWIM); }
         })
       });
+
+      /* ---------------- the figures they drew themselves ---------------- */
+      out += h.wikifigs('cornell');
 
       /* ---------------- wet lab ---------------- */
       out += h.sec({

@@ -141,6 +141,56 @@
     },
     /* figure from the FIG engine */
     fig: function (spec) { return w.FIG.fig(spec); },
+
+    /* ---- a figure lifted from a team's own wiki -------------------
+       The image is served from this repo (assets/wiki/…) so the page
+       does not depend on the team's CDN, and every one of them carries
+       the team credit and the CC BY 4.0 line in its caption. The frame
+       is the same FIG shell as every other figure, so wiki figures and
+       our own diagrams are numbered in one sequence.                  */
+    shot: function (o) {
+      var alt = esc(T(o.alt || o.title));
+      var body = '<a class="shot" href="' + esc(o.src) + '" target="_blank" rel="noopener" ' +
+        'title="' + T({ en: 'Open the full-size image', zh: '開啟原尺寸圖片' }) + '">' +
+        '<img src="' + esc(o.src) + '" alt="' + alt + '" loading="lazy" decoding="async">' +
+        '<span class="shotz">' + T({ en: 'full size ↗', zh: '原尺寸 ↗' }) + '</span></a>';
+      return w.FIG.fig({
+        kind: 'custom', svg: body, table: '',
+        tag: o.tag || { en: 'THEIR FIGURE', zh: '他們畫的圖' },
+        title: o.title, sub: o.sub, caption: o.caption, source: o.source
+      });
+    },
+
+    /* the standard "from their own wiki" section, built from PD.figs */
+    wikifigs: function (tid) {
+      var g = (PD.figs || {})[tid];
+      if (!g) return '';
+      var t = (PD.teams || []).filter(function (x) { return x.id === tid; })[0] || {};
+      var body = '';
+      if (g.lede2) body += h.p(g.lede2);
+      g.items.forEach(function (it) {
+        body += h.shot({
+          src: 'assets/wiki/' + it.file,
+          alt: it.alt || it.title,
+          tag: it.tag || { en: 'THEIR FIGURE', zh: '他們畫的圖' },
+          title: it.title,
+          sub: it.sub,
+          caption: it.caption,
+          source: {
+            en: t.name + ' — iGEM 2026, [' + it.page + '](' + it.src + '). Licensed CC BY 4.0; reproduced here unmodified. The reading in the caption above is ours.',
+            zh: t.name + '（iGEM 2026），[' + it.page + '](' + it.src + ')。CC BY 4.0 授權，此處未經修改轉載。上方說明文字中的解讀是我們的。'
+          }
+        });
+      });
+      if (g.after) body += g.after(h);
+      return h.sec({
+        id: tid + '-wik',
+        kick: { en: 'How they drew it themselves', zh: '他們自己怎麼畫' },
+        h2: g.h2 || { en: 'The figures on their own wiki', zh: '他們 wiki 上的圖' },
+        lede: g.lede,
+        body: body
+      });
+    },
     /* figure from the WF workflow-diagram library */
     wf: function (name, o) {
       o = o || {};
@@ -214,7 +264,9 @@
       compare: 'M4 6h7M4 12h11M4 18h5M17 4v16m0-16l3 3m-3-3l-3 3',
       team: 'M4 7h5v5H4zM15 7h5v5h-5zM9.5 9.5h5M7 12v5h10v-5',
       wet: 'M12 3v6l-5 9a4 4 0 0 0 3.6 6h2.8A4 4 0 0 0 17 18l-5-9',
-      dry: 'M4 19V9m5 10V5m5 14v-7m5 7V8'
+      dry: 'M4 19V9m5 10V5m5 14v-7m5 7V8',
+      toolbox: 'M3 9h18v11H3zM8 9V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3M3 14h18',
+      next: 'M4 20v-5m0 0l4-4 4 3 7-8M20 6h-4m4 0v4M4 15h0'
     }[String(name).replace(/^(og|hs|x)-/, '')] || p2(name);
     return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + p + '"/></svg>';
   }

@@ -250,7 +250,7 @@
               { label: { en: 'Slope stability', zh: '坡面穩定' }, sub: { en: 'Infinite-slope Factor of Safety, including root reinforcement', zh: '無限邊坡安全係數，並納入根系加固' }, tone: 'b',
                 items: [
                   { en: 'historical rainfall and landslide data across Switzerland', zh: '全瑞士的歷史降雨與山崩資料' },
-                  { en: 'output: **the additional cohesion the bacteria would have to supply**', zh: '輸出：**細菌必須額外提供多少凝聚力**' }
+                  { en: 'output: the additional cohesion the bacteria would have to supply', zh: '輸出：細菌必須額外提供多少凝聚力' }
                 ] },
               { label: { en: 'Reactive transport', zh: '反應輸送' }, sub: { en: 'A published Michaelis–Menten model adapted to a 0.5 m vertical column', zh: '把一個已發表的 Michaelis–Menten 模型改用在 0.5 公尺垂直土柱上' }, tone: 'v',
                 items: [
