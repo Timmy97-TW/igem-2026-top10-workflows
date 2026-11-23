@@ -6,7 +6,7 @@
 
   PD.pages['x-plan'] = {
     label: { en: '2027 season plan', zh: '2027 賽季計畫' },
-    title: { en: '2027 season plan — the roadmap as dates', zh: '2027 賽季計畫——把行程換成日期' },
+    title: { en: '2027 season plan: the roadmap as dates', zh: '2027 賽季計畫——把行程換成日期' },
     render: function (h) {
       var out = '';
 
@@ -21,13 +21,13 @@
           zh: '2027 年的 Jamboree 比 2026 年**在年內提前了 26 天**開幕。==如果你照去年那支隊伍的時間開始，你就少了二十六天，而不會有人來提醒你。=='
         }) + '</h1>' +
         '<p class="lede">' + h.md({
-          en: 'The [roadmap page](#x-roadmap) counts the season in weeks before the wiki freeze, because that is the only honest way to count before iGEM publishes its calendar. This page does the arithmetic anyway. **iGEM\'s own events API gives the 2027 Grand Jamboree as 18–21 October 2027.** The freeze has fallen 19 to 23 days earlier, on a Wednesday, four seasons running — which puts it at **29 September 2027**. That one inferred date turns every week offset into a Wednesday you can write on a wall. Each date below is marked as published, inferred, or derived, and the page tells you exactly how to shift all of them in one step when iGEM announces the real one.',
+          en: 'The [roadmap page](#x-roadmap) counts the season in weeks before the wiki freeze, because that is the only honest way to count before iGEM publishes its calendar. This page does the arithmetic anyway. **iGEM\'s own events API gives the 2027 Grand Jamboree as 18–21 October 2027.** The freeze has fallen 19 to 23 days earlier, on a Wednesday, four seasons running, which puts it at **29 September 2027**. That one inferred date turns every week offset into a Wednesday you can write on a wall. Each date below is marked as published, inferred, or derived, and the page tells you exactly how to shift all of them in one step when iGEM announces the real one.',
           zh: '[選題指南](#x-roadmap)把整季以「wiki 凍結日前幾週」計算，因為在 iGEM 公布行程之前，那是唯一誠實的算法。這一頁還是把算術做完了。**iGEM 自己的 events API 把 2027 年 Grand Jamboree 列為 2027 年 10 月 18 至 21 日。**過去四季，凍結日都落在開幕前 19 到 23 天、而且都是星期三——推算下來是 **2027 年 9 月 29 日**。這一個推算出來的日期，把每一個週數偏移都變成一個你可以寫在牆上的星期三。以下每個日期都標示為「已公布」、「推算」或「導出」，而本頁也寫明：當 iGEM 公布真正的日期時，該怎麼一步把全部日期平移。'
         }) + '</p>' +
         h.stats([
-          { v: '18–21 Oct', l: { en: '2027 Grand Jamboree, from iGEM\'s events API — the only published 2027 date', zh: '2027 年 Grand Jamboree，來自 iGEM events API——唯一已公布的 2027 日期' } },
+          { v: '18–21 Oct', l: { en: '2027 Grand Jamboree, from iGEM\'s events API: the only published 2027 date', zh: '2027 年 Grand Jamboree，來自 iGEM events API——唯一已公布的 2027 日期' } },
           { v: '29 Sep', l: { en: 'Our inferred wiki freeze, from four seasons of the same interval', zh: '我們推算的 wiki 凍結日，依四個賽季相同的間隔' } },
-          { v: '26 days', l: { en: 'Earlier in the calendar than the 2026 Jamboree — this is published, not inferred', zh: '比 2026 年 Jamboree 在日曆上提前的天數——這是公布的，不是推算的' } },
+          { v: '26 days', l: { en: 'Earlier in the calendar than the 2026 Jamboree. This is published, not inferred', zh: '比 2026 年 Jamboree 在日曆上提前的天數——這是公布的，不是推算的' } },
           { v: '13', l: { en: 'Dated milestones, every one of them a Wednesday', zh: '有日期的里程碑數，每一個都是星期三' } },
           { v: '4', l: { en: 'Points at which the plan says to kill the project rather than continue', zh: '計畫中明白寫著「該停掉而不是繼續」的時點數' } },
           { v: '0', l: { en: '2027 deadlines iGEM had published when we wrote this page', zh: '我們寫這一頁時，iGEM 已公布的 2027 期限數' } }
@@ -83,7 +83,7 @@
           h.take({ en: 'The one-step correction', zh: '一步修正' },
             { en: 'When iGEM publishes the real freeze, subtract it from 29 September 2027 and shift **every** date on this page by that many days. Do not re-plan. The plan is a set of intervals; only its anchor is uncertain.', zh: '當 iGEM 公布真正的凍結日，把它和 2027 年 9 月 29 日相減，然後把本頁**每一個**日期平移同樣的天數。不要重新規劃。這份計畫是一組間隔；不確定的只有它的錨點。' }) +
           h.warn({
-            en: 'The 26 days are the part that bites. A team that starts its first meeting in the same school week as the 2026 team did, and keeps the same habits, reaches the 2027 freeze **with 26 days of work not done** — and the days it will have lost are September days, which in 2026 were the writing weeks. The common version of this failure is a team that measures everything it planned to measure and then has eleven days to write a wiki about it.',
+            en: 'The 26 days are the part that bites. A team that starts its first meeting in the same school week as the 2026 team did, and keeps the same habits, reaches the 2027 freeze **with 26 days of work not done**. The days it will have lost are September days, which in 2026 were the writing weeks. The common version of this failure is a team that measures everything it planned to measure and then has eleven days to write a wiki about it.',
             zh: '真正會咬人的是那 26 天。一支在學年同一週開第一次會、並且保持同樣習慣的隊伍，抵達 2027 年凍結日時會**有 26 天的工作沒做完**——而它失去的那些日子是九月的日子，也就是 2026 年的書寫週。這種失敗最常見的樣子是：一支隊伍把計畫中要量的全都量完了，然後只剩十一天可以寫出一個 wiki。'
           })
       });
@@ -94,7 +94,7 @@
         kick: { en: 'The plan', zh: '計畫' },
         h2: { en: 'Thirteen Wednesdays between the first meeting and the freeze', zh: '從第一次會議到凍結日之間的十三個星期三' },
         lede: {
-          en: 'Every milestone from the roadmap, converted to a real 2027 date. They are all Wednesdays because the freeze is a Wednesday and the offsets are whole weeks — which is convenient: a weekly meeting lands on every one of them.',
+          en: 'Every milestone from the roadmap, converted to a real 2027 date. They are all Wednesdays because the freeze is a Wednesday and the offsets are whole weeks. That is convenient: a weekly meeting lands on every one of them.',
           zh: '選題指南裡的每一個里程碑，都換算成一個真實的 2027 年日期。它們全都是星期三，因為凍結日是星期三、而偏移都是整週——這剛好很方便：一個每週例會會落在其中每一個上面。'
         },
         body:
@@ -186,13 +186,13 @@
                { en: 'The count is two or three. At four you are not choosing a project, you are choosing which three things will be published as design.', zh: '數字是二或三。到四的時候，你不是在選一個專案，你是在選哪三件事會以「設計」的形式公開。' }],
               [{ en: '**4 · The outsider**', zh: '**4 · 外部的人**' },
                { en: '"______ at ______ will measure ______ for us, and may disagree."', zh: '「______ 單位的 ______ 會替我們量 ______，而且可能與我們不一致。」' },
-               { en: 'A name, not a category. And they must be able to return an answer you dislike — a service that runs your sample is an instrument you rented, not a check.', zh: '一個名字，不是一個類別。而且他們必須能回給你一個你不喜歡的答案——幫你跑樣本的服務是你租來的儀器，不是檢驗。' }],
+               { en: 'A name, not a category. And they must be able to return an answer you dislike. A service that runs your sample is an instrument you rented, not a check.', zh: '一個名字，不是一個類別。而且他們必須能回給你一個你不喜歡的答案——幫你跑樣本的服務是你租來的儀器，不是檢驗。' }],
               [{ en: '**5 · The negative result**', zh: '**5 · 負面結果**' },
                { en: '"If ______ then our answer is ______, and we will publish it."', zh: '「如果 ______，那我們的答案就是 ______，而我們會公開它。」' },
                { en: 'Somebody on the team visibly does not want this sentence to be true. If nobody minds it, the project cannot fail, which means it cannot succeed either.', zh: '團隊裡有人明顯不希望這句話成立。如果沒有人在意它，這個專案就不可能失敗，也就意味著它不可能成功。' }],
               [{ en: '**6 · The baseline**', zh: '**6 · 基準**' },
                { en: '"Our model will be compared against ______, which we will run ourselves."', zh: '「我們的模型會跟 ______ 比較，而那個我們自己會跑。」' },
-               { en: 'One of the baselines is embarrassingly simple — a straight line, a mean, a coin flip. If the simple one wins, that is the finding.', zh: '其中一個基準笨得讓人不好意思——一條直線、一個平均、一次擲硬幣。如果笨的那個贏了，那就是發現。' }],
+               { en: 'One of the baselines is embarrassingly simple: a straight line, a mean, a coin flip. If the simple one wins, that is the finding.', zh: '其中一個基準笨得讓人不好意思——一條直線、一個平均、一次擲硬幣。如果笨的那個贏了，那就是發現。' }],
               [{ en: '**7 · The person**', zh: '**7 · 那個人**' },
                { en: '"______ does ______ for a living, and we will ask them ______."', zh: '「______ 以 ______ 為業，而我們會問他們 ______。」' },
                { en: 'You can state what you expect them to change about the design. A conversation that cannot change the design is publicity, not practice.', zh: '你能說出你預期他們會改變設計的哪一部分。一場不可能改變設計的對話是宣傳，不是實踐。' }],
@@ -210,9 +210,9 @@
             source: { en: 'Our worksheet. The ten prompts are the ten rows of the roadmap\'s scoring sheet, rewritten as sentences with blanks, because a score hides a disagreement and a filled-in sentence cannot.', zh: '這是我們的工作單。十個提問就是選題指南評分表的十列，改寫成帶空格的句子，因為分數會藏住分歧，而一句填好的話藏不住。' }
           }) +
           h.take({ en: 'How to run the meeting', zh: '這場會議怎麼開' },
-            { en: 'Twenty minutes of writing, in silence, one sheet per topic per person. Then read **row 1 from every sheet** aloud before moving to row 2 — go across the rows, not down the sheets. Topics die on their own when four people read out four different numbers for the same project. Nobody has to argue.', zh: '二十分鐘的書寫，全程安靜，每人每題一份。然後**先把每一份的第 1 列**唸出來，再進到第 2 列——橫著走，不要豎著走。當四個人對同一個專案唸出四個不同的數字時，題目會自己死掉。沒有人需要吵架。' }) +
+            { en: 'Twenty minutes of writing, in silence, one sheet per topic per person. Then read **row 1 from every sheet** aloud before moving to row 2. Go across the rows, not down the sheets. Topics die on their own when four people read out four different numbers for the same project. Nobody has to argue.', zh: '二十分鐘的書寫，全程安靜，每人每題一份。然後**先把每一份的第 1 列**唸出來，再進到第 2 列——橫著走，不要豎著走。當四個人對同一個專案唸出四個不同的數字時，題目會自己死掉。沒有人需要吵架。' }) +
           h.warn({
-            en: 'Two failure modes of this worksheet, both of which we have seen in our own meetings. **Filling it in after the decision** turns it into a justification document, and you can tell because every blank is full and confident. **Filling it in for only the favourite topic** removes the only thing it is for, which is the comparison — the sheet is useless on one topic and powerful on four.',
+            en: 'Two failure modes of this worksheet, both of which we have seen in our own meetings. **Filling it in after the decision** turns it into a justification document, and you can tell because every blank is full and confident. **Filling it in for only the favourite topic** removes the only thing it is for, which is the comparison. The sheet is useless on one topic and powerful on four.',
             zh: '這份工作單有兩種失敗模式，我們自己的會議裡都見過。**在決定之後才填**，會讓它變成一份正當化文件；辨識方法是每個空格都填滿而且充滿自信。**只為最喜歡的那個題目填**，則移除了它唯一的用處——比較；這張表用在一個題目上毫無用處，用在四個題目上威力強大。'
           })
       });
@@ -258,7 +258,7 @@
                 { en: 'If the honest answer is the negative result you wrote on 3 February, the right move is to publish it properly rather than spend August chasing the positive one. Ten weeks of chasing produces a wiki that claims more than it shows, which is the single most visible weakness to a judge.', zh: '如果誠實的答案就是你 2 月 3 日寫下的那個負面結果，正確的做法是把它好好公開，而不是用八月去追那個正面的。追十週會產出一個「主張多於展示」的 wiki，而那是評審眼裡最顯眼的弱點。' },
                 { en: 'Everything measured after this date is an addition. Label it as one on the page.', zh: '這個日期之後測到的一切都是補充。在頁面上就這樣標示它。' }
               ],
-              done: { en: 'A dated archive, and one sentence stating what it supports — written before anybody starts the results page.', zh: '一份有日期的封存檔，以及一句陳述它支持什麼的話——在任何人開始寫結果頁之前寫好。' } }
+              done: { en: 'A dated archive, and one sentence stating what it supports, written before anybody starts the results page.', zh: '一份有日期的封存檔，以及一句陳述它支持什麼的話——在任何人開始寫結果頁之前寫好。' } }
           ]) +
           h.note({
             en: 'All four gates are written **before** the season starts, with their numbers filled in, and signed. A gate whose threshold is decided at the gate is not a gate. The point of dating them in January is that the person who will want to continue in July is the same person who writes the stopping rule in February, and in February they are still able to be fair about it.',
@@ -272,7 +272,7 @@
         kick: { en: 'Slack', zh: '餘裕' },
         h2: { en: 'Which dates can move, which cannot, and where the twenty-six days have to come from', zh: '哪些日期可以動、哪些不行，以及那二十六天必須從哪裡挪出來' },
         lede: {
-          en: 'A plan with no slack is a plan that fails on its first bad week, and every season has one. Here is where the slack actually is — and because 2027 is 26 days shorter, a team has to decide in January which of these it is spending.',
+          en: 'A plan with no slack is a plan that fails on its first bad week, and every season has one. Here is where the slack actually is. Because 2027 is 26 days shorter, a team has to decide in January which of these it is spending.',
           zh: '沒有餘裕的計畫，會在第一個倒楣的星期就失效，而每一季都會有一個。這裡寫明餘裕實際上在哪裡——而因為 2027 年短了 26 天，一支隊伍必須在一月就決定要花掉哪一項。'
         },
         body:
@@ -294,7 +294,7 @@
                { en: 'Slippable to about mid-May, and no later: the whole reason it is in April is that there must be time to act on an answer you did not want.', zh: '可以延到大約五月中，不能再晚：它之所以排在四月，整個理由就是必須留下時間，去對一個你不想要的答案做反應。' }],
               [{ en: 'The screen with a loser (12 May)', zh: '會有輸家的篩選（5 月 12 日）' },
                { en: '**Yes**', zh: '**可以**' },
-               { en: 'The most droppable item on the page. It makes a project much stronger and it is not load-bearing — cut it to two options instead of four before you cut it entirely.', zh: '本頁最可以放棄的一項。它讓專案強很多，但不承重——在整個砍掉之前，先把它從四個選項減成兩個。' }],
+               { en: 'The most droppable item on the page. It makes a project much stronger and it is not load-bearing. Cut it to two options instead of four before you cut it entirely.', zh: '本頁最可以放棄的一項。它讓專案強很多，但不承重——在整個砍掉之前，先把它從四個選項減成兩個。' }],
               [{ en: 'Dose–response (23 June)', zh: '劑量反應（6 月 23 日）' },
                { en: '*A little*', zh: '*一點點*' },
                { en: 'Four weeks of slack exist between it and the dataset freeze, and they are the only real slack in the season. Spend them here, not earlier.', zh: '它與資料集凍結之間有四週餘裕，而那是整季唯一真正的餘裕。把它花在這裡，不要更早花掉。' }],
@@ -312,7 +312,7 @@
                { en: 'These are the cheapest marks in the competition and the only ones lost by administration rather than by science.', zh: '這些是整個競賽裡最便宜的分數，也是唯一會因為行政而不是因為科學而丟掉的分數。' }]
             ],
             min: 840,
-            source: { en: 'Our judgement, from reading how the thirty 2026 Top 10 teams described their own timing — including the ones who said plainly what they ran out of time to do.', zh: '這是我們的判斷，來自閱讀 2026 年三十支前十名隊伍如何描述自己的時程——包括那些明白寫出「來不及做什麼」的隊伍。' }
+            source: { en: 'Our judgement, from reading how the thirty 2026 Top 10 teams described their own timing, including the ones who said plainly what they ran out of time to do.', zh: '這是我們的判斷，來自閱讀 2026 年三十支前十名隊伍如何描述自己的時程——包括那些明白寫出「來不及做什麼」的隊伍。' }
           }) +
           h.take({ en: 'Where the twenty-six days come from', zh: '那二十六天從哪裡來' },
             { en: 'Three of the four slippable items add up to about six weeks of flexibility, and the 2027 calendar has already spent four of those weeks before your first meeting. So: **start the choosing phase in December 2026, not January 2027.** That is the whole answer, and it is free. Every other version of the answer costs an experiment.', zh: '四個可延項目裡有三個加起來約有六週彈性，而 2027 年的日曆在你第一次開會之前就已經花掉了其中四週。所以：**選題階段從 2026 年 12 月開始，不要從 2027 年 1 月開始。**這就是全部的答案，而且它免費。這個答案的其他每一個版本，都要用一個實驗來換。' })
