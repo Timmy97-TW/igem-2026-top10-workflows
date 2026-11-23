@@ -777,3 +777,78 @@ the SD estimate; 20 gives 16 %, 8 gives 27 %) split across days and operators. *
 not fresh: the green autofluorescence is secreted flavins that accumulate with growth, cells releasing ~10×
 what they retain. And one free, unpublished experiment: **empty vector versus no plasmid** in a calibrated
 fluorescence assay.
+
+---
+
+## What actually won the 2026 High School Special Awards (23 Nov 2026)
+
+Seventeen winning standard pages read as text, plus Registry entries via the API and two public GitLab
+repos. **All seventeen 2026 wikis are server-rendered static HTML** — plain fetches work, no browser needed.
+**`parts.igem.org/Part:<id>` returns HTTP 403 to automated clients**, so Registry content comes from
+`https://api.registry.igem.org/v1/parts?search=<id>` plus the undocumented `…/parts/<uuid>/documentation`
+endpoint, which returns the full Design / Experiment / Characterisation / Application / Discussion bodies.
+Human-readable equivalent: `https://registry.igem.org/parts/<slug>`.
+
+**The strongest signature across all seventeen: every winner publishes a failure beside its result, in the
+same voice, at figure level rather than as a closing disclaimer.** Lambert-GA reports one confirmed binder
+out of 35 and names the design whose ipSAE 0.927 still failed; GCGS's improvement only makes sense because
+cycle 2a destroyed the induction signal; BGI-College shows two blank plates before the one with colonies;
+GEMS-Taiwan writes that *"five of our eight pre-registered predictions about the photometer were overturned
+by our own data."*
+
+**Second signature: a sentence per figure saying what the data does not show.** GHCIS: *"This single example
+demonstrates the expected workflow and does not establish independent biological detection accuracy."*
+Lambert: *"the identity of the pooled reporter preparation remains unverified."* Squirrel-Beijing:
+*"enhanced normalised fluorescence does not directly demonstrate increased PobR–pNP binding affinity."*
+BASIS-China: *"sfGFP supports circuit tracking but does not independently establish cell viability."*
+
+**Other shared practices.** A downloadable artefact behind every claim, and **in no case is the artefact a
+PDF of the wiki** — STLs, a design CSV, raw CSVs plus a replay script plus a pre-registration in one GitLab
+folder, print-ready bilingual lesson folders, a deployable repo. **Two of the four multi-award winners
+structure the page as the ballot** (GEMS prints the four hardware judging questions and maps each to a
+numbered section; Lambert keeps a `/judging/` page answering every criterion with a link). **Benchmark
+against something you did not make**: HKSSC runs commercial porcine liver esterase on the same plate at
+matched mass; GEMS runs a benchtop BioDrop in the same loop and states it used it *"as a validation reference
+and not as the source of a fitted calibration curve"*; GCGS re-synthesises and re-assays the 2017 parent.
+**Anonymous "we consulted experts" appears nowhere in a winning section.** **One traceable pivot beats thirty
+logged meetings** (NFLSHS adding HPLC and going single-plasmid after formulators asked for batch consistency;
+GEMS abandoning soil release for a contained bioreactor on biosafety advice; Lambert moving from nanobodies
+to minibinders). **Four of the five soft awards were won with an invented named framework** — the value is
+that a framework forces a per-item feedback→change field that prose lets you skip.
+
+**The surprises, which are the useful part.**
+- **Best Model was won with a failure rate, not a fit**: 18 negatives, 16 unusable, 1 hit at 604 nM, and the
+  clinching argument is that the confidence metrics *did not* predict success.
+- **Admitting insufficiency helps.** The Software winner devotes a long section to its validation
+  establishing *"neither sensitivity, specificity, a detection limit nor a continuous concentration
+  calibration."*
+- **Best Sustainable Development Impact was won by transparent self-grading**: seven SDGs scored 7.1–8.1/10
+  on the team's own weights, disclaimed as *"not official United Nations SDG scores"*, with **no measured SDG
+  outcome anywhere**. The ballot asks for "measurably and significantly"; what won was an auditable,
+  exportable measurement of the team's own activity. Far more reachable than the wording implies.
+- **The Software eligibility bar is mechanical and nearly trivial**: `.nvmrc` with an exact Node version, a
+  root `LICENSE` carrying the Apache 2.0 text, a `README.md`, in the `2026/software/<team>` namespace.
+  **Zero npm dependencies satisfied "pinned dependencies" more completely than any lockfile.** Verified
+  against the GitLab API on `2026/software/ghcis/argus`. (Its live console's documented credentials are
+  `root`/`root`, which evidently cost nothing in judging.)
+- **Best Presentation leaves no trace on the wiki at all** — NFLSHS-CHINA has no `/presentation` page, video
+  embed or deck anywhere. The award is invisible to the artefact that outlives the season.
+- **Registry structured metadata is unmaintained.** All three part-award winners checked have
+  `characterisedIn` **empty** and `usageCount` **0** behind thousands of words of characterisation prose.
+  Judges read the prose.
+- **The improved-part rule is the one most likely to disqualify good work.** GCGS re-synthesised the 2017
+  part, re-cloned it into pTrc99k, re-sequenced, re-assayed in triplicate, then wrote five new sections onto
+  the **old part's** page (`BBa_K2315014`, verified via the API alongside `BBa_26QSD9SO`).
+
+**Not verified.** Every figure is unread — these pages present data as images, so any claim resting only on
+a gel or plot is unchecked. All linked PDFs unread. The two largest GEMS pages (~169k and ~168k characters)
+were read in full at the top and by keyword below. GreatBay's inclusivity page read in extracts. Lambert's
+minibinder-dosing, RNAi and epidemiological model pages not opened. Which specific part each part award was
+granted for is **inferred from the teams' own pages**, not confirmed against the award record. GHCIS's
+Registry collection page could not be loaded (`/v1/collections/<uuid>` returns 404).
+
+**One finding about our own team, deliberately not published.** The reader flagged that GEMS-Taiwan's
+overview frames the project around *"one question from the farmers in Ghana"* while all five documented
+farmer outreach events are in Taiwan and there is a single named Ghanaian contact. It also could not read
+the full expert-engagement pipelines and said it could not rule out further Ghanaian contact elsewhere.
+An unverified criticism of our own team does not go on the site; it goes here, for the team to check.
