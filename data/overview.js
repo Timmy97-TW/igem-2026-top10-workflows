@@ -26,29 +26,29 @@
         }) + '</p>' +
         h.stats([
           { v: '10', l: { en: 'Teams on the Undergrad Top 10 list', zh: '大學部前十名隊伍' } },
-          { v: '7', l: { en: 'Of the ten that published a named negative result', zh: '十隊中公開寫出具名負面結果的隊數' } },
+          { v: '10', l: { en: 'Of the ten that published a named failure with its cause — all of them', zh: '十隊中公開寫出具名失敗與其原因的隊數——全部' } },
           { v: '9', l: { en: 'Of the ten whose dry lab changed a wet-lab decision', zh: '十隊中乾式實驗改變了濕式決策的隊數' } },
-          { v: '5', l: { en: 'Teams running generative protein design', zh: '使用生成式蛋白質設計的隊數' } },
-          { v: '4', l: { en: 'Teams that had to build or rebuild their own assay', zh: '必須自建或重建量測方法的隊數' } },
+          { v: '3', l: { en: 'Teams that ran a model which writes new sequences; two more scored mutants of one they had', zh: '跑了「會寫出新序列」模型的隊數；另有兩隊為既有序列的突變體打分' } },
+          { v: '8', l: { en: 'Of the ten that spent an experiment on the assay before trusting it', zh: '十隊中在信任量測之前先花一個實驗在它身上的隊數' } },
           { v: '3', l: { en: 'Teams whose model disqualified their own experiment', zh: '模型否決了自家實驗的隊數' } }
         ]) +
         '</div></div>';
 
       out += h.toc([
-        { id: 'o-what', t: { en: 'What this is', zh: '這是什麼' } },
-        { id: 'o-ten', t: { en: 'The ten', zh: '十支隊伍' } },
         { id: 'o-find', t: { en: 'Six findings', zh: '六個發現' } },
         { id: 'o-where', t: { en: 'Where dry meets wet', zh: '乾濕交界' } },
         { id: 'o-meas', t: { en: 'The measurement ladder', zh: '量測階梯' } },
         { id: 'o-fail', t: { en: 'Failure as method', zh: '把失敗當方法' } },
         { id: 'o-arch', t: { en: 'Four archetypes', zh: '四種原型' } },
         { id: 'o-funnel', t: { en: 'Design funnels', zh: '設計漏斗' } },
+        { id: 'o-ten', t: { en: 'The ten', zh: '十支隊伍' } },
+        { id: 'o-what', t: { en: 'What this is', zh: '這是什麼' } },
         { id: 'o-method', t: { en: 'How we read this', zh: '我們怎麼讀的' } },
         { id: 'o-gems', t: { en: 'What we would take', zh: '我們會帶走什麼' } }
       ]);
 
-      /* ---------------- what this is ---------------- */
-      out += h.sec({
+      /* ---------------- what this is — held back, appended below the analysis ---------------- */
+      var secAbout = h.sec({
         id: 'o-what',
         kick: { en: 'What this is', zh: '這是什麼' },
         h2: { en: 'A workflow study, not a ranking and not a review of the science', zh: '一份工作流程研究，不是排名，也不是對科學內容的評論' },
@@ -66,8 +66,8 @@
           ])
       });
 
-      /* ---------------- the ten ---------------- */
-      out += h.sec({
+      /* ---------------- the ten — held back, appended below the analysis ---------------- */
+      var secTen = h.sec({
         id: 'o-ten',
         kick: { en: 'The ten', zh: '十支隊伍' },
         h2: { en: 'Top 10 Undergraduate, iGEM 2026', zh: 'iGEM 2026 大學部前十名' },
@@ -86,8 +86,8 @@
               '</div>';
           }).join('') + '</div>' +
           h.note({
-            en: 'Also announced on the same page: TU Delft took the Overgrad Grand Prize and Lambert-GA the High School Grand Prize. **All three sections now have their own part of this site** — use the switch above the tabs, or go straight to the [Overgraduate overview](#og-overview) or the [High School overview](#hs-overview). The **Across tiers** section reads all thirty wikis against each other in [Three tiers](#x-tiers), turns them into a [2027 roadmap](#x-roadmap), and puts five candidate 2027 topics through that procedure in [Five ideas](#x-ideas). The full official list is at [competition.igem.org/results/2026](https://competition.igem.org/results/2026).',
-            zh: '同一頁公布的其他結果：TU Delft 取得研究生組首獎，Lambert-GA 取得高中組首獎。**三個組別現在在本站都有自己的一區**——使用分頁列上方的切換鈕，或直接前往[研究生部總覽](#og-overview)或[高中部總覽](#hs-overview)。**三層比較**那一區把三十個 wiki 互相對讀，成果在[三層分析](#x-tiers)，整理成一份[2027 選題指南](#x-roadmap)，並在[五個題目](#x-ideas)裡把五個 2027 候選題目跑過那套程序。完整官方名單見 [competition.igem.org/results/2026](https://competition.igem.org/results/2026)。'
+            en: 'Also announced on the same page: TU Delft took the Overgrad Grand Prize and Lambert-GA the High School Grand Prize. **All three sections now have their own part of this site** — use the switch above the tabs, or go straight to the [Overgraduate overview](#og-overview) or the [High School overview](#hs-overview). The **Across tiers** section reads all thirty wikis against each other in [Three tiers](#x-tiers), turns them into a [2027 roadmap](#x-roadmap), puts five candidate 2027 topics through that procedure in [Five ideas](#x-ideas), reads the Gold rule as an award strategy in [Three special prizes](#x-prize), and dates the whole season in [2027 season plan](#x-plan). The full official list is at [competition.igem.org/results/2026](https://competition.igem.org/results/2026).',
+            zh: '同一頁公布的其他結果：TU Delft 取得研究生組首獎，Lambert-GA 取得高中組首獎。**三個組別現在在本站都有自己的一區**——使用分頁列上方的切換鈕，或直接前往[研究生部總覽](#og-overview)或[高中部總覽](#hs-overview)。**三層比較**那一區把三十個 wiki 互相對讀，成果在[三層分析](#x-tiers)，整理成一份[2027 選題指南](#x-roadmap)，在[五個題目](#x-ideas)裡把五個 2027 候選題目跑過那套程序，在[三個特別獎](#x-prize)裡把金牌規則當成獎項策略來讀，並在[2027 賽季計畫](#x-plan)裡把整季換算成日期。完整官方名單見 [competition.igem.org/results/2026](https://competition.igem.org/results/2026)。'
           })
       });
 
@@ -97,8 +97,8 @@
         kick: { en: 'Findings', zh: '發現' },
         h2: { en: 'Six things all ten wikis say when you read them together', zh: '把十個 wiki 一起讀時，它們共同說出的六件事' },
         lede: {
-          en: 'These are our conclusions, drawn from the ten pages that follow. Each one names the teams it rests on so you can check it.',
-          zh: '以下是我們從後面十頁得出的結論。每一條都列出它所依據的隊伍，方便你自己查核。'
+          en: 'These are our conclusions, drawn from the ten team pages on this site. Each one names the teams it rests on so you can check it. The ten are [listed further down](#o-ten), with what this study is and is not.',
+          zh: '以下是我們從本站十個團隊頁得出的結論。每一條都列出它所依據的隊伍，方便你自己查核。十支隊伍[列在下方](#o-ten)，連同這份研究是什麼、不是什麼。'
         },
         body:
           h.h3({ en: '1 · The model picks the target before the lab touches a pipette', zh: '1 · 在實驗室碰到移液器之前，模型已經挑好標靶' }, 'o-f1') +
@@ -108,19 +108,49 @@
           }) +
           h.h3({ en: '2 · The podium teams had to build their own measurement', zh: '2 · 站上前三的隊伍都必須自己建量測方法' }, 'o-f2') +
           h.p({
-            en: 'Princeton is the clearest case: plaque counting works for wild-type M13, but **constructs with more than two tag inserts gave colonies rather than plaques**, so the measurement had to be rebuilt — four protocols, each with its own DBTL round, ending in a dual-selection transduction count where *"a plaque reports that a particle was infective. It never reports what was inside it."* Stanford defines eight metrics once and fixes the comparison inside a single transfection because flow runs on different days drift. UCAS-China bounds its binding window at **both** ends (PRS shift below 2.5 µM, non-specific above 5 µM). NUS-Singapore validates its linear unmixing on **mixtures of single-reporter strains in known ratios** before trusting it on a real sample.',
-            zh: 'Princeton 是最清楚的例子：噬菌斑計數對野生型 M13 有效，但**帶超過兩個標籤插入的構建體長出的是菌落、不是噬菌斑**，於是整個量測必須重建——四套流程、每套都有自己的 DBTL 循環，最後落在雙重選擇的轉導計數上，並寫下*「噬菌斑只報告一顆顆粒具感染性，從不報告它裡面裝了什麼。」* Stanford 把八個指標定義一次，並因為不同日期的流式會漂移，把比較固定在同一次轉染內。UCAS-China 把結合窗口的**兩端**都界定出來（PRS 在 2.5 µM 以下才位移、5 µM 以上出現非專一結合）。NUS-Singapore 則先用**已知比例混合的單一報告基因菌株**驗證線性解混，才敢把它用在真實樣品上。'
+            en: 'Princeton is the clearest case. Plaque counting works for wild-type M13, but **constructs with more than two tag inserts gave colonies rather than plaques**, so the measurement had to be rebuilt: four protocols, each with its own DBTL round, ending in a dual-selection transduction count. The reason fits in one sentence — *"a plaque reports that a particle was infective. It never reports what was inside it."* Three more teams spent part of the season on the instrument rather than on the biology.',
+            zh: 'Princeton 是最清楚的例子。噬菌斑計數對野生型 M13 有效，但**帶超過兩個標筤插入的構建體長出的是菌落、不是噬菌斑**，於是整個量測必須重建：四套流程、每套都有自己的 DBTL 循環，最後落在雙重選擇的轉導計數上。理由只有一句——*「噬菌斑只報告一顆顆粒具感染性，從不報告它裡面裝了什麼。」*另有三隊把賽季裡的一段時間花在儀器、而不是生物學上。'
           }) +
+          h.kv([
+            [{ en: 'Stanford · eight metrics, defined before the data', zh: 'Stanford · 八個指標，在數據之前定義' },
+             { en: 'Each quantity defined once, and every comparison fixed **inside a single transfection**, because flow runs on different days drift.', zh: '每個量只定義一次，而每一次比較都固定在**同一次轉染内**，因為不同日期的流式會漂移。' }],
+            [{ en: 'UCAS-China · both ends of the window marked', zh: 'UCAS-China · 窗口兩端都標出來' },
+             { en: 'PRS shift appears below **2.5 µM**; non-specific binding appears above **5 µM**. The usable range is what is left between them.', zh: 'PRS 位移出現在 **2.5 µM** 以下；非專一結合出現在 **5 µM** 以上。可用範圍就是兩者之間剩下的那一段。' }],
+            [{ en: 'NUS-Singapore · the unmixing checked before use', zh: 'NUS-Singapore · 解混在使用前先查過' },
+             { en: 'Linear unmixing validated on **mixtures of single-reporter strains in known ratios**, and only then used on a real sample.', zh: '線性解混先用**已知比例混合的單一報告基因菌株**驗證，之後才用在真實樣品上。' }]
+          ]) +
           h.h3({ en: '3 · Generative protein design is routine, and nobody trusts one score', zh: '3 · 生成式蛋白質設計已是常規，而沒有人只信一個分數' }, 'o-f3') +
           h.p({
-            en: 'Five of the ten ran generative design, and every one of them put a **gate written in advance** in front of it. Heidelberg: LigandMPNN redesign in four tiers, then a four-criterion gate (AlphaFold2 i_pAE ≤ 12, contacts with all four chains in ≥4 of 5 Boltz-2 runs, pose reproducible within 2 Å, composition filter) taking **200 designs → 135 → 121**, with only the i_pAE threshold calibrated against controls and the other three declared a priori. LYON: BoltzGen 0.3.2 generated **10,000 candidates → 5 kept → 3 built**, and in silico affinity scoring **did not beat the wild type, so nothing was selected on it**. UAlberta: **117,732 FoldX mutant structures → 10 to the bench**, chosen to discriminate between two docking programs rather than to confirm either. Princeton ships the gate as software, with a difficulty score that carries its own disclaimer. UOttawa deliberately pairs two unlike ΔΔG predictors — FoldX (physics) and ThermoMPNN (deep learning) — so that agreement carries information.',
-            zh: '十隊中有五隊使用生成式設計，而每一隊都在它前面放了一道**事先寫好的門檻**。Heidelberg：LigandMPNN 分四級重設計，再經四項判準（AlphaFold2 i_pAE ≤ 12、五次 Boltz-2 中至少四次與四條鏈都有接觸、姿態可重現於 2 Å 內、組成篩選），把 **200 個設計→135→121**，而其中只有 i_pAE 門檻是用對照校正的，另外三項明說是事先設定。LYON：BoltzGen 0.3.2 產生 **10,000 個候選→留 5 個→做 3 個**，而計算親和力評分**並未勝過野生型，因此不以它選株**。UAlberta：**117,732 個 FoldX 突變結構→10 個進實驗台**，挑選標準是能分辨兩套對接程式，而不是去確認其中任一套。Princeton 把門檻本身做成軟體，附上一個自帶免責聲明的難度分數。UOttawa 則刻意並用兩種性質不同的 ΔΔG 預測器——FoldX（物理）與 ThermoMPNN（深度學習）——好讓「兩者一致」本身帶有資訊。'
+            en: 'Three of the ten ran a generative model that writes new sequences and two more scored mutants of a sequence they already had; all five put a **gate written before the designs were seen** in front of it. What differs is the gate; what does not differ is saying out loud which thresholds were calibrated against controls and which were set a priori. The candidate counts, and how many survived, are in [the funnel figure below](#o-funnel).',
+            zh: '十隊中有五隊使用生成式設計，五隊都在它前面放了一道**在看到設計之前就寫好的門檻**。不同的是門檻本身；相同的是都把「哪些門檻用對照校正過、哪些是事先設定」說出來。各隊的候選數與存活數在[下方的漏斗圖](#o-funnel)裡。'
           }) +
+          h.kv([
+            [{ en: 'Heidelberg · four criteria, three of them a priori', zh: 'Heidelberg · 四項判準，其中三項是事先設定' },
+             { en: 'LigandMPNN redesign in four tiers, then AlphaFold2 i_pAE ≤ 12, contacts with all four chains in ≥4 of 5 Boltz-2 runs, a pose reproducible within 2 Å, and a composition filter. **Only the i_pAE threshold was calibrated against controls**; the other three are declared a priori.', zh: 'LigandMPNN 分四級重設計，再經 AlphaFold2 i_pAE ≤ 12、五次 Boltz-2 中至少四次與四條鏈都有接觸、姿態可重現於 2 Å 内，以及組成篩選。**只有 i_pAE 門檻是用對照校正的**，其餘三項明說是事先設定。' }],
+            [{ en: 'LYON · the score lost to the wild type, so it was not used', zh: 'LYON · 評分輸給野生型，所以不用它' },
+             { en: 'BoltzGen 0.3.2 generated the binder candidates, and in silico affinity scoring **did not beat the wild type — so nothing was selected on it**.', zh: 'BoltzGen 0.3.2 產生結合蛋白候選，而計算親和力評分**並未勝過野生型——因此不以它選株**。' }],
+            [{ en: 'UAlberta · mutants picked to settle a disagreement', zh: 'UAlberta · 挑突變體是為了裁決一個分歧' },
+             { en: 'The ten FoldX mutants that reached the bench were chosen **to discriminate between two docking programs rather than to confirm either**.', zh: '進到實驗台的十個 FoldX 突變體，是**為了分辨兩套對接程式、而不是為了確認其中任一套**而挑的。' }],
+            [{ en: 'Princeton · the gate shipped as software', zh: 'Princeton · 把門檻做成軝體出貨' },
+             { en: 'The filter is the deliverable, and its difficulty score carries its own disclaimer.', zh: '篩選本身就是交件，而它的雾度分數自帶免責聲明。' }],
+            [{ en: 'UOttawa · two unlike predictors, on purpose', zh: 'UOttawa · 兩種不同類的預測器，是刻意的' },
+             { en: 'FoldX (physics) and ThermoMPNN (deep learning) paired for ΔΔG **so that agreement between them carries information**.', zh: 'FoldX（物理）與 ThermoMPNN（深度學習）並用來算 ΔΔG，**好讓「兩者一致」本身帶有資訊**。' }]
+          ]) +
           h.h3({ en: '4 · Fitted, or labelled: credible models say which', zh: '4 · 擬合或標註：可信的模型會說清楚是哪一種' }, 'o-f4') +
           h.p({
-            en: 'Stanford fits three parameters by **simulated annealing against someone else\'s qPCR data** and reports them as its own numbers (p_entry 10.7 % per division, k_sat 232 plasmids per nucleus, k_tx 0.273 h⁻¹), alongside a table of **82 parameters each with value, unit, source and a note on what still needs measuring**. LYON labels every single filter parameter *design choice / computed / placeholder / operating range*, and prints that its reference capacity of 25 mg/g is a placeholder against a **measured upper bound of 0.135 mg/g** — a factor of about 185. Princeton reads plasmid copy numbers off the actual origin annotations and **publishes a correction to its own earlier parameter** (a_h 0.96 → 0.729, after realising M13K07 replicates from p15A, not an intact f1 origin). UAlberta declares Y = 1 a fitting parameter awaiting bench data. The pattern is consistent: the number is either tied to a measurement, or it is wearing a label.',
-            zh: 'Stanford 用**模擬退火對別人的 qPCR 數據**擬合三個參數，並把它們當成自己的數字報出（每次分裂 p_entry 10.7%、每核 k_sat 232 個質體、k_tx 0.273 h⁻¹），同時附上一張 **82 個參數的表，每個都有數值、單位、出處，以及「還需要量什麼」的備註**。LYON 把濾床模型的每一個參數都標成*設計選擇／計算／暫定值／操作範圍*，並寫明其參考容量 25 mg/g 是暫定值，而**實測上界是 0.135 mg/g**——相差約 185 倍。Princeton 直接從複製起點註解讀出質體拷貝數，並**為自己先前的參數公開更正**（a_h 0.96→0.729，因為發現 M13K07 是靠 p15A 而非完整 f1 起點複製）。UAlberta 明白宣告 Y = 1 是一個等待實驗數據的擬合參數。模式很一致：一個數字要嘛綁在量測上，要嘛身上貼著標籤。'
+            en: 'A number on these pages is either tied to a measurement or wearing a label that says it is not. Four teams show the same habit in four different registers.',
+            zh: '這些頁面上的數字，要嘉綁在量測上，要嘉身上貼著「它不是量測」的標籤。四隊用四種不同的寫法做同一件事。'
           }) +
+          h.kv([
+            [{ en: 'Stanford · fitted, and said so', zh: 'Stanford · 擬合，並且說出來' },
+             { en: 'Three parameters fitted by **simulated annealing against someone else\'s qPCR data** and then reported as the team\'s own numbers: p_entry 10.7 % per division, k_sat 232 plasmids per nucleus, k_tx 0.273 h⁻¹. Beside them, a table of **82 parameters, each with value, unit, source and a note on what still needs measuring**.', zh: '三個參數是用**模擬退火對別人的 qPCR 數據**擬合的，然後當成自己的數字報出：每次分裂 p_entry 10.7%、每核 k_sat 232 個質體、k_tx 0.273 h⁻¹。旁邊附上一張 **82 個參數的表，每個都有數值、單位、出處，以及「還需要量什麼」的備註**。' }],
+            [{ en: 'LYON · a status column, and a 185-fold gap', zh: 'LYON · 一欄狀態，以及 185 倍的落差' },
+             { en: 'Every filter parameter carries one of four labels — *design choice / computed / placeholder / operating range*. The reference capacity of **25 mg/g is printed as a placeholder against a measured upper bound of 0.135 mg/g**, a factor of about 185, rather than quietly used.', zh: '濾床模型的每一個參數都帶著四種標籤之一——*設計選擇／計算／暫定值／操作範圍*。參考容量 **25 mg/g 是以暫定值的身分印出來的，旁邊放著實測上界 0.135 mg/g**，相差約 185 倍，而不是默默拿來用。' }],
+            [{ en: 'Princeton · a correction to its own earlier number', zh: 'Princeton · 為自己先前的數字更正' },
+             { en: 'Plasmid copy numbers read off the actual origin annotations, and **a_h corrected from 0.96 to 0.729** in public after the team realised M13K07 replicates from p15A rather than an intact f1 origin.', zh: '質體拷貝數直接從複製起點註解讀出，而在發現 M13K07 是靴 p15A 而非完整 f1 起點複製之後，**a_h 在公開場合從 0.96 更正為 0.729**。' }],
+            [{ en: 'UAlberta · a placeholder named as one', zh: 'UAlberta · 把暫定值叫出它的名字' },
+             { en: '**Y = 1** declared a fitting parameter awaiting bench data, not a measured yield.', zh: '**Y = 1** 被明白宣告為一個等待實驗數據的擬合參數，不是實測的產率。' }]
+          ]) +
           h.h3({ en: '5 · The strongest move on display is a model that disqualifies your own experiment', zh: '5 · 全場最強的一招，是用模型否決自家實驗' }, 'o-f5') +
           h.p({
             en: 'UAlberta used its ocular transport model to argue that protein should move about **1 mm per hour**, which means the deeper slices in their own diffusion assay are artefact — so D_gel is still taken from the literature rather than from their data. UCNZ ran a borrowed periplasmic protein (**HiSiaP**) purely to audit their own fractionation, and it **disqualified every extracellular lane they had**, taking their secretion claim with it. LYON\'s structural model concluded that cleaving TFA is blocked by attack geometry rather than affinity, which **ended the degradation route and turned the project into a capture project**. Three different teams, one habit: point the model at your own evidence first.',
@@ -294,6 +324,9 @@
             zh: '請把這些讀成*被報告的*數量，而不是可以互相比較的工作量單位。一張已發表感測器表裡的一列，和一個 FoldX 突變結構或一條擴散模型骨架，並不是同一種東西；而且只有 Heidelberg、LYON、UAlberta 與 UOttawa 把輸入數與存活數寫在同一個地方。'
           })
       });
+
+      /* the roster and the framing, after the findings they support */
+      out += secTen + secAbout;
 
       /* ---------------- method ---------------- */
       out += h.sec({

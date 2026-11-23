@@ -9,15 +9,15 @@
   var SWIM = {
     wet: [
       { l: { en: 'Rebuild the published cis switch first', zh: '先重建那個已公開的 cis 開關' },
-        s: { en: 'An 11 to 13 bp RNase III site upstream of an RBS already exists as Registry parts. Reproduce it before changing it', zh: 'RBS 上游 11 到 13 bp 的 RNase III 位點已經是 Registry 元件。先重現它，再改它' }, tone: 'g' },
+        s: { en: 'Registry parts already exist. Reproduce one, in the 3 prime UTR rather than upstream of the RBS', zh: 'Registry 已經有現成元件。先重現一個，放在 3 端 UTR 而不是 RBS 上游' }, tone: 'g' },
       { l: { en: 'Cut the hairpin in half and supply it in trans', zh: '把髮夾剪成兩半，用 trans 供應' },
         s: { en: 'One strand stays on the reporter, the other is a separate sensor RNA. This is the only new idea in the project', zh: '一股留在報告子上，另一股作為獨立的感測 RNA。這是整個專案裡唯一的新想法' } },
       { l: { en: 'Run it in two strains, same day, same plate', zh: '在兩個菌株中跑，同一天、同一盤' },
-        s: { en: 'An RNase III-deficient strain and a functional one. If the output is identical, the reader is not reading', zh: '一個缺乏 RNase III 的菌株、一個功能正常的。如果輸出一樣，那讀取者就沒有在讀' }, tone: 'g' },
+        s: { en: 'Lower RNase III inside one strain by overexpressing YmdB. If the output does not move, the reader is not reading', zh: '在同一個菌株內用過量表達 YmdB 壓低 RNase III。如果輸出沒有移動，讀取者就沒有在讀' }, tone: 'g' },
       { l: { en: 'Put the gene back on a plasmid', zh: '把那個基因用質體補回去' },
         s: { en: 'Complementation plus an empty-vector control. Two strains differ in more than one gene; this closes that', zh: '互補加上空載體對照。兩個菌株相差的不只一個基因；這一步把那個缺口關上' }, tone: 'a' },
       { l: { en: 'Walk the duplex length across the threshold', zh: '讓雙股長度跨過那個門檻' },
-        s: { en: 'A short series around 11 bp, where the literature says one base pair is worth fiftyfold', zh: '在 11 bp 附近做一個短序列，而文獻說那裡一個鹼基對值五十倍' } }
+        s: { en: 'A short series around 11 bp, each length paired with a cleavage-dead twin of the same length', zh: '在 11 bp 附近做一個短序列，每個長度都配一個同長度、不可切割的孿生對照' } }
     ],
     dry: [
       { l: { en: 'Generate candidates, do not rank them', zh: '產生候選，不要給它們排名' },
@@ -49,8 +49,8 @@
           zh: '五個題目中的第四個 · 我們的提案，從未執行 · 建立在 Stanford-University 2026 上 · 基礎推進'
         })) + '</p>' +
         '<h1 class="big">' + h.md({
-          en: 'The Grand Prize team let the cell\'s own enzyme decide. ==In a bacterium that enzyme already exists, and nobody has asked it to read.==',
-          zh: '首獎隊伍讓細胞自己的酵素做決定。==而在細菌裡那個酵素本來就存在，只是沒有人請它來讀。=='
+          en: 'The Grand Prize team let the cell\'s own enzyme decide. ==In a bacterium that enzyme already exists, and no one has yet asked it to read something supplied separately.==',
+          zh: '首獎隊伍讓細胞自己的酵素做決定。==而在細菌裡那個酵素本來就存在，只是還沒有人請它去讀一段「另外供應」的序列。=='
         }) + '</h1>' +
         '<p class="lede">' + h.md({
           en: 'Stanford-University\'s 2026 project does not build a sensor protein. It puts a stop codon inside a sequence that pairs with a transcript the target cell already has, and lets the cell\'s **own ADAR enzyme** edit that stop codon away — so the therapeutic is translated only where the transcript is. The transferable idea is: **form a duplex with something the host already contains, and let an enzyme the host already expresses decide whether the output is made.** A High School team cannot run that, because it needs mammalian cells, a flow cytometer and primary fibroblasts, which the iGEM White List closes outright. But *E. coli* has its own double-strand reader — **RNase III** — and nature already uses an RNase III cut beside a ribosome binding site to switch translation on by **at least 200-fold**. Nobody, in iGEM or in the literature, has asked that enzyme to read a duplex formed **in trans** between an engineered sensor and a target transcript. **That single unanswered question is the project**, and it is settled by swapping one strain.',
@@ -60,7 +60,7 @@
           { v: '200×', l: { en: 'Translation activation nature already gets from one RNase III cut beside an RBS', zh: '大自然光靠 RBS 旁一刀 RNase III 切割就得到的轉譯活化倍數' } },
           { v: '11 bp', l: { en: 'The published minimum duplex; one base pair less costs fiftyfold', zh: '已發表的最小雙股長度；少一個鹼基對就差五十倍' } },
           { v: '0', l: { en: 'Papers or iGEM projects that have tried this in trans', zh: '嘗試過以 trans 方式做這件事的論文或 iGEM 專案數' } },
-          { v: '2', l: { en: 'Strains the first experiment needs. That is the whole control', zh: '第一個實驗需要幾個菌株。那就是全部的對照' } },
+          { v: '1', l: { en: 'Strains the first experiment needs, once the control moved inside it', zh: '把對照搬進同一個菌株之後，第一個實驗需要幾個菌株' } },
           { v: '0', l: { en: 'Of these experiments we have run. This is a plan', zh: '這些實驗我們做過幾個。這是一份計畫' } }
         ]) +
         '</div></div>';
@@ -70,6 +70,7 @@
         { id: 'rd-open', t: { en: 'What is actually open', zh: '真正還開著的問題' } },
         { id: 'rd-geo', t: { en: 'The geometry is the design', zh: '幾何就是設計' } },
         { id: 'rd-dry', t: { en: 'What the dry lab is for', zh: '乾式實驗是用來做什麼的' } },
+        { id: 'rd-flaw', t: { en: 'Three things we got wrong', zh: '我們弄錯的三件事' } },
         { id: 'rd-gate', t: { en: 'The five gates', zh: '五道關卡' } },
         { id: 'rd-flow', t: { en: 'The workflow', zh: '工作流程' } },
         { id: 'rd-tool', t: { en: 'Tools, strains and money', zh: '工具、菌株與錢' } },
@@ -227,6 +228,48 @@
           h.take({ en: 'So what the dry lab is for here', zh: '所以這裡的乾式實驗是用來做什麼的' }, {
             en: 'Three jobs, all of them real. **Generate** the library: conserve the published determinants, walk the duplex length across the threshold, and design the bind-but-do-not-cut variant. **Check crosstalk**: predicted pairing between your sensor and the rest of the host transcriptome is a question folding tools answer well, and it is the question that decides whether your sensor is specific. **Pre-register**: write down the expected fold-change at each rung of the length ladder, since the literature gives you a number for every one, and write down what a null looks like. **What the dry lab is not for is choosing which design is best — measure that.** A 2026 High School team selected four toehold candidates from about sixteen with folding predictions and six criteria; measured fold changes came back at **0.92 to 1.51** against a positive control at **28.1**, and their own wiki says "dry lab analysis might not accurately reflect in empirical testing."',
             zh: '三件工作，而且都是真的。**產生**那個庫：保留已發表的決定因子、讓雙股長度跨過門檻、並設計那個「會結合但不切」的變異體。**檢查交叉反應**：你的感測器與宿主其餘轉錄體之間的預測配對，是摺疊工具答得好的問題，而它正是決定你的感測器專一不專一的那個問題。**事先登記**：把長度階梯每一階的預期倍數變化寫下來——文獻對每一階都給了你一個數字——並寫下虛無結果長什麼樣子。**乾式實驗不是用來決定哪個設計最好的——那個要去量。**2026 年有一支高中部隊伍，用摺疊預測加六項標準，從大約十六個 toehold 候選中挑了四個；實測倍數變化回來是 **0.92 到 1.51**，而正對照是 **28.1**；他們自己的 wiki 寫著：「乾式實驗的分析可能無法準確反映在實證測試上。」'
+          })
+      });
+
+      /* ---------------- what we got wrong ---------------- */
+      out += h.sec({
+        id: 'rd-flaw',
+        kick: { en: 'Corrections', zh: '更正' },
+        h2: { en: 'Three things wrong with the first version of this page, one of which would have produced a beautiful false result', zh: '本頁第一個版本有三處錯誤，其中一處會產出一個漂亮的假結果' },
+        lede: {
+          en: 'We had this design read again after publishing it. It came back with a confound we had not seen, a missing control we had assumed away, and a strain choice that may be closed to a High School team outright. All three are cheap to fix in January and expensive in July, and we would rather print them than quietly edit them out.',
+          zh: '我們在公開這個設計之後又請人重讀了一次。結果帶回來一個我們沒看見的干擾、一個我們假設掉的缺失對照，以及一個對高中隊伍可能根本不開放的菌株選擇。三者都是一月修很便宜、七月修很貴，而我們寧願把它們印出來，也不要悄悄改掉。'
+        },
+        body:
+          h.phases([
+            { h: { en: 'The duplex must not sit upstream of the ribosome binding site', zh: '雙股不能放在核糖體結合位的上游' },
+              p: { en: 'This is the serious one. Our first version put an 11 to 22 bp hairpin in the 5 prime UTR and proposed walking its length — which is also the most natural way to vary a duplex. A hairpin that size in a 5 prime UTR **occludes the ribosome binding site and blocks translation initiation whether or not anything ever cuts it**, and the occlusion gets monotonically stronger with length.', zh: '這是嚴重的那一個。我們第一個版本把一個 11 到 22 bp 的髮夾放在 5 端 UTR，並提議讓它的長度逐步變化——而那也是改變雙股最自然的方式。那個尺寸的髮夾在 5 端 UTR 裡**會遮住核糖體結合位、阻斷轉譯起始，不論有沒有東西去切它**，而遮蔽效果會隨長度單調變強。' },
+              items: [
+                { en: 'So the experiment as drawn would have produced a strong, reproducible, highly significant correlation between duplex length and output — **entirely an artefact of translation initiation** — and we would have published it as an RNase III design rule. It is the same shape as the failure that killed this page\'s first premise: a real correlation driven by the wrong mechanism.', zh: '所以照原圖做的實驗，會產出一個強而可重現、統計上高度顯著的「雙股長度對輸出」相關性——**而它完全是轉譯起始造成的假象**——而我們會把它當成一條 RNase III 設計規則公開。這與殺死本頁第一個前提的那個失敗形狀完全相同：一個由錯誤機制驅動的真實相關。' },
+                { en: 'The fix is a position, not a statistic: put the duplex in the **3 prime UTR or between two cistrons**, where a cut changes transcript stability without changing ribosome access. That is also how the existing Registry insulator parts are deployed, and how the stabilising literature uses them.', zh: '修正方法是一個位置，不是一個統計量：把雙股放在 **3 端 UTR 或兩個順反子之間**，那裡切一刀會改變轉錄本穩定性，而不改變核糖體的取用。那也正是 Registry 現有絕緣子元件被使用的方式，以及穩定化文獻使用它們的方式。' },
+                { en: 'If you keep the 5 prime UTR anyway, **every length needs a cleavage-dead twin of the same length and roughly the same fold** — which is what a single base-pair substitution in the proximal box gives you, and what shortening the stem does not.', zh: '如果你還是要用 5 端 UTR，那**每一個長度都需要一個同長度、摺疊大致相同、但不可切割的孿生對照**——那正是近端框裡單一鹼基對取代所提供的東西，而把莖幹縮短並不提供。' }
+              ],
+              done: { en: 'A construct map where the duplex sits downstream of the stop codon, or a table where every length appears twice.', zh: '一張雙股位於停止密碼子下游的構築圖，或一張每個長度都出現兩次的表。' } },
+            { h: { en: 'A cleavage readout has no internal normaliser unless you build one', zh: '以切割為讀值的系統，除非你自己做，否則沒有內部歸一化' },
+              p: { en: 'The enzyme we borrowed behaves differently from the one Stanford borrowed, and we had not followed the consequence through. **ADAR edits:** the signal goes up, the transcript survives, and anything else on that transcript is an internal reference. **RNase III cleaves:** the signal goes down, the transcript is destroyed, and a second colour on a separate plasmid cannot normalise it — because for this device the measured event *is* the destruction of the transcript.', zh: '我們借來的酵素與 Stanford 借的那一個行為不同，而我們沒有把後果想完。**ADAR 是編輯：**訊號上升、轉錄本存活，而那個轉錄本上的其他東西就是一個內部參考。**RNase III 是切割：**訊號下降、轉錄本被摧毀，而放在另一個質體上的第二個顏色無法歸一化它——因為對這個裝置而言，被量到的事件**就是**轉錄本被摧毀。' },
+              items: [
+                { en: 'The fix is the highest-value single change available on this page: put a **constitutive marker gene upstream on the same transcript, on the protected side of the cut site**, and report the ratio of the two. That cancels plasmid copy number, growth rate, induction variability and metabolic burden *per transcript*, which is the only level at which they can be cancelled here.', zh: '這個修正是本頁單一改動裡價值最高的一個：在**同一個轉錄本上、切點受保護的那一側、上游**放一個組成型標記基因，並報告兩者的比值。這會*以轉錄本為單位*抵消質體拷貝數、生長速率、誘導變異與代謝負擔，而那是在這裡唯一能抵消它們的層級。' },
+                { en: 'Measuring a loss is also empirically worse than measuring a gain: across a published library of 91,534 switches, the off state was predicted consistently worse than the on state. If an internal loop or bulge can be found that leaves a protective hairpin after a single cut, the device becomes a gain-of-signal device — unpublished, harder, and the more interesting project.', zh: '而且「量損失」在經驗上也比「量增益」更糟：在一個已發表的 91,534 個開關的庫裡，關閉態的預測一貫比開啟態更差。如果能找到一個內部環或凸起，使單次切割之後留下一個保護性髮夾，這個裝置就變成增益型裝置——那是未發表的、更難的、也更有趣的專案。' },
+                { en: 'And never benchmark your fold-change against a published one. One study measured about **sevenfold** for constructs that had been reported at over **600-fold**, with the number changing by reporter and by quantification method. **Dynamic range is a property of your measurement, not of the device.** Fix the reporter and the quantification method on day one; changing either mid-season invalidates everything before the change.', zh: '另外，絕對不要把你的倍數變化拿去對標已發表的數字。有一份研究對「原本被報告為超過 **600 倍**」的構築量到大約 **7 倍**，而那個數字會隨報告子與定量方法改變。**動態範圍是你量測的性質，不是裝置的性質。**報告子與定量方法請在第一天就固定；中途換掉任何一個，會讓改動之前的一切失效。' }
+              ],
+              done: { en: 'One transcript, two readouts, and every number reported as a ratio.', zh: '一個轉錄本、兩個讀值，而每一個數字都以比值形式報告。' } },
+            { h: { en: 'The two-strain control may be closed to you, and it was never isogenic', zh: '那個雙菌株對照可能對你關閉，而它從來就不是同源的' },
+              p: { en: 'We proposed comparing an RNase III-deficient strain with a functional one. Two problems. The obvious deficient strain is **tetracycline resistant**, and the White List requires a Check-In for resistance factors not in common use at the host institution — **a form a High School team cannot file**. For a school stocked with ampicillin and kanamycin, the honest answer is probably that tetracycline is not in common use, which closes that strain with no appeal. Ask your host lab in writing before ordering anything.', zh: '我們原本提議把一個缺乏 RNase III 的菌株與一個功能正常的做比較。有兩個問題。最明顯的那個缺陷菌株**帶四環素抗性**，而白名單要求「在接待機構並非常用的抗性因子」必須送 Check-In——**那是一支高中隊伍無法提交的表單**。對一間只備有安比西林與康黴素的學校，誠實的答案大概是四環素並非常用，而那會讓那個菌株沒有申訴空間地被關掉。在訂任何東西之前，先請接待實驗室書面回答。' },
+              items: [
+                { en: 'Even if it were available, the comparison is not clean: the two strains differ in more than the gene you care about — a second nuclease, the genetic background, the T7 context and the growth rate — so any difference in output is uninterpretable as an RNase III effect.', zh: '即使它拿得到，這個比較也不乾淨：兩個菌株的差異不只在你在意的那個基因上——還有第二個核酸酶、遺傳背景、T7 環境與生長速率——所以輸出上的任何差異都無法被解釋成 RNase III 的效應。' },
+                { en: 'The fix keeps everything in one strain: **overexpress YmdB**, the protein that inhibits RNase III, as an inducible condition. White-List-legal, Registry parts already exist, no strain to acquire and no tetracycline. **Check the part you pick for resistance cassettes before you order** — at least one YmdB part in the Registry carries tetracycline-based regulation and would reintroduce the problem you just removed.', zh: '修正方法把一切留在同一個菌株裡：**過量表達 YmdB**——那個抑制 RNase III 的蛋白——當成一個可誘導的條件。符合白名單、Registry 已有現成元件、不需要取得菌株、也不需要四環素。**在下單之前先檢查你挑的那個元件有沒有抗性卡匣**——Registry 裡至少有一個 YmdB 元件帶有以四環素為基礎的調控，會把你剛剛移除的問題又帶回來。' },
+                { en: 'Pair it with the cleavage-site-ablated constructs rather than replacing them. YmdB inhibition is partial and has effects of its own; a dead cleavage site is specific but cannot rule out a structural artefact. **The two controls fail in different directions, which is the only reason to run both.**', zh: '把它與「切點失效」的構築併用，而不是取代它們。YmdB 的抑制是部分的，而且它自己也有其他效應；一個失效的切點很專一，但無法排除結構性假象。**兩個對照會往不同方向失敗，而那正是同時跑兩個的唯一理由。**' }
+              ],
+              done: { en: 'One strain, one inducible inhibitor, and a dead-site twin for every live construct.', zh: '一個菌株、一個可誘導的抑制劑，以及每一個活構築都有一個失效切點的孿生對照。' } }
+          ]) +
+          h.warn({
+            en: 'Three measurement traps come with this particular enzyme, and none of them is about the sensor. **Burden runs straight from your variable to your readout.** RNase III processes ribosomal RNA and has hundreds of endogenous targets, so perturbing it changes ribosome biogenesis, then growth rate, then every gene\'s expression including your reporter\'s. Expression capacity has been reported to fall within half an hour of induction while growth rate responds later, so growth rate will not warn you in time. Report growth with every fluorescence number, carry a constitutive capacity reporter, and give output both raw and capacity-normalised: **if the ranking of your designs changes between the two, you measured burden, not switching.** **Growth phase changes which targets exist at all** — about half of the mapped in vivo cleavage sites were found in stationary phase, and hundreds only there — so fix and report your harvest optical density, and never compare designs read at different phases. And **calibrate every plate**: in one multi-laboratory study year a single mis-prepared fluorescein standard produced a **29-fold** systematic error, caught only because independent calibrants were run alongside. A twenty-nine-fold artefact would swallow everything this panel is looking for.',
+            zh: '這個酵素特別帶來三個量測陷阱，而沒有一個與感測器本身有關。**代謝負擔會從你的變數直通你的讀值。**RNase III 會處理核糖體 RNA，並有數百個內源標的，所以擾動它會改變核糖體生成、接著是生長速率、接著是包含你的報告子在內每一個基因的表達。有報告指出表達容量在誘導後半小時內就下降，生長速率卻更晚才反應，所以生長速率來不及警告你。每一個螢光數字都要附上生長數據、帶一個組成型的容量報告子，並把輸出同時以原始值與容量歸一化值呈現：**如果你的設計排序在兩者之間改變，那你量到的是負擔，不是切換。** **生長階段會改變哪些標的根本存在**——已繪製的體內切點中約有一半是在穩定期發現的，而其中數百個只在穩定期出現——所以請固定並報告你收樣時的光密度，而且絕不比較在不同階段讀取的設計。還有**每一盤都要校正**：在某個多實驗室的研究年度裡，單一份配錯的螢光素標準品造成了 **29 倍**的系統性誤差，而它之所以被抓到，只因為有獨立的校正品一起跑。一個二十九倍的假象會吞掉這個 panel 想找的一切。'
           })
       });
 

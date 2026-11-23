@@ -50,8 +50,8 @@
           zh: '一個平台，而它最好的結果是一句關於==儀器、而不是樣品==的話。'
         },
         lede: {
-          en: 'MOSAIC is a modular implant coating: one elastin-like polypeptide backbone, produced in E. coli, carrying whichever function the implant and the patient need — antimicrobial peptide, cell-adhesion motif, growth-factor mimetic — added by changing DNA rather than by changing chemistry. The Grand Prize argument is not the coating. It is that five modules each carry a Future Perspective, every negative result is given a mechanism, and when the rheometer could not resolve the sample they wrote that the numbers do not describe it.',
-          zh: 'MOSAIC 是一種模組化植入物塗層：一條在大腸桿菌中生產的類彈性蛋白（ELP）骨架，掛上該植入物與該病人需要的功能——抗菌胜肽、細胞黏附 motif、生長因子模擬物——而更換功能是改 DNA，不是改化學。拿下首獎的論點不是那層塗層，而是五個模組各自都寫了 Future Perspective、每個負面結果都被給出機制，而當流變儀解析不出樣品時，他們寫下「那些數字並不描述這個樣品」。'
+          en: 'The Grand Prize argument is not the coating. It is that five modules each carry a Future Perspective, every negative result is given a mechanism, and when the rheometer could not resolve the sample they wrote that the numbers do not describe it. The coating itself: MOSAIC is modular — one elastin-like polypeptide backbone, produced in E. coli, carrying whichever function the implant and the patient need (antimicrobial peptide, cell-adhesion motif, growth-factor mimetic), added by changing DNA rather than by changing chemistry.',
+          zh: '拿下首獎的論點不是那層塗層，而是五個模組各自都寫了 Future Perspective、每個負面結果都被給出機制，而當流變儀解析不出樣品時，他們寫下「那些數字並不描述這個樣品」。至於那層塗層本身：MOSAIC 是模組化的——一條在大腸桿菌中生產的類彈性蛋白（ELP）骨架，掛上該植入物與該病人需要的功能（抗菌胜肽、細胞黏附 motif、生長因子模擬物），而更換功能是改 DNA，不是改化學。'
         },
         chips: [
           { t: { en: 'Elastin-like polypeptides', zh: '類彈性蛋白' }, k: 'b' },
@@ -158,7 +158,7 @@
                 { en: '**IMAC failed as a single step.** Many bands in every eluted fraction; flow nearly stopped for the RGD constructs at **0.125 mL/min against 1.33 mL/min** for K30-ELP; brown precipitate in the resin bed; protein still bound after elution.', zh: '**IMAC 作為單一步驟失敗。**每個洗出分液都有很多條帶；RGD 構建體的流速幾乎停住，**0.125 mL/min，而 K30-ELP 是 1.33 mL/min**；樹脂床出現棕色沉澱；洗提後蛋白仍留在樹脂上。' },
                 { en: 'The diagnosis is specific. The known *E. coli* IMAC contaminants need **30–80 mM imidazole**, so a 10 mM wash could not displace them and a single 150 mM elution brought everything down together. The deeper cause is **phase transition on the column**: binding concentrates ELP on the bead surface, and both salt and local concentration lower T_t. Their construct-level evidence is that K30-ELP is all-lysine (T_t high) while the RGD constructs are isoleucine-block (T_t low).', zh: '這個診斷很具體。已知的大腸桿菌 IMAC 污染蛋白需要 **30–80 mM 咪唑**才會脫落，所以 10 mM 的沖洗推不走它們，而單步 150 mM 洗提就把所有東西一起帶下來。更深層的原因是**在管柱上發生相變**：結合會把 ELP 濃縮在珠體表面，而鹽與局部濃度都會降低 T_t。他們的構建體層面證據是：K30-ELP 全部是離胺酸（T_t 高），而 RGD 構建體是異白胺酸區塊（T_t 低）。' },
                 { en: 'Then they refuse to call it proved: *"this remains an interpretation rather than a demonstrated mechanism."* And the standard remedy — more salt in the wash — **is ruled out because NaCl lowers T_t**, which would precipitate the product on the column.', zh: '接著他們拒絕把它說成已證實：*「這仍然是一種解釋，而不是已被證明的機制。」*而標準解法——在沖洗液裡加更多鹽——**被排除，正因為 NaCl 會降低 T_t**，那會讓產物直接在管柱上沉澱。' },
-                { en: '**Inverse transition cycling won.** Contaminant bands drop with each cycle; after **four cycles** the ELP band is essentially alone and the fifth adds nothing. No tag, no resin: only NaCl and a centrifuge, which also leaves both termini free for functional motifs. 1 L cultures gave **59.1 mg and 63.4 mg** of lyophilised RGD(+)- and RDG(-)-ELP after 72 h of freeze-drying.', zh: '**逆相變循環勝出。**污染帶隨每個循環遞減；**四個循環**之後基本上只剩 ELP 一條帶，第五個循環沒有再改善。不需要標籤、不需要樹脂：只要 NaCl 與離心機，而且兩端都留白給功能 motif。1 L 培養經 72 小時凍乾後得到 **59.1 mg 與 63.4 mg** 的 RGD(+)- 與 RDG(-)-ELP。' },
+                { en: '**Inverse transition cycling won.** Contaminant bands drop with each cycle; after **four cycles** the ELP band stands almost alone and the fifth adds nothing. No tag, no resin: only NaCl and a centrifuge, which also leaves both termini free for functional motifs. 1 L cultures gave **59.1 mg and 63.4 mg** of lyophilised RGD(+)- and RDG(-)-ELP after 72 h of freeze-drying.', zh: '**逆相變循環勝出。**污染帶隨每個循環遞減；**四個循環**之後基本上只剩 ELP 一條帶，第五個循環沒有再改善。不需要標籤、不需要樹脂：只要 NaCl 與離心機，而且兩端都留白給功能 motif。1 L 培養經 72 小時凍乾後得到 **59.1 mg 與 63.4 mg** 的 RGD(+)- 與 RDG(-)-ELP。' },
                 { en: 'The rule they publish is not a cycle number: *"purity should always be verified by SDS-PAGE instead of relying on cycle numbers"*, and since yield drops sharply after the third cycle, three may be the better trade for some uses. Cost: **3–4 days per purification**, two cycles a day at most, 12 h to redissolve a hot-spin pellet.', zh: '他們寫下的規則不是一個循環數：*「純度應該一律用 SDS-PAGE 驗證，而不是依賴循環次數」*；而且由於第三個循環之後產率明顯下降，對某些用途來說三個循環可能是更好的取捨。代價是：**每次純化 3–4 天**、一天最多兩個循環、熱離心的沉澱要 12 小時才溶回去。' }
               ],
               done: { en: 'A method chosen on cost, scalability and what it leaves free on the molecule — with the rejected method\'s failure mechanism published.', zh: '一個依成本、可放大性與「在分子上留下什麼」而選定的方法——並且把被淘汰方法的失敗機制公開。' } },
@@ -178,7 +178,7 @@
       out += h.sec({
         id: 'd-meas',
         kick: { en: 'Measurement', zh: '量測紀律' },
-        h2: { en: 'The paragraph we would put on a poster', zh: '我們會把這段貼在海報上' },
+        h2: { en: 'They published the instrument-artefact comparison instead of the moduli', zh: '他們公開的是「儀器假象」的比較，而不是那些模數' },
         lede: {
           en: 'The Assembly module set out to show that an ELP solution becomes a hydrogel. It found that it does not, and then found that most of its own numbers were the instrument talking to itself.',
           zh: 'Assembly 模組原本要證明 ELP 溶液會變成水膠。結果發現它不會，接著又發現自己大部分的數字其實是儀器在跟自己說話。'
@@ -197,9 +197,9 @@
             opts: { unit: { en: 'nN·m', zh: 'nN·m' }, dec: 1, xlabel: { en: 'torque, nN·m', zh: '扭矩，nN·m' } },
             caption: { en: 'Plotted by us from the team\'s Mechanical Properties results. Their own sentence: the moduli reported for these runs do not describe the sample.', zh: '由我們依該隊 Mechanical Properties 結果繪製。他們自己的句子是：這些測試回報的模數並不描述樣品。' }
           }) +
-          h.take({ en: 'Why this is the best thing on the wiki', zh: '為什麼這是整個 wiki 上最好的一段' }, {
-            en: 'A rheometer always returns a modulus. What it does not do is tell you whether that modulus came from your sample or from the inertia of the spinning geometry. TU Delft calculated the second number, compared it to the first, and **published the comparison instead of the moduli** — then kept going: only V72-ELP at 61.5 mg/mL resolved, G′ rising ~12 → 33.3 Pa at 33.6 °C and falling to 26 Pa at 37 °C, two to three orders of magnitude below published ELP gels.',
-            zh: '流變儀永遠會回傳一個模數。它不會告訴你那個模數來自你的樣品，還是來自旋轉幾何本身的慣性。TU Delft 把第二個數字算了出來，拿去跟第一個比，然後**公開那個比較而不是那些模數**——接著繼續往下：只有 61.5 mg/mL 的 V72-ELP 解析得出來，G′ 由約 12 升到 33.6 °C 時的 33.3 Pa，再在 37 °C 掉到 26 Pa，比已發表的 ELP 水膠低兩到三個數量級。'
+          h.take({ en: 'A rheometer always returns a modulus; it never tells you whose modulus it is', zh: '流變儀永遠會回傳一個模數；但它從不告訴你那是誰的模數' }, {
+            en: 'The question is whether that modulus came from your sample or from the inertia of the spinning geometry. TU Delft calculated the second number, compared it to the first, and **published the comparison instead of the moduli** — then kept going: only V72-ELP at 61.5 mg/mL resolved, G′ rising ~12 → 33.3 Pa at 33.6 °C and falling to 26 Pa at 37 °C, two to three orders of magnitude below published ELP gels.',
+            zh: '問題在於那個模數來自你的樣品，還是來自旋轉幾何本身的慣性。TU Delft 把第二個數字算了出來，拿去跟第一個比，然後**公開那個比較而不是那些模數**——接著繼續往下：只有 61.5 mg/mL 的 V72-ELP 解析得出來，G′ 由約 12 升到 33.6 °C 時的 33.3 Pa，再在 37 °C 掉到 26 Pa，比已發表的 ELP 水膠低兩到三個數量級。'
           }) +
           h.h3({ en: 'And then they argue against their own positive', zh: '然後他們反駁自己的正面結果' }) +
           h.p({
@@ -250,7 +250,7 @@
             en: 'They then publish **their five worst and five best test points with the sequence and the measurement conditions**, and diagnose them. Every high-error sequence carries residues outside the ELP repeats. The worst, index 209 at **−15.18 °C**, sat at **2918 µM** when the dataset mean is ~400 µM and most points are under 100 µM.',
             zh: '接著他們公開**自己最差與最好的各五個測試點，連序列與量測條件一起**，並做診斷。所有高誤差序列都帶有 ELP 重複以外的殘基。最差的那個，編號 209、誤差 **−15.18 °C**，濃度是 **2918 µM**，而資料集平均約 400 µM、多數點低於 100 µM。'
           }) +
-          h.take({ en: 'The structural admission', zh: '結構性的承認' }, {
+          h.take({ en: 'A decision tree cannot extrapolate, and they call that a property of the model class', zh: '決策樹不能外插，而他們把這件事稱為模型類別的性質' }, {
             en: 'A tree cannot extrapolate. Past its last split it keeps returning the answer that belongs to the highest concentration it ever saw, no matter how far out the new value is. They state this as a property of the model class, not as an accident, and name four fixes: flag out-of-range inputs, return a confidence, log-transform concentration, or hybridise with the physics equation — **which is reasonable precisely because the two models fail on opposite points**.',
             zh: '決策樹不能外插。超過最後一個分裂點之後，它就一直回傳它見過的最高濃度所對應的答案，不管新值離得多遠。他們把這件事寫成「模型類別的性質」而不是意外，並指出四個修法：標記超出範圍的輸入、回傳信心值、對濃度取對數，或與物理式混合——**而後者之所以合理，正是因為兩個模型失敗在相反的那些點上**。'
           }) +

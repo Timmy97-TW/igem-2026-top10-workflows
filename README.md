@@ -113,6 +113,8 @@ teams and villages APIs, read 2026-11-22.
 | 2027 roadmap | A project-selection guide built from the thirty: five gates a candidate topic must pass, six project shapes with their evidence cost, a scoring sheet, a season calendar read backwards from the wiki freeze, and six anti-patterns |
 | Five ideas | Five candidate 2027 topics of our own, each derived from an empty cell in one of the tables above, each put through the five gates, with the five we rejected and the gate that killed each one. Nothing on these pages has been run |
 | One page per idea | The argument · the prior art and how far it got · the key data with every figure cited · the five gates answered · a wet/dry swimlane · tools and a bill of materials · a month-by-month schedule · what kills it · what it ships and which awards it maps onto |
+| Three special prizes | The 2026 Gold rule read as a strategy: the elected-three cap, the published ballot questions for every award, why three High School shortlists had two teams, five seasons of High School results, and which three we would elect for 2027 |
+| 2027 season plan | The roadmap's week offsets converted into thirteen dated Wednesdays, from one published date (Grand Jamboree 18–21 October 2027, iGEM's events API) and one inferred freeze (29 September 2027). A fill-in worksheet for the first meeting, four dates on which the plan says stop, and a slack table saying which dates may move |
 
 Ideas 4 and 5 are built on the mechanisms Stanford-University and Aarhus-University used in 2026 —
 ADAR-read RNA sensing and microRNA-gated activation — recast so that a High School team confined to

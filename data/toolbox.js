@@ -166,16 +166,16 @@
         '</div></div>';
 
       out += h.toc([
-        { id: 'tb-what', t: { en: 'How we counted', zh: '怎麼數的' } },
         { id: 'tb-matrix', t: { en: 'The matrix', zh: '工具矩陣' } },
         { id: 'tb-jobs', t: { en: 'Five jobs', zh: '五種工作' } },
         { id: 'tb-table', t: { en: 'The table', zh: '工具表' } },
         { id: 'tb-cost', t: { en: 'What it costs', zh: '成本' } },
+        { id: 'tb-what', t: { en: 'How we counted', zh: '怎麼數的' } },
         { id: 'tb-min', t: { en: 'What we would install', zh: '我們會裝什麼' } }
       ]);
 
-      /* ---------------- how we counted ---------------- */
-      out += h.sec({
+      /* ---------------- how we counted — held back, appended below the extraction ---------------- */
+      var secHow = h.sec({
         id: 'tb-what',
         kick: { en: 'Method', zh: '方法' },
         h2: { en: 'A tool counts when we can see what came out of it', zh: '看得到它產出什麼，才算用過' },
@@ -206,8 +206,8 @@
         kick: { en: 'The extraction', zh: '萃取結果' },
         h2: { en: 'Twenty-three capabilities against ten teams', zh: '二十三項能力對十支隊伍' },
         lede: {
-          en: 'Read it by row, not by column. A row with one filled cell is a capability exactly one team thought was worth the trouble; a row with nine is table stakes.',
-          zh: '請按列（橫的）讀，不要按欄讀。只有一格有顏色的那一列，代表只有一支隊伍認為這件事值得費心；有九格的那一列，就是入場門檻。'
+          en: 'Read it by row, not by column. A row with one filled cell is a capability exactly one team thought was worth the trouble; a row with nine is table stakes. A blank cell means we could not point to a use, never that a team did not have the tool — [the counting rule is further down](#tb-what).',
+          zh: '請按列（橫的）讀，不要按欄讀。只有一格有顏色的那一列，代表只有一支隊伍認為這件事值得費心；有九格的那一列，就是入場門檻。空格代表我們指不出具體使用，而不是代表該隊沒有那個工具——[計數規則在下方](#tb-what)。'
         },
         body:
           h.fig({
@@ -246,7 +246,7 @@
                 { en: 'Atlases, expression databases, localisation databases, literature screens. Output: a shortlist with a stated disqualifying rule for each stage.', zh: '圖譜、表現量資料庫、定位資料庫、文獻篩選。輸出：一份候選名單，而且每一關都有明說的淘汰規則。' },
                 { en: '**Who:** Stanford (26 scRNA-seq cohorts), UCAS (three databases → UPK1B), UAlberta (GLARE signature).', zh: '**誰在做：**Stanford（26 個單細胞資料集）、UCAS（三個資料庫→UPK1B）、UAlberta（GLARE 特徵）。' }
               ],
-              foot: { en: 'Cheapest job on the list, and the one with the highest leverage: it is the only job that changes what gets ordered.', zh: '名單上最便宜的工作，槓桿也最大：它是唯一會改變「下單內容」的工作。' } },
+              foot: { en: 'Cheapest job on the list, and the one that pays back most: it is the only job that changes what gets ordered.', zh: '名單上最便宜的工作，回報也最大：它是唯一會改變「下單內容」的工作。' } },
             { chips: [{ t: { en: 'job 2 · design', zh: '工作二 · 設計' }, k: 'v' }],
               h: { en: 'Produce a sequence that does not exist yet', zh: '生出一段還不存在的序列' },
               p: [
@@ -357,6 +357,9 @@
               { en: 'A CFD licence, when the question is one-dimensional. Write the one-dimensional model, publish it, and move the money to consumables.', zh: '當問題其實是一維時的計算流體授權。把一維模型寫出來、公開它，然後把錢移到耗材上。' }]
           ])
       });
+
+      /* the counting rule, after the rows it produced */
+      out += secHow;
 
       /* ---------------- minimum stack ---------------- */
       out += h.sec({

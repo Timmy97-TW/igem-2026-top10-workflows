@@ -21,8 +21,8 @@
           zh: '同樣的問題問十隊，讓答案可以==公開地互相矛盾==。'
         }) + '</h1>' +
         '<p class="lede">' + h.md({
-          en: 'No wiki can tell you how its own choices compare with anyone else\'s. These tables do only that: which chassis and which assembly route, what each team decided a result was, what is actually inside each dry-lab stack, which workflow practices each wiki documents, and what each team released that somebody else can pick up. Every cell is read from that team\'s wiki; the columns are ours.',
-          zh: '沒有任何 wiki 能告訴你「自己的選擇和別人比起來如何」。這些表格只做這件事：哪個宿主、哪條組裝路線、每支隊伍如何決定什麼算一個結果、每個乾式堆疊裡實際上有什麼、各 wiki 記載了哪些流程做法，以及每支隊伍釋出了什麼是別人可以接手的。每一格都讀自該隊的 wiki；欄位是我們定的。'
+          en: 'No wiki can tell you how its own choices compare with anyone else\'s. These five tables do only that, using one set of columns for all ten teams. Every cell is read from that team\'s own wiki; the columns are ours.',
+          zh: '沒有任何 wiki 能告訴你「自己的選擇和別人比起來如何」。下面五張表只做這件事，而且對十隊使用同一組欄位。每一格都讀自該隊自己的 wiki；欄位是我們定的。'
         }) + '</p>' +
         '</div></div>';
 
@@ -38,10 +38,10 @@
       out += h.sec({
         id: 'gc-chassis',
         kick: { en: 'Build', zh: '建構' },
-        h2: { en: 'Chassis and assembly route', zh: '宿主與組裝路線' },
+        h2: { en: 'Four of the ten explain why they left the obvious assembly standard', zh: '十隊中有四隊說明了為何離開最明顯的組裝標準' },
         lede: {
-          en: 'Four of the ten state why they chose an assembly standard other than the obvious one, and one of them says so against iGEM\'s own Registry convention.',
-          zh: '十隊中有四隊說明了為什麼選了「不是最明顯的那個」組裝標準，而其中一隊是明確地與 iGEM 自家登錄庫慣例相左。'
+          en: 'One of them does it against iGEM\'s own Registry convention. The table below is every chassis and route; the four deviations are named underneath it.',
+          zh: '其中一隊是明確地與 iGEM 自家登錄庫慣例相左。下表是十隊的宿主與路線；那四次偏離則列在表格下方。'
         },
         body:
           h.tbl({

@@ -53,8 +53,8 @@
           zh: '六個模型，而==每一個都是為了把一個預定的實驗變成一個數字==。'
         },
         lede: {
-          en: 'Klothos is a smart bandage for chronic fibrotic wounds: a probiotic that makes its anti-scarring peptide only when the wound is both hypoxic and oxidative, spun into a coaxial alginate nanofibre mat by an electrospinner the team built themselves. What puts it on this list is the one-to-one discipline between the two labs — six wet-lab phases, six chained models, and a failure log honest enough to name the reversed electrode and the mislabelled ethanol bottle.',
-          zh: 'Klothos 是給慢性纖維化傷口用的智慧敷料：一株只有在傷口同時缺氧又處於氧化壓力時才製造抗疤胜肽的益生菌，再由團隊自己做的靜電紡絲機紡成同軸海藻酸鈉奈米纖維墊。讓它進入這份名單的是兩個實驗室之間一對一的紀律——六個濕式階段、六個串接模型，以及一份誠實到連「電極接反」與「乙醇瓶貼錯標」都寫出來的失敗紀錄。'
+          en: 'Six wet-lab phases, six chained models, and you can name the assay each model was built to interpret. That one-to-one discipline between the two labs is what puts Klothos on this list, along with a failure log honest enough to name the reversed electrode and the mislabelled ethanol bottle. The product itself is a smart bandage for chronic fibrotic wounds: a probiotic that makes its anti-scarring peptide only when the wound is both hypoxic and oxidative, spun into a coaxial alginate nanofibre mat by an electrospinner the team built themselves.',
+          zh: '六個濕式階段、六個串接模型，而且每一個模型當初是為了解讀哪一個實驗，你都叫得出來。讓 Klothos 進入這份名單的，就是兩個實驗室之間這種一對一的紀律，再加上一份誠實到連「電極接反」與「乙醇瓶貼錯標」都寫出來的失敗紀錄。產品本身是給慢性纖維化傷口用的智慧敷料：一株只有在傷口同時缺氧又處於氧化壓力時才製造抗疤胜肽的益生菌，再由團隊自己做的靜電紡絲機紡成同軸海藻酸鈉奈米纖維墊。'
         },
         chips: [
           { t: { en: 'AND-gate promoter (hypoxia + ROS)', zh: 'AND 閘啟動子（缺氧＋ROS）' }, k: 'b' },
@@ -95,8 +95,8 @@
         },
         body:
           h.p({
-            en: 'The therapeutic is **810A**, a 12-amino-acid peptide that binds the CTGF C-terminus (Xiao et al.). The delivery decision is the part worth studying: rather than dosing a peptide, Cornell put the peptide\'s gene into a probiotic and wrapped the probiotic in a coaxial alginate nanofibre mat — a bandage that keeps making the drug. The safety argument is a promoter, not a formulation: an **AND gate** combining a hypoxia-responsive promoter (pNarK-type) with a ROS-responsive one (pkatG), so 810A appears only where a wound is both oxygen-starved and inflamed, which is what a chronic wound is.',
-            zh: '治療分子是 **810A**，一段與 CTGF C 端結合的 12 個胺基酸胜肽（Xiao 等人）。真正值得研究的是遞送上的決定：Cornell 沒有直接投予胜肽，而是把胜肽的基因放進一株益生菌，再把益生菌包進同軸海藻酸鈉奈米纖維墊——一片會持續製造藥物的敷料。安全論證靠的是啟動子而不是配方：一個把缺氧反應型啟動子（pNarK 類）與 ROS 反應型啟動子（pkatG）結合起來的 **AND 閘**，使 810A 只在同時缺氧又發炎的地方出現，而那正是慢性傷口的定義。'
+            en: 'The therapeutic is **810A**, a 12-amino-acid peptide that binds the CTGF C-terminus (Xiao et al.). The delivery decision is where the design work went: rather than dosing a peptide, Cornell put the peptide\'s gene into a probiotic and wrapped the probiotic in a coaxial alginate nanofibre mat — a bandage that keeps making the drug. The safety argument is a promoter, not a formulation: an **AND gate** combining a hypoxia-responsive promoter (pNarK-type) with a ROS-responsive one (pkatG), so 810A appears only where a wound is both oxygen-starved and inflamed, which is what a chronic wound is.',
+            zh: '治療分子是 **810A**，一段與 CTGF C 端結合的 12 個胺基酸胜肽（Xiao 等人）。設計工作真正花在遞送這個決定上：Cornell 沒有直接投予胜肽，而是把胜肽的基因放進一株益生菌，再把益生菌包進同軸海藻酸鈉奈米纖維墊——一片會持續製造藥物的敷料。安全論證靠的是啟動子而不是配方：一個把缺氧反應型啟動子（pNarK 類）與 ROS 反應型啟動子（pkatG）結合起來的 **AND 閘**，使 810A 只在同時缺氧又發炎的地方出現，而那正是慢性傷口的定義。'
           }) +
           h.cards([
             { chips: [{ t: { en: 'chassis path', zh: '底盤路線' }, k: 'b' }],
@@ -139,8 +139,8 @@
         kick: { en: 'Wet lab', zh: '濕式流程' },
         h2: { en: 'Six phases, and the last two are about the mat, not the molecule', zh: '六個階段，而最後兩個講的是纖維墊、不是分子' },
         lede: {
-          en: 'The team names six phases and runs design–build–test–learn cycles inside each one. Phases 1 and 2 are the drug and its target; phases 3 to 6 are circuitry, fibres, encasement and extrusion.',
-          zh: '團隊明列六個階段，並在每個階段內部跑 design–build–test–learn 迴圈。第一、二階段是藥物與它的標靶；第三到第六階段則是電路、纖維、包覆與擠出。'
+          en: 'The team names six phases and runs design–build–test–learn cycles inside each one: phases 1 and 2 are the drug and its target, phases 3 to 6 are circuitry, fibres, encasement and extrusion. The six blocks below follow the order the work actually ran in, which is ours, not their numbering.',
+          zh: '團隊明列六個階段，並在每個階段內部跑 design–build–test–learn 迴圈：第一、二階段是藥物與它的標靶，第三到第六階段是電路、纖維、包覆與擠出。下面六個區塊照工作實際進行的順序排列，這個排法是我們的，不是他們的編號。'
         },
         body:
           h.phases([
@@ -214,7 +214,7 @@
             ],
             source: { en: 'Condensed from the team\'s Results and Measurement pages.', zh: '濃縮自該隊 Results 與 Measurement 頁。' }
           }) +
-          h.take({ en: 'The rule that makes these comparable', zh: '讓這些數字可比的規則' }, {
+          h.take({ en: 'Only one of the three studies is allowed to settle a design choice', zh: '三個實驗裡只有一個有資格定下設計決策' }, {
             en: 'They publish **n = 1 mat per concentration and a 100× piece-to-piece variation in the same breath as the 1–4 CFU/mg plateau**, and they publish the slope test against the 0 wt % control rather than an eyeballed curve. The result is that a reader can see exactly which of the three studies is allowed to settle a design choice — the settling t-test — and which two are shape, not ranking. Stating the n next to the number costs nothing and is the difference between a figure and a claim.',
             zh: '他們把 **「每個濃度 n = 1 片墊、片間差異 100 倍」跟「1–4 CFU/mg 平台」寫在同一口氣裡**，而且公開的是對 0 wt% 對照的斜率檢定，而不是用眼睛看曲線。結果是讀者可以明確分出三個實驗中哪一個有資格定下設計決策——沉降 t 檢定——而哪兩個只給出形狀、不給出排名。把 n 寫在數字旁邊不花一毛錢，卻是「一張圖」與「一個主張」之間的差別。'
           })

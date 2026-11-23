@@ -484,7 +484,9 @@
         { id: 'x-shelf', label: { en: 'Idea 2 · DRYRUN', zh: '題目二 · DRYRUN' } },
         { id: 'x-assay', label: { en: 'Idea 3 · SPLITFISH', zh: '題目三 · SPLITFISH' } },
         { id: 'x-reader', label: { en: 'Idea 4 · ENDOREAD', zh: '題目四 · ENDOREAD' } },
-        { id: 'x-seed', label: { en: 'Idea 5 · SEEDTEST', zh: '題目五 · SEEDTEST' } }
+        { id: 'x-seed', label: { en: 'Idea 5 · SEEDTEST', zh: '題目五 · SEEDTEST' } },
+        { id: 'x-prize', label: { en: 'Three special prizes', zh: '三個特別獎' } },
+        { id: 'x-plan', label: { en: '2027 season plan', zh: '2027 賽季計畫' } }
       ]
     }
   ];

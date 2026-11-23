@@ -21,8 +21,8 @@
           zh: 'iGEM 2026 關於證據寫得最好的文字==出現在高中部==，而它出現在那裡，是因為那裡的結果夠薄，所以落差藏不住。'
         }) + '</h1>' +
         '<p class="lede">' + h.md({
-          en: 'Ten teams were named to the Top 10 **High School** list at the iGEM 2026 Grand Jamboree. We read all ten for one thing: how the work was actually run. We came in expecting the senior sections to teach us how to write a result and the High School section to teach us enthusiasm. It is the other way round. **Every one of these ten wikis contains a sentence that refuses to let a reader over-read a result** — "1 ppb is the lowest concentration tested, not a validated detection limit"; "a positive association, not proof of rate prediction"; "do not yet establish … the performance of the complete DNA-to-color workflow". A team with one enzyme and one assay has to decide what that assay proves. A team with a platform can hide the question inside the volume of work.',
-          zh: '2026 年 iGEM Grand Jamboree 的 **高中部**前十名共有十支隊伍。我們把十個 wiki 全部讀過，只為一件事：這些工作實際上是怎麼跑的。我們進去的時候以為，高年級組別會教我們怎麼寫一個結果，而高中部會教我們熱情。結果剛好相反。**這十個 wiki 每一個都含有一句不讓讀者過度解讀結果的話**——「1 ppb 是測過的最低濃度，不是經驗證的偵測極限」；「一個正相關，不是速率預測的證明」；「尚未建立……完整 DNA 到顏色流程的表現」。一支只有一個酵素與一個試驗的隊伍，必須決定那個試驗到底證明了什麼。一支擁有平台的隊伍，可以把這個問題藏在工作量裡面。'
+          en: 'We came in expecting the senior sections to teach us how to write a result and the High School section to teach us enthusiasm. It is the other way round. **Every one of these ten wikis contains a sentence that refuses to let a reader over-read a result** — "1 ppb is the lowest concentration tested, not a validated detection limit"; "a positive association, not proof of rate prediction"; "do not yet establish … the performance of the complete DNA-to-color workflow". A team with one enzyme and one assay has to decide what that assay proves; a team with a platform can hide the question inside the volume of work. We read all ten of the 2026 **High School** Top 10 wikis for one thing only: how the work was actually run.',
+          zh: '我們進去的時候以為，高年級組別會教我們怎麼寫一個結果，而高中部會教我們熱情。結果剛好相反。**這十個 wiki 每一個都含有一句不讓讀者過度解讀結果的話**——「1 ppb 是測過的最低濃度，不是經驗証的偵測極限」；「一個正相關，不是速率預測的証明」；「尚未建立……完整 DNA 到顏色流程的表現」。一支只有一個酵素與一個試驗的隊伍，必須決定那個試驗到底証明了什麼；一支擁有平台的隊伍，可以把這個問題藏在工作量裡面。我們把 2026 年 **高中部**前十名的十個 wiki 全部讀過，只為一件事：這些工作實際上是怎麼跑的。'
         }) + '</p>' +
         h.stats([
           { v: '152', l: { en: 'High School teams accepted in 2026, competing for ten places', zh: '2026 年獲接受的高中部隊伍，爭十個席位' } },
@@ -35,8 +35,6 @@
         '</div></div>';
 
       out += h.toc([
-        { id: 'h-what', t: { en: 'What this is', zh: '這是什麼' } },
-        { id: 'h-ten', t: { en: 'The ten', zh: '十支隊伍' } },
         { id: 'h-find', t: { en: 'Six findings', zh: '六個發現' } },
         { id: 'h-scope', t: { en: 'The refusal', zh: '那個拒絕' } },
         { id: 'h-neg', t: { en: 'Ten negative results', zh: '十個負面結果' } },
@@ -44,11 +42,13 @@
         { id: 'h-out', t: { en: 'Outside the team', zh: '團隊之外' } },
         { id: 'h-wobble', t: { en: 'Pages that disagree', zh: '互相矛盾的頁面' } },
         { id: 'h-struct', t: { en: 'How this section is judged', zh: '這個組別怎麼被評' } },
+        { id: 'h-ten', t: { en: 'The ten', zh: '十支隊伍' } },
+        { id: 'h-what', t: { en: 'What this is', zh: '這是什麼' } },
         { id: 'h-take', t: { en: 'What we would take', zh: '我們會帶走什麼' } }
       ]);
 
-      /* ---------------- what this is ---------------- */
-      out += h.sec({
+      /* ---------------- what this is — held back, appended below the analysis ---------------- */
+      var secAbout = h.sec({
         id: 'h-what',
         kick: { en: 'What this is', zh: '這是什麼' },
         h2: { en: 'A workflow study of the High School section, in the same terms as the other two', zh: '一份高中部的工作流程研究，用與另外兩個組別相同的語彙' },
@@ -66,8 +66,8 @@
           ])
       });
 
-      /* ---------------- the ten ---------------- */
-      out += h.sec({
+      /* ---------------- the ten — held back, appended below the analysis ---------------- */
+      var secTen = h.sec({
         id: 'h-ten',
         kick: { en: 'The ten', zh: '十支隊伍' },
         h2: { en: 'Top 10 High School, iGEM 2026', zh: 'iGEM 2026 高中部前十名' },
@@ -86,8 +86,34 @@
               '</div>';
           }).join('') + '</div>' +
           h.note({
-            en: 'Awards inside this cohort. **Best Village Project**, which in the High School section is awarded to four bundled village groups rather than to each village: **Lambert-GA** (Climate Crisis / Conservation / Bioremediation), **HongKong-JSS** (Agriculture / Food & Nutrition / Fashion & Cosmetics / Art & Design), **HFI** (Infectious Diseases / Therapeutics / Diagnostics / Oncology) and **HangzhouFourteenAP** (Space / Foundational Advance / Software & AI / Biomanufacturing). **Special prizes:** Lambert-GA took Best Model, Best Wiki and Best Sustainable Development Impact; **GEMS-Taiwan** took Best Measurement, Best Hardware and Best Integrated Human Practices; **GHCIS** took Best Part Collection and Best Software; **HFI** Best Education; **HKSSC** Best New Basic Part; **GCGS** Best New Improved Part. **Eton-College-UK and HongKong-HS won no special prize**, and were nominated in three and one category respectively. Source: [competition.igem.org/results/2026](https://competition.igem.org/results/2026).',
-            zh: '本組別內的獎項。**最佳村專案**——高中部是把村別併成四大組來頒，而不是每村一獎：**Lambert-GA**（氣候危機／保育／生物復育）、**HongKong-JSS**（農業／食品與營養／時尚與美妝／藝術與設計）、**HFI**（傳染病／治療／診斷／腫瘤）與 **HangzhouFourteenAP**（太空／基礎推進／軟體與 AI／生物製造）。**特別獎：**Lambert-GA 拿下最佳模型、最佳 Wiki 與最佳永續發展影響；**GEMS-Taiwan** 拿下最佳量測、最佳硬體與最佳整合人類實踐；**GHCIS** 拿下最佳元件集與最佳軟體；**HFI** 最佳教育；**HKSSC** 最佳新基礎元件；**GCGS** 最佳新改良元件。**Eton-College-UK 與 HongKong-HS 沒有獲得特別獎**，分別入圍三項與一項。資料來源：[competition.igem.org/results/2026](https://competition.igem.org/results/2026)。'
+            en: '**Best Village Project is awarded to four bundled village groups in this section, not to each village** — so the four village awards below cover all sixteen High School villages between them.',
+            zh: '**本組別的最佳村專案是頒給四個併組後的村群，而不是每村一獎**——所以下表那四個村獎合起來涵蓋了高中部全部十六個村別。'
+          }) +
+          h.tbl({
+            cols: [
+              { t: { en: 'Team', zh: '隊伍' }, w: '17%' },
+              { t: { en: 'Best Village Project, and the group it covers', zh: '最佳村專案，以及它涵蓋的村群' }, w: '36%' },
+              { t: { en: 'Special prizes', zh: '特別獎' } }
+            ],
+            rows: [
+              ['**Lambert-GA**', { en: 'Climate Crisis / Conservation / Bioremediation', zh: '氣候危機／保育／生物復育' },
+               { en: 'Best Model · Best Wiki · Best Sustainable Development Impact', zh: '最佳模型 · 最佳 Wiki · 最佳永續發展影響' }],
+              ['**HongKong-JSS**', { en: 'Agriculture / Food & Nutrition / Fashion & Cosmetics / Art & Design', zh: '農業／食品與營養／時尚與美妝／藝術與設計' }, '—'],
+              ['**Eton-College-UK**', '—', { en: 'None; nominated in three categories', zh: '無；入圍三項' }],
+              ['**GCGS**', '—', { en: 'Best New Improved Part', zh: '最佳新改良元件' }],
+              ['**GEMS-Taiwan**', '—', { en: 'Best Measurement · Best Hardware · Best Integrated Human Practices', zh: '最佳量測 · 最佳硬體 · 最佳整合人類實踐' }],
+              ['**GHCIS**', '—', { en: 'Best Part Collection · Best Software', zh: '最佳元件集 · 最佳軟體' }],
+              ['**HangzhouFourteenAP**', { en: 'Space / Foundational Advance / Software & AI / Biomanufacturing', zh: '太空／基礎推進／軟體與 AI／生物製造' }, '—'],
+              ['**HFI**', { en: 'Infectious Diseases / Therapeutics / Diagnostics / Oncology', zh: '傳染病／治療／診斷／腫瘤' },
+               { en: 'Best Education', zh: '最佳教育' }],
+              ['**HKSSC**', '—', { en: 'Best New Basic Part', zh: '最佳新基礎元件' }],
+              ['**HongKong-HS**', '—', { en: 'None; nominated in one category', zh: '無；入圍一項' }]
+            ],
+            min: 820,
+            source: {
+              en: 'Four of these ten won no special prize. Eton-College-UK and HongKong-HS won nothing at all, having been nominated in three and one category respectively; HongKong-JSS and HangzhouFourteenAP hold a Best Village Project instead, which iGEM publishes as a Village Award. Across the whole High School section, 19 special awards went to 13 different teams, and 7 of those 13 did not place in the Top 10 — see [Three special prizes](#x-prize). Source: [competition.igem.org/results/2026](https://competition.igem.org/results/2026).',
+              zh: '這十隊裡有四隊沒有拿到特別獎。Eton-College-UK 與 HongKong-HS 什麼都沒拿到，分別入圍三項與一項；HongKong-JSS 與 HangzhouFourteenAP 則持有一個 Best Village Project，而 iGEM 把它公布為 Village Award。放到整個高中組看，19 個特別獎分給了 13 支不同的隊伍，而那 13 隊裡有 7 隊沒有進入前十名——見[三個特別獎](#x-prize)。資料來源：[competition.igem.org/results/2026](https://competition.igem.org/results/2026)。'
+            }
           })
       });
 
@@ -97,8 +123,8 @@
         kick: { en: 'Findings', zh: '發現' },
         h2: { en: 'Six things the ten High School wikis say when you read them together', zh: '把高中部十個 wiki 一起讀時，它們共同說出的六件事' },
         lede: {
-          en: 'These are our conclusions, drawn from the ten pages that follow. Each one names the teams it rests on, so you can disagree with it precisely.',
-          zh: '這些是我們的結論，從後面那十頁得出。每一條都指名它所依據的隊伍，好讓你能精確地反對它。'
+          en: 'These are our conclusions, drawn from the ten team pages on this site. Each one names the teams it rests on, so you can disagree with it precisely. The ten are [listed further down](#h-ten), with what this study is and is not.',
+          zh: '這些是我們的結論，從本站十個團隊頁得出。每一條都指名它所依據的隊伍，好讓你能精確地反對它。十支隊伍[列在下方](#h-ten)，連同這份研究是什麼、不是什麼。'
         },
         body:
           h.cards([
@@ -107,7 +133,7 @@
               p: { en: 'The practice we expected to find only in the Overgraduate section is everywhere here: a result followed, in the same sentence, by what it is not evidence for. **HongKong-JSS, GHCIS, Eton-College-UK, Lambert-GA, HFI and GCGS** all do it, and in four of those cases the sentence limits a result the team clearly wanted to be bigger. It gets its own section below.', zh: '我們原本以為只會在研究生部看到的做法，在這裡到處都是：一個結果之後，在同一句話裡接上「它不構成什麼的證據」。**HongKong-JSS、GHCIS、Eton-College-UK、Lambert-GA、HFI 與 GCGS** 全都這麼做，而其中四個案例裡，那句話限制的是團隊明顯希望它更大的結果。下面有一整節講這件事。' } },
             { chips: [{ t: { en: '2', zh: '2' }, k: 'g' }],
               h: { en: 'The readout is built before the thing being measured', zh: '讀值在被量測的對象之前就先建好' },
-              p: { en: 'Seven of the ten spent a dedicated experiment on the measurement itself before using it to judge anything: **HKSSC** built CFU standard curves and wrote down why CFU beats OD₆₀₀; **GHCIS** validated its cell-free system with a positive-control plasmid before screening a single switch; **HangzhouFourteenAP** established a DNS glucose standard curve (R² = 0.9606); **Eton-College-UK** proved its electrodes were alive on ferricyanide before blaming the chemistry; **HFI** knocked out *ldcC* so the chassis had no endogenous background to confound the measurement; **HongKong-JSS** published calibration equations with a held-out set; **GEMS-Taiwan** calibrated a self-built photometer against a commercial instrument and found where the commercial one saturates.', zh: '十隊中有七隊，在用量測去評判任何東西之前，先為量測本身花了一個專門的實驗：**HKSSC** 建立 CFU 標準曲線，並寫下為什麼 CFU 勝過 OD₆₀₀；**GHCIS** 在篩選任何一個開關之前，先用陽性對照質體驗證無細胞系統；**HangzhouFourteenAP** 建立 DNS 葡萄糖標準曲線（R² = 0.9606）；**Eton-College-UK** 先用鐵氰化物證明電極是活的，才去怪化學；**HFI** 剔除 *ldcC*，讓底盤沒有會干擾量測的內源背景；**HongKong-JSS** 公開了帶留出集的校正方程式；**GEMS-Taiwan** 把自製光度計對照商用儀器校正，並找出商用那台在哪裡飽和。' } },
+              p: { en: 'Seven of the ten spent a dedicated experiment on the measurement itself before using it to judge anything. A null result then says something about the biology instead of leaving two candidate explanations open. [Which seven, and what each one of them spent it on](#h-read), further down.', zh: '十隊中有七隊，在用量測去評判任何東西之前，先為量測本身花了一個專門的實驗。這樣一來，一個零結果講的就是生物學，而不是留下兩個可能的解釋。[是哪七隊、各自把那個實驗花在什麼上](#h-read)，見下方。' } },
             { chips: [{ t: { en: '3', zh: '3' }, k: 'b' }],
               h: { en: 'A screen with a published loser beats a result with no comparison', zh: '一次有公開「輸家」的篩選，勝過一個沒有比較的結果' },
               p: { en: '**GCGS** compared two iron-regulated promoters and published the one that barely responded, then screened four SsrA degradation tags and published that most of them destroyed induction entirely. **HangzhouFourteenAP** carried two antimicrobial peptides and published that one of them never produced a detectable band. **HongKong-JSS** built thirteen biosensor prototypes and reports that two responded. In each case the comparison is what makes the surviving choice a finding rather than a preference.', zh: '**GCGS** 比較了兩個受鐵調控的啟動子，並公開那個幾乎沒有反應的；接著篩了四種 SsrA 降解標籤，並公開其中大多數完全摧毀了誘導。**HangzhouFourteenAP** 同時做了兩個抗菌肽，並公開其中一個從未產出可偵測的條帶。**HongKong-JSS** 做了十三個生物感測器原型，並報告有兩個有反應。在每個案例裡，正是那個比較讓存活下來的選擇成為一個發現，而不只是一個偏好。' } },
@@ -127,7 +153,7 @@
       out += h.sec({
         id: 'h-scope',
         kick: { en: 'The practice', zh: '那個做法' },
-        h2: { en: 'Five teams refuse, in writing, to call their lowest tested value a limit', zh: '有五隊以書面拒絕把自己測過的最低值稱為極限' },
+        h2: { en: 'Six teams refuse, in writing, to call their lowest tested value a limit', zh: '有六隊以書面拒絕把自己測過的最低值稱為極限' },
         lede: {
           en: 'This is the most copyable sentence pattern in the 2026 cohort, and it costs one clause. We think it is also the reason several of these wikis survived contact with a judge.',
           zh: '這是 2026 這一批隊伍中最容易照抄的句型，而它的成本是一個子句。我們也認為，這正是其中幾個 wiki 能在評審面前撐住的原因。'
@@ -220,8 +246,8 @@
             source: { en: 'Read from each team\'s own 2026 wiki; each row is sourced in detail on that team\'s page here. The grouping is ours.', zh: '讀自各隊自己 2026 年的 wiki；每一列在本站該隊頁面都有詳細出處。分組是我們做的。' }
           }) +
           h.note({
-            en: 'The reason this table is the most useful page in the section: in six of these ten rows, **the failure is what produced the project**. PRINCE exists because round 1 failed. GCGS\'s improved part exists because four degradation tags destroyed induction. GEMS-Taiwan\'s whole architecture exists because the first design could not be contained. A wiki that hides its failures hides its own engineering.',
-            zh: '這張表之所以是這一區最有用的一頁：在這十列中有六列，**那個失敗正是專案的來源**。PRINCE 之所以存在，是因為第一輪失敗了。GCGS 的改良元件之所以存在，是因為四種降解標籤摧毀了誘導。GEMS-Taiwan 的整個架構之所以存在，是因為第一版設計無法被圍阻。一個藏起自己失敗的 wiki，藏起的是自己的工程。'
+            en: '**In six of these ten rows the failure is what produced the project**, which is why we think this table is the most useful page in the section. PRINCE exists because round 1 failed. GCGS\'s improved part exists because four degradation tags destroyed induction. GEMS-Taiwan\'s whole architecture exists because the first design could not be contained. A wiki that hides its failures hides its own engineering.',
+            zh: '**在這十列中有六列，那個失敗正是專案的來源**——這也是我們認為這張表是這一區最有用一頁的原因。PRINCE 之所以存在，是因為第一輪失敗了。GCGS 的改良元件之所以存在，是因為四種降解標籤摧毀了誘導。GEMS-Taiwan 的整個架構之所以存在，是因為第一版設計無法被圍阻。一個藏起自己失敗的 wiki，藏起的是自己的工程。'
           })
       });
 
@@ -250,9 +276,25 @@
             ],
             caption: { en: 'Drawn by us. The upper path is HKSSC, GHCIS, HangzhouFourteenAP, Eton-College-UK, HFI, HongKong-JSS and GEMS-Taiwan; the lower one is what the other three risked. HangzhouFourteenAP could write "strictly specific for α-1,3-glucan" only because the swapped-substrate and heat-inactivated arms ran in the same batch.', zh: '由我們繪製。上面那條路是 HKSSC、GHCIS、HangzhouFourteenAP、Eton-College-UK、HFI、HongKong-JSS 與 GEMS-Taiwan；下面那條是另外三隊所承受的風險。HangzhouFourteenAP 之所以能寫下「嚴格專一於 α-1,3-葡聚糖」，只因為換底物組與熱去活組是在同一批次跑的。' }
           }) +
+          h.kv([
+            [{ en: 'HKSSC', zh: 'HKSSC' },
+             { en: 'Built CFU standard curves, and wrote down why CFU beats OD₆₀₀.', zh: '建立 CFU 標準曲線，並寫下為什麼 CFU 勝過 OD₆₀₀。' }],
+            [{ en: 'GHCIS', zh: 'GHCIS' },
+             { en: 'Validated its cell-free system with a positive-control plasmid before screening a single switch.', zh: '在篩選任何一個開關之前，先用陽性對照質體驗證無細胞系統。' }],
+            [{ en: 'HangzhouFourteenAP', zh: 'HangzhouFourteenAP' },
+             { en: 'Established a DNS glucose standard curve, **R² = 0.9606**.', zh: '建立 DNS 葡萄糖標準曲線，**R² = 0.9606**。' }],
+            [{ en: 'Eton-College-UK', zh: 'Eton-College-UK' },
+             { en: 'Proved its electrodes were alive on ferricyanide before blaming the chemistry.', zh: '先用鐵氰化物證明電極是活的，才去怪化學。' }],
+            [{ en: 'HFI', zh: 'HFI' },
+             { en: 'Knocked out *ldcC*, so the chassis had no endogenous background to confound the measurement.', zh: '剔除 *ldcC*，讓底盤沒有會干擾量測的內源背景。' }],
+            [{ en: 'HongKong-JSS', zh: 'HongKong-JSS' },
+             { en: 'Published calibration equations with a held-out set, not a fitted line alone.', zh: '公開帶留出集的校正方程式，而不是只有一條擬合線。' }],
+            [{ en: 'GEMS-Taiwan', zh: 'GEMS-Taiwan' },
+             { en: 'Calibrated a self-built photometer against a commercial instrument, and found where the commercial one saturates.', zh: '把自製光度計對照商用儀器校正，並找出商用那台在哪裡飽和。' }]
+          ]) +
           h.p({
-            en: 'The clearest statement of it in the whole section is HKSSC\'s, and it is worth quoting because they wrote it down before they needed it: **CFU standard curves are required for proper normalisation**, and without CFU calibration **"conclusions may be misleading or incorrect"**. That is a team deciding, in advance, that a result it cannot normalise is a result it will not report.',
-            zh: '整個組別裡把這件事說得最清楚的是 HKSSC，而值得引述的原因是：他們在需要它之前就先寫下來了——**CFU 標準曲線是正確標準化的必要條件**，而少了 CFU 校正，**「結論可能具誤導性或根本不正確」**。這是一支隊伍事先決定：一個自己無法標準化的結果，就是一個自己不會報告的結果。'
+            en: 'HKSSC wrote the rule down before they needed it: **CFU standard curves are required for proper normalisation**, and without CFU calibration **"conclusions may be misleading or incorrect"**. That is a team deciding in advance that a result it cannot normalise is a result it will not report — the clearest statement of this order anywhere in the section.',
+            zh: 'HKSSC 在需要這條規則之前就先把它寫下來了：**CFU 標準曲線是正確標準化的必要條件**，而少了 CFU 校正，**「結論可能具誤導性或根本不正確」**。這是一支隊伍事先決定：一個自己無法標準化的結果，就是一個自己不會報告的結果；整個組別裡沒有別的地方把這個順序講得更清楚。'
           })
       });
 
@@ -270,7 +312,7 @@
             [{ en: 'Eton-College-UK · host laboratories', zh: 'Eton-College-UK · 接待實驗室' },
              { en: 'Bench work hosted at the **University of Greenwich** and **King\'s College London**, with the notebook kept per site. This buys instruments and supervision rather than independence, and it is the most reproducible of the three routes — a school with a nearby university can ask for it.', zh: '實驗檯工作在**格林威治大學**與**倫敦國王學院**進行，實驗記錄依場地分別保存。這換到的是儀器與督導，而不是獨立性；但它是三條路線中最可複製的一條——任何附近有大學的學校都問得到。' }],
             [{ en: 'The other eight', zh: '另外八隊' },
-             { en: 'Measured everything in-house. Several of them consulted experts extensively — GCGS, HFI and GEMS-Taiwan all document expert interviews that changed the design — but **advice changes a design, and only a measurement changes the evidence.** Our recommendation for 2027 is in the roadmap: budget one external measurement the way you budget reagents, and send it early enough that a bad answer is still actionable.', zh: '所有量測都自己做。其中有幾隊大量諮詢了專家——GCGS、HFI 與 GEMS-Taiwan 都記錄了改變設計的專家訪談——但**意見改變的是設計，只有量測才改變證據。**我們對 2027 年的建議寫在選題指南裡：把一次外部量測像試劑一樣列入預算，並且送得夠早，讓一個壞答案仍然來得及處理。' }]
+             { en: 'Measured everything in-house. Several of them consulted experts extensively — GCGS, HFI and GEMS-Taiwan all document expert interviews that changed the design — but **advice changes a design, and only a measurement changes the evidence.** Our recommendation for 2027 is in the roadmap: budget one external measurement the way you budget reagents, and send it early enough that a bad answer still leaves you time to act on it.', zh: '所有量測都自己做。其中有幾隊大量諮詢了專家——GCGS、HFI 與 GEMS-Taiwan 都記錄了改變設計的專家訪談——但**意見改變的是設計，只有量測才改變證據。**我們對 2027 年的建議寫在選題指南裡：把一次外部量測像試劑一樣列入預算，並且送得夠早，讓一個壞答案仍然來得及處理。' }]
           ])
       });
 
@@ -319,7 +361,7 @@
           h.cards([
             { chips: [{ t: { en: 'villages are bundled', zh: '村別是併組的' }, k: 'b' }],
               h: { en: 'You compete for a village award against adjacent villages, not your own', zh: '你爭村獎的對手是鄰近村別，不是你自己的村別' },
-              p: { en: 'High School village awards are grouped four ways, so the field for a village award is the whole group. In 2026 the groups were wildly uneven: **Agriculture / Food & Nutrition / Fashion & Cosmetics / Art & Design held 48 teams**, while **Climate Crisis / Conservation / Bioremediation held 28**. Two of the four 2026 village awards went to teams in the smaller groups. Choosing a village in this section is partly choosing a group size — and nothing on the registration page says so.', zh: '高中部的村獎分四組發放，所以爭村獎的賽場是整個組。2026 年各組大小非常不平均：**農業／食品與營養／時尚與美妝／藝術與設計那組有 48 支隊伍**，而**氣候危機／保育／生物復育那組只有 28 支**。2026 年四個村獎中有兩個落在較小的組。在這個組別選村別，有一部分其實是在選組的大小——而報名頁上沒有任何地方提到這件事。' } },
+              p: { en: 'High School village awards are grouped four ways, so the field for a village award is the whole group. In 2026 the groups were wildly uneven: **Agriculture / Food & Nutrition / Fashion & Cosmetics / Art & Design held 48 teams**, while **Climate Crisis / Conservation / Bioremediation held 28**. Two of the four 2026 village awards went to teams in the smaller groups. Choosing a village in this section is partly choosing a group size — and nothing on the registration page says so.', zh: '高中部的村獎分四組發放，所以爭村獎的賽場是整個組。2026 年各組大小落差極大：**農業／食品與營養／時尚與美妝／藝術與設計那組有 48 支隊伍**，而**氣候危機／保育／生物復育那組只有 28 支**。2026 年四個村獎中有兩個落在較小的組。在這個組別選村別，有一部分其實是在選組的大小——而報名頁上沒有任何地方提到這件事。' } },
             { chips: [{ t: { en: 'the villages do not behave alike', zh: '各村別的表現不一樣' }, k: 'v' }],
               h: { en: 'Diagnostics works here and nowhere else; Bioremediation is the reverse', zh: 'Diagnostics 在這裡行得通、在別處都不行；Bioremediation 剛好相反' },
               p: { en: '**Three of these ten teams are registered in Diagnostics** — Eton-College-UK, GCGS and HongKong-HS — while across 22 Undergraduate and Overgraduate Diagnostics teams in 2026, not one reached a Top 10. **Bioremediation was the second-largest High School village with 21 teams and placed nobody**, while the same village produced two Top 10 teams in each of the other sections. Our reading: a diagnostic is the one shape where a school lab can reach a real readout in one season, and degrading a pollutant is the shape where the measurement costs more than a school has. The full tables are on the **Across tiers** page.', zh: '**這十隊中有三隊登記在 Diagnostics**——Eton-College-UK、GCGS 與 HongKong-HS——而 2026 年大學部與研究生部共 22 支 Diagnostics 隊伍裡，沒有一隊進入前十名。**Bioremediation 是高中部第二大的村別、有 21 支隊伍，卻零席次**，而同一個村別在另外兩個組別各產出兩支前十名。我們的解讀：診斷是唯一一種能讓學校實驗室在一季內拿到真實讀值的形狀；而降解污染物則是「量測費用超過學校能力」的那種形狀。完整表格在**三層比較**那一頁。' } }
@@ -329,6 +371,9 @@
             zh: '這十隊的所在地：**四隊在中國大陸**（GCGS、GHCIS、HangzhouFourteenAP、HFI）、**三隊在香港**（HKSSC、HongKong-HS、HongKong-JSS）、**一隊在台灣**（GEMS-Taiwan）、**一隊在美國**（Lambert-GA）、**一隊在英國**（Eton-College-UK）。香港 2026 年共報名十支高中部隊伍，其中三支進入前十名。以上由我們自 iGEM teams API 統計；轉換率及其保留條件，討論於**三層比較**那一頁。'
           })
       });
+
+      /* the roster and the framing, after the findings they support */
+      out += secTen + secAbout;
 
       /* ---------------- what we would take ---------------- */
       out += h.sec({
@@ -349,8 +394,8 @@
             zh: '這六件事都讓一個專案**在評審眼中變得可讀**，而那和讓它變好不是同一件事。這些做法獎勵的是「能裝進九個月與學校預算」的工作——而那是對「值得嘗試的問題」的一種限制，不是那些問題的特質。如果你有理由把一季花在一件不會完成的事情上，那是一個正當的選擇，不該有任何做法清單把你勸退。這一頁誠實的版本是：以下是那十支完成了的隊伍，怎麼讓自己的證據變得可被檢查。至於要把證據花在什麼上面，仍然是你的事。'
           }) +
           h.note({
-            en: 'If you are planning a 2027 season from this page, the six practices above are the procedure and [the 2027 roadmap](#x-roadmap) is the longer version of it — five gates, six project shapes, a scoring sheet and a season counted backwards from the wiki freeze. We also put five candidate topics of our own through those gates, with workflows, bills of materials and the negative results written in advance, on **[Five ideas](#x-ideas)**. Two of the five are built on the mechanisms Stanford-University and Aarhus-University used in 2026, recast so that a team confined to the iGEM White List can produce evidence for them. We have not run any of them.',
-            zh: '如果你正用這一頁來規劃 2027 賽季：上面那六件做法就是那套程序，而[2027 選題指南](#x-roadmap)是它的完整版——五道關卡、六種專案形狀、一張評分表，以及一份從 wiki 凍結日往回推的賽季行程。我們也把自己的五個候選題目跑過了那些關卡，附上流程、物料清單與事先寫好的負面結果，放在 **[五個題目](#x-ideas)**。其中兩個建立在 Stanford-University 與 Aarhus-University 於 2026 年所用的機制上，並改寫成「一支被限制在 iGEM 白名單內的隊伍也能為它產出證據」的版本。這些我們都沒有做過。'
+            en: 'If you are planning a 2027 season from this page, the six practices above are the procedure and [the 2027 roadmap](#x-roadmap) is the longer version of it — five gates, six project shapes, a scoring sheet and a season counted backwards from the wiki freeze. We also put five candidate topics of our own through those gates, with workflows, bills of materials and the negative results written in advance, on **[Five ideas](#x-ideas)**. Two of the five are built on the mechanisms Stanford-University and Aarhus-University used in 2026, recast so that a team confined to the iGEM White List can produce evidence for them. We have not run any of them. **[Three special prizes](#x-prize)** reads the 2026 Gold rule as an award strategy, using iGEM\'s published ballot questions and five seasons of High School results. And once a topic is chosen, **[the 2027 season plan](#x-plan)** turns the week offsets into thirteen dated Wednesdays, with a worksheet for the first meeting and four dates on which the plan says stop.',
+            zh: '如果你正用這一頁來規劃 2027 賽季：上面那六件做法就是那套程序，而[2027 選題指南](#x-roadmap)是它的完整版——五道關卡、六種專案形狀、一張評分表，以及一份從 wiki 凍結日往回推的賽季行程。我們也把自己的五個候選題目跑過了那些關卡，附上流程、物料清單與事先寫好的負面結果，放在 **[五個題目](#x-ideas)**。其中兩個建立在 Stanford-University 與 Aarhus-University 於 2026 年所用的機制上，並改寫成「一支被限制在 iGEM 白名單內的隊伍也能為它產出證據」的版本。這些我們都沒有做過。**[三個特別獎](#x-prize)** 用 iGEM 已公布的評分題與五個賽季的高中組結果，把 2026 年的金牌規則當成一套獎項策略來讀。而一旦題目定了，**[2027 賽季計畫](#x-plan)** 會把那些週數偏移變成十三個有日期的星期三，附上第一次會議的工作單，以及四個計畫上寫著「停」的日期。'
           })
       });
 

@@ -504,3 +504,276 @@ include something designed to cross-react and show that it does.
   and 21/26 at the other. The actionable consequence is to **ask a prospective partner laboratory which
   proficiency scheme it joins and what its last score was.**
 * **No dedicated EU Reference Laboratory for histamine was found** — do not assert one exists.
+
+---
+
+## iGEM High School special awards, 2022–2026 — the competition data (23 Nov 2026)
+
+**How to get it.** `competition.igem.org/results/<year>` is a JS-rendered shell. The real public endpoint is
+`https://api.igem.org/v1/competitions/<uuid>/awards/results`, unauthenticated. Competition UUIDs from
+`https://api.igem.org/v1/events`. 2026 = `58a7e73a-1e25-457f-9f59-36c47b3f652a`, 2025 = `d615db72-738d-47c0-a929-fbdeb4882fc0`,
+2024 = `5198bd74-a6bc-482d-bf02-d0f7dc5f33c7`, 2023 = `d7dab5d6-eedb-40ed-8b50-ffbcb2053851`,
+2022 = `3a8e556f-e347-4b47-8d0e-9b697f49fba5`. Each record carries `type` (special / village / community / medal /
+grand-prize / finalist), each team entry carries `decision` (winner / nominee), `group` and `section`.
+Verified against the rendered pages line by line for 2026 and 2022: identical, nominee lists included.
+`/awards/results/overview` returns 401. `api.igem.org/v1/teams` is paginated at a fixed 20 and **rejects**
+`limit`/`section`/`status` with HTTP 400 rather than ignoring them, so a short crawl cannot pass as a complete one.
+`villages?year=` does honour the year, but each record's `latestVersion.year` always reports the newest year — read
+the village set from list membership.
+
+**The Gold rule, 2026.** A team elects **three** Special Awards on the Judging Form: at least one from
+**General Bio Engineering** (Best Measurement, Best Model, Best New Basic Part, Best New Composite Part,
+Best New Improved Part, Best Part Collection) and at least one from **Specializations** (Best Education,
+Best Entrepreneurship, Best Hardware, Inclusivity Award, Best Integrated Human Practices,
+Best Alternative Platform, Safety and Security Award, Best Software, Best Sustainable Development Impact).
+**Best Presentation and Best Wiki are "All Teams"** — automatic, and they *cannot be elected* toward Gold.
+Software & AI Village teams may not elect Best Software. *"High school is always evaluated separately"* and
+*"up to three winners are recognized, one per section."* Sources: competition.igem.org/judging/awards/special
+and /judging/awards/medals.
+
+**Concentration.** 2026: 19 Special Awards went to High School teams, shared by **13 distinct teams**; top take 3
+(GEMS-Taiwan: Measurement, Hardware, IHP — and Lambert-GA: Model, Wiki, SDI). 2025: 19 awards, **13 distinct
+teams**, top take 4 (GreatBay-SCIE: Education, IHP, Model, Wiki). Adding the four HS Best Village Project prizes
+(published under *Village Awards*, not Special Awards): 23 prizes / 15 teams in 2026, 23 / 14 in 2025.
+
+**My earlier figure of 12 prizes across 6 teams was incomplete.** Everything in it checks out; it omitted
+Best Alternative Platform (BGI-College), Best Entrepreneurship and Best Presentation (NFLSHS-CHINA),
+Best New Composite Part (Squirrel-Beijing), Inclusivity (GreatBay-SCIE), Safety and Security (BASIS-China),
+Best Project Promotion Video (ZQT-Nanjing) and iGEMers Prize (Labi-Taiwan). The HS field is about twice as
+spread out as that list suggested.
+
+**Shortlist size per 2026 HS award** (winner + published nominees) — the crowding proxy:
+Best Wiki 10, Best Presentation 10, Best Hardware 6, Best Part Collection 6, Best SDI 6,
+Best New Basic Part 5, Best New Composite Part 5, Best Measurement 5, Best Model 5, Best Education 5,
+Best Entrepreneurship 5, Best IHP 5, **Inclusivity 3, Best Software 2, Best Alternative Platform 2**,
+Best New Improved Part 1 and Safety and Security 1 (no nominees published — iGEM publishes none for
+community-voted awards and for some judged ones, and it cannot be told apart from "none named").
+Best Software's HS shortlist was two teams in both 2025 and 2026, and HK-Joint-School was the runner-up both times.
+
+**No entrenched incumbent.** The only team ever to win the same HS Special Award in consecutive years,
+2022–2026, is **GreatBay-SCIE — Best Integrated Human Practices, 2023, 2024 and 2025** — and it broke in 2026.
+Non-consecutive repeats: AIS-China (New Improved Part 2023, 2025), Lambert-GA (Wiki 2022, 2026),
+BASIS-China (Safety 2023, 2026). Thirteen of 2026's 19 HS prizes went to teams that had not won that award
+the year before. Checked across the renames, so no repeat is hidden by one.
+
+**A special prize does not need a Top-10 finish.** In both 2025 and 2026, **7 of the 13** HS Special Award
+winners did not place Top 10 — BASIS-China, BGI-College, GreatBay-SCIE, NFLSHS-CHINA (two awards),
+Squirrel-Beijing, ZQT-Nanjing and Labi-Taiwan in 2026. And in both years **4 of the 10** HS Top-10 teams won
+no Special Award at all.
+
+**High School section size.** Registered / accepted: 2022 89/72, 2023 125/119, 2024 142/128, 2025 145/143,
+**2026 152/147**. Medalled (the only published proxy for "finished", a lower bound):
+70 / 110 / 119 / 136 / 135. HS medal split 2026: 63 Gold, 68 Silver, 4 Bronze. All-section 2026 medals
+226/149/18, matching the printed Medals tab. A team can be a Special Award nominee with no medal at all
+(WIST 2023, NIS Almaty-Medeu 2026).
+
+**2026 HS village distribution** (152 teams): Biomanufacturing 23, Bioremediation 21, Therapeutics 20,
+Agriculture 17, Food & Nutrition 17, Fashion & Cosmetics 14, Diagnostics 13, Conservation 7, Oncology 6,
+Space 4, **Foundational Advance 2**, **Software & AI 2**, Infectious Diseases 1, Art & Design 0,
+Climate Crisis 0, no village 5 (all non-accepted). 2025 for comparison: Bioremediation 28, Therapeutics 23,
+Biomanufacturing 17, Food & Nutrition 15, Agriculture 13, Fashion & Cosmetics 11, Diagnostics 10,
+Oncology 7, Infectious Diseases 6, Conservation 5, Space 3, Climate Crisis 3, Foundational Advance 1,
+Software & AI 1, Art & Design 1. **The Foundational Advance figure of 2 of 152 is confirmed.**
+
+**Award lineage.** Best Software Tool → **Best Software** is a confirmed rename (identical description text
+carried across 2025→2026). Best Plant Synthetic Biology → **Best Alternative Platform** is an *inference*,
+not an iGEM statement: the 2026 description broadened to "anything that is not E. coli, S. cerevisiae and
+B. subtilis… plant biology chassis, mammalian cells, cell-free platform, or non-model organisms", and the
+plant award disappears the same year. Treat the lineage as unconfirmed. **iGEM Spirit Award** (new in 2026)
+has no High School category and so no HS winner. Awards with no HS category in a given year: Best Measurement
+2022, Safety and Security 2024, Best Software 2022–2023, Best Alternative Platform / Plant SynBio 2022.
+
+**Unverified.** "Finished" is not published per section. Pre-2022 not crawled, so introduction dates are only
+"absent in 2022–2026". 2025's four HS Best Village Project cluster labels overlap in iGEM's own data
+(clusters 2 and 4 both Agriculture / Food & Nutrition / Fashion & Cosmetics) — reproduced as published.
+No 2027 data exists: `villages?year=2027` is empty and the 2027 competition is `status: "pre-release"`,
+so the award list may change again — Best Alternative Platform and iGEM Spirit Award are both one year old.
+
+---
+
+## The 2026 Judge Handbook, read verbatim (23 Nov 2026)
+
+**Where it is.** `competition.igem.org` is a JS SPA and WebFetch returns an empty 7,294-byte shell on every
+`/judging/...` URL. The content is in the deployed JS chunks, and the authoritative document is the
+**108-page 2026 Judge Handbook PDF**:
+`https://static.igem.org/websites/competition/2026/judging/2026-judge-handbook-digital-v5.pdf`.
+Real current URLs: `/judging/awards/medals`, `/judging/awards/project`, `/judging/awards/special`,
+`/judging/handbook`, `/judging/how-it-works`, `/judging/tips`. **There is no `/judging/rubric` page and no
+published rubric document** — iGEM publishes the ballot questions and a generic 1–6 ladder
+(1 "Poor work done or completely absent" … 6 "Amazing work; impressive") and **deliberately withholds the
+per-question anchor wording**.
+
+**Gold, verbatim.** *"Demonstrate excellence in your work toward three Special Awards of your choice. At least
+one must come from the General Bio Engineering category and at least one from the Specializations category."*
+The handbook spells the first category "General Biological Engineering" (p. 44). Also p. 44: *"You do not have
+to win any Special Award awards to meet the Gold Medal criteria, but you do have to impress the judges in your
+efforts towards each Special Award you select."* **Gold is new in 2026 and judges cast no separate Gold vote** —
+each judge's yes/no per elected award is inferred from their rubric score against a performance standard, then
+majority-counted, and **all three must come out yes**. Ties go to the team (3–3 = met).
+
+**Three is a cap, not just a floor** (p. 47): *"Teams cannot apply for more than three Special Awards total,
+whether they are seeking a gold medal or not. The limit is intended to encourage the teams to focus on quality
+over quantity."* Outside the three, every team remains eligible for Village awards, Best Wiki, Best
+Presentation, the iGEMers' award, Best Promotion Video and the iGEM Spirit Award.
+
+**Best Wiki and Best Presentation are tagged "All Teams"**: *"Every team automatically competes for these
+awards. Their scores also contribute to the Project Awards."* So they cannot be elected toward Gold **but they
+are two of the three ballot sections (Project, Presentation, Wiki) whose weighted average decides Project
+Awards, Village Awards and finalists.** The weights are **not published**.
+
+**Standard URLs** — medals: `/contribution`, `/engineering`, `/human-practices`. Electives:
+`/measurement`, `/model`, `/education`, `/entrepreneurship`, `/hardware`, `/inclusivity`, `/human-practices`,
+`/alternative-platform`, `/safety-and-security`, `/software`, `/sustainability`. **Part awards have no standard
+page** and are judged on the Registry entry; the part number goes on the Judging Form.
+
+**The sentence that makes page placement load-bearing** (p. 41): *"If sufficient information to meet a specific
+medal criterion or award cannot be found under its corresponding wiki page, you can choose to consider the
+requirement unmet."* Plus p. 29: *"Judges are not required to independently seek out additional information…"*
+and *"Content on sites external to iGEM servers cannot be judged."* For parts (p. 18): *"evaluate only what is
+documented on the Registry, not the Team Wiki or any external site."*
+
+**The ballot question that settles our Measurement argument.** Best Measurement's four questions are: could the
+measurement be reproduced by other iGEM teams; are the methods or protocols described well; could it be useful
+to other projects; did the team validate and calibrate their measurement process appropriately. **None asks
+whether the thing measured worked.** By contrast the part awards ask *"Did the team show the part works as
+expected (modeling data can be acceptable)?"* — note that modelling data is explicitly allowed — Best Part
+Collection asks *"Did the team finish building a functional system using this collection?"*, Best New Improved
+Part requires experiments on **both** parts with the old one as control, documented on both Registry pages, and
+Best Alternative Platform asks *"How strong is the evidence that the team successfully engineered their
+biological system?"* **So Alternative Platform is not a free property of an unusual chassis** — that is only
+the eligibility condition. Best Model accepts *"experimental or other relevant data"*, so literature data
+qualifies. Best Alternative Platform is also the only 2026 ballot question that directly scores documented
+failure: *"Has the team documented what didn't work, why, and what others should watch out for?"*
+
+**Hard eligibility gates explain the thin fields.** Best Software (p. 89) requires an OSI licence, source in
+the team's repo on iGEM's GitLab (*"Code hosted anywhere else is not eligible for evaluation"*), a README, a
+LICENSE, reproducible build/run instructions with source not binaries, pinned dependencies in a committed
+lockfile, and a repo under 50 MB — *"If any are missing, the submission has not met the requirements."*
+Software & AI Village teams are barred outright. Best Alternative Platform requires a chassis that is not
+*E. coli*, *S. cerevisiae* or *B. subtilis*. Best New Improved Part requires the paired experiment.
+
+**High School specifics.** *"high school is always evaluated separately"* with **no minimum team count**, while
+each collegiate section needs ≥10 teams or they merge. Judges are told (p. 101) to *"judge High School teams
+just as you would a standard collegiate team"* on the same language scale, adjusting only the tone of comments,
+and that *"it can be considered a substantial achievement for a high school team to make a functioning Part."*
+**HS Village Awards go to four combined groups** (p. 28): Group 1 Diagnostics / Infectious Diseases / Oncology /
+Therapeutics; Group 2 Climate Crisis / Conservation / Bioremediation; Group 3 Agriculture / Food & Nutrition /
+Fashion & Cosmetics / Art & Design; Group 4 Foundational Advance / Software & AI / Biomanufacturing / Space.
+**Our arithmetic over the 147 accepted 2026 HS teams: Group 2 = 28, Group 4 = 31, Group 1 = 40, Group 3 = 48**
+(sums to 147). So choosing a village chooses a competition 1.7× larger or smaller, and a thin village such as
+Foundational Advance (2 teams) buys nothing because it sits with Biomanufacturing's 23. **2 HS finalists**
+(3 undergrad, 2 overgrad). **White List**: p. 25 — HS teams *"do not have access to parts, organisms, or
+activities that require a Check-in Form or Animal Use Form."*
+
+**Judging mechanics.** Six judges per team, conflicts removed. 25-minute session: 5-minute team summary then
+20 minutes of questions, hybrid, live-streamed and recorded, followed by a 10-minute private panel discussion.
+Judges review the wiki and the 15-minute presentation video **before** the Jamboree. An award is not given at
+all if no team clears the minimum performance standard, and judges are warned that abstaining can make a team
+ineligible.
+
+**New in 2026, and directly relevant to how the wiki is written** (pp. 94–95). *"The wiki is a scientific
+record, and the team is accountable for every claim, citation, figure, and line of code published under its
+name, however it was produced."* Four named violations to report to the RCC: fabricated or inaccurate citations;
+misrepresented data figures (*"AI-generated, AI-modified, or AI-'cleaned' evidentiary figures are never
+allowed"*); invented quotes; plagiarism including from a generative model. The AI rule is not a ban:
+*"Polishing wording, fixing grammar, translating, suggesting structure, drafting alt text, writing
+build/infrastructure code, and generating decorative illustrations are acceptable uses. Having a model author
+the substance of the wiki — the reasoning, the choices about what the project did and why it matters — is not."*
+The Attributions Form now carries an explicit **"AI Tool Use"** field, and judges are themselves forbidden to
+use AI for substantive assessments. Quotable line (p. 95): *"A wiki that looks polished but rests on a
+plausible-but-fabricated reference list, an AI-generated 'representative' gel, or numbers that correspond to no
+real experiment has misrepresented the team's work, and should be treated as such."*
+
+**Honesty over false precision** (p. 20): *"It is better that a team presents and acknowledges limited,
+qualitative assessments than they attempt to report flawed quantitative measurements."*
+
+**2027.** Published: **Grand Jamboree 18–21 October 2027, Paris Convention Centre, Pavilion 7.3** (events API).
+The 2027 competition record `126a39f8-0af6-4b92-ba57-e7e444ad442e` was created 18 Nov 2026 with status
+`pre-release`, and **all 13 phases return null open and close dates** — so as of 23 Nov 2026 no registration
+date, fee deadline, Wiki Freeze, Judging Form Freeze or Safety Form deadline is published anywhere. 2026 had
+**three separate freezes** (Wiki, Judging Form, Registry Part Pages) and iGEM warns *"no extensions will be
+granted. (No exceptions!)"*, advising a Judging Form review **three days or more** before the deadline.
+
+## Three idea pages sharpened from fresh research (23 Nov 2026)
+
+**DRYRUN.** The RH table is now printed: Greenspan 1977, *J Res Natl Bur Stand* 81A(1):89–96 Table 2
+([10.6028/jres.081A.011](https://doi.org/10.6028/jres.081A.011)), nine salts at 20/25/30/40 °C with his own
+uncertainties (3× SD of the predicted value, **excluding** vapour-pressure and enhancement-factor uncertainty;
+he prints to 0.01 % and says that "does not in any way imply an accuracy of 0.01 percent"). **K₂CO₃ and
+potassium acetate have no 40 °C value** — real gaps in his fit ranges (0–30 °C and 11.2–31.0 °C), do not
+extrapolate. **Three salts dropped on hazard grounds**: LiCl (H360), NaBr (same statement in ~53 % of
+notifications), Mg(NO₃)₂ (oxidiser, category disputed). The six that remain give 22.5 / 32.8 / 43.2 / 75.3 /
+84.3 / 97.3 % RH at 25 °C. K₂CO₃, LiCl and NaCl are temperature-flat; NaBr moves 6 points over 20–40 °C.
+**Excess undissolved solid is required** (Greenspan §1, quoted). **ASTM E104-20** covers the same practice
+(0–50 °C, closed systems, corrosivity warning) but is paywalled and was not read — cite Greenspan, never E104.
+Equilibration: ~30 min stirred headspace, ~2 days sealed unstirred, **~12 days for a hygroscopic sample inside**
+(abstract records, seed/food systems — orders of magnitude only), so t = 0 needs defining in advance.
+**Vacuum desiccator with silica gel beat a laboratory freeze dryer 50 % vs 20 % at two weeks** on the same
+formulation (PMC9098194), and open-air drying with 0.55 M trehalose carried a cell-free reaction **136 days at
+37 °C** (Karig 2017, PMC5414909). Three named non-first-order failure modes to pre-register: Weibull p < 1
+(Torino 2025), a ~10 % plateau (Karig), shoulder-then-collapse (PMC11939460). **Humidity is not a second
+acceleration axis**: Tg ≈ 25 °C at 8 % moisture (Breen 2001), above which Arrhenius fails and WLF constants do
+not transfer. Prefer **30 °C** over 37 °C for the accelerated arm (Wälchli 2020: rankings differ drastically at
+40 vs 5 °C but correlate better 30 vs 5). Target **2–3 % residual moisture**, not the driest (Chang 2005
+degradation-rate minimum). Gravimetric loss-on-drying RSD ~4–9 % at 1.1–4.4 % moisture but **17–47 % below 1 %**;
+metal vessels roughly halve the scatter; run **sodium tartrate dihydrate (7.93 % water)** as an accuracy check
+(May 1989). **Caution:** this round could not read ASTM F1980 and reports that secondary sources *do* attribute
+Q10 = 2.0 to it — our page's existing F1980 wording quotes the standard's own text from an earlier read, so it
+stands, but ICH Q1A(R2)/Q1E is the right framework either way.
+
+**ENDOREAD — three corrections now printed on the page.** (1) **The duplex must not sit in the 5′UTR.** An
+11–22 bp hairpin there occludes the RBS and blocks initiation regardless of cleavage, monotonically with length
+— so walking duplex length in a 5′UTR produces a strong, significant, entirely artefactual length/output
+correlation. Move it to the 3′UTR or an intercistronic position, as the existing Registry insulator parts
+(BBa_K5291046/47) are deployed; if the 5′UTR is kept, every length needs a **structure-matched cleavage-dead
+twin** (single proximal-box substitution, not a shortened stem). (2) **A cleavage readout has no internal
+normaliser.** ADAR edits (gain, transcript survives, internal reference available); RNase III cleaves (loss,
+transcript destroyed, a second plasmid cannot normalise what is being destroyed). Fix: constitutive marker CDS
+**upstream on the same transcript, protected side of the cut**, report the ratio. Off-state prediction was
+consistently worse than on-state across 91,534 switches. Never benchmark fold-change against literature: one
+study measured ~7-fold for constructs reported at >600-fold. (3) **HT115(DE3) may be barred** — it is
+tetracycline resistant, and resistance factors not in common use at the host institution need a Check-In an HS
+team cannot file; it is also not isogenic with BL21 (differs in *rnc*, *rne*, background, T7 context, growth
+rate). Use **YmdB overexpression** for an isogenic RNase III-low condition (prefer BBa_K3407003 or
+BBa_25DMM6OH; **avoid BBa_K3407019**, whose tetA/tetR regulation reintroduces the AMR problem), paired with
+cleavage-dead constructs because the two controls fail differently. **Statistics:** n = 24 detects only
+R² ≥ 0.30, n = 96 only R² ≥ 0.08, published effects are R² = 0.001–0.16, and R² = 0.04 needs ~194 *working*
+constructs — so a correlation is unreachable **and a null at n = 24–96 is not a publishable negative either.**
+Reframed to a categorical test of whether published proximal/distal-box determinants transfer, where the
+biochemistry offers 7, 14, 25, 30 and 50-fold effects at named positions with n = 3–6. **Novelty is narrower
+than we claimed**: RNase III sites as insulators and stabilisers are established, TU Delft 2020 built YmdB and
+Mini-III, a 2025 team built an *rnc* knockout, and 2026 teams design hairpins to *evade* RNase III using the
+11-bp rule. What is unpublished is a **trigger-responsive** RNase III switch with a measured dynamic range.
+Also: RNase III has ~615 endogenous targets including rRNA, capacity falls within 30 min of induction while
+growth responds later; ~52 % of mapped in vivo sites were stationary-phase and 359 only there; and one
+mis-prepared fluorescein standard produced a **29.1-fold** systematic error across a 244-lab study-year.
+
+**NULLSET.** The **White List has moved** to `responsibility.igem.org/guidance/white-list` (the old
+`technology.igem.org/safety/white-list` is a hard 404), and it states in its own words that high school teams
+are *"unable to seek approval via Check-In Forms"* and *"should not engage collaborators to work beyond the
+White List."* Organisms: Risk Group 1, with *E. coli* K-12 as the worked example and **no strain-by-strain
+list**, so any RG1 *E. coli* including BL21 derivatives is permitted. Nothing in the NULLSET plan is
+White-List-illegal. **Corrections to our own page:** G67A is wrong because it **partially matures** (leaky),
+not because it reduces protein — fold stability is largely chromophore-independent. **Y66L drifts**: colourless
+fresh, develops 374/412 nm chromophores on oxidation plus a His148 cross-link, so it needs a time course.
+**Lead with R96M**, the only quantified folded-but-unmatured GFP (~7,500-fold slower maturation). **Drop E222Q**
+— 32× slower than EGFP at pH 7 but *faster* at pH 9–10. **lacZ: E537Q** (160,000–300,000-fold) is the right
+kill and its authors concluded the residual was wild-type protein from translational misreads — this project's
+thesis, demonstrated in 1994; **E461 substitutions are <10 %** and fail our own few-percent test (E461 is the
+acid/base catalyst, E537 the nucleophile). **Firefly H245D at 0.33 %** is borderline against a measured floor.
+**No published chromophore-dead mRFP1 with a measured residual exists** — use a dark acceptor (Ultramarine,
+QY 0.001) and characterise a dead twin of the 1,464-use E1010 rather than claiming novelty for dark FPs.
+**Do not use BBa_J23112 as a dead promoter**: ~9 % of J23118 by fluorescence, inverted at the mRNA level, and
+its own page says it duplicates J23103 — build a **−10 box knockout** instead (−35 changes do not abolish
+transcription). **An early stop is not a translation kill**: readthrough reaches 80 % under stress, depends on
+context to ±12 nt, is partly transcriptional, and several standard cloning strains carry ***supE44*, which
+suppresses all three stop codons** — read the strain genotype first and measure readthrough in stationary phase
+too. **Quote the floor in calibrated units**: arbitrary units gave a 95 % CI spanning five orders of magnitude
+and **normalising to a control is specifically unreliable** because the control fails as the sample does
+(Beal 2018) — so a floor expressed as a ratio to a dead part is circular. **The benchmark to beat: iGEM's own
+InterLab filter accepted a negative control at up to 0.5 μM FITC/OD against a 3.02 median positive, ≈17 % of
+the positive, and 28 % of submitted datasets failed even that.** Budget **60 blank wells** (≈9 % precision on
+the SD estimate; 20 gives 16 %, 8 gives 27 %) split across days and operators. **Blank against spent medium**,
+not fresh: the green autofluorescence is secreted flavins that accumulate with growth, cells releasing ~10×
+what they retain. And one free, unpublished experiment: **empty vector versus no plasmid** in a calibrated
+fluorescence assay.

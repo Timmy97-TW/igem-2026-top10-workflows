@@ -53,8 +53,8 @@
           zh: '把牙結石當成多糖基質的問題，而不是刷牙的問題——然後==把那個從未表達的構築、以及那個被自己實驗檯推翻的排序，一起公開==。'
         },
         lede: {
-          en: 'Oral diseases affect an estimated 3.7 billion people, and China\'s Fourth National Oral Health Epidemiological Survey puts dental calculus in 96.7 % of adults aged 35–44 while only 9.1 % of that group has a healthy periodontium. Mechanical scaling works and is nevertheless avoided, so this team went after the organic scaffold instead: two glycosidases with complementary linkage specificity, plus a hydroxyapatite-binding antimicrobial peptide to keep the cleaned surface clean. Four constructs were built in one backbone; three gave protein and one gave nothing, and the one that gave nothing is written up with its three candidate explanations and then dropped. The specificity claim survives because each enzyme was run against a PBS control, a heat-inactivated control and a swapped substrate on the same plate. And the computational ranking of two CoGH66 mutants was reversed by their own activity assay, which they say in the overview paragraph rather than in a footnote.',
-          zh: '口腔疾病影響約 37 億人，而中國第四次全國口腔健康流行病學調查顯示，35–44 歲成人有 96.7% 帶有牙結石，而這個年齡層只有 9.1% 擁有健康的牙周。機械式洗牙有效，卻依然被迴避，於是這支隊伍改去對付那層有機支架：兩個鍵結專一性互補的糖苷酶，加上一個能結合羥基磷灰石的抗菌肽，讓清乾淨的表面繼續保持乾淨。四個構築建在同一個骨架上；三個做出了蛋白，一個什麼都沒有，而那個什麼都沒有的，被寫成三個可能原因之後正式棄用。專一性的主張之所以站得住腳，是因為每個酵素都在同一塊盤上同時跑了 PBS 對照、加熱去活對照與基質互換組。而兩個 CoGH66 突變體的計算排序，被他們自己的活性試驗推翻了——這件事寫在概述的第一段，不是寫在註腳裡。'
+          en: 'Four constructs in one backbone: three gave protein, one gave nothing, and the one that gave nothing is written up with its three candidate explanations and then dropped. The computational ranking of two CoGH66 mutants was reversed by their own activity assay, and they say so in the overview paragraph rather than in a footnote. The specificity claim survives because each enzyme was run against a PBS control, a heat-inactivated control and a swapped substrate on the same plate. The target: oral diseases affect an estimated 3.7 billion people, and China\'s Fourth National Oral Health Epidemiological Survey puts dental calculus in 96.7 % of adults aged 35–44 while only 9.1 % of that group has a healthy periodontium. Mechanical scaling works and is nevertheless avoided, so this team went after the organic scaffold instead — two glycosidases with complementary linkage specificity, plus a hydroxyapatite-binding antimicrobial peptide to keep the cleaned surface clean.',
+          zh: '四個構築建在同一個骨架上：三個做出了蛋白，一個什麼都沒有，而那個什麼都沒有的，被寫成三個可能原因之後正式棄用。兩個 CoGH66 突變體的計算排序被他們自己的活性試驗推翻了，而這件事寫在概述的第一段，不是寫在註腳裡。專一性的主張之所以站得住腳，是因為每個酵素都在同一塊盤上同時跑了 PBS 對照、加熱去活對照與基質互換組。至於標的：口腔疾病影響約 37 億人，而中國第四次全國口腔健康流行病學調查顯示，35–44 歲成人有 96.7% 帶有牙結石，而這個年齡層只有 9.1% 擁有健康的牙周。機械式洗牙有效，卻依然被迴避，於是這支隊伍改去對付那層有機支架——兩個鍵結專一性互補的糖苷酶，加上一個能結合羥基磷灰石的抗菌肽，讓清乾淨的表面繼續保持乾淨。'
         },
         chips: [
           { t: { en: 'Two complementary glycosidases', zh: '兩個互補的糖苷酶' }, k: 'b' },
@@ -95,11 +95,18 @@
         },
         body:
           h.p({
-            en: 'The burden numbers are used once and then put away. Oral diseases affect an estimated **3.7 billion people**; India and China carry the largest cumulative caseloads of the top five oral diseases, at **632 million and 599 million**; in the Western Pacific Region about **960 million people (43 %)** live with untreated oral conditions, at an estimated **US$192 billion**. The Chinese figures are the ones that set the target: **96.7 %** of adults aged 35–44 with dental calculus, **87.4 %** with gingival bleeding, calculus already detectable in **84.5 % at age 12 and 91.0 % at age 15**, only **9.1 %** of that adult group with a healthy periodontium, and a past-year dental visit rate among the elderly of **20.1 %**. The gap between how common calculus is and how rarely anyone has it removed is the problem statement.',
-            zh: '那些負擔數字只用一次，之後就收起來。口腔疾病影響約 **37 億人**；印度與中國在五大口腔疾病上的累計病例數最高，分別是 **6.32 億與 5.99 億**；西太平洋區約有 **9.6 億人（43%）** 帶著未經治療的口腔問題，估計經濟負擔為 **1,920 億美元**。真正定出標的的是中國的數字：35–44 歲成人 **96.7%** 有牙結石、**87.4%** 有牙齦出血，牙結石在 **12 歲已有 84.5%、15 歲 91.0%** 可檢出，這個成人族群只有 **9.1%** 牙周健康，而老年人過去一年的就診率只有 **20.1%**。牙結石有多普遍，和真的有人去把它清掉有多罕見，兩者之間的落差就是他們的問題陳述。'
+            en: 'The problem statement is the gap between how common calculus is and how rarely anyone has it removed. Globally, oral diseases affect an estimated **3.7 billion people**; India and China carry the largest cumulative caseloads of the top five oral diseases, at **632 million and 599 million**; in the Western Pacific Region about **960 million people (43 %)** live with untreated oral conditions, at an estimated **US$192 billion**. The Chinese survey numbers are the ones that set the target.',
+            zh: '他們的問題陳述就是：牙結石有多普遍，和真的有人去把它清掉有多罕見，兩者之間的落差。在全球層面，口腔疾病影響約 **37 億人**；印度與中國在五大口腔疾病上的累計病例數最高，分別是 **6.32 億與 5.99 億**；西太平洋區約有 **9.6 億人（43%）** 帶著未經治療的口腔問題，估計經濟負擔為 **1,920 億美元**。而真正定出標的的，是中國調查裡的那幾個數字。'
           }) +
+          h.kv([
+            [{ en: 'Calculus, adults 35–44', zh: '牙結石，35–44 歲成人' }, { en: '**96.7 %**', zh: '**96.7%**' }],
+            [{ en: 'Gingival bleeding, same group', zh: '牙齦出血，同一族群' }, { en: '**87.4 %**', zh: '**87.4%**' }],
+            [{ en: 'Healthy periodontium, same group', zh: '牙周健康，同一族群' }, { en: '**9.1 %**', zh: '**9.1%**' }],
+            [{ en: 'Calculus already detectable', zh: '已可檢出牙結石' }, { en: '**84.5 %** at age 12, **91.0 %** at age 15', zh: '12 歲 **84.5%**、15 歲 **91.0%**' }],
+            [{ en: 'Dental visit in the past year, elderly', zh: '過去一年就診率，老年人' }, { en: '**20.1 %**', zh: '**20.1%**' }]
+          ]) +
           h.warn({
-            en: '**The interview that moved the target.** Dr Wang Yongwu told them that using enzymes to dissolve already-mineralised calculus is *"like an egg hitting a stone"*, with very little effect. They then drew the safety consequence themselves: calculus and enamel are **both calcium phosphate**, so a non-selective demineralising agent would attack the tooth as well. Dr Lei added that before mineralisation the organic components — polysaccharides, proteins, eDNA — can still be hydrolysed. So the intervention window became **the early biofilm, before it mineralises**, and the project scope was rewritten on the Human Practices page as **daily prevention and risk reduction, explicitly not treatment of existing calculus or periodontal disease.**',
+            en: '**The interview that moved the target.** Dr Wang Yongwu told them that using enzymes to dissolve already-mineralised calculus is *"like an egg hitting a stone"*, with little effect. They then drew the safety consequence themselves: calculus and enamel are **both calcium phosphate**, so a non-selective demineralising agent would attack the tooth as well. Dr Lei added that before mineralisation the organic components — polysaccharides, proteins, eDNA — can still be hydrolysed. So the intervention window became **the early biofilm, before it mineralises**, and the project scope was rewritten on the Human Practices page as **daily prevention and risk reduction, explicitly not treatment of existing calculus or periodontal disease.**',
             zh: '**那場讓標的移位的訪談。**王永武醫師告訴他們，用酵素去溶解已經礦化的牙結石，*「像雞蛋撞石頭」*，效果極小。他們接著自己推出了安全上的後果：牙結石與琺瑯質**同樣都是磷酸鈣**，所以一個不具選擇性的去礦化劑，也會一起攻擊牙齒。雷醫師補充，在礦化之前，有機成分——多糖、蛋白質、胞外 DNA——仍然可以被水解。於是介入的時間窗變成**礦化之前的早期生物膜**，而專案範圍也在人類實踐頁上被改寫為**每日預防與風險降低，並明確寫出「不是」治療既有牙結石或牙周病。**'
           }) +
           h.h3({ en: 'Which enzymes to make, and which to simply buy', zh: '哪些酵素自己做，哪些直接買' }) +
@@ -120,7 +127,7 @@
             ],
             caption: { en: 'Drawn by us from the team\'s Engineering and Human Practices pages.', zh: '由我們依該隊 Engineering 與 Human Practices 頁繪製。' }
           }) +
-          h.take({ en: 'Why we like this piece of formulation design', zh: '為什麼我們喜歡這段配方設計' }, {
+          h.take({ en: 'The incompatibility is used as the release mechanism', zh: '那個不相容本身被拿來當成釋放機制' }, {
             en: 'The incompatibility is real and most teams would have ignored it: a broad-spectrum cysteine protease in the same tube as two recombinant enzymes and a peptide will destroy all three. Their answer uses the problem as the mechanism — **gelatin is papain\'s substrate, so the protease that threatened the peptide is what releases it.** That is a design idea, not a paragraph of hand-waving, and it is labelled as proposed.',
             zh: '那個不相容是真的，而大多數隊伍會選擇忽略它：一個廣效的半胱胺酸蛋白酶，和兩個重組酵素加一個肽放在同一條管子裡，會把三者都毀掉。他們的解法把這個問題本身當成機制——**明膠就是木瓜蛋白酶的基質，所以原本威脅那個肽的蛋白酶，正是把它釋放出來的那一個。**這是一個設計想法，不是一段含糊的說詞，而且它被標記為「提議中」。'
           })
@@ -148,9 +155,9 @@
             [{ en: 'What they did about it', zh: '他們為此做了什麼' },
              { en: 'The agar well diffusion assay was run on both crude lysates anyway: a clear inhibition zone for **21aa only**, none for 18aa and none for the negative control — consistent with there being no 18aa protein to test. **21aa was taken forward** and 18aa was dropped, which is how a negative result is supposed to end.', zh: '瓊脂孔洞擴散試驗還是把兩個粗萃液都跑了：**只有 21aa** 出現清楚的抑菌圈，18aa 沒有，陰性對照也沒有——這與「根本沒有 18aa 蛋白可測」一致。**21aa 被帶往下一步**，18aa 則被棄用，這正是一個負面結果該有的收尾。' }]
           ]) +
-          h.take({ en: 'Labelled as ours', zh: '標示為我們的看法' }, {
-            en: 'A high school team with four constructs and a deadline has every incentive to show the three that worked and quietly leave the fourth out of the figure. Instead **Figure 2E is the empty lane**, with the uninduced control beside it so a reader can see there is nothing to see. The cost of publishing it is one gel panel; the value is that every other claim on the page becomes easier to believe.',
-            zh: '一支有四個構築、又有截稿期的高中隊伍，有一切理由只展示那三個成功的，把第四個安靜地從圖裡拿掉。但他們的 **圖 2E 就是那條空白的膠道**，旁邊還擺著未誘導對照，讓讀者看得出「這裡確實沒有東西可看」。公開它的代價是一張膠圖；它帶來的價值是，這一頁上其他每一個主張都變得更容易被相信。'
+          h.take({ en: 'Figure 2E is the empty lane, with its uninduced control beside it', zh: '圖 2E 就是那條空白的膠道，旁邊還擺著未誘導對照' }, {
+            en: 'A high school team with four constructs and a deadline has every incentive to show the three that worked and quietly leave the fourth out of the figure. Instead the empty lane is published, with the uninduced control beside it so a reader can see there is nothing to see. The cost of publishing it is one gel panel; the value is that every other claim on the page becomes easier to believe.',
+            zh: '一支有四個構築、又有截稿期的高中隊伍，有一切理由只展示那三個成功的，把第四個安靜地從圖裡拿掉。但他們把那條空白的膠道公開了，旁邊還擺著未誘導對照，讓讀者看得出「這裡確實沒有東西可看」。公開它的代價是一張膠圖；它帶來的價值是，這一頁上其他每一個主張都變得更容易被相信。'
           })
       });
 
@@ -179,7 +186,7 @@
             { h: { en: 'Clone four, verify four', zh: '四個選殖，四個驗證' },
               p: { en: 'One backbone for everything: **pET-32a**, T7 promoter with lac operator, RBS, TrxA tag, 6xHis tag, enterokinase site, ORF, T7 terminator. Codon-optimised inserts were amplified with 5\' homology arms and joined by Gibson assembly or seamless cloning in **DH5α**.', zh: '所有東西共用一個骨架：**pET-32a**，T7 啟動子加 lac 操縱子、RBS、TrxA 標籤、6xHis 標籤、腸激酶切位、ORF、T7 終止子。密碼子最佳化的插入片段帶 5\' 同源臂擴增，以 Gibson 組裝或無縫選殖在 **DH5α** 中接起來。' },
               items: [
-                { en: 'The verification primer pair is the design choice worth copying: **gene-specific forward plus the plasmid\'s own T7 Terminal-R**, so a band proves the insert sits in the vector rather than proving the insert exists.', zh: '值得抄的設計選擇是那組驗證引子：**基因專一正向引子，搭配質體自己的 T7 Terminal-R**，所以出現條帶證明的是「插入片段坐在載體裡」，而不只是「插入片段存在」。' },
+                { en: 'The verification primer pair is the design choice to take from this page: **gene-specific forward plus the plasmid\'s own T7 Terminal-R**, so a band proves the insert sits in the vector rather than proving the insert exists.', zh: '這一頁該帶走的設計選擇是那組驗證引子：**基因專一正向引子，搭配質體自己的 T7 Terminal-R**，所以出現條帶證明的是「插入片段坐在載體裡」，而不只是「插入片段存在」。' },
                 { en: 'A first round of colony PCR gave non-specific extra bands; they **raised the annealing temperature and shortened the extension**, and report the fix rather than only the clean gel.', zh: '第一輪菌落 PCR 出現非專一的多餘條帶；他們**提高了黏合溫度並縮短延伸時間**，並且把這個修正寫出來，而不是只放那張乾淨的膠圖。' }
               ],
               done: { en: 'Four plasmids with insert-specific colony PCR bands and Sanger confirmation, before any protein work begins.', zh: '四個質體都有插入專一的菌落 PCR 條帶與 Sanger 確認，才開始任何蛋白工作。' } },
@@ -260,9 +267,9 @@
             min: 760,
             source: { en: 'Read from the team\'s Results and Engineering pages, Figure 3 and Figure 5 legends. The arrangement into a table is ours.', zh: '讀自該隊 Results 與 Engineering 頁的 Figure 3 與 Figure 5 圖說。整理成表是我們做的。' }
           }) +
-          h.take({ en: 'Why we are giving the controls their own section', zh: '為什麼我們給對照組單獨一節' }, {
-            en: 'On a high school wiki the usual pattern is a test well and a blank. Here each enzyme carries **three negatives, run on the same plate**, and the swapped-substrate arm is the one that does the real work: without it, "specific for α-1,3" would rest on the absence of a comparison. **The same discipline reappears at formulation scale** as a six-arm leave-one-out design, which is why "the complete cocktail is better" can be said about particular components rather than about the cocktail as a whole.',
-            zh: '在高中組的 wiki 上，常見的模式是一個測試孔加一個空白。這裡每個酵素都帶**三個陰性對照，而且在同一塊盤上一起跑**，其中基質互換那一組才是真正出力的：少了它，「專一於 α-1,3」就只能建立在「沒有做過比較」之上。**同樣的紀律在配方層級又出現一次**，成為六組的逐一抽離設計，這也是為什麼「完整配方比較好」這句話可以落到具體的某個成分上，而不是只能講整個配方。'
+          h.take({ en: 'Without the swapped-substrate arm, "specific for α-1,3" would rest on the absence of a comparison', zh: '少了基質互換那一組，「專一於 α-1,3」就只能建立在「沒有做過比較」之上' }, {
+            en: 'On a high school wiki the usual pattern is a test well and a blank. Here each enzyme carries **three negatives, run on the same plate**, and the swapped-substrate arm is the one that does the work. **The same discipline reappears at formulation scale** as a six-arm leave-one-out design, which is why "the complete cocktail is better" can be said about particular components rather than about the cocktail as a whole.',
+            zh: '在高中組的 wiki 上，常見的模式是一個測試孔加一個空白。這裡每個酵素都帶**三個陰性對照，而且在同一塊盤上一起跑**，其中基質互換那一組才是真正出力的那一組。**同樣的紀律在配方層級又出現一次**，成為六組的逐一抽離設計，這也是為什麼「完整配方比較好」這句話可以落到具體的某個成分上，而不是只能講整個配方。'
           }) +
           h.note({
             en: 'One caveat we would raise as readers, not as a correction: the specificity assay compares **induced cells against heat-inactivated cells**, so what is being compared is lysate against lysate rather than a quantified amount of enzyme against the same amount. They know this — the activity is reported as **U/mL and explicitly not U/mg** — and the mutant comparison later in the project is the place where they fix it, by normalising total protein with a BCA curve first.',

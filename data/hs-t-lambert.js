@@ -48,8 +48,8 @@
           zh: '對一個沒有人設計過的標靶做出結合蛋白——並且==把每個主張都寫成只有產生它的那個實驗那麼大==。'
         },
         lede: {
-          en: 'Beekeepers in a US survey reported losing 55.6 % of their managed colonies in a single year, and the mite behind much of that carries Deformed Wing Virus with it. SWARM goes after both halves at once: a de novo minibinder against the viral capsid protein VP3, and a multiplexed RNAi construct against three *Varroa destructor* salivary-gland genes. The first design round produced 15 candidates and no binders; the second produced one, at 603.6 nM, after the team built PRINCE to re-choose where on VP3 to aim. What earns this page its own section below is not the binder. It is that the claims are written at the size of the assay behind them — "The gel alone does not establish sequence identity, complete annealing, or gene-silencing activity" — and that the sentence sits on the results page itself, not in a footnote at the bottom.',
-          zh: '在一份美國調查中，養蜂人回報單一年度就損失了 55.6% 的管理蜂群，而造成其中大部分損失的那種蟎，身上還帶著畸翅病毒（DWV）。SWARM 同時處理兩半：一個對病毒外殼蛋白 VP3 的 de novo minibinder，以及一個對三個 *Varroa destructor* 唾液腺基因的多重 RNAi 構築。第一輪設計做出 15 個候選，沒有任何結合者；第二輪做出一個，親和力 603.6 nM，而在那之前，他們先做了 PRINCE 來重新挑選要打 VP3 的哪個位置。下面之所以要給這一頁單獨一節，不是因為那個結合蛋白，而是因為：這裡的主張都被寫成只有背後那個實驗那麼大——「光靠這張膠體並不足以證明序列身分、完全黏合，或基因沉默活性」——而且那句話就印在結果頁上，不是放在頁尾的註腳裡。'
+          en: 'Round one: 15 designs, zero binders. Round two: one binder at 603.6 nM, after the team built PRINCE to re-choose where on the viral capsid protein VP3 to aim. SWARM goes after a mite and a virus at once — a de novo minibinder against VP3, and a multiplexed RNAi construct against three *Varroa destructor* salivary-gland genes — because beekeepers in a US survey reported losing 55.6 % of their managed colonies in a single year, and the mite behind much of that carries Deformed Wing Virus with it. What earns this page its own section below is not the binder. It is that the claims are written at the size of the assay behind them — "The gel alone does not establish sequence identity, complete annealing, or gene-silencing activity" — and that the sentence sits on the results page itself, not in a footnote at the bottom.',
+          zh: '第一輪：15 個設計，零個結合者。第二輪：一個結合者，親和力 603.6 nM——而在那之前，他們先做了 PRINCE 來重新挑選要打病毒外殼蛋白 VP3 的哪個位置。SWARM 同時對付一種蟎和一種病毒——一個對 VP3 的 de novo minibinder，以及一個對三個 *Varroa destructor* 唾液腺基因的多重 RNAi 構築——因為在一份美國調查中，養蜂人回報單一年度就損失了 55.6% 的管理蜂群，而造成其中大部分損失的那種蟎，身上還帶著畸翅病毒（DWV）。下面之所以要給這一頁單獨一節，不是因為那個結合蛋白，而是因為：這裡的主張都被寫成只有背後那個實驗那麼大——「光靠這張膠體並不足以證明序列身分、完全黏合，或基因沉默活性」——而且那句話就印在結果頁上，不是放在頁尾的註腳裡。'
         },
         chips: [
           { t: { en: 'DWV VP3 minibinder', zh: 'DWV VP3 結合蛋白' }, k: 'b' },
@@ -91,8 +91,8 @@
         },
         body:
           h.p({
-            en: '*Varroa destructor* wedges itself beneath the overlapping plates of a bee\'s abdomen and feeds on the fat body underneath; while it feeds, **Deformed Wing Virus escapes the mite and enters the bee**. Kill the mite and the virus load still has to fall; neutralise the virus and the mite still reproduces in capped brood. The numbers the team opens with are a US survey reporting **55.6 % of managed colonies lost between April 2024 and April 2025**, and large Georgia operations losing **about 88,000 colonies between October 2025 and June 2026**, at 17–20 % quarterly.',
-            zh: '*Varroa destructor* 會把自己楔進蜜蜂腹部重疊的甲板底下，吸食下方的脂肪體組織；在牠吸食的過程中，**畸翅病毒就從蟎身上脫離、進入蜜蜂體內**。殺掉蟎，病毒量還是得降下來；中和病毒，蟎還是會在封蓋的育幼房裡繁殖。這支隊伍開場用的數字是一份美國調查：**2024 年 4 月到 2025 年 4 月之間有 55.6% 的管理蜂群損失**，而 Georgia 的大型蜂場在 **2025 年 10 月到 2026 年 6 月之間損失了約 88,000 群**，季度損失率 17–20%。'
+            en: '**55.6 % of managed US colonies were lost between April 2024 and April 2025**, on the survey the team opens with, and large Georgia operations lost **about 88,000 colonies between October 2025 and June 2026**, at 17–20 % quarterly. The mechanism behind those numbers is a pair: *Varroa destructor* wedges itself beneath the overlapping plates of a bee\'s abdomen and feeds on the fat body underneath, and while it feeds, **Deformed Wing Virus escapes the mite and enters the bee**. Kill the mite and the virus load still has to fall. Neutralise the virus and the mite still reproduces in capped brood.',
+            zh: '依該隊開場引用的調查，**2024 年 4 月到 2025 年 4 月之間有 55.6% 的美國管理蜂群損失**，而 Georgia 的大型蜂場在 **2025 年 10 月到 2026 年 6 月之間損失了約 88,000 群**，季度損失率 17–20%。這些數字背後的機制是一組搭檔：*Varroa destructor* 會把自己楔進蜜蜂腹部重疊的甲板底下，吸食下方的脂肪體組織，而在牠吸食的過程中，**畸翅病毒就從蟎身上脫離、進入蜜蜂體內**。殺掉蟎，病毒量還是得降下來。中和病毒，蟎還是會在封蓋的育幼房裡繁殖。'
           }) +
           h.tbl({
             cols: [
@@ -139,7 +139,7 @@
       out += h.sec({
         id: 'l-scope',
         kick: { en: 'Practice', zh: '做法' },
-        h2: { en: 'The standout: every claim is the size of the assay that produced it', zh: '最突出的一點：每個主張的大小，剛好等於產生它的那個實驗' },
+        h2: { en: 'Every claim is written at the size of the assay that produced it', zh: '每個主張都寫成只有產生它的那個實驗那麼大' },
         lede: {
           en: 'Not a limitations section. These sentences are the conclusions, written down where the result is reported, in the paragraph that reports it.',
           zh: '這不是一個限制一節。這些句子本身就是結論，被寫在結果被報告的地方、就在報告它的那一段裡。'
@@ -179,9 +179,9 @@
             min: 760,
             source: { en: 'All twelve quoted from the team\'s own Results, Minibinder Design, RNAi Design, Hardware and Modeling pages. Pulling them into one table is ours; the bold is ours.', zh: '十二句全部引自該隊自己的 Results、Minibinder Design、RNAi Design、Hardware 與 Modeling 頁。把它們收攏成一張表是我們做的；粗體也是我們加的。' }
           }) +
-          h.take({ en: 'Why we are giving a High School team its own section for this', zh: '為什麼我們為這件事給一支高中隊伍單獨一節' }, {
-            en: 'The usual High School pattern is a true result described one size too large: a gel becomes a working construct, a pull-down becomes a therapeutic. Lambert-GA does the opposite, and does it **where it costs them something** — on the page that reports their headline binder, in the caption of their own siRNA table, in the parameter list of the model that produces their dosing number. **Three of the twelve sentences above exist only to prevent a reader from over-reading a result that is already good.** That is a harder habit than any single technique on this wiki, and it is the one we would teach first.',
-            zh: '高中組常見的樣態是：一個真實的結果被描述成大了一號——一張膠體變成一個可用的構築，一次沉降變成一種療法。Lambert-GA 做的恰恰相反，而且是在**對他們自己有代價的地方**做的——在報告他們招牌結合蛋白的那一頁、在他們自己 siRNA 表的說明裡、在產生劑量數字的那個模型的參數清單裡。**上面十二句裡有三句的存在，純粹是為了阻止讀者把一個本來就不錯的結果讀得太大。**這比這個 wiki 上任何單一技術都更難養成，而這也是我們會優先教的那一件事。'
+          h.take({ en: 'Three of those twelve sentences exist only to stop a reader over-reading a result that is already good', zh: '上面十二句裡有三句的存在，純粹是為了阻止讀者把一個本來就不錯的結果讀得太大' }, {
+            en: 'The usual High School pattern is a true result described one size too large: a gel becomes a working construct, a pull-down becomes a therapeutic. Lambert-GA does the opposite, and does it **where it costs them something** — on the page that reports their headline binder, in the caption of their own siRNA table, in the parameter list of the model that produces their dosing number. That is a harder habit than any single technique on this wiki, and it is the one we would teach first.',
+            zh: '高中組常見的樣態是：一個真實的結果被描述成大了一號——一張膠體變成一個可用的構築，一次沉降變成一種療法。Lambert-GA 做的恰恰相反，而且是在**對他們自己有代價的地方**做的——在報告他們招牌結合蛋白的那一頁、在他們自己 siRNA 表的說明裡、在產生劑量數字的那個模型的參數清單裡。這比這個 wiki 上任何單一技術都更難養成，而這也是我們會優先教的那一件事。'
           })
       });
 
@@ -262,7 +262,7 @@
             en: '**Their own words for why it exists:** the first campaign produced no confirmed binders among 15 tested candidates "despite promising computational predictions", which "prompted us to reconsider how we selected binding sites". **Dr. Michael Hecht** (Princeton) pushed the same way — epitope selection remains uncertain, and a region that looks promising in a prediction still needs experimental validation. PRINCE is the answer to a question the bench asked.',
             zh: '**他們自己說它為什麼存在：**第一輪在 15 個受測候選中沒有產出任何確認的結合者，「儘管運算上的預測看起來不錯」，這件事「促使我們重新思考我們是怎麼挑選結合位點的」。**Dr. Michael Hecht**（Princeton）也往同一個方向推——抗原表位的選擇仍然充滿不確定，而一個在預測裡看起來不錯的區域，仍然需要實驗驗證。PRINCE 是對一個由實驗檯提出的問題的回答。'
           }) +
-          h.h3({ en: 'The thing worth copying: a split by antigen cluster, and a harder subset reported separately', zh: '值得抄的那一點：依抗原分群切分，並且把更難的子集單獨報出來' }) +
+          h.h3({ en: 'Split by antigen cluster, with the harder subset reported separately', zh: '依抗原分群切分，並且把更難的子集單獨報出來' }) +
           h.p({
             en: 'A benchmark of **6,937 experimentally observed antibody–antigen interfaces across 1,549 antigen clusters**, split **by antigen cluster** with sequence-homology checks between training, validation and test sets. A "hit" is defined before the number is given: **at least one of the three selected patches contains more than 50 % true epitope residues.**',
             zh: '一個包含**1,549 個抗原分群、共 6,937 個實驗觀測到的抗體—抗原界面**的基準資料集，**依抗原分群**切分，並在訓練、驗證與測試集之間做序列同源性檢查。「命中」的定義在數字之前就先給了：**所選三個表面區塊中，至少有一個含有超過 50% 的真實抗原表位殘基。**'
@@ -294,7 +294,7 @@
             min: 760,
             source: { en: 'Read from the team\'s Software page. Every pairing of a score with its baseline is theirs; the fourth column is ours.', zh: '讀自該隊 Software 頁。每一組「分數配基線」都是他們自己的；第四欄是我們寫的。' }
           }) +
-          h.take({ en: 'What the two percentages do together', zh: '那兩個百分比放在一起做了什麼' }, {
+          h.take({ en: '45.8 % is what survives once the close relatives are removed', zh: '45.8% 是把近親移掉之後還剩下的數字' }, {
             en: '50.8 % is what you quote. 45.8 % is what survives when every test antigen with a close relative in training is removed. **Publishing both is the difference between a benchmark and a demonstration**, and it is a High School team doing it on their own software. The random baselines move barely at all between the two rows — 23.3 % to 23.8 % — which is how a reader can tell the harder subset was not also an easier one.',
             zh: '50.8% 是你會拿出去引用的那個數字。45.8% 是把每一個「在訓練集裡有近親」的測試抗原都移掉之後，還留下來的那個數字。**同時公開兩個，就是基準測試與示範表演之間的差別**，而這是一支高中隊伍在自己的軟體上做到的。兩列之間的隨機基線幾乎沒有動——23.3% 對 23.8%——讀者正是靠這點才能判斷：那個更難的子集，並沒有同時變得更容易。'
           }) +
@@ -313,10 +313,19 @@
               h: { en: 'Two design tools, measured for overlap', zh: '兩個設計工具，實際量了它們的重疊程度' },
               p: { en: 'Across **1,176 pairwise comparisons** of BindCraft and Mosaic designs, the median Jaccard similarity of target-contact residues was **0.000**, with interface centres a median of about **42.9 Å** apart. So running both tools was justified by measurement rather than by preference.', zh: '在 BindCraft 與 Mosaic 設計之間的 **1,176 次兩兩比較**中，標靶接觸殘基的 Jaccard 相似度中位數是 **0.000**，而界面中心之間的距離中位數約為 **42.9 Å**。所以「兩個工具都跑」是靠量測證成的，不是靠偏好。' } }
           ]) +
-          h.note({
-            en: '**Shipped, not just described:** an open-source web application and a command-line interface, with the trained antibody site ranker behind a separate CLI entry point, plus a reproduction guide and the evaluation records. Also on the dry-lab shelf: a dosing model (**1,000 parameter sets, a 40,000-bee colony, 56 days**), a 13-ODE RNAi model of Sf9 reporter silencing, a **six-year colony epidemiological model run at two sites, Atlanta and Ithaca** (800 six-year simulations, 20 matched weather sequences per scenario), and a seven-video modelling instructional series for teams with no modelling experience.',
-            zh: '**是交付出來的，不只是被描述的：**一個開放原始碼的網頁應用與一套命令列介面，訓練過的抗體位點排序器放在另一個命令列入口後面，另外還附上重現指引與評估紀錄。乾式實驗架上還有：一個劑量模型（**1,000 組參數、4 萬隻蜂的蜂群、56 天**）、一個用 13 條常微分方程描述 Sf9 報告系統沉默的 RNAi 模型、一個**在 Atlanta 與 Ithaca 兩地跑的六年蜂群流行病學模型**（800 次六年模擬，每個情境 20 組對齊的天氣序列），以及一套七支影片的建模教學系列，對象是完全沒有建模經驗的隊伍。'
-          })
+          h.h4({ en: 'Five things the dry lab shipped, not just described', zh: '乾式實驗交付出來、而不只是描述出來的五樣東西' }) +
+          h.kv([
+            [{ en: 'PRINCE', zh: 'PRINCE' },
+             { en: 'Open-source web app and command-line interface, with the trained antibody site ranker behind its own CLI entry point, plus a reproduction guide and the evaluation records.', zh: '開放原始碼的網頁應用與命令列介面，訓練過的抗體位點排序器放在自己的命令列入口後面，另附重現指引與評估紀錄。' }],
+            [{ en: 'Dosing model', zh: '劑量模型' },
+             { en: '**1,000 parameter sets**, a 40,000-bee colony, 56 days.', zh: '**1,000 組參數**、4 萬隻蜂的蜂群、56 天。' }],
+            [{ en: 'RNAi model', zh: 'RNAi 模型' },
+             { en: 'Thirteen ODEs for Sf9 reporter silencing.', zh: '以 13 條常微分方程描述 Sf9 報告系統的沉默。' }],
+            [{ en: 'Colony epidemiology', zh: '蜂群流行病學' },
+             { en: 'Six years at two sites, Atlanta and Ithaca: **800 simulations, 20 matched weather sequences per scenario.**', zh: '在 Atlanta 與 Ithaca 兩地跑六年：**800 次模擬，每個情境 20 組對齊的天氣序列。**' }],
+            [{ en: 'Teaching material', zh: '教學素材' },
+             { en: 'A seven-video modelling series aimed at teams with no modelling experience.', zh: '一套七支影片的建模系列，對象是完全沒有建模經驗的隊伍。' }]
+          ])
       });
 
       /* ---------------- hardware ---------------- */
@@ -325,8 +334,8 @@
         kick: { en: 'Hardware', zh: '硬體' },
         h2: { en: 'Vapor-X: $80.07 of parts, and two labs that were not theirs', zh: 'Vapor-X：80.07 美元的零件，以及兩個不屬於他們的實驗室' },
         lede: {
-          en: 'A vacuum dryer built because benchtop lyophilisers cost $5,000 to $25,000. The interesting part is who tested it.',
-          zh: '一台真空乾燥器，起因是檯上型凍乾機要價 5,000 到 25,000 美元。有意思的地方在於是誰測試了它。'
+          en: 'A vacuum dryer built because benchtop lyophilisers cost $5,000 to $25,000. Two labs that were not theirs ran the tests.',
+          zh: '一台真空乾燥器，起因是檯上型凍乾機要價 5,000 到 25,000 美元。測試是由兩個不屬於他們的實驗室跑的。'
         },
         body:
           h.kv([
@@ -354,9 +363,9 @@
             min: 740,
             source: { en: 'Read from the team\'s Hardware page, with the raw workbooks and data files linked there to GitLab.', zh: '讀自該隊 Hardware 頁，原始工作簿與資料檔在該頁連到 GitLab。' }
           }) +
-          h.take({ en: 'The part we would put on a slide', zh: '我們會放上投影片的那一部分' }, {
-            en: 'Two external labs, one quoted recovery fraction given as **38 of 43 rather than 88 %**, one outlier named rather than dropped, and a changed denominator explained in the same bullet. **External validation at High School level is rare; external validation where the team then does the arithmetic on somebody else\'s raw workbook and publishes the awkward row is rarer still.** Note also what they did not claim: the Bradford result on their own bench is restricted to *detection* of BSA, explicitly not to quantitative recovery or retained function.',
-            zh: '兩個外部實驗室、一個被寫成 **43 之中的 38 而不是 88% 的回收比例**、一個被指名而不是被丟掉的離群值，以及在同一個條目裡解釋清楚的分母變動。**在高中組，有外部驗證本來就少見；而「團隊接著拿別人的原始工作簿自己算一遍，並把那條難看的列也公開」更少見。**另外也看看他們沒有主張什麼：他們自己實驗檯上的 Bradford 結果，被限制在 BSA 的*可被偵測*，明確不包含定量回收或功能保留。'
+          h.take({ en: 'External validation is rare at High School level; re-doing the arithmetic on someone else\'s workbook is rarer', zh: '高中組有外部驗證就已少見；拿別人的原始工作簿自己再算一遍更少見' }, {
+            en: 'Two external labs. A recovery fraction given as **38 of 43 rather than 88 %**. One outlier named rather than dropped, and a changed denominator explained in the same bullet. Note also what they did not claim: the Bradford result on their own bench is restricted to *detection* of BSA, explicitly not to quantitative recovery or retained function.',
+            zh: '兩個外部實驗室。回收比例被寫成 **43 之中的 38，而不是 88%**。一個離群值被指名而不是被丟掉，分母的變動也在同一個條目裡交代清楚。另外也看看他們沒有主張什麼：他們自己實驗檯上的 Bradford 結果，被限制在 BSA 的*可被偵測*，明確不包含定量回收或功能保留。'
           })
       });
 

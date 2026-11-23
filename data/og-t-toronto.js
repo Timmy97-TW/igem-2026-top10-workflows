@@ -47,8 +47,8 @@
           zh: '一份大了六十萬倍的目錄，以及那句==他們自己的模型贏不過序列長度==。'
         },
         lede: {
-          en: 'Nature has probably already evolved the enzyme you need. Toronto\'s long-term goal is a workflow that mines public sequencing data for a plastic-degrading enzyme for any condition and any plastic; this year\'s North Star Goal was one enzyme that degrades PET at room temperature — a target set by human practices, because wastewater researchers and operators told them that enzymes needing 70 °C are industrially useless. The dry lab is the largest we read in 2026. The most valuable thing on it is an evaluation protocol that says the model is not ready.',
-          zh: '大自然很可能早就演化出你需要的那個酵素了。Toronto 的長期目標是一條「從公開定序資料中挖出適用於任何條件、任何塑膠的分解酵素」的流程；而今年的北極星目標是一個能在室溫下分解 PET 的酵素——這個標的是由社會實踐工作定下的，因為廢水研究者與操作人員告訴他們，需要 70 °C 的酵素在工業上沒有用。這是我們在 2026 年讀到最大的乾式實驗。而它上面最有價值的東西，是一套說明「這個模型還沒準備好」的評估協議。'
+          en: 'Nature has probably already evolved the enzyme you need. Toronto\'s long-term goal is a workflow that mines public sequencing data for a plastic-degrading enzyme for any condition and any plastic; this year\'s North Star Goal was one enzyme that degrades PET at room temperature — a target set by human practices, because wastewater researchers and operators told them that enzymes needing 70 °C are industrially useless. The dry lab is the largest we read in 2026, and its own evaluation protocol says the model is not ready.',
+          zh: '大自然很可能早就演化出你需要的那個酵素了。Toronto 的長期目標是一條「從公開定序資料中挖出適用於任何條件、任何塑膠的分解酵素」的流程；而今年的北極星目標是一個能在室溫下分解 PET 的酵素——這個標的是由社會實踐工作定下的，因為廢水研究者與操作人員告訴他們，需要 70 °C 的酵素在工業上沒有用。這是我們在 2026 年讀到最大的乾式實驗，而它自己的評估協議說：這個模型還沒準備好。'
         },
         chips: [
           { t: { en: 'PETadex, 307 M sequences', zh: 'PETadex，3.07 億序列' }, k: 'b' },
@@ -214,7 +214,7 @@
             sub: { en: '227 sequences across 40 homology components. The two no-model controls outscore both embeddings on all twelve target sets.', zh: '227 條序列、橫跨 40 個同源成分。兩個不需要模型的對照在全部十二個標的集合上都勝過兩種嵌入。' },
             data: [
               { label: { en: 'Sequence length (no model)', zh: '序列長度（無模型）' }, v: 0.343, note: { en: 'longer PETases have higher catalytic efficiency: ρ = +0.350, p = 0.001', zh: '較長的 PETase 有較高催化效率：ρ = +0.350、p = 0.001' } },
-              { label: { en: 'Stock ESM-C embeddings', zh: '原版 ESM-C 嵌入' }, v: -0.025, note: { en: 'essentially no signal', zh: '基本上沒有訊號' } },
+              { label: { en: 'Stock ESM-C embeddings', zh: '原版 ESM-C 嵌入' }, v: -0.025, note: { en: 'no usable signal', zh: '沒有可用的訊號' } },
               { label: { en: 'PlasticESM embeddings (theirs)', zh: 'PlasticESM 嵌入（他們的）' }, v: -0.217, note: { en: 'worse than stock, and worse than free', zh: '比原版更差，也比「免費的方法」更差' } }
             ],
             opts: { dec: 3, xlabel: { en: 'Spearman ρ against measured kcat', zh: '對實測 kcat 的 Spearman ρ' } },

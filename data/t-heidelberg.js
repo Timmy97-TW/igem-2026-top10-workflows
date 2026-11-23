@@ -53,8 +53,8 @@
           zh: '一個事先寫下來的設計篩選閘，而==四個門檻裡只有一個被校正過==——這句話是他們自己寫的。'
         },
         lede: {
-          en: 'VOYAGE engineers gas vesicles — gas-filled protein nanostructures that scatter ultrasound and collapse at a defined pressure — into a programmable acoustic interface. One half, Observe, turns a vesicle into a signal; the other half, Organize, turns ultrasound into a handle that moves only the labelled cells. The dry lab, branded ATLAS, is the widest in the Top 10: all-atom molecular dynamics, three generative design pipelines, and a fine-tuned segmentation model, with the screening thresholds and a pre-registered decision rule written before the runs.',
-          zh: 'VOYAGE 把氣囊——充氣的蛋白質奈米結構，會散射超音波並在特定壓力下崩解——改造成一個可程式化的聲學介面。其中一半「Observe」把氣囊變成訊號；另一半「Organize」把超音波變成只會移動被標記細胞的把手。他們稱為 ATLAS 的乾式實驗是前十名中跨度最大的：全原子分子動力學、三條生成式設計流程，以及一個微調過的影像分割模型，而篩選門檻與一條預先登錄的判定規則都在開跑前就寫好。'
+          en: 'The dry lab, branded ATLAS, is the widest in the Top 10: all-atom molecular dynamics, three generative design pipelines, and a fine-tuned segmentation model — with the screening thresholds and a pre-registered decision rule written before the runs. What it is pointed at: VOYAGE engineers gas vesicles, gas-filled protein nanostructures that scatter ultrasound and collapse at a defined pressure, into a programmable acoustic interface. One half, Observe, turns a vesicle into a signal; the other half, Organize, turns ultrasound into a handle that moves only the labelled cells.',
+          zh: '他們稱為 ATLAS 的乾式實驗是前十名中跨度最大的：全原子分子動力學、三條生成式設計流程，以及一個微調過的影像分割模型——而篩選門檻與一條預先登錄的判定規則都在開跑前就寫好。它對準的是什麼：VOYAGE 把氣囊（充氣的蛋白質奈米結構，會散射超音波並在特定壓力下崩解）改造成一個可程式化的聲學介面。其中一半「Observe」把氣囊變成訊號；另一半「Organize」把超音波變成只會移動被標記細胞的把手。'
         },
         chips: [
           { t: { en: 'Gas vesicles (GvpA / GvpC)', zh: '氣囊（GvpA／GvpC）' }, k: 'b' },
@@ -219,7 +219,7 @@
             ],
             source: { en: 'Condensed from the team\'s Model, Software and Measurement pages.', zh: '濃縮自該隊 Model、Software 與 Measurement 頁。' }
           }) +
-          h.take({ en: 'The rule that makes their numbers comparable', zh: '讓他們的數字可比的規則' }, {
+          h.take({ en: 'Both outcomes were defined before the simulation ran, so a negative could still be a result', zh: '兩種結果都在模擬開跑前就定義好，所以否定答案仍然算是一個結果' }, {
             en: 'The pre-registered rule for the rival collapse mechanism is the sentence to steal: *an increase of 6° or more in contact angle with a 95 % CI excluding zero counts as an effect; under 3° with the CI inside ±6° counts as no effect.* Both outcomes were defined before the simulation ran, so the test could come back negative and still be a result. Paired with "only the i_pAE threshold was calibrated, the other three were set a priori", it means a reader can tell exactly how much of the screening gate is evidence.',
             zh: '針對對立崩解機制那條預先登錄的規則，就是值得抄走的一句話：*接觸角增加 6° 以上且 95% 信賴區間不含 0 算有效應；小於 3° 且信賴區間落在 ±6° 內算沒有效應。* 兩種結果都在模擬開跑前就定義好，所以這個檢驗即使得到否定答案，仍然是一個結果。再配上「只有 i_pAE 門檻經過校正，其餘三個是先驗設定」，讀者就能精確判斷這個篩選閘裡有多少是證據。'
           })

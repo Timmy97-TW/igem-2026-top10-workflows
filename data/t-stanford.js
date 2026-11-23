@@ -265,9 +265,18 @@
           }) +
           h.h3({ en: '4 · The device, modelled from both directions', zh: '4 · 裝置，從兩個方向建模' }) +
           h.p({
-            en: 'They started from a **DeSimone-lab** saRNA-LNP patch (8 × 5 mm, 16 needles in four rows, 0.5 mm base, 0.6 mm long) and lengthened the needles to **0.9 mm**, with the trade-off written out: keloid tissue is thicker and the dermal–epidermal junction has to be crossed, but needles longer than 1000 µm reach nerve endings and cause bleeding and inflammation. The nociceptor model says a 3.0 mm needle crosses **30.75× more nociceptors** and produces **4.46× more reported pain**. The second justification is mechanosensing: YAP/TAZ-driven collagen production is the keloid mechanism, and the **reticular** dermis fibroblasts are the stiffness-sensitive ones (Type I collagen, 100–20,000 Pa) versus **papillary** (Type III, sometimes below 1 Pa).',
-            zh: '他們從 **DeSimone 實驗室**的 saRNA-LNP 貼片出發（8×5 mm、四排共 16 根針、底徑 0.5 mm、長 0.6 mm），把針長改為 **0.9 mm**，並把取捨寫清楚：瘢痕組織更厚、必須穿過表皮–真皮交界，但針長超過 1000 µm 會碰到神經末梢並造成出血與發炎。痛覺受器模型指出，3.0 mm 的針會穿過 **30.75 倍的痛覺受器**，病人回報疼痛增加 **4.46 倍**。第二個理由是機械感知：YAP/TAZ 驅動的膠原生成才是瘢痕機制，而對硬度敏感的是**網狀層**纖維母細胞（I 型膠原、100–20,000 Pa），而非**乳突層**（III 型膠原，有時低於 1 Pa）。'
+            en: 'They started from a **DeSimone-lab** saRNA-LNP patch (8 × 5 mm, 16 needles in four rows, 0.5 mm base, 0.6 mm long) and lengthened the needles to **0.9 mm**, with the trade-off written out: keloid tissue is thicker and the dermal–epidermal junction has to be crossed, but needles longer than 1000 µm reach nerve endings and cause bleeding and inflammation. The nociceptor model prices the other direction: a 3.0 mm needle crosses **30.75× more nociceptors** and produces **4.46× more reported pain**.',
+            zh: '他們從 **DeSimone 實驗室**的 saRNA-LNP 貼片出發（8×5 mm、四排共 16 根針、底徑 0.5 mm、長 0.6 mm），把針長改為 **0.9 mm**，並把取捨寫清楚：瘢痕組織更厚、必須穿過表皮–真皮交界，但針長超過 1000 µm 會碰到神經末梢並造成出血與發炎。痛覺受器模型則算出反方向的代價：3.0 mm 的針會穿過 **30.75 倍的痛覺受器**，病人回報疼痛增加 **4.46 倍**。'
+          }, {
+            en: 'The second justification for 0.9 mm is mechanosensing. YAP/TAZ-driven collagen production is the keloid mechanism, and only one of the two dermal fibroblast populations is stiffness-sensitive:',
+            zh: '0.9 mm 的第二個理由是機械感知。YAP/TAZ 驅動的膠原生成才是瘢痕機制，而兩種真皮纖維母細胞族群中只有一種對硬度敏感：'
           }) +
+          h.kv([
+            [{ en: '**Reticular** dermis — the target', zh: '**網狀層**真皮——目標' },
+             { en: 'Type I collagen, **100–20,000 Pa**. Stiffness-sensitive, so this is the layer the needle has to reach.', zh: 'I 型膠原、**100–20,000 Pa**。對硬度敏感，所以這才是針必須抵達的那一層。' }],
+            [{ en: '**Papillary** dermis — above it', zh: '**乳突層**真皮——在它上方' },
+             { en: 'Type III collagen, **sometimes below 1 Pa**. Not stiffness-sensitive, so stopping here would miss the mechanism.', zh: 'III 型膠原、**有時低於 1 Pa**。對硬度不敏感，所以停在這裡就會錯過那個機制。' }]
+          ]) +
           h.p({
             en: 'The diffusion model then sets a deadline that comes from the drug rather than from the clinic: finite-element analysis with Fick\'s second law, Einstein–Stokes and Darcy\'s law (needle pressure), 1-D, D_eff = 1.57 × 10⁻¹⁴ m²/s over 2.5 mm of dermis — and because the LNP\'s PEG layer is gone in ≤6 h while bare mRNA has a half-life near 5 minutes, **the payload has about six hours to arrive**. Adding collagenase and applying pressure are tested inside the model as ways to meet it.',
             zh: '擴散模型接著設下一個來自藥物本身、而非診間的期限：以 Fick 第二定律、Einstein–Stokes 與 Darcy 定律（微針壓力）做有限元分析，一維、D_eff = 1.57×10⁻¹⁴ m²/s、跨越 2.5 mm 真皮——而由於 LNP 的 PEG 層在 6 小時內消失，裸 mRNA 半衰期又只有約 5 分鐘，**酬載大約只有六小時可以抵達**。模型內還測了加入膠原酶與施加壓力這兩種達成它的方法。'

@@ -49,8 +49,8 @@
           zh: '噬菌斑計數偏偏在這個專案最核心的那些構建體上失效，於是他們==把量測方法自己做出來==。'
         },
         lede: {
-          en: 'SymPleco turns the M13 filamentous phage into a covalently functionalised sequestration sponge, with cargo attached by sortase-mediated transpeptidation rather than by phage display. The project is worth reading for one reason above the construct: its hardest problem was measurement. Four protocols were tried before one could count what the project needed counted, and the dry lab exists to explain a number that came out the opposite way round from the prediction.',
-          zh: 'SymPleco 把 M13 絲狀噬菌體做成共價修飾的吸附海綿，酬載以 sortase 轉肽作用接上，而不是靠傳統的噬菌體表面展示。這個專案值得讀的理由在構建體之上：它最難的問題是量測。他們試了四種流程，才有一種能數到專案真正需要數的東西；而乾式實驗之所以存在，是為了解釋一個與預測方向完全相反的數字。'
+          en: 'This project\'s hardest problem was measurement, not construction. Four protocols were tried before one could count what the project needed counted, and the dry lab exists to explain a number that came out the opposite way round from the prediction. The construct: SymPleco turns the M13 filamentous phage into a covalently functionalised sequestration sponge, with cargo attached by sortase-mediated transpeptidation rather than by phage display.',
+          zh: '這個專案最難的問題是量測，不是建構。他們試了四種流程，才有一種能數到專案真正需要數的東西；而乾式實驗之所以存在，是為了解釋一個與預測方向完全相反的數字。至於構建體：SymPleco 把 M13 絲狀噬菌體做成共價修飾的吸附海綿，酬載以 sortase 轉肽作用接上，而不是靠傳統的噬菌體表面展示。'
         },
         chips: [
           { t: { en: 'M13 phage platform', zh: 'M13 噬菌體平台' }, k: 'b' },
@@ -201,7 +201,7 @@
             en: 'Each genome carries a **different selection marker**, so one infection event becomes one countable colony of known genotype: an **Amp colony means the phagemid entered**, a **Kan colony means the helper entered**. The design turns an absolute count, which no student lab can trust, into a ratio whose error sources are shared.',
             zh: '每個基因體帶**不同的選擇標記**，於是一次感染事件就變成一個可以數、而且基因型已知的菌落：**Amp 菌落代表 phagemid 進去了**，**Kan 菌落代表輔助質體進去了**。這個設計把一個沒有學生實驗室敢信的絕對計數，變成一個誤差來源彼此共用的比值。'
           }) +
-          h.take({ en: 'The rule that makes their numbers comparable', zh: '讓他們的數字可以互相比較的那條規則' }, {
+          h.take({ en: 'Both plates come from the same diluted sample, so the errors cancel in the ratio', zh: '兩塊盤來自同一份稀釋後的樣本，所以誤差在比值裡互相抵消' }, {
             en: '**Both plates come from the same diluted sample**, so dilution error, plating efficiency and host competence cancel in the ratio. Everything downstream — the round-1 value, the Phase 2 collapse, the model fitted to explain it — is a ratio of two numbers that shared a pipette.',
             zh: '**兩塊盤來自同一份稀釋後的樣本**，所以稀釋誤差、塗盤效率與宿主勝任度都會在比值裡互相抵消。後面所有東西——第 1 輪的數值、第 2 階段的崩塌、為了解釋它而擬合的模型——都是兩個共用同一支移液器的數字之比。'
           }) +
@@ -279,13 +279,13 @@
           }) +
           h.h3({ en: '3 · SymPlify, with BindCraft\'s own stages documented', zh: '3 · SymPlify，並把 BindCraft 自己的階段寫清楚' }) +
           h.p({
-            en: 'Ranking is primarily on **ipTM**, with pTM, pLDDT, ΔG (REU), surface hydrophobicity, shape complementarity, unsatisfied H-bonds, C-terminal accessibility and SASA shown alongside, so a user can override the primary sort. The four internal stages of **BindCraft** are documented rather than hidden: hallucination with **AF2-multimer** → **SolubleMPNN** → AF2 monomer re-prediction, which the page calls harsh but robust → confidence filtering. Where experts disagreed on which AlphaFold version to use — 2, 3, or the Server — the team tried several and compared instead of picking one on authority. Designs are deposited on **Zenodo**.',
+            en: 'Ranking is primarily on **ipTM**, with pTM, pLDDT, ΔG (REU), surface hydrophobicity, shape complementarity, unsatisfied H-bonds, C-terminal accessibility and SASA shown alongside, so a user can override the primary sort. The four internal stages of **BindCraft** are documented rather than hidden: hallucination with **AF2-multimer** → **SolubleMPNN** → AF2 monomer re-prediction, which the page calls "harsh but robust" → confidence filtering. Where experts disagreed on which AlphaFold version to use — 2, 3, or the Server — the team tried several and compared instead of picking one on authority. Designs are deposited on **Zenodo**.',
             zh: '排序主要依 **ipTM**，同時並列顯示 pTM、pLDDT、ΔG（REU）、表面疏水性、形狀互補性、未滿足的氫鍵、C 端可及性與 SASA，使用者因此可以推翻主要的排序依據。**BindCraft** 內部的四個階段是被寫出來、而不是被藏起來的：以 **AF2-multimer** 做幻覺生成→**SolubleMPNN**→AF2 單體重新預測（頁面上形容這一步嚴苛但穩健）→信心度篩選。當專家們對該用哪個 AlphaFold 版本（2、3 或 Server 版）意見不一致時，這個團隊是試了幾種並加以比較，而不是憑權威選一個。設計成果存放在 **Zenodo**。'
           }) +
           h.h3({ en: '4 · The difficulty scorer, and its disclaimer on the same screen', zh: '4 · 難度評分器，以及和它同一個畫面上的免責聲明' }) +
           h.p({
-            en: 'A 0–100 score graded Easy to Very Hard. For protein targets it is five weighted factors; for small molecules, five RDKit descriptors. The point worth copying is not the weighting but what sits next to it: the app itself states that the score is **not experimentally validated**, carries **no affinity metric**, and **only sees the uploaded PDB**.',
-            zh: '一個 0–100 分、分級為「容易」到「非常困難」的分數。對蛋白標靶是五項加權因子；對小分子是五個 RDKit 描述子。值得照抄的不是權重本身，而是旁邊放了什麼：這個工具自己就寫出，這個分數**未經實驗驗證**、**不含任何親和力指標**，而且**只看得到使用者上傳的那個 PDB**。'
+            en: 'A 0–100 score graded Easy to Very Hard. For protein targets it is five weighted factors; for small molecules, five RDKit descriptors. The weighting matters less than what sits next to it: the app itself states that the score is **not experimentally validated**, carries **no affinity metric**, and **only sees the uploaded PDB**.',
+            zh: '一個 0–100 分、分級為「容易」到「非常困難」的分數。對蛋白標靶是五項加權因子；對小分子是五個 RDKit 描述子。權重本身沒有旁邊放的東西重要：這個工具自己就寫出，這個分數**未經實驗驗證**、**不含任何親和力指標**，而且**只看得到使用者上傳的那個 PDB**。'
           }) +
           h.tbl({
             cols: [

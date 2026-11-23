@@ -34,10 +34,10 @@
       out += h.sec({
         id: 'c-build',
         kick: { en: 'Construction', zh: '建構' },
-        h2: { en: 'Chassis and assembly route', zh: '宿主與組裝路線' },
+        h2: { en: 'Half the field runs in E. coli alone, and one team did no assembly at all', zh: '全場有一半只在 E. coli 裡做，而有一隊完全沒做組裝' },
         lede: {
-          en: 'Five of the ten work in E. coli alone; two run a mammalian line as the main chassis; one works in yeast, one in Pseudomonas, and one in a phage. One team did no assembly at all.',
-          zh: '十隊中有五隊只在 E. coli 中工作；兩隊以哺乳動物細胞為主要宿主；一隊在酵母、一隊在 Pseudomonas、一隊在噬菌體。有一隊完全沒有做任何組裝。'
+          en: 'Two of the ten run a mammalian line as the main chassis; one works in yeast, one in Pseudomonas, one in a phage. The assembly route each one chose is the fourth column.',
+          zh: '十隊中有兩隊以哺乳動物細胞為主要宿主；一隊在酵母、一隊在 Pseudomonas、一隊在噬菌體。各隊選的組裝路線在第四欄。'
         },
         body:
           h.tbl({
@@ -128,8 +128,8 @@
               h: { en: 'Two teams ran MD, for opposite reasons', zh: '兩隊跑了 MD，理由相反' },
               p: { en: 'Heidelberg simulates two ribs of GvpA in CHARMM36 to get a bending stiffness and therefore a predicted collapse pressure — a number with a unit. UCAS-China coarse-grains three 1000-residue fusion proteins in Martini 3 to answer one yes/no question: is the RNA-binding domain buried inside the assembly?', zh: 'Heidelberg 用 CHARMM36 模擬兩條 GvpA 肋，為了得到彎曲剛度、進而推出預測的崩塌壓力——一個帶單位的數字。UCAS-China 則用 Martini 3 把三個千餘殘基的融合蛋白做粗粒化，只為回答一個是／否問題：RNA 結合域有沒有被包埋在組裝體內部？' } },
             { chips: [{ t: { en: 'generative design', zh: '生成式設計' }, k: 'b' }],
-              h: { en: 'Four different generators, one shared habit', zh: '四種不同的生成器，一個共同的習慣' },
-              p: { en: 'RFdiffusion3 and LigandMPNN (Heidelberg), BoltzGen 0.3.2 (LYON), BindCraft and RFdiffusion3 behind a web app (Princeton), FoldX plus ThermoMPNN (UOttawa). Every one of them is followed by a filter the team wrote down before looking at the output.', zh: 'RFdiffusion3 與 LigandMPNN（Heidelberg）、BoltzGen 0.3.2（LYON）、藏在網頁應用後面的 BindCraft 與 RFdiffusion3（Princeton）、FoldX 加 ThermoMPNN（UOttawa）。它們每一個後面都接著一道團隊在看到輸出之前就寫下的篩選。' } },
+              h: { en: 'Three generators, two scanners, one shared habit', zh: '三個生成器、兩個掃描器，一個共同的習慣' },
+              p: { en: 'Three teams ran a model that **writes new sequences**: RFdiffusion3 and LigandMPNN (Heidelberg), BoltzGen 0.3.2 (LYON), BindCraft and RFdiffusion3 behind a web app (Princeton). Two more ran a model that **scores mutations of a sequence they already had** — UAlberta put 117,732 FoldX mutants through five filters to reach 10, and UOttawa paired FoldX with ThermoMPNN. The distinction matters, and we had it wrong on this page at first. What all five share is a filter the team wrote down before looking at the output.', zh: '有三隊跑了一個會**寫出新序列**的模型：RFdiffusion3 與 LigandMPNN（Heidelberg）、BoltzGen 0.3.2（LYON）、藏在網頁應用後面的 BindCraft 與 RFdiffusion3（Princeton）。另外兩隊跑的模型是**為自己已經有的序列的突變體打分**——UAlberta 把 117,732 個 FoldX 突變體通過五道篩選剩下 10 個，UOttawa 則把 FoldX 與 ThermoMPNN 併用。這個區別是有意義的，而我們這一頁起初弄錯了。五隊共有的是一道團隊在看到輸出之前就寫下的篩選。' } },
             { chips: [{ t: { en: 'machine learning', zh: '機器學習' }, k: 'g' }],
               h: { en: 'Three teams trained a model on their own data', zh: '三隊用自己的數據訓練了模型' },
               p: { en: 'Heidelberg fine-tuned CellSAM on **108 of their own microscopy images** and reports F1 rising from 0.2 % to 42 % with false positives down 97 %. NUS-Singapore trained an MLP (128-128-64) on their own plate reads with whole-condition hold-outs. Stanford\'s U-Net turns a scar photograph into a printable patch.', zh: 'Heidelberg 用**自家 108 張顯微影像**微調 CellSAM，報告 F1 從 0.2% 升到 42%、偽陽性下降 97%。NUS-Singapore 用自家盤讀數據訓練一個 MLP（128-128-64），並採整組條件留出法。Stanford 的 U-Net 則把疤痕照片變成可列印的貼片。' } },
@@ -189,9 +189,9 @@
               zh: '我們對十個 wiki 的判讀。「參數標註狀態」指模型參數被明確標成量測、計算、擬合或暫定值。「試驗經驗證或重建」指在用它評判構建體之前，先花了一個實驗在方法本身上。'
             }
           }) +
-          h.take({ en: 'The column that separates the field', zh: '把全場分開的那一欄' }, {
-            en: 'Six of the ten spent an experiment on the measurement before using it, and four of the ten label their model parameters by status. Those two columns are where we would put our own effort next season, because neither needs a budget.',
-            zh: '十隊中有六隊在使用量測之前先花了一個實驗在它身上，而有四隊為模型參數標註狀態。這兩欄就是我們下一季會把力氣放上去的地方，因為兩者都不需要預算。'
+          h.take({ en: 'The two columns that are not full', zh: '沒有填滿的那兩欄' }, {
+            en: 'Five of the ten label their model parameters by status, and seven of the ten defined their metrics before the data arrived. **Every other column here stands at eight or above** — controls in the same run and named failures are at ten. So the field separates on exactly two habits, and neither of them needs a budget. That is where we would put our own effort next season.',
+            zh: '十隊中有五隊為模型參數標註狀態，有七隊在數據到手之前就先定義了指標。**這裡其他每一欄都站在八以上**——對照同批次與具名失敗都是十。所以把全場分開的剛好是兩個習慣，而兩者都不需要預算。那就是我們下一季會把力氣放上去的地方。'
           })
       });
 

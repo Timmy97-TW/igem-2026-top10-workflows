@@ -27,8 +27,8 @@
           zh: '題目定下來之後，下一個決定是==什麼才算一個結果==——而這件事要嘛在實驗跑之前就決定，要嘛永遠不會被決定。'
         }) + '</h1>' +
         '<p class="lede">' + h.md({
-          en: 'Three things, all drawn from the ten Undergraduate workflows: what crosses the gap from an Undergraduate lab to a High School one and what does not, six cheap questions to ask of an idea before anyone books bench time, and **a six-column sheet filled in for every planned result before the experiment runs**. Every rule names the team it came from, so you can go and disagree with the evidence rather than with us.',
-          zh: '三件事，全部來自大學部那十條工作流程：從大學部實驗室到高中實驗室，什麼過得來、什麼過不來；在有人預約實驗台之前要先問一個點子的六個便宜問題；以及**每個預定結果在實驗開跑前都要填好的六欄表格**。每一條規則都註明它來自哪一隊，你可以直接去跟證據吵，而不是跟我們吵。'
+          en: 'Everything below is drawn from the ten Undergraduate workflows, and every rule names the team it came from, so you can go and disagree with the evidence rather than with us. The piece that does the work is **a six-column sheet, filled in for every planned result before the experiment runs**; the rest of the page is what feeds it and what it costs.',
+          zh: '下面所有東西都來自大學部那十條工作流程，而每一條規則都註明它來自哪一隊，你可以直接去跳証據吵，而不是跳我們吵。真正幹活的那一塊是**一張六欄表格，每個預定結果在實驗開跑前都要填好**；這一頁其餘部分，是餵給它的東西與它的代價。'
         }) + '</p>' +
         '<div class="herometa">' + h.chips([
           { t: { en: 'What transfers', zh: '什麼帶得走' }, k: 'b' },
@@ -86,7 +86,7 @@
               foot: { en: 'Evidence: Heidelberg and LYON state both the input and the surviving count; most teams state only one.', zh: '證據：Heidelberg 與 LYON 同時寫出投入數與存活數；多數隊伍只寫其中一個。' } },
             { chips: [{ t: { en: 'costs more than it looks', zh: '比看起來貴' }, k: 'a' }],
               h: { en: 'Building your own instrument', zh: '自己做儀器' },
-              p: { en: 'Cornell built an electrospinner because the product does not exist without one. That is the right reason. Building an instrument because it looks like a Hardware medal is six weeks you will want back in September.', zh: 'Cornell 做靜電紡絲機，是因為沒有它就沒有產品——那是對的理由。為了看起來像一面硬體獎而做儀器，等於是九月時你會非常想要回來的六個星期。' },
+              p: { en: 'Cornell built an electrospinner because the product does not exist without one. That is the right reason. Building an instrument because it looks like a Hardware medal is six weeks you will want back in September.', zh: 'Cornell 做靜電紡絲機，是因為沒有它就沒有產品——那是對的理由。為了看起來像一面硬體獎而做儀器，就是九月時你會想討回來的六個星期。' },
               foot: { en: 'Evidence: Cornell, UCAS, UCNZ all built hardware the project could not proceed without.', zh: '證據：Cornell、UCAS、UCNZ 做的硬體，都是專案沒有它就走不下去的東西。' } },
             { chips: [{ t: { en: 'does not cross', zh: '過不來' }, k: 'r' }],
               h: { en: 'Mining a dataset that does not exist for your organism', zh: '挖一個你的生物沒有的資料集' },

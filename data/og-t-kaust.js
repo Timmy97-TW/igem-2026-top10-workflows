@@ -47,7 +47,7 @@
           zh: '帶生產菌株上太空，而不是帶成藥——並且==在每個主張所在的那一句話裡就標出它的範圍==。'
         },
         lede: {
-          en: 'Beyond the ISS, resupply stops being a plan: replacement medication may take months or never arrive, storage mass competes with everything else, and no manifest can anticipate every illness. SHIHAB proposes a library of freeze-dried microbes, a shared 2.2 kg bioreactor and automated purification, so a crew selects a payload and makes it on site. What makes this wiki unusual is not the hardware. It is that the claims are scoped inline — "genetic integration and radiation-testing activities should be distinguished from a demonstrated increase in resistance" — and the workflow carries a "Proposed" badge.',
+          en: 'Beyond the ISS, resupply stops being a plan: replacement medication may take months or never arrive, storage mass competes with everything else, and no manifest can anticipate every illness. SHIHAB proposes a library of freeze-dried microbes, a shared 2.2 kg bioreactor and automated purification, so a crew selects a payload and makes it on site. What makes this wiki unusual is not the hardware. It is that the claims are scoped inline — "genetic integration and radiation-testing activities should be distinguished from a demonstrated increase in resistance" — and that the workflow carries a "Proposed" badge.',
           zh: '離開國際太空站之後，再補給就不再是一個可行的計畫：替代藥物可能要好幾個月才到、或根本到不了；儲存質量要和所有其他東西競爭；而任何清單都無法預先設想每一種疾病。SHIHAB 提議的是一套凍乾微生物庫、一台共用的 2.2 公斤生物反應器與自動化純化，讓組員選定酬載、就地製造。這個 wiki 特別的地方不是硬體，而是它的主張是就地標註範圍的——「基因整合與輻射測試活動，應與『已證明抗性提升』區分開來」——而且那套流程還掛著一個「提議中」的標籤。'
         },
         chips: [
@@ -143,9 +143,9 @@
             min: 700,
             source: { en: 'All six quoted from the team\'s own pages. The collection is ours.', zh: '六句全部引自該隊自己的頁面。整理成表是我們做的。' }
           }) +
-          h.take({ en: 'Why we are giving this its own section', zh: '為什麼我們給這件事單獨一節' }, {
-            en: 'A limitations section at the end of a page is read by a judge and nobody else. A clause inside the claim is read by **everyone who reads the claim**, including the person who later cites it. Across the twenty Top 10 wikis in both divisions, this is the clearest example of a team deciding that the scope of a claim travels with the claim.',
-            zh: '放在頁面最後的限制一節，只有評審會讀，其他人不會。而寫在主張裡的那個子句，**每個讀到那個主張的人都會讀到**，包括之後引用它的那個人。在兩個組別共二十個前十名 wiki 中，這是「一支隊伍決定讓主張的範圍跟著主張一起走」最清楚的例子。'
+          h.take({ en: 'A limitations section is read by a judge; a clause inside the claim is read by everyone', zh: '限制一節只有評審會讀；寫在主張裡的子句，每個人都會讀到' }, {
+            en: 'The clause is read by **everyone who reads the claim**, including the person who later cites it. Across the twenty Top 10 wikis in both divisions, this is the clearest example of a team deciding that the scope of a claim travels with the claim.',
+            zh: '那個子句會被**每個讀到那個主張的人**讀到，包括之後引用它的那個人。在兩個組別共二十個前十名 wiki 中，這是「一支隊伍決定讓主張的範圍跟著主張一起走」最清楚的例子。'
           })
       });
 

@@ -47,8 +47,8 @@
           zh: '在同一批培養物上量三種讀值，公布贏的那一個，也公布它輸掉的那兩個指標——並把==1 ppb 是測過的最低濃度，不是已驗證的偵測極限==這句話直接寫進結果頁裡。'
         },
         lede: {
-          en: 'The World Health Organization lists mercury among ten chemicals of major public-health concern, and the exposure route this team went after is not the fish on the plate but the water and soil upstream of it: in Guizhou, Zhang and colleagues found rice rather than fish was the principal methylmercury pathway, and local production supplied about 2 % of the fresh vegetables eaten in Hong Kong in 2024. MerMAID is an *E. coli* biosensor — MerR and the mercury-responsive pMer promoter–operator driving mRFP1e — together with a phone imaging box and a spectrometer reader built to read it. Thirteen prototypes were designed and built; two responded to mercury, and **Design 429** is the one that was characterised. What makes this the most carefully reported High School dataset we read is not the sensor. It is that the limitation sits inside the claim: the detection threshold was calculated and evaluated on the same five runs, so the page calls 1 ppb the lowest concentration tested rather than a limit of detection.',
-          zh: '世界衛生組織把汞列為十類重大公共衛生關注化學物之一，而這支隊伍追的暴露路徑不是餐盤上的魚，而是它上游的水與土：在貴州，Zhang 等人發現主要的甲基汞暴露途徑是稻米而不是魚；2024 年香港本地生產只供應了當地食用新鮮蔬菜的約 2%。MerMAID 是一個 *E. coli* 生物感測器——MerR 與受汞調控的 pMer 啟動子／操作子驅動 mRFP1e——再加上一個手機成像暗箱與一台為它而造的光譜儀讀取器。他們設計並做出了十三個原型，其中兩個對汞有反應，而被完整特性化的是 **Design 429**。讓這份資料成為我們讀過最謹慎的高中部資料集的，不是那個感測器，而是「限制就寫在主張裡面」：偵測門檻是用同樣那五組實驗算出來、也在同樣那五組實驗上評估的，所以頁面把 1 ppb 稱為測過的最低濃度，而不是偵測極限。'
+          en: 'Thirteen prototypes designed and built; two responded to mercury; **Design 429** is the one that was characterised. MerMAID is an *E. coli* biosensor — MerR and the mercury-responsive pMer promoter–operator driving mRFP1e — together with a phone imaging box and a spectrometer reader built to read it. Mercury is one of ten chemicals the World Health Organization names as a major public-health concern, and the exposure route this team went after is the water and soil upstream of the food rather than the fish on the plate: in Guizhou, Zhang and colleagues found rice rather than fish was the principal methylmercury pathway, and local production supplied about 2 % of the fresh vegetables eaten in Hong Kong in 2024. What makes this the most carefully reported High School dataset we read is not the sensor. It is that the limitation sits inside the claim: the detection threshold was calculated and evaluated on the same five runs, so the page calls 1 ppb the lowest concentration tested rather than a limit of detection.',
+          zh: '設計並做出十三個原型；兩個對汞有反應；被完整特性化的是 **Design 429**。MerMAID 是一個 *E. coli* 生物感測器——MerR 與受汞調控的 pMer 啟動子／操作子驅動 mRFP1e——再加上一個手機成像暗箱與一台為它而造的光譜儀讀取器。汞是世界衛生組織列為重大公共衛生關注的十類化學物之一，而這支隊伍追的暴露路徑是食物上游的水與土，而不是餐盤上的魚：在貴州，Zhang 等人發現主要的甲基汞暴露途徑是稻米而不是魚；2024 年香港本地生產只供應了當地食用新鮮蔬菜的約 2%。讓這份資料成為我們讀過最謹慎的高中部資料集的，不是那個感測器，而是「限制就寫在主張裡面」：偵測門檻是用同樣那五組實驗算出來、也在同樣那五組實驗上評估的，所以頁面把 1 ppb 稱為測過的最低濃度，而不是偵測極限。'
         },
         chips: [
           { t: { en: 'MerR · pMer · mRFP1e', zh: 'MerR · pMer · mRFP1e' }, k: 'b' },
@@ -121,7 +121,7 @@
             ],
             rows: [
               [{ en: '**Water Supplies Department**', zh: '**水務署（WSD）**' },
-               { en: 'Drinking water was the original sample. WSD said local tap-water mercury was very low, questioned the intended users and use case, and **could not identify a contaminated drinking-water site to test at.** The team stopped assuming drinking water.', zh: '最初設想的樣品是飲用水。水務署表示本地自來水的汞含量極低、質疑了設想中的使用者與使用情境，而且**找不到一個受污染的飲用水場址可供測試。**該隊因此不再把飲用水當成預設答案。' }],
+               { en: 'Drinking water was the original sample. WSD said local tap-water mercury was minimal, questioned the intended users and use case, and **could not identify a contaminated drinking-water site to test at.** The team stopped assuming drinking water.', zh: '最初設想的樣品是飲用水。水務署表示本地自來水的汞含量極低、質疑了設想中的使用者與使用情境，而且**找不到一個受污染的飲用水場址可供測試。**該隊因此不再把飲用水當成預設答案。' }],
               [{ en: '**Prof. TSUI Tsz Ki Martin and Prof. Jake Ming-kei CHUNG**, CUHK', zh: '香港中文大學 **徐志毅教授與鍾明基教授**' },
                { en: 'Both encouraged them to investigate **soil** rather than ordinary water samples, which is where the soil-extract work and the soil module come from.', zh: '兩位都鼓勵他們去研究**土壤**，而不是只做一般水樣——土壤萃取實驗與土壤模組就是從這裡來的。' }],
               [{ en: '**Drainage Services Department**', zh: '**渠務署（DSD）**' },
@@ -182,9 +182,9 @@
             min: 760,
             source: { en: 'All ten quoted from the team\'s own Results, Engineering, Model, Description, Hardware and Human Practices pages. The collection is ours.', zh: '十句全部引自該隊自己的 Results、Engineering、Model、Description、Hardware 與 Human Practices 頁。整理成表是我們做的。' }
           }) +
-          h.take({ en: 'Why this is the section worth reading', zh: '為什麼這是最值得讀的一節' }, {
-            en: 'A high-school team with a 7.95× fold response and five significant runs had every incentive to write "we detect mercury at 1 ppb" and let the reader do the rest. Instead the strongest number on the page arrives with the reason it is not yet a limit of detection attached to it, and **the circularity is named in the team\'s own words — thresholds fitted and evaluated on the same five runs.** Among the ten High School Top 10 wikis, this is the clearest case of a team understanding that a claim and its scope have to travel together.',
-            zh: '一支有 7.95 倍反應、五組都達顯著的高中隊伍，完全有理由寫下「我們在 1 ppb 偵測到汞」，剩下的留給讀者自己想。但這一頁上最強的那個數字，是連著「為什麼它還不是偵測極限」一起出現的，而且**那個循環論證是用該隊自己的話指出來的——門檻是在同樣那五組實驗上擬合、也在同樣那五組上評估的。**在高中部前十名的十個 wiki 之中，這是「一支隊伍理解到主張與其範圍必須一起走」最清楚的一例。'
+          h.take({ en: 'A 7.95× response and five significant runs, and they still would not call 1 ppb a detection limit', zh: '7.95 倍的反應、五組都顯著，而他們仍然不把 1 ppb 稱為偵測極限' }, {
+            en: 'A high-school team with those numbers had every incentive to write "we detect mercury at 1 ppb" and let the reader do the rest. Instead the strongest number on the page arrives with the reason it is not yet a limit of detection attached to it, and **the circularity is named in the team\'s own words — thresholds fitted and evaluated on the same five runs.** Among the ten High School Top 10 wikis, this is the clearest case of a team understanding that a claim and its scope have to travel together.',
+            zh: '有這種數字的高中隊伍，完全有理由寫下「我們在 1 ppb 偵測到汞」，剩下的留給讀者自己想。但這一頁上最強的那個數字，是連著「為什麼它還不是偵測極限」一起出現的，而且**那個循環論證是用該隊自己的話指出來的——門檻是在同樣那五組實驗上擬合、也在同樣那五組上評估的。**在高中部前十名的十個 wiki 之中，這是「一支隊伍理解到主張與其範圍必須一起走」最清楚的一例。'
           })
       });
 
@@ -314,8 +314,11 @@
         },
         body:
           h.p({
-            en: 'Both readouts are reference-normalised and control-subtracted first — colour as `1 − (G_pellet ÷ G_white)`, pellet fluorescence as `R_pellet ÷ R_background`, then each minus its matching control from the same run and time — and then fitted as **log-linear in concentration**: ΔS = A + b · log₁₀(c ÷ 0.005 µM). The reference point 0.005 µM is the lowest calibration concentration, chosen so that A is simply the predicted signal there; they note this makes the equation easier to read and **does not by itself improve accuracy.** Untreated controls were used for subtraction but **not included as concentration points, because the logarithm of zero is undefined.**',
-            zh: '兩種讀值都先經過參考正規化與對照扣除——顏色是 `1 − (G_pellet ÷ G_white)`，菌體沉澱螢光是 `R_pellet ÷ R_background`，然後各自減去同一組實驗、同一時間的配對對照——接著以**濃度的對數線性**擬合：ΔS = A + b · log₁₀(c ÷ 0.005 µM)。參考點 0.005 µM 是校正範圍中最低的濃度，這樣 A 就直接是該處的預測訊號；他們指出這只是讓方程式更好讀，**本身並不會提升準確度。**未處理的對照被用於扣除，但**沒有被當成濃度點納入，因為零的對數沒有定義。**'
+            en: 'The fit is **log-linear in concentration**: ΔS = A + b · log₁₀(c ÷ 0.005 µM). Both readouts are reference-normalised and control-subtracted before it — colour as `1 − (G_pellet ÷ G_white)`, pellet fluorescence as `R_pellet ÷ R_background`, then each minus its matching control from the same run and time.',
+            zh: '擬合形式是**濃度的對數線性**：ΔS = A + b · log₁₀(c ÷ 0.005 µM)。兩種讀值在擬合前都先經過參考正規化與對照扣除——顏色是 `1 − (G_pellet ÷ G_white)`，菌體沉澱螢光是 `R_pellet ÷ R_background`，然後各自減去同一組實驗、同一時間的配對對照。'
+          }, {
+            en: 'Two choices in that equation are declared rather than assumed. The reference point 0.005 µM is the lowest calibration concentration, picked so that A is simply the predicted signal there; they note this makes the equation easier to read and **does not by itself improve accuracy.** And untreated controls were used for subtraction but **not included as concentration points, because the logarithm of zero is undefined.**',
+            zh: '這個方程式裡有兩個選擇是被明講出來、而不是默默假設的。參考點 0.005 µM 是校正範圍中最低的濃度，這樣挑是為了讓 A 就直接是該處的預測訊號；他們指出這只是讓方程式更好讀，**本身並不會提升準確度。**另外，未處理的對照被用於扣除，但**沒有被當成濃度點納入，因為零的對數沒有定義。**'
           }) +
           h.kv([
             [{ en: 'Calibration set', zh: '校正集' },
@@ -349,9 +352,17 @@
             { en: 'A **Route 1 model** follows mercury from extracellular chloride complexes through uptake to reporter maturation: at 0.10 M chloride the calculated neutral HgCl₂ fraction is **41.39 %**, and mixing the extract 1:1 with standard LBK gives about 0.136 M chloride and **30.8 %** neutral. Letting the chloride-bound reservoir replenish neutral mercury as uptake proceeds raises the predicted readout from **4,535 ADC to about 5,114 ADC** — and the conclusion drawn is a documentation requirement, not a performance claim: extraction volume, salt concentration and assay mixing ratio belong in the same preparation record.', zh: '一個**Route 1 模型**追蹤汞從胞外氯錯合物、經攝入、到報告子成熟：在 0.10 M 氯離子下，計算出的中性 HgCl₂ 比例是 **41.39%**；把萃取液與標準 LBK 以 1:1 混合後，氯離子約 0.136 M、中性比例 **30.8%**。若讓結合氯的那個庫隨攝入進行而補回中性汞，預測讀值會從 **4,535 ADC 升到約 5,114 ADC**——而他們從中得出的結論是一個文件紀錄要求，不是一個效能主張：萃取體積、鹽濃度與分析混合比例，應該寫在同一份製備紀錄裡。' }
           ]) +
           h.note({
-            en: '**Limitations written as properties of the model, with the next analysis specified rather than promised.** The fitted lines are preliminary calibration relationships: restricted to four-hour pellet data between 0.005 and 0.1 µM, pooled so that run-to-run variation is not estimated, validated on two runs per readout, giving **point estimates with no uncertainty interval**, fitted on **rounded** signal values, and with the two readouts modelled separately and never combined. The named next steps are a **random-intercept model ΔS = A + b·log₁₀(c ÷ 0.005 µM) + u_r + ε**, inverse-calibration intervals for the estimated concentration rather than the fitted signal, **a known mercury standard measured in every run** so a run-specific intercept can be derived, **leave-one-run-out cross-validation across six folds with errors reported per run**, and a four-parameter logistic comparison if matched data across 0.001–5 µM ever exist. They also note that selecting and evaluating a model on the same cross-validation results produces optimistic estimates. And about the UV-AOP chemistry on the hardware side: *"Modelling and reactor design cannot substitute for these measurements."*',
-            zh: '**限制被寫成模型的性質，而下一步的分析是被具體指定的、不是被承諾的。**那兩條擬合線是初步的校正關係：限於 0.005 到 0.1 µM 之間的第四小時沉澱數據、彙總成一條所以實驗間變異沒有被估計、每種讀值只在兩組實驗上驗證、給出的是**沒有不確定區間的點估計**、用**四捨五入後**的訊號值擬合，而且兩種讀值分別建模、從未合併。他們指名的下一步是一個**隨機截距模型 ΔS = A + b·log₁₀(c ÷ 0.005 µM) + u_r + ε**、針對「估計濃度」而非「擬合訊號」的反向校正區間、**在每一組實驗中都量一個已知汞標準品**以便推出該組專屬的截距、**六折的逐組保留交叉驗證並逐組報告誤差**，以及若有 0.001–5 µM 的配對數據就與四參數邏吉斯模型比較。他們也指出：用同一份交叉驗證結果去選模型又去評估模型，會得到偏樂觀的估計。而關於硬體那一側的 UV-AOP 化學：*「建模與反應器設計，不能取代這些量測。」*'
-          })
+            en: '**The limitations are written as properties of the model.** The fitted lines are preliminary calibration relationships: restricted to four-hour pellet data between 0.005 and 0.1 µM, pooled so that run-to-run variation is not estimated, validated on two runs per readout, giving **point estimates with no uncertainty interval**, fitted on **rounded** signal values, and with the two readouts modelled separately and never combined. They also note that selecting and evaluating a model on the same cross-validation results produces optimistic estimates. And about the UV-AOP chemistry on the hardware side: *"Modelling and reactor design cannot substitute for these measurements."*',
+            zh: '**那些限制是被寫成模型本身的性質的。**那兩條擬合線是初步的校正關係：限於 0.005 到 0.1 µM 之間的第四小時沉澱數據、彙總成一條所以實驗間變異沒有被估計、每種讀值只在兩組實驗上驗證、給出的是**沒有不確定區間的點估計**、用**四捨五入後**的訊號值擬合，而且兩種讀值分別建模、從未合併。他們也指出：用同一份交叉驗證結果去選模型又去評估模型，會得到偏樂觀的估計。而關於硬體那一側的 UV-AOP 化學：*「建模與反應器設計，不能取代這些量測。」*'
+          }) +
+          h.h4({ en: 'Five next analyses, specified rather than promised', zh: '五項下一步分析：被具體指定，而不是被承諾' }) +
+          h.ul([
+            { en: 'A **random-intercept model**, ΔS = A + b·log₁₀(c ÷ 0.005 µM) + u_r + ε, so between-run variation is estimated instead of pooled away.', zh: '一個**隨機截距模型**，ΔS = A + b·log₁₀(c ÷ 0.005 µM) + u_r + ε，讓實驗間變異被估計出來，而不是被彙總掉。' },
+            { en: 'Inverse-calibration intervals for **the estimated concentration**, not for the fitted signal.', zh: '針對**估計濃度**、而不是針對擬合訊號的反向校正區間。' },
+            { en: '**A known mercury standard measured in every run**, so a run-specific intercept can be derived.', zh: '**在每一組實驗中都量一個已知汞標準品**，以便推出該組專屬的截距。' },
+            { en: '**Leave-one-run-out cross-validation across six folds**, with errors reported per run.', zh: '**六折的逐組保留交叉驗證**，並逐組報告誤差。' },
+            { en: 'A four-parameter logistic comparison, if matched data across 0.001–5 µM ever exist.', zh: '若有 0.001–5 µM 的配對數據，就與四參數邏吉斯模型比較。' }
+          ])
       });
 
       /* ---------------- hardware ---------------- */

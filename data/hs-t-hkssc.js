@@ -48,8 +48,8 @@
           zh: '在讀結果之前先把標準曲線做出來——而當第二輪的結果==比第一輪還差時，也要把那個數字印出來==。'
         },
         lede: {
-          en: 'Over a billion tonnes of food are wasted every year, and Hong Kong already has part of an answer: **O·PARK**, where microbes digest source-separated food waste into biogas. HKSSC noticed what that plant is up against — the **preservatives that arrive inside the waste paralyse the very microbes doing the digesting, and drastically slow the process down.** So the project is one enzyme aimed at one bottleneck: **prbA**, an esterase from *Enterobacter cloacae* that hydrolyses methyl-paraben into less antimicrobial compounds, expressed in *E. coli* **BL21(DE3)**. What is worth copying here is not the result. It is that they **calibrated the readout before they used it**, published the reason for choosing CFU plate counts over OD₆₀₀, and then reported a second engineering cycle that came out *lower* than the first instead of quietly keeping the better number.',
-          zh: '全球每年浪費超過十億公噸食物，而香港已經有了一部分答案：**O·PARK**——微生物在那裡把源頭分類的廚餘消化成沼氣。HKSSC 注意到那座廠面對的是什麼：**隨廚餘一起進來的防腐劑，會麻痺正在做消化工作的那些微生物，把整個過程大幅拖慢。**所以這個專案就是一個酵素對準一個瓶頸：**prbA**，一個來自 *Enterobacter cloacae* 的酯酶，能把對羥基苯甲酸甲酯水解成抗菌性較弱的化合物，並在 *E. coli* **BL21(DE3)** 中表達。這裡值得抄的不是結果，而是他們**在使用讀值之前先把它校正好**，把「為什麼選 CFU 塗盤計數而不是 OD₆₀₀」的理由寫出來，然後又把第二輪工程循環比第一輪*更低*的數字報了出來，而不是安靜地留下比較好看的那一個。'
+          en: 'Over a billion tonnes of food are wasted every year, and Hong Kong already has part of an answer: **O·PARK**, where microbes digest source-separated food waste into biogas. HKSSC noticed what that plant is up against — the **preservatives that arrive inside the waste paralyse the very microbes doing the digesting, and drastically slow the process down.** So the project is one enzyme aimed at one bottleneck: **prbA**, an esterase from *Enterobacter cloacae* that hydrolyses methyl-paraben into less antimicrobial compounds, expressed in *E. coli* **BL21(DE3)**. The practice, not the result, is what this page is for: they **calibrated the readout before they used it**, published the reason for choosing CFU plate counts over OD₆₀₀, and then reported a second engineering cycle that came out *lower* than the first instead of quietly keeping the better number.',
+          zh: '全球每年浪費超過十億公噸食物，而香港已經有了一部分答案：**O·PARK**——微生物在那裡把源頭分類的廚餘消化成沼氣。HKSSC 注意到那座廠面對的是什麼：**隨廚餘一起進來的防腐劑，會麻痺正在做消化工作的那些微生物，把整個過程大幅拖慢。**所以這個專案就是一個酵素對準一個瓶頸：**prbA**，一個來自 *Enterobacter cloacae* 的酯酶，能把對羥基苯甲酸甲酯水解成抗菌性較弱的化合物，並在 *E. coli* **BL21(DE3)** 中表達。這一頁要講的是做法而不是結果：他們**在使用讀值之前先把它校正好**，把「為什麼選 CFU 塗盤計數而不是 OD₆₀₀」的理由寫出來，然後又把第二輪工程循環比第一輪*更低*的數字報了出來，而不是安靜地留下比較好看的那一個。'
         },
         chips: [
           { t: { en: 'prbA paraben esterase', zh: 'prbA 對羥基苯甲酸酯酯酶' }, k: 'b' },
@@ -110,7 +110,7 @@
             en: 'The numbers behind the framing are theirs and they are sourced: **1.05 billion tonnes** of food wasted worldwide in 2022 from the UNEP Food Waste Index Report 2024; **29 %** of municipal solid waste landfilled in Hong Kong in 2024 was food waste, the largest single category; and a 2013 US survey in which **more than 90 % of food samples contained measurable parabens**. Parabens are esters of 4-hydroxybenzoic acid; the team\'s own account of the mechanism is membrane damage — they destabilise the bacterial membrane by mimicking pore-forming proteins, inducing potassium efflux.',
             zh: '支撐這個框架的數字是他們自己的，而且都附了出處：依聯合國環境署《2024 年食物浪費指數報告》，2022 年全球浪費 **10.5 億公噸**食物；2024 年香港棄置於垃圾填埋區的都市固體廢物中，廚餘佔 **29%**，是單一類別中最大的一塊；另有一份 2013 年的美國調查指出，**超過九成的食物樣本都驗出可量測的對羥基苯甲酸酯**。對羥基苯甲酸酯是 4-羥基苯甲酸的酯類；該隊對作用機制的說法是破壞膜：它們模仿成孔蛋白的行為去擾動細菌膜，誘發鉀離子外流。'
           }) +
-          h.take({ en: 'Why we think the local aim matters', zh: '為什麼我們認為「對準本地」這件事重要' }, {
+          h.take({ en: 'A global abstraction cannot be wrong; O·PARK gave them conditions they could fail to meet', zh: '全球性的抽象說法不可能錯；而 O·PARK 給了他們一組可能達不到的條件' }, {
             en: 'A global abstraction cannot be wrong. "One billion tonnes of food waste" has no operating temperature, no retention time and no pH, so no experiment can disagree with it. **O·PARK has all three**, and the moment the team wrote them down — 35 °C, 23 days, pH 4–6, a 2–3 day buffer tank — the project acquired conditions it could fail to meet. It has not met them yet. But a High School team that gave itself a target specific enough to miss has done something most wikis avoid.',
             zh: '一個全球性的抽象說法是不可能錯的。「十億公噸廚餘」沒有操作溫度、沒有停留時間、也沒有 pH 值，所以沒有任何實驗能跟它矛盾。**O·PARK 三者都有**，而當這個隊伍把它們寫下來的那一刻——35 °C、23 天、pH 4 至 6、2 至 3 天的緩衝槽——這個專案就得到了一組它可能達不到的條件。它目前還沒達到。但一支高中隊伍把目標設得具體到「有可能沒做到」，這件事本身就是多數 wiki 會避開的。'
           })
@@ -137,13 +137,13 @@
           h.h3({ en: 'Which dilutions, and why not all of them', zh: '哪些稀釋度，以及為什麼不是全部' }) +
           h.ul([
             { en: '**They did not plate a full ten-fold series.** Rather than "wasting agar plates on every single step", they selected dilutions aimed at the biological minimum and maximum of the growth curve they cared about.', zh: '**他們沒有把完整的十倍序列稀釋都塗盤。**他們沒有「把洋菜培養盤浪費在每一個步驟上」，而是挑出對準自己在意的那段生長曲線的生物學下限與上限的稀釋度。' },
-            { en: '**10⁻¹ and 10⁻² were kept as a safeguard** for the lowest optical densities such as OD 0.1: if the culture were lagging or contaminated the cell count would be very low, and the concentrated steps guarantee countable colonies anyway.', zh: '**10⁻¹ 與 10⁻² 被留下來作為保險**，對應像 OD 0.1 這樣最低的光密度：如果培養物處於遲滯期或受污染，細胞數會非常低，而這些較濃的稀釋度至少能保證還有可數的菌落。' },
+            { en: '**10⁻¹ and 10⁻² were kept as a safeguard** for the lowest optical densities such as OD 0.1: if the culture were lagging or contaminated the cell count would be low, and the concentrated steps guarantee countable colonies anyway.', zh: '**10⁻¹ 與 10⁻² 被留下來作為保險**，對應像 OD 0.1 這樣最低的光密度：如果培養物處於遲滯期或受污染，細胞數會很低，而這些較濃的稀釋度至少能保證還有可數的菌落。' },
             { en: '**The higher dilutions came from an expectation, stated as an expectation:** a log-phase *E. coli* culture at OD 0.1–1.0 holds between **10⁸ and 10⁹ cells/mL**, cited to the literature. 10⁻⁵, 10⁻⁶ and 10⁻⁸ follow from that, and they say so.', zh: '**較高的稀釋度來自一個被明說為「預期」的預期：**OD 0.1 至 1.0 的對數期 *E. coli* 培養物含有 **10⁸ 至 10⁹ 個細胞/mL**，並附上文獻出處。10⁻⁵、10⁻⁶ 與 10⁻⁸ 就是由此而來，而他們把這點寫出來了。' },
             { en: '**The counting window is 30–300 colonies per plate, with the failure mode on each side named.** Above 300 the crowding effect merges overlapping colonies and severely undercounts; below 30 a minor pipetting error skews the final concentration by a large percentage.', zh: '**計數視窗是每盤 30 至 300 顆菌落，而兩端的失效模式都被指名了。**超過 300 時擁擠效應會讓重疊的菌落合併，導致嚴重低估；低於 30 時，一個小小的移液誤差就會讓最終濃度偏掉一大截。' },
             { en: '**The arithmetic that makes mixed dilutions comparable is spelled out:** each plate count is multiplied by its inverse dilution factor and the volume plated, so every point returns to CFU/mL of the original undiluted culture and all standards plot on one axis.', zh: '**讓不同稀釋度可以互相比較的算術也被寫清楚了：**每盤的計數乘上它各自稀釋倍數的倒數與塗盤體積，於是每個點都回到原始未稀釋培養物的 CFU/mL，所有標準點就能畫在同一個軸上。' },
             { en: '**A lawn is recorded as a lawn.** Plates too packed to count are reported as "a lawn of bacteria" rather than being given a number — an uncountable plate is an observation, not a data point.', zh: '**菌膜就記成菌膜。**太密而無法計數的培養盤被報告為「一片菌膜」，而不是被硬給一個數字——一盤數不清的培養盤是一個觀察，不是一個數據點。' }
           ]) +
-          h.take({ en: 'Our reading', zh: '我們的解讀' }, {
+          h.take({ en: 'Calibrating a readout before using it is ordinary good practice that most teams skip', zh: '在使用讀值之前先把它校正好，是一般意義上的好做法，而多數隊伍直接跳過' }, {
             en: 'This is the most transferable thing on the wiki, and it is also the part a judge is least likely to ask about. **Choosing a readout on its merits, writing down the reason, then building its calibration curve before the experiment that depends on it** is ordinary good practice that most teams — including most undergraduate teams — simply skip. The MIC numbers further down this page are contestable. The decision to earn the right to read them is not.',
             zh: '這是整個 wiki 上最可轉移的一件事，同時也是評審最不可能問到的一部分。**依理由挑選讀值、把理由寫下來、然後在依賴它的實驗之前先把校正曲線做好**，是一般意義上的好做法，而多數隊伍——包括多數大學組隊伍——就是直接跳過。這一頁後面那些 MIC 數字是可以被爭論的，但「先去取得讀它們的資格」這個決定不是。'
           })
@@ -256,7 +256,7 @@
       out += h.sec({
         id: 'k-part',
         kick: { en: 'Registry', zh: '零件登錄' },
-        h2: { en: 'Best New Basic Part — and the one thing in this project that was genuinely not in the Registry', zh: '最佳新基礎零件——以及這個專案裡真正不曾出現在零件登錄中的那一樣東西' },
+        h2: { en: 'Best New Basic Part — and the one thing in this project that was not already in the Registry', zh: '最佳新基礎零件——以及這個專案裡唯一不曾出現在零件登錄中的那一樣東西' },
         lede: {
           en: '14 new parts: 12 basic, 2 composite, plus a collection. The wiki does not say which basic part the prize went to, so we will not guess — but two of the twelve have characterisation behind them, and only one of those is new to iGEM.',
           zh: '14 個新零件：12 個基礎、2 個組合，另加一個集合。這個 wiki 沒有說獎是給了哪一個基礎零件，所以我們不猜——但十二個之中有兩個背後有表徵，而其中只有一個對 iGEM 來說是新的。'

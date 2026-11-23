@@ -51,8 +51,8 @@
           zh: '模型判定降解行不通，於是==這個專案在實驗桌之前先改變了主意==。'
         },
         lede: {
-          en: 'TFA is the smallest PFAS, it is in European tap water, and normal treatment does not remove it. Plan A was to destroy it with a fluoroacetate dehalogenase; the structural modelling said the barrier was attack geometry on a fully substituted carbon rather than affinity, and the project pivoted to capture — protein binders anchored to cellulose beads in a column, released by heat so the material is reusable. What makes this workflow worth copying is not the pivot, it is the bookkeeping: every design choice is a row with its alternative and the experiment that decided it, and every model parameter carries a label saying whether it was chosen, computed, or made up.',
-          zh: 'TFA 是最小的 PFAS，存在於歐洲自來水中，而常規處理並不能去除它。A 計畫是用氟乙酸脫鹵酶把它分解掉；結構建模指出障礙在於全取代碳上的攻擊幾何、而不是親和力，於是專案轉向捕捉——把蛋白結合體錨定在管柱內的纖維素珠上，再以加熱釋放，使材料可重複使用。這套流程值得照抄的不是那次轉向，而是它的記帳方式：每個設計決定都是一列，附上替代方案與決定它的那個實驗；而每個模型參數都帶一個標籤，說明它是被選的、算出來的，還是編出來的。'
+          en: 'The pivot is not the thing to take from this workflow. The bookkeeping is: every design choice is a row with its alternative and the experiment that decided it, and every model parameter carries a label saying whether it was chosen, computed, or made up. The project itself: TFA is the smallest PFAS, it is in European tap water, and normal treatment does not remove it. Plan A was to destroy it with a fluoroacetate dehalogenase; the structural modelling said the barrier was attack geometry on a fully substituted carbon rather than affinity, and the project pivoted to capture — protein binders anchored to cellulose beads in a column, released by heat so the material is reusable.',
+          zh: '這套流程該被帶走的不是那次轉向，而是它的記帳方式：每個設計決定都是一列，附上替代方案與決定它的那個實驗；而每個模型參數都帶一個標籤，說明它是被選的、算出來的，還是編出來的。至於專案本身：TFA 是最小的 PFAS，存在於歐洲自來水中，而常規處理並不能去除它。A 計畫是用氟乙酸脫鹵酶把它分解掉；結構建模指出障礙在於全取代碳上的攻擊幾何、而不是親和力，於是專案轉向捕捉——把蛋白結合體錨定在管柱內的纖維素珠上，再以加熱釋放，使材料可重複使用。'
         },
         chips: [
           { t: { en: 'TFA, the smallest PFAS', zh: 'TFA，最小的 PFAS' }, k: 'b' },
@@ -227,7 +227,7 @@
             ],
             source: { en: 'Condensed from the team\'s Results, Design and Model pages.', zh: '濃縮自該隊 Results、Design 與 Model 頁。' }
           }) +
-          h.take({ en: 'The rule that makes their numbers comparable', zh: '讓他們的數字可比的規則' }, {
+          h.take({ en: '"No production route is adopted on a qualitative readout"', zh: '「不以定性讀出結果決定採用哪條生產路線」' }, {
             en: '*"No production route is adopted on a qualitative readout."* They wrote it after FM4-64 microscopy showed vesicles and the SDS-PAGE through the purification showed inclusion bodies — a pretty image and a wrong conclusion. Paired with equal cell equivalents per lane, an uninduced control on every gel, and a per-protein signal check that threw out RPA1163 before it could be ranked, it is the reason a yield of 117 mg/L and a yield of 14 mg/L on this page can be read side by side.',
             zh: '*「不以定性讀出結果決定採用哪條生產路線。」* 這條規則是在 FM4-64 顯微鏡看到囊泡、而沿純化流程做的 SDS-PAGE 卻顯示包涵體之後寫下的——一張漂亮的影像，加上一個錯的結論。再配上每個膠道相同細胞當量、每張膠都有未誘導對照，以及在 RPA1163 被排名之前就把它剔除的逐一蛋白訊號檢查，這就是這一頁上 117 mg/L 與 14 mg/L 兩個產量能夠並排閱讀的理由。'
           })

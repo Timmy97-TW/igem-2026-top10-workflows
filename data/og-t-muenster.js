@@ -253,7 +253,7 @@
             kind: 'funnel',
             tag: { en: 'VALIDATION', zh: '驗證' },
             title: { en: 'Validated on the one protease whose answer is already published', zh: '在唯一一個答案已公開的蛋白酶上做驗證' },
-            sub: { en: 'NIa-Pro has a known consensus. Recovering it is the positive control that makes the four unknowns worth reading.', zh: 'NIa-Pro 有已知的共識序列。把它找回來，就是讓另外四個未知蛋白酶值得一讀的那個陽性對照。' },
+            sub: { en: 'NIa-Pro has a known consensus. Recovering it is the positive control that gives the four unknowns any standing.', zh: 'NIa-Pro 有已知的共識序列。把它找回來，就是讓另外四個未知蛋白酶站得住腳的那個陽性對照。' },
             data: [
               { label: { en: 'Combinations in a ~7-residue recognition site', zh: '約 7 個殘基辨識位的組合數' }, v: 1280000000, note: { en: 'why random screening is impossible', zh: '這就是隨機篩選不可行的原因' } },
               { label: { en: 'Backbones generated per protease', zh: '每個蛋白酶生成的主鏈數' }, v: 1000, note: { en: '"thousands", coarsely filtered for proper binding sites', zh: '「數千個」，再粗篩出位置正確的結合位' } },
@@ -300,7 +300,7 @@
             { en: '**Control for the phenotype you cannot see.** Trypan blue for invisible necrosis, and a helper-strain-only infiltration for necrosis caused by the method rather than the construct.', zh: '**為你看不見的表現型設對照。**用 trypan blue 抓看不見的細胞死亡，用只打輔助菌株的浸潤抓「由方法而不是構建體造成」的細胞死亡。' },
             { en: '**Make the negative control by reverting the one mutation**, so the control differs in exactly one thing and nothing else has to be argued.', zh: '**用「把那一個突變回復」的方式做陰性對照**，讓對照只差在一件事上，其他就不必再爭論。' },
             { en: '**Separate two explanations that would look identical in the data** instead of picking the one that reads better.', zh: '**把兩個在數據上看起來一樣的解釋分開**，而不是挑讀起來比較順的那一個。' },
-            { en: '**Validate a de novo design pipeline on the one target whose answer is published.** Recovering E/P6, V/P4 and Q/P1 for NIa-Pro is what makes the four unknown proteases worth reading at all.', zh: '**在唯一一個答案已公開的標靶上驗證你的從零設計流程。**為 NIa-Pro 找回 E/P6、V/P4 與 Q/P1，才是讓那四個未知蛋白酶值得一讀的原因。' },
+            { en: '**Validate a de novo design pipeline on the one target whose answer is published.** Recovering E/P6, V/P4 and Q/P1 for NIa-Pro is what gives the four unknown proteases any credibility at all.', zh: '**在唯一一個答案已公開的標靶上驗證你的從零設計流程。**為 NIa-Pro 找回 E/P6、V/P4 與 Q/P1，才是讓那四個未知蛋白酶的結果具有可信度的原因。' },
             { en: '**Let an interview change the model\'s architecture, not its wording.** "Binding is not cleavage" became a scoring function built from catalytic geometry.', zh: '**讓一次訪談改變模型的架構，而不只是改變措辭。**「結合不等於切割」變成了一個由催化幾何建構出來的評分函數。' },
             { en: '**Let the regulation set a design parameter.** "How small can the blocker be" is an NGT-1 question answered at the bench, which is a better reason for an experiment than curiosity.', zh: '**讓法規決定一個設計參數。**「阻斷子可以做到多小」是一個在實驗檯上回答的 NGT-1 問題，而那是比好奇心更好的實驗理由。' },
             { en: '**Keep the caveat in the abstract.** "The screening assay needs further refinement to confirm these results" sits in the first paragraph of the model page, where a reader cannot miss it.', zh: '**把警語留在摘要裡。**「這個篩選試驗仍需進一步改良，才能確認這些結果」就寫在模型頁的第一段，讓讀者不可能漏看。' },

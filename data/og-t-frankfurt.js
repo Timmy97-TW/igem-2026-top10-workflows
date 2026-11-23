@@ -198,9 +198,9 @@
             en: 'Their argument, in full: protein expression levels depend on transfection efficiency and on HLA plasmid amount. **Each transfection uses the same total amount of plasmid, but in a co-transfection the individual amount of each plasmid is half as much as in a single-plasmid transfection.** And since shRNA must always be co-transfected with HLA, every comparison is normalised **to the co-transfection of the corresponding HLA with scrambled shRNA** — not to a single-plasmid control, which would have made the knockdown look larger than it is. Samples were additionally normalised to **cell count** and, by BCA assay, to **total protein**.',
             zh: '他們的完整論點是：蛋白表達量取決於轉染效率與 HLA 質體的量。**每次轉染使用的質體總量相同，但在共轉染中，每個質體各自的量只有單質體轉染時的一半。**而既然 shRNA 永遠必須與 HLA 共轉染，所以每一個比較都是**以「對應的 HLA 加打亂 shRNA 的共轉染」為基準正規化**——而不是以單質體對照為基準，否則抑制效果看起來會比實際更大。樣品另外還以**細胞數**正規化，並以 BCA 分析對**總蛋白量**正規化。'
           }) +
-          h.take({ en: 'Why this is worth a paragraph', zh: '為什麼這值得一整段' }, {
-            en: 'Three normalisations in series — housekeeping protein, cell count, total protein — are good practice. But the **choice of comparison group** is the one that changes the answer, and it is the one most knockdown figures get wrong by quietly comparing a co-transfection against a single transfection. Writing the arithmetic out is what makes their percentages mean anything.',
-            zh: '串接三道正規化——內參蛋白、細胞數、總蛋白——是好做法。但真正會改變答案的是**比較組的選擇**，而這也是大多數抑制圖表最容易出錯的地方：悄悄拿共轉染去比單獨轉染。把這個算術寫出來，才是讓他們的百分比有意義的原因。'
+          h.take({ en: 'The choice of comparison group is what changes the answer', zh: '會改變答案的是比較組的選擇' }, {
+            en: 'Three normalisations in series — housekeeping protein, cell count, total protein — are good practice. The comparison group is the part most knockdown figures get wrong by quietly comparing a co-transfection against a single transfection. Writing the arithmetic out is what makes their percentages mean anything.',
+            zh: '串接三道正規化——內參蛋白、細胞數、總蛋白——是好做法。而比較組才是大多數抑制圖表最容易出錯的地方：悄悄拿共轉染去比單獨轉染。把這個算術寫出來，才是讓他們的百分比有意義的原因。'
           }) +
           h.warn({
             en: 'And a false-positive risk flagged against their own result: **HLA-A\\*24 expressed lower than A\\*01 and A\\*02**, which "while being included in expression comparison could lead to false positive downregulation results due to the detection limit of Western blot analysis." A lane near the detection limit will always look knocked down.',

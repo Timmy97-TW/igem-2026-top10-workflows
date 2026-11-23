@@ -42,8 +42,8 @@
           zh: '每個模組各自特性化，把輸掉的那個元件也公開——而當你自己的想法把線路弄壞時，==就把它說出來，然後去向 2016 年的一支隊伍借一個啟動子==。'
         },
         lede: {
-          en: 'A cystic fibrosis airway holds two signals at once that almost nothing else holds together: it is iron-starved, because the host locks iron away from invaders, and it is full of C4-HSL, because *P. aeruginosa* is sitting in it inside an alginate biofilm. GCGS wired both into one Fur–RhlR AND gate in *E. coli* Nissle 1917, so that an alginate lyase is made only where both are true. The gate is not what makes the wiki worth reading. What makes it worth reading is that all three modules were characterised separately before being joined, that each choice came out of a screen with a published loser, and that the screen which failed — four degradation tags that removed the induction along with the leakage — is written up at the same length as the one that worked. Registered in the Diagnostics Village, although what they built is a therapy rather than a diagnostic.',
-          zh: '囊狀纖維化的呼吸道同時握有兩個訊號，而這兩個訊號幾乎不會在別處同時出現：它缺鐵，因為宿主把鐵從入侵者手上鎖起來；它又充滿 C4-HSL，因為 *P. aeruginosa* 就待在裡面、裹在褐藻酸生物膜中。GCGS 把這兩者接進 *E. coli* Nissle 1917 裡的同一個 Fur–RhlR AND 閘，讓褐藻酸裂解酶只在兩個條件同時成立的地方才被製造出來。但這個閘不是這個 wiki 值得讀的原因。值得讀的原因是：三個模組都先各自特性化再接起來；每一次選擇都出自一場有公開落選者的篩選；而那場失敗的篩選——四種降解標籤把洩漏和誘導一起拿掉了——被寫得跟成功那場一樣長。他們登記在診斷村，雖然他們做出來的是一種療法，而不是一個診斷工具。'
+          en: 'All three modules were characterised separately before any of them was joined, every part choice came out of a screen with a published loser, and the screen that failed — four degradation tags that removed the induction along with the leakage — is written up at the same length as the one that worked. The target: a cystic fibrosis airway holds two signals at once that almost nothing else holds together. It is iron-starved, because the host locks iron away from invaders, and it is full of C4-HSL, because *P. aeruginosa* is sitting in it inside an alginate biofilm. GCGS wired both into one Fur–RhlR AND gate in *E. coli* Nissle 1917, so that an alginate lyase is made only where both are true. Registered in the Diagnostics Village, although what they built is a therapy rather than a diagnostic.',
+          zh: '三個模組在被接起來之前都先各自特性化過，每一次元件選擇都出自一場有公開落選者的篩選，而那場失敗的篩選——四種降解標籤把洩漏和誘導一起拿掉了——被寫得跟成功那場一樣長。至於標的：囊狀纖維化的呼吸道同時握有兩個訊號，而這兩個訊號幾乎不會在別處同時出現。它缺鐵，因為宿主把鐵從入侵者手上鎖起來；它又充滿 C4-HSL，因為 *P. aeruginosa* 就待在裡面、裹在褐藻酸生物膜中。GCGS 把這兩者接進 *E. coli* Nissle 1917 裡的同一個 Fur–RhlR AND 閘，讓褐藻酸裂解酶只在兩個條件同時成立的地方才被製造出來。他們登記在診斷村，雖然他們做出來的是一種療法，而不是一個診斷工具。'
         },
         chips: [
           { t: { en: 'Fur–RhlR AND gate', zh: 'Fur–RhlR AND 閘' }, k: 'b' },
@@ -118,7 +118,7 @@
             { h: { en: 'Cycle 1 — two iron promoters, and the growth curve that makes the comparison legal', zh: '循環 1——兩個鐵感應啟動子，以及那條讓比較得以成立的生長曲線' },
               p: { en: 'Native **P_fepA** against the engineered chimeric **P_fhuA1**, whose operator has been replaced with consensus *E. coli* Fur box sequences. Both read out with mCherry on the same pTrc99k backbone, both tracked as RFU/OD₆₀₀ over 20 h, three biological replicates per condition.', zh: '原生的 **P_fepA** 對上人工嵌合的 **P_fhuA1**，後者的操縱子被換成了 *E. coli* 的共識 Fur box 序列。兩者都以 mCherry 作為讀值、放在同一個 pTrc99k 骨架上，都以 RFU/OD₆₀₀ 追蹤 20 小時，每個條件三個生物重複。' },
               items: [
-                { en: '**P_fepA lost, and they print the loss:** even at the strongest chelation (200 µM 2,2′-bipyridine, DP) it gave only a very mild rise at the 20 h endpoint. Their conclusion is about cascading, not about the promoter in isolation — a weak signal "cannot deliver sufficient transcriptional signal to downstream cascaded genetic circuits."', zh: '**P_fepA 輸了，而他們把這個敗局印出來：**即使在最強的螯合條件下（200 µM 2,2′-聯吡啶，DP），它在 20 小時終點也只有非常輕微的上升。他們的結論講的是串接，而不是單獨看這個啟動子——訊號太弱，「無法為下游串接的基因線路提供足夠的轉錄訊號」。' },
+                { en: '**P_fepA lost, and they print the loss:** even at the strongest chelation (200 µM 2,2′-bipyridine, DP) it gave only a slight rise at the 20 h endpoint. Their conclusion is about cascading, not about the promoter in isolation — a weak signal "cannot deliver sufficient transcriptional signal to downstream cascaded genetic circuits."', zh: '**P_fepA 輸了，而他們把這個敗局印出來：**即使在最強的螯合條件下（200 µM 2,2′-聯吡啶，DP），它在 20 小時終點也只有極輕微的上升。他們的結論講的是串接，而不是單獨看這個啟動子——訊號太弱，「無法為下游串接的基因線路提供足夠的轉錄訊號」。' },
                 { en: '**P_fhuA1 won on two properties at once:** low basal expression under iron-rich conditions, and a dose-dependent rise as iron fell, sharpest after the 10 h point and highest at 200 µM DP.', zh: '**P_fhuA1 同時在兩個性質上取勝：**在高鐵條件下基礎表達低，而隨著鐵減少出現劑量依賴性的上升，在 10 小時之後最陡，並在 200 µM DP 達到最高。' },
                 { en: '**The control that makes it a result:** OD₆₀₀ was comparable across blank, iron-rich and all three DP concentrations, so the fluorescence difference is promoter activity and not a cell-density artefact. They say this in the text, for both strains.', zh: '**讓它成為一個結果的那個對照：**在空白組、高鐵組與三個 DP 濃度之間，OD₆₀₀ 都相當，所以螢光差異是啟動子活性，不是細胞密度的假象。他們在文字裡把這點對兩株菌都寫了出來。' }
               ],
@@ -135,7 +135,7 @@
               items: [
                 { en: 'The target band appeared at the theoretical **~42.2 kDa** and sat mostly in the soluble fraction, which is why the mild induction conditions are reported rather than skipped.', zh: '目標條帶出現在理論值 **約 42.2 kDa**，並且主要落在可溶部分，這就是為什麼那組溫和的誘導條件被報告出來，而不是被略過。' },
                 { en: '**Every biochemical number is framed by the CF airway:** optimum **37 °C**, which is body temperature; optimum pH 8.0 but **substantial activity retained at pH 7.0**, inside the neutral-to-weakly-alkaline range they cite for CF airway fluid; and **no saturation within 0–60 min**, i.e. it keeps cutting for at least an hour.', zh: '**每一個生化數字都被放在囊狀纖維化呼吸道的框架裡講：**最適 **37 °C**，也就是人體溫度；最適 pH 為 8.0，但**在 pH 7.0 仍保有相當活性**，落在他們引用的囊狀纖維化呼吸道液體「中性到弱鹼」的範圍內；而且**在 0–60 分鐘內沒有飽和**，也就是說它至少還能繼續切一個小時。' },
-                { en: 'They flag their own gel: **an extra band migrating close to the target** in the elution fractions, which they suspect came from incomplete denaturation during sample preparation. Suspected, not asserted.', zh: '他們主動指出自己膠片上的問題：**洗脫部分中有一條與目標非常接近的額外條帶**，他們懷疑來自製樣時蛋白沒有完全變性。是「懷疑」，不是斷言。' }
+                { en: 'They flag their own gel: **an extra band migrating close to the target** in the elution fractions, which they suspect came from incomplete denaturation during sample preparation. Suspected, not asserted.', zh: '他們主動指出自己膠片上的問題：**洗脫部分中有一條與目標十分接近的額外條帶**，他們懷疑來自製樣時蛋白沒有完全變性。是「懷疑」，不是斷言。' }
               ],
               done: { en: 'An enzyme with four published parameters — and one named limit, below.', zh: '一個有四個公開參數的酵素——以及下面那一個被指名的限制。' } },
             { h: { en: 'Cycle 4 — assemble, then test the logic rather than the output', zh: '循環 4——組裝，然後測邏輯，而不是測輸出' },
@@ -145,7 +145,7 @@
                 { en: 'Cloning is reported as routine and verified — PCR, homologous recombination into the kanamycin-resistant pTrc99k, colony PCR, Sanger sequencing at every step — and their Contribution page says explicitly that the emphasis is on characterisation rather than on the cloning.', zh: '選殖工作被當作常規並已驗證來報告——PCR、同源重組進帶卡那黴素抗性的 pTrc99k、菌落 PCR、每一步都有 Sanger 定序——而他們的 Contribution 頁明確寫著：重點放在特性化，而不是選殖。' }
               ] }
           ]) +
-          h.h3({ en: 'The three choices, and what lost each time', zh: '三次選擇，以及每一次輸掉的是什麼' }) +
+          h.h3({ en: 'Four choices, and what lost each time', zh: '四次選擇，以及每一次輸掉的是什麼' }) +
           h.tbl({
             cols: [
               { t: { en: 'Choice', zh: '選擇' }, w: '20%' },
@@ -161,7 +161,7 @@
                { en: 'Not a bench comparison but a clinical one: *lasR* loss-of-function runs at 15–30 % in CF isolates, while RhlR stays intact and keeps making C4-HSL.', zh: '這不是實驗檯上的比較，而是臨床上的比較：在囊狀纖維化分離株中，*lasR* 功能喪失的比例是 15–30%，而 RhlR 仍完好並持續製造 C4-HSL。' }],
               [{ en: '**RhlR-SsrA-ASV + P_rhl(LR)**', zh: '**RhlR-SsrA-ASV ＋ P_rhl(LR)**' },
                { en: 'Untagged RhlR plus LAA, LVA and AAV, on two different promoters', zh: '未加標籤的 RhlR，加上 LAA、LVA、AAV，在兩個不同的啟動子上' },
-               { en: 'A genuine two-round screen: on wild-type P_rhl only ASV kept a statistically distinguishable induction; on P_rhl(LR) all four worked and ASV held the best leakage-to-amplitude balance.', zh: '一場真正的兩輪篩選：在野生型 P_rhl 上只有 ASV 保住了統計上可分辨的誘導；在 P_rhl(LR) 上四個都有效，而 ASV 在洩漏與振幅之間取得最好的平衡。' }],
+               { en: 'Two rounds, and they disagreed: on wild-type P_rhl only ASV kept a statistically distinguishable induction, while on P_rhl(LR) all four worked and ASV held the best leakage-to-amplitude balance.', zh: '兩輪，而兩輪的結果不一致：在野生型 P_rhl 上只有 ASV 保住了統計上可分辨的誘導；而在 P_rhl(LR) 上四個都有效，ASV 在洩漏與振幅之間取得最好的平衡。' }],
               [{ en: '**PL5 alginate lyase**', zh: '**PL5 褐藻酸裂解酶**' },
                { en: 'The PL6, PL7, PL17 and PL18 families they review', zh: '他們回顧過的 PL6、PL7、PL17、PL18 家族' },
                { en: 'Chosen from the literature on pathological fit, then characterised — not screened at the bench. The selection argument and the activity data are separate claims on their pages.', zh: '是依病理適配性從文獻中挑出來、再去做特性化的，而不是在實驗檯上篩出來的。在他們的頁面上，選擇的論證與活性數據是兩個分開的主張。' }]
@@ -177,8 +177,8 @@
         kick: { en: 'The improved part', zh: '改良元件' },
         h2: { en: 'Their own fix broke the circuit, and the repair came out of another team\'s registry entry', zh: '他們自己的解法把線路弄壞了，而修復它的東西來自另一支隊伍的登錄元件' },
         lede: {
-          en: 'This is the work that won Best New Improved Part in the High School division, and it is worth following step by step, because the interesting half is the half that failed.',
-          zh: '這就是拿下高中組最佳新改良元件的那份工作，而它值得一步一步跟著看，因為有趣的那一半正是失敗的那一半。'
+          en: 'This is the work that won Best New Improved Part in the High School division. The half that failed is the half that taught them where the limit was.',
+          zh: '這就是拿下高中組最佳新改良元件的那份工作。而失敗的那一半，正是讓他們知道瓶頸在哪裡的那一半。'
         },
         body:
           h.p({
@@ -229,7 +229,7 @@
             en: 'The result after the swap: maximum induced output roughly **doubled**; clear dose stratification at 10 µM, 100 µM and 1 mM C4-HSL; all four tags significant; and — they say this too — **the higher transcription rate also raised the blank group\'s basal signal.** The improvement is a better ratio, not a free lunch, and the trade-off is on the page. Growth curves showed no significant difference in final OD₆₀₀ between the untagged control and any of the four tagged variants in this cycle.',
             zh: '更換之後的結果：最大誘導輸出大約**翻倍**；在 10 µM、100 µM 與 1 mM C4-HSL 下有清楚的劑量分層；四種標籤都顯著；而且——這句話也是他們自己寫的——**較高的轉錄速率同時也把空白組的基礎訊號抬高了。**這個改良是比值變好，不是天上掉下來的好處，而那個代價就寫在頁面上。這一輪的生長曲線顯示，未加標籤的對照與四個帶標籤變異體之間，最終 OD₆₀₀ 沒有顯著差異。'
           }) +
-          h.take({ en: 'Why we think this deserved the part award', zh: '我們為什麼認為這值得那個元件獎' }, {
+          h.take({ en: 'The submitted part is the survivor of a five-way screen run twice', zh: '被提交的那個元件，是一場五組並列、跑了兩次的篩選中的倖存者' }, {
             en: 'The part that was submitted, **BBa_26QSD9SO**, is not a clever construct that worked first time. It is the surviving member of a five-way screen run twice, on two promoters, with growth curves attached and a mechanistic explanation for every variant that failed. A future team reading that entry learns not only which tag to use but **what the tag cannot fix** — which is the part of an improvement that normally never gets written down.',
             zh: '被提交的那個元件 **BBa_26QSD9SO**，不是一個第一次就成功的聰明構築。它是一場五組並列、在兩個啟動子上各跑一次的篩選中倖存下來的那一個，而且附上了生長曲線，以及每一個失敗變異體的機制解釋。一支未來的隊伍讀到那筆登錄資料時，學到的不只是「該用哪個標籤」，還有**那個標籤修不了什麼**——而這通常正是一次改良中永遠不會被寫下來的部分。'
           })

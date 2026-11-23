@@ -304,8 +304,8 @@
             zh: '目標函數以公式公開：`1.0·Δbind′ + 0.15·ΔpTM`，其中結合力**下降**時會被**加倍十倍**計罰。後果用數字講明：結合力下降 0.01 需要 **pTM 上升 0.67** 才能打平，那不會發生；而 pTM 下降 0.05 只要結合力上升 0.0075 就能補回。一個被攤開來看的設計取捨，而不是埋在設定檔裡的超參數。'
           }) +
           h.p({
-            en: 'Result: RSc1362_v3 reached a Boltz-2 binding probability of **0.723, up more than 33 %** from 0.54, with model confidence held. Boltz-2 was used over docking because the target is tiny. And the caveat box is the part worth copying: a Boltz-2 probability is **a ranking signal, not a measured affinity**, to be used for deciding what enters the lab, with experiment as ground truth — plus **two specific questions handed to the bench**: whether a predicted binder binds in practice, and **whether TFA can even reach the binding pocket**. PIGEON is written to be re-pointed at solubility, thermostability or interface confidence by another team.',
-            zh: '結果：RSc1362_v3 的 Boltz-2 結合機率達到 **0.723，比 0.54 提升超過 33%**，而模型信心維持不變。選 Boltz-2 而不是對接，是因為標靶太小。而那個警語方框才是值得抄的部分：Boltz-2 的機率是**排序訊號，不是量測出的親和力**，應該用來決定什麼進實驗室，以實驗為真值——另外還**丟給實驗檯兩個具體問題**：預測出的結合蛋白在現實中是否真的會結合，以及 **TFA 到底能不能進到結合口袋**。PIGEON 的寫法也允許別的團隊把它重新指向溶解度、熱穩定性或界面信心分數。'
+            en: 'Result: RSc1362_v3 reached a Boltz-2 binding probability of **0.723, up more than 33 %** from 0.54, with model confidence held. Boltz-2 was used over docking because the target is tiny. And the caveat box is the part that carries the weight: a Boltz-2 probability is **a ranking signal, not a measured affinity**, to be used for deciding what enters the lab, with experiment as ground truth — plus **two specific questions handed to the bench**: whether a predicted binder binds in practice, and **whether TFA can even reach the binding pocket**. PIGEON is written to be re-pointed at solubility, thermostability or interface confidence by another team.',
+            zh: '結果：RSc1362_v3 的 Boltz-2 結合機率達到 **0.723，比 0.54 提升超過 33%**，而模型信心維持不變。選 Boltz-2 而不是對接，是因為標靶太小。而那個警語方框才是真正承重的部分：Boltz-2 的機率是**排序訊號，不是量測出的親和力**，應該用來決定什麼進實驗室，以實驗為真值——另外還**丟給實驗檯兩個具體問題**：預測出的結合蛋白在現實中是否真的會結合，以及 **TFA 到底能不能進到結合口袋**。PIGEON 的寫法也允許別的團隊把它重新指向溶解度、熱穩定性或界面信心分數。'
           })
       });
 

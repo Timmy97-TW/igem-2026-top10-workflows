@@ -93,7 +93,7 @@
             en: '**MICP** uses urease-producing bacteria such as *Sporosarcina pasteurii* to hydrolyse urea into ammonium and carbonate; carbonate with calcium forms **calcite crystals that grow between neighbouring soil particles, creating bridges that increase cohesion.** MICP has been investigated beyond small samples — metre-long soil columns, and treatments involving roughly 100 m³ of sand — although its suitability for alpine slopes still needs investigating.',
             zh: '**MICP** 利用會產尿素酶的細菌（例如 *Sporosarcina pasteurii*）把尿素水解成銨與碳酸根；碳酸根與鈣結合形成**在相鄰土壤顆粒之間生長的方解石晶體，形成提高凝聚力的橋。**MICP 已經在小樣品以外被研究過——公尺級的土柱，以及約 100 立方公尺砂土的處理——不過它是否適用於高山坡面仍有待研究。'
           }) +
-          h.take({ en: 'The framing is the project', zh: '這個框架就是這個專案' }, {
+          h.take({ en: 'They state on the first page that they are not assuming MICP is ready', zh: '他們在第一頁就寫明：自己並不假設 MICP 已經可以用' }, {
             en: 'From the first page: *"Rather than assuming that MICP is ready for real-world deployment, we aim to understand where it might be useful, what would be required for it to work under alpine conditions, and what biological, practical, and environmental questions must be addressed before it could be considered as a potential approach to slope stabilisation."* Every section that follows holds that line, including the ones that report their own negative controls.',
             zh: '從第一頁開始就是：*「我們不假設 MICP 已經可以實地部署，而是要理解它可能在哪裡有用、要在高山條件下運作需要什麼，以及在它能被當成一個潛在坡面穩定方法認真考慮之前，有哪些生物、實務與環境問題必須先被解決。」*接下來每一節都守住這條線，包括那些報告了自家陰性對照的章節。'
           }) +
@@ -204,9 +204,9 @@
           zh: '兩個族群平行演化：G1 在遞降溫度下、最終適應到 17 °C，而 G2 固定在 30 °C 作為「對培養基適應」的對照。'
         },
         body:
-          h.take({ en: 'Why G2 is the whole experiment', zh: '為什麼 G2 就是整個實驗' }, {
-            en: 'Without a population evolved at constant temperature in the same medium, "grew better in the cold" cannot be separated from "got better at growing in this medium". **G2 is what lets the cold claim be attributed to the cold regime rather than to repeated passaging** — and it is also what produced their most interesting anomaly.',
-            zh: '如果沒有一個「在同樣培養基中、但固定溫度下演化」的族群，「在冷的時候長得比較好」就無法和「變得比較擅長在這個培養基裡生長」分開。**G2 正是讓「耐冷」這個主張能被歸因於低溫處理、而不是歸因於反覆轉接的東西**——而它同時也產生了他們最有意思的那個異常。'
+          h.take({ en: 'G2 separates "better in the cold" from "better in this medium"', zh: 'G2 把「在冷的時候長得比較好」和「變得擅長在這個培養基裡長」分開' }, {
+            en: 'Without a population evolved at constant temperature in the same medium, "grew better in the cold" cannot be separated from "got better at growing in this medium". **G2 is what lets the cold claim be attributed to the cold regime rather than to repeated passaging** — and it is also what produced the anomaly in the curves below.',
+            zh: '如果沒有一個「在同樣培養基中、但固定溫度下演化」的族群，「在冷的時候長得比較好」就無法和「變得比較擅長在這個培養基裡生長」分開。**G2 正是讓「耐冷」這個主張能被歸因於低溫處理、而不是歸因於反覆轉接的東西**——而它同時也產生了下面那些曲線裡的異常。'
           }) +
           h.p({
             en: 'The five strongest-performing strains from each group were taken forward, with wild-type *S. pasteurii* as a positive control and a medium blank for background. Final growth curves were measured at 30 °C and **18 °C — "although the strains had been adapted to 17 °C, we still performed the experiment at 18 °C because the Tecan Spark Multimode Plate Reader equipped with a cooling add-on could not operate below 18 °C."** An instrument limit, declared.',

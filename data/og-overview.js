@@ -35,20 +35,20 @@
         '</div></div>';
 
       out += h.toc([
-        { id: 'go-what', t: { en: 'What this is', zh: '這是什麼' } },
-        { id: 'go-ten', t: { en: 'The ten', zh: '十支隊伍' } },
         { id: 'go-find', t: { en: 'Six findings', zh: '六個發現' } },
         { id: 'go-scope', t: { en: 'The claim ladder', zh: '主張階梯' } },
         { id: 'go-neg', t: { en: 'Ten negative results', zh: '十個負面結果' } },
         { id: 'go-ai', t: { en: 'AI, disclosed', zh: 'AI 的聲明' } },
         { id: 'go-arch', t: { en: 'Four archetypes', zh: '四種原型' } },
         { id: 'go-ug', t: { en: 'Against the Undergrad ten', zh: '與大學部十隊對照' } },
+        { id: 'go-ten', t: { en: 'The ten', zh: '十支隊伍' } },
+        { id: 'go-what', t: { en: 'What this is', zh: '這是什麼' } },
         { id: 'go-method', t: { en: 'How we read this', zh: '我們怎麼讀的' } },
         { id: 'go-gems', t: { en: 'What we would take', zh: '我們會帶走什麼' } }
       ]);
 
-      /* ---------------- what this is ---------------- */
-      out += h.sec({
+      /* ---------------- what this is — held back, appended below the analysis ---------------- */
+      var secAbout = h.sec({
         id: 'go-what',
         kick: { en: 'What this is', zh: '這是什麼' },
         h2: { en: 'A workflow study of the Overgraduate section, in the same terms as the Undergraduate one', zh: '一份研究生部的工作流程研究，用與大學部相同的語彙' },
@@ -66,8 +66,8 @@
           ])
       });
 
-      /* ---------------- the ten ---------------- */
-      out += h.sec({
+      /* ---------------- the ten — held back, appended below the analysis ---------------- */
+      var secTen = h.sec({
         id: 'go-ten',
         kick: { en: 'The ten', zh: '十支隊伍' },
         h2: { en: 'Top 10 Overgraduate, iGEM 2026', zh: 'iGEM 2026 研究生部前十名' },
@@ -97,8 +97,8 @@
         kick: { en: 'Findings', zh: '發現' },
         h2: { en: 'Six things the ten Overgrad wikis say when you read them together', zh: '把研究生部十個 wiki 一起讀時，它們共同說出的六件事' },
         lede: {
-          en: 'These are our conclusions, drawn from the ten pages that follow. Each one names the teams it rests on, so you can disagree with it precisely.',
-          zh: '以下是我們從後面十個頁面得出的結論。每一條都點出它依據哪些隊伍，讓你可以精確地提出不同意見。'
+          en: 'These are our conclusions, drawn from the ten team pages on this site. Each one names the teams it rests on, so you can disagree with it precisely. The ten are [listed further down](#go-ten), with what this study is and is not.',
+          zh: '以下是我們從本站十個團隊頁得出的結論。每一條都點出它依據哪些隊伍，讓你可以精確地提出不同意見。十支隊伍[列在下方](#go-ten)，連同這份研究是什麼、不是什麼。'
         },
         body:
           h.cards([
@@ -148,7 +148,7 @@
               { t: { en: 'Clearest example in this cohort', zh: '本組別中最清楚的例子' }, w: '32%' }
             ],
             rows: [
-              [{ en: '**1 · A reading**', zh: '**1 · 一個讀值' },
+              [{ en: '**1 · A reading**', zh: '**1 · 一個讀值**' },
                { en: 'An instrument returned a number. Nothing has been established about the sample yet.', zh: '儀器回傳了一個數字。關於樣品本身還什麼都沒有確立。' },
                { en: 'TU Delft\'s rheometer torque at 136–170 nN·m against a calculated inertial torque of 166.4 — "the moduli reported for these runs do not describe the sample."', zh: 'TU Delft 的流變儀扭矩 136–170 nN·m，而計算出的慣性扭矩是 166.4——「這些測試回報的模數並不描述樣品。」' }],
               [{ en: '**2 · A reading with a floor**', zh: '**2 · 有底線的讀值**' },
@@ -328,10 +328,13 @@
             { en: '**And one direct collision.** LYON took Best Bioremediation Project in the Undergraduate section and WageningenUR took it in the Overgraduate section — **both attacking TFA, the shortest PFAS, in the same year.** LYON\'s model said degradation would not work and the project pivoted to capture only; Wageningen kept all three legs and reported each one\'s exact distance from working. Two Top 10s and two village awards from opposite answers to the same question, which is the most useful thing a cross-division comparison can show.', zh: '**還有一次正面相撞。**LYON 拿下大學部的最佳生物復育專案，而 WageningenUR 拿下研究生部的同一個獎——**兩隊在同一年對付同一個分子：最短的 PFAS，TFA。**LYON 的模型判定降解行不通，專案因此轉向只做捕捉；Wageningen 則保留三條腿，並報告每一條距離「能用」還有多遠。對同一個問題給出相反答案，卻各自得到前十名與村獎——這是跨組比較最能展示的事。' }
           ]) +
           h.note({
-            en: 'The [Undergraduate](#overview) and [High School](#hs-overview) sections are one click away, in the switch at the top of the page, and the **Across tiers** section compares all three in [Three tiers](#x-tiers) turns them into a [2027 roadmap](#x-roadmap), and puts five candidate 2027 topics through that procedure in [Five ideas](#x-ideas). All three sections use the same page template, the same figure engine and the same bilingual layer, so the differences above are differences in the wikis rather than in how we read them.',
-            zh: '[大學部](#overview)與[高中部](#hs-overview)就在頁面頂端的切換鈕上，一鍵即到；而**三層比較**那一區在[三層分析](#x-tiers)裡把三個組別一起比較，整理成一份[2027 選題指南](#x-roadmap)，並在[五個題目](#x-ideas)裡把五個 2027 候選題目跑過那套程序。三個組別都使用相同的頁面模板、相同的圖表引擎與相同的雙語層，所以上述差異是 wiki 之間的差異，而不是我們閱讀方式的差異。'
+            en: 'The [Undergraduate](#overview) and [High School](#hs-overview) sections are one click away, in the switch at the top of the page, and the **Across tiers** section compares all three in [Three tiers](#x-tiers), turns them into a [2027 roadmap](#x-roadmap), puts five candidate 2027 topics through that procedure in [Five ideas](#x-ideas), reads the Gold rule as an award strategy in [Three special prizes](#x-prize), and dates the whole season in [2027 season plan](#x-plan). All three sections use the same page template, the same figure engine and the same bilingual layer, so the differences above are differences in the wikis rather than in how we read them.',
+            zh: '[大學部](#overview)與[高中部](#hs-overview)就在頁面頂端的切換鈕上，一鍵即到；而**三層比較**那一區在[三層分析](#x-tiers)裡把三個組別一起比較，整理成一份[2027 選題指南](#x-roadmap)，在[五個題目](#x-ideas)裡把五個 2027 候選題目跑過那套程序，在[三個特別獎](#x-prize)裡把金牌規則當成獎項策略來讀，並在[2027 賽季計畫](#x-plan)裡把整季換算成日期。三個組別都使用相同的頁面模板、相同的圖表引擎與相同的雙語層，所以上述差異是 wiki 之間的差異，而不是我們閱讀方式的差異。'
           })
       });
+
+      /* the roster and the framing, after the findings they support */
+      out += secTen + secAbout;
 
       /* ---------------- method ---------------- */
       out += h.sec({

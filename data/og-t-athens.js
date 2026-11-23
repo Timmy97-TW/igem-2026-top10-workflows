@@ -155,9 +155,9 @@
             opts: { log: true, dec: 0 },
             caption: { en: 'Counts read from the team\'s Results page. They name 646 → 169 as the step that does most of the work.', zh: '數字讀自該隊 Results 頁。他們自己指出 646→169 是做掉最多工的一步。' }
           }) +
-          h.take({ en: 'The gate worth copying', zh: '值得抄的那道門檻' }, {
-            en: 'Requiring an **E-value of zero** removes chance matches. But the second half of that filter is the thoughtful one: **excluding tail-associated and other virion-associated lysins**, because those only function as part of an assembled phage particle — which makes them the wrong starting point for something to be expressed recombinantly and applied externally. A filter written from the application backwards.',
-            zh: '要求 **E 值為零**可以排除偶然比中的匹配。但這道篩選的後半才是有想法的那一半：**排除尾部相關與其他病毒顆粒相關的溶菌酶**，因為那些只有在組裝好的噬菌體顆粒裡才有功能——這讓它們成為「要被重組表達並從外部施用」這件事的錯誤起點。一道從應用端往回寫的篩選。'
+          h.take({ en: 'A filter written from the application backwards', zh: '一道從應用端往回寫的篩選' }, {
+            en: 'Requiring an **E-value of zero** removes chance matches. But the second half of that filter is the thoughtful one: **excluding tail-associated and other virion-associated lysins**, because those only function as part of an assembled phage particle — which makes them the wrong starting point for something to be expressed recombinantly and applied externally.',
+            zh: '要求 **E 值為零**可以排除偶然比中的匹配。但這道篩選的後半才是有想法的那一半：**排除尾部相關與其他病毒顆粒相關的溶菌酶**，因為那些只有在組裝好的噬菌體顆粒裡才有功能——這讓它們成為「要被重組表達並從外部施用」這件事的錯誤起點。'
           }) +
           h.h3({ en: 'Two candidates, and the pair is itself an experiment', zh: '兩個候選，而這一對本身就是一個實驗' }) +
           h.tbl({
@@ -191,7 +191,7 @@
           ]) +
           h.h3({ en: 'In silico redesign: freeze what matters, then optimise hard', zh: '電腦內重新設計：先凍結重要的，再用力最佳化' }) +
           h.p({
-            en: 'The GH25 muramidase evolved for intracellular lysis, so it expresses poorly — **Protein-Sol 0.411 against a 0.45 threshold, with inclusion bodies confirmed at the bench.** The strategy is a **40-position freeze list enforced as a hard constraint**, each position backed by at least two of three independent sources (structural role, ESM-2 evolutionary constraint, literature) — and then **an all-atom MD run to confirm those residues really are rigid (RMSF < 2 Å) with a stable active site, "turning the list from a heuristic into a tested claim."**',
+            en: 'The GH25 muramidase evolved for intracellular lysis, so it expresses poorly — **Protein-Sol 0.411 against a 0.45 threshold, with inclusion bodies confirmed at the bench.** The strategy is a **40-position freeze list enforced as a hard constraint**, each position backed by at least two of three independent sources (structural role, ESM-2 evolutionary constraint, literature) — and then **an all-atom MD run to confirm those residues are rigid (RMSF < 2 Å) with a stable active site, "turning the list from a heuristic into a tested claim."**',
             zh: '這個 GH25 胞壁醯胺酶是為了細胞內溶解而演化的，所以表達不良——**Protein-Sol 0.411，門檻是 0.45，而實驗檯也確認形成包涵體。**策略是一份**以硬性限制強制執行的 40 個位置凍結清單**，每個位置都有三種獨立來源中至少兩種支持（結構角色、ESM-2 演化限制、文獻）——接著**跑一次全原子分子動力學去確認那些殘基真的是剛性的（RMSF < 2 Å）、活性位點也穩定，「把這份清單從經驗法則變成一個被測試過的主張」。**'
           }) +
           h.flow({
@@ -281,7 +281,7 @@
             [{ en: 'The compartment', zh: '隔室' }, { en: 'The midgut is treated as a **sealed, expanding lumen that voids only once at pupation**, so there is no convective outflow — and the pathogen is tracked as an **absolute cell number rather than a concentration**, "which keeps gut expansion from being mistaken for killing".', zh: '中腸被當成一個**密閉、會擴張、只在化蛹時排空一次的管腔**，所以沒有對流外流——而病原是以**絕對菌數而非濃度**追蹤的，「這樣腸道擴張就不會被誤認為殺菌」。' }],
             [{ en: 'The dosing', zh: '給藥' }, { en: 'Nurse bees feed roughly **4,300 times a day**, so delivery behaves like a continuous drip with no peak-to-trough swings, and the enzyme settles at a quasi-steady concentration.', zh: '保母蜂一天餵食約 **4,300 次**，所以遞送的行為像連續滴注，沒有峰谷起伏，酵素會停在一個準穩定濃度。' }],
             [{ en: 'The kill law', zh: '殺菌動力學' }, { en: 'Emax-type saturating, fitted to their own in-vitro lysis data: **φmax ≈ 0.006125 min⁻¹, KE ≈ 0.633 µg/mL, R² = 0.935.** A 100-fold rise in enzyme buys only about **1.6× more kill rate**, because the enzyme can only bind a finite number of cell-surface sites.', zh: '飽和型 Emax，擬合自他們自己的體外溶解數據：**φmax ≈ 0.006125 min⁻¹、KE ≈ 0.633 µg/mL、R²=0.935。**酵素濃度提高 100 倍只換到約 **1.6 倍的殺菌速率**，因為酵素只能結合有限數量的細胞表面位點。' }],
-            [{ en: 'The pH finding', zh: 'pH 的發現' }, { en: 'A pH-plate experiment **split pH into two separate effects**: the fresh kill rate is essentially flat across the lumen band (pH 5.5–7.5), but **stability is strongly pH-dependent** — t½ ≈ 140–280 h at pH 5.5–6.7, **≈ 7 h at pH 4**, ≈ 12 h at pH 7.5.', zh: '一個 pH 盤實驗**把 pH 拆成兩個獨立效應**：新鮮的殺菌速率在管腔範圍（pH 5.5–7.5）內基本上是平的，但**穩定性強烈依賴 pH**——pH 5.5–6.7 下 t½ ≈ 140–280 小時、**pH 4 下約 7 小時**、pH 7.5 下約 12 小時。' }],
+            [{ en: 'The pH finding', zh: 'pH 的發現' }, { en: 'A pH-plate experiment **split pH into two separate effects**: the fresh kill rate barely moves across the lumen band (pH 5.5–7.5), but **stability is strongly pH-dependent** — t½ ≈ 140–280 h at pH 5.5–6.7, **≈ 7 h at pH 4**, ≈ 12 h at pH 7.5.', zh: '一個 pH 盤實驗**把 pH 拆成兩個獨立效應**：新鮮的殺菌速率在管腔範圍（pH 5.5–7.5）內基本上是平的，但**穩定性強烈依賴 pH**——pH 5.5–6.7 下 t½ ≈ 140–280 小時、**pH 4 下約 7 小時**、pH 7.5 下約 12 小時。' }],
             [{ en: 'What that changed', zh: '這改變了什麼' }, { en: 'The enzyme is about **30× more stable in the lumen than previously assumed**, so **dilution rather than degradation now dominates enzyme loss**, and the required food concentration falls roughly **31-fold**.', zh: '酵素在管腔中**比原先假設穩定約 30 倍**，所以**現在主導酵素損失的是稀釋而不是降解**，而所需的飼料濃度下降約 **31 倍**。' }]
           ]) +
           h.fig({

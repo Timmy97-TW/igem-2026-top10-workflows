@@ -287,8 +287,8 @@
             [{ en: 'How it was evaluated', zh: '如何被評估' }, { en: '**"Every check the model wrote was read by a team member and then run. Mistakes were caught that way, which is the reason the review exists."**', zh: '**「模型寫的每一個檢查都由一位團隊成員讀過、然後執行。錯誤就是這樣被抓到的，而這也是這道審查存在的理由。」**' }]
           ]) +
           h.p({
-            en: 'Their bibliography also records the **licence of each external data source and what it requires** — including, remarkably, where they do not comply: *"their terms ask for a direct versioned URL beside specific data; we give no versioned URL."*',
-            zh: '他們的參考書目還記錄了**每一個外部資料來源的授權條款以及它要求什麼**——而且值得注意的是，連自己沒有遵守的地方也寫了出來：*「他們的條款要求在特定資料旁附上帶版本的直接網址；我們沒有提供帶版本的網址。」*'
+            en: 'Their bibliography also records the **licence of each external data source and what it requires** — including where they do not comply: *"their terms ask for a direct versioned URL beside specific data; we give no versioned URL."*',
+            zh: '他們的參考書目還記錄了**每一個外部資料來源的授權條款以及它要求什麼**——連自己沒有遵守的地方也寫了出來：*「他們的條款要求在特定資料旁附上帶版本的直接網址；我們沒有提供帶版本的網址。」*'
           })
       });
 

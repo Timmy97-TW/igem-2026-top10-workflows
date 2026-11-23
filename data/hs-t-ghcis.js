@@ -51,8 +51,8 @@
           zh: '三個基因、濾紙上三種顏色——而結尾那句話說，這些結果==還沒有建立起一個經過驗證的偵測極限==。'
         },
         lede: {
-          en: 'Antibiotic resistance genes travel through livestock, agricultural and healthcare wastewater, which is why GHCIS put their test where the water is: a paper-based, cell-free toehold sensor for MCR1 (colistin) and the carbapenemases NDM1 and KPC2, framed with the WHO One Health approach. The masthead calls the project HoldeX, under the tagline "Your toehold to the future of biology"; across the project pages themselves it is described plainly as a screening platform, so we refer to it here as the toehold AMR paper test. The planned workflow is isothermal RPA amplification, then toehold switches, then an enzyme colour readout on paper. What makes the wiki unusual is the line it draws down the middle of that workflow: the trigger-to-colour half has data, the sample-to-trigger half does not, and the team never blurs the two. Their results page ends by saying so.',
-          zh: '抗藥性基因會隨著畜牧、農業與醫療廢水移動，所以 GHCIS 把檢測放到水邊：一個紙基、無細胞的 toehold 感測系統，針對 MCR1（colistin）與兩個碳青黴烯酶基因 NDM1 與 KPC2，並以世界衛生組織的 One Health 框架來談。網站標頭把這個專案叫做 HoldeX，標語是「Your toehold to the future of biology」；而在各個內容頁上，他們只是平實地稱它為一套篩檢平台，所以我們在這裡稱它為 toehold 抗藥性基因紙上檢測。預定流程是恆溫 RPA 擴增、再經 toehold 開關、最後在紙上以酵素顯色。這個 wiki 特別的地方，是它在這條流程的正中間畫了一條線：觸發 RNA 到顏色那一半有數據，水樣到觸發 RNA 那一半沒有，而他們從不把兩者混在一起講。他們的結果頁就是這樣收尾的。'
+          en: 'The wiki draws a line down the middle of its own workflow: the trigger-to-colour half has data, the sample-to-trigger half does not, and the team never blurs the two. Their results page ends by saying so. What sits on either side of that line: a paper-based, cell-free toehold sensor for MCR1 (colistin) and the carbapenemases NDM1 and KPC2, framed with the WHO One Health approach, because antibiotic resistance genes travel through livestock, agricultural and healthcare wastewater. The planned workflow is isothermal RPA amplification, then toehold switches, then an enzyme colour readout on paper. The masthead calls the project HoldeX, under the tagline "Your toehold to the future of biology"; across the project pages themselves it is described plainly as a screening platform, so we refer to it here as the toehold AMR paper test.',
+          zh: '這個 wiki 在自己的流程正中間畫了一條線：觸發 RNA 到顏色那一半有數據，水樣到觸發 RNA 那一半沒有，而他們從不把兩者混在一起講。他們的結果頁就是這樣收尾的。線的兩側各是什麼：一個紙基、無細胞的 toehold 感測系統，針對 MCR1（colistin）與兩個碳青黴烯酶基因 NDM1 與 KPC2，並以世界衛生組織的 One Health 框架來談——因為抗藥性基因會隨著畜牧、農業與醫療廢水移動。預定流程是恆溫 RPA 擴增、再經 toehold 開關、最後在紙上以酵素顯色。網站標頭把這個專案叫做 HoldeX，標語是「Your toehold to the future of biology」；而在各個內容頁上，他們只是平實地稱它為一套篩檢平台，所以我們在這裡稱它為 toehold 抗藥性基因紙上檢測。'
         },
         chips: [
           { t: { en: 'Toehold switches on paper', zh: '紙上的 toehold 開關' }, k: 'b' },
@@ -188,7 +188,7 @@
             { en: '**NDM1_3 is the useful failure**, and the engineering page says why: it supported GFP production, *"but its signal did not distinguish the presence of trigger RNA."* A rising line is not an activated switch. Any team that reported the rising line alone would have reported a working sensor.', zh: '**NDM1_3 是那個有用的失敗**，而工程頁說出了理由：它支持 GFP 的生產，*「但它的訊號並不能區分觸發 RNA 是否存在。」*一條上升的曲線不等於一個被打開的開關。任何只報告那條上升曲線的隊伍，都會等於報告了一個可用的感測器。' },
             { en: '**And the explanation is labelled as an inference.** They re-examined the predicted RNA secondary structures and found that the hairpin and the region around the RBS *"appeared to impose structural constraints that might hinder trigger-mediated opening"* — followed immediately by *"although the structural explanation was not directly established by these fluorescence measurements."* The structure story was good enough to redesign on, and they say it was not proven.', zh: '**而那個解釋被標記成一個推論。**他們重新檢視預測的 RNA 二級結構，發現髮夾與核糖體結合位附近*「似乎造成了某些結構限制，可能阻礙觸發 RNA 介導的開啟」*——緊接著就是*「雖然這個結構上的解釋，並沒有被這些螢光量測直接證實。」*那個結構說法足以拿來重新設計，而他們說它沒有被證明。' }
           ]) +
-          h.take({ en: 'Why we gave the failure its own section', zh: '為什麼我們給這次失敗單獨一節' }, {
+          h.take({ en: 'The second round exists only because the first one was taken seriously', zh: '第二輪之所以存在，正是因為第一輪被認真對待' }, {
             en: 'A clean first round tells a judge that the design method was lucky. **A failed first round, published with its plots, its inference and the stated limit of that inference, tells a judge the method works** — because it was exercised on a negative result, and the negative result changed what the team did next. The second round exists only because the first one was taken seriously. Across the High School division, this is the clearest case of a failure doing load-bearing work.',
             zh: '一個乾淨漂亮的第一輪，只告訴評審「這次設計運氣不錯」。**一個失敗的第一輪，連圖、連推論、連那個推論被宣告的界限一起公開，才告訴評審這套方法是有效的**——因為它在一個負面結果上被操作過，而那個負面結果真的改變了接下來的做法。第二輪之所以存在，正是因為第一輪被認真對待。在整個高中組裡，這是「失敗真的承重」最清楚的一個例子。'
           })
@@ -344,7 +344,7 @@
       out += h.sec({
         id: 'g-hedge',
         kick: { en: 'Ours', zh: '我們的看法' },
-        h2: { en: 'The practice we would name: hedge the word, not the paragraph', zh: '我們會替它命名的那個做法：在字上保留，而不是在段落上保留' },
+        h2: { en: 'Hedge the word, not the paragraph', zh: '在字上保留，而不是在段落上保留' },
         lede: {
           en: 'This section is our observation, not theirs. Nowhere do they call this a method. We think it is the most copyable thing on the wiki.',
           zh: '這一節是我們的觀察，不是他們的。他們沒有任何地方把這件事稱為一套方法。我們認為這是整個 wiki 上最值得抄的東西。'
@@ -380,7 +380,7 @@
             min: 720,
             source: { en: 'All eight quoted from the team\'s own pages. Collecting them, and calling it a practice, is ours.', zh: '八則全部引自該隊自己的頁面。把它們收集起來、並把它稱為一種做法，是我們做的。' }
           }) +
-          h.take({ en: 'Our judgement', zh: '我們的判斷' }, {
+          h.take({ en: 'A limitations section is read once; a hedge inside the noun is read every time', zh: '一節「限制」只會被讀一次；寫在名詞裡的保留，每次都會被讀到' }, {
             en: 'A limitations section is read once, by a judge. A hedge inside the noun is read **every time the claim is read**, including by the next team that cites it. GHCIS do this so consistently that the discipline reads as a house style rather than caution — and a house style can be taught to the following year\'s team in an afternoon.',
             zh: '一節「限制」只會被讀一次，而且只有評審會讀。而寫在名詞裡的保留，**每一次那個主張被讀到時都會被讀到**，包括被下一支引用它的隊伍讀到。GHCIS 做得如此一致，以致於這份紀律讀起來像是一種編輯慣例，而不是謹慎——而一種編輯慣例，可以在一個下午之內教給明年的隊伍。'
           })

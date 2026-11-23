@@ -70,6 +70,7 @@
         { id: 'dr-why', t: { en: 'Why it is a project', zh: '為什麼這是個專案' } },
         { id: 'dr-prior', t: { en: 'Who got closest', zh: '誰最接近' } },
         { id: 'dr-num', t: { en: 'What the literature says', zh: '文獻說了什麼' } },
+        { id: 'dr-salt', t: { en: 'The humidity ladder', zh: '濕度階梯' } },
         { id: 'dr-what', t: { en: 'What you deliver', zh: '你交付什麼' } },
         { id: 'dr-gate', t: { en: 'The five gates', zh: '五道關卡' } },
         { id: 'dr-flow', t: { en: 'The workflow', zh: '工作流程' } },
@@ -205,6 +206,62 @@
             [{ en: 'The correction we had to make to our own draft', zh: '我們必須對自己草稿做的更正' },
              { en: 'It is widely repeated that the accelerated-aging standard **ASTM F1980** prescribes a temperature coefficient of 2. It does not: the standard\'s own text says "Determining AAFs are beyond the scope of this guide", requires "**conservative**" factors when little is known, calls an accelerated expiry "**tentative** until the results of real time aging studies are completed", and requires real-time studies to run **in parallel**. Attribute the ten-degree rule to the device literature, not to the standard.', zh: '一個被廣泛重複的說法是：加速老化標準 **ASTM F1980** 規定了溫度係數為 2。它沒有：該標準自己的文字寫著「決定加速老化因子超出本指引的範圍」，要求在所知甚少時使用「**保守的**」係數，稱由加速資料得到的有效期是「**暫定的**，直到實時老化研究的結果完成」，並要求實時研究**並行**進行。請把「十度法則」歸給裝置領域的文獻，不要歸給那份標準。' }]
           ])
+      });
+
+      /* ---------------- the humidity ladder ---------------- */
+      out += h.sec({
+        id: 'dr-salt',
+        kick: { en: 'Protocol', zh: '流程' },
+        h2: { en: 'Six salts, six humidities, and the three we would not let a school use', zh: '六種鹽、六個濕度，以及我們不會讓學校使用的那三種' },
+        lede: {
+          en: 'An earlier version of this page refused to print humidity values and told you to look them up. That was the right call then and it is unnecessary now: the values below are read from the paper that produced them, and the uncertainties are the author\'s own. **A saturated salt slurry in a sealed box is the cheapest piece of real instrumentation in this project** — but three of the nine standard salts carry hazard statements that put them out of a school lab, and dropping them leaves a better-spaced ladder anyway.',
+          zh: '本頁較早的版本拒絕印出濕度數值，並叫你自己去查。那在當時是對的做法，而現在已經沒有必要：以下數值讀自產生它們的那篇論文，而不確定度是作者自己給的。**密封盒裡的飽和鹽泥漿，是這個專案裡最便宜的一件真正的儀器**——但九種標準鹽裡有三種帶有讓它們不該進入學校實驗室的危害分類，而把它們去掉之後，剩下的階梯間距反而更好。'
+        },
+        body:
+          h.tbl({
+            cols: [
+              { t: { en: 'Saturated salt', zh: '飽和鹽' }, w: '21%' },
+              { t: { en: '20 °C', zh: '20 °C' }, w: '13%', num: true },
+              { t: { en: '25 °C', zh: '25 °C' }, w: '13%', num: true },
+              { t: { en: '30 °C', zh: '30 °C' }, w: '13%', num: true },
+              { t: { en: '40 °C', zh: '40 °C' }, w: '13%', num: true },
+              { t: { en: 'For a school lab', zh: '對學校實驗室' } }
+            ],
+            rows: [
+              [{ en: 'Potassium acetate', zh: '醋酸鉀 CH₃COOK' }, { en: '23.11 ± 0.25', zh: '23.11 ± 0.25' }, { en: '**22.51 ± 0.32**', zh: '**22.51 ± 0.32**' }, { en: '21.61 ± 0.53', zh: '21.61 ± 0.53' }, { en: '*no value*', zh: '*無數值*' },
+               { en: 'Use. The 40 °C cell is blank because the fit only runs to 31.0 °C — **do not extrapolate it.**', zh: '可用。40 °C 格是空的，因為擬合只到 31.0 °C——**不要外推。**' }],
+              [{ en: 'Magnesium chloride', zh: '氯化鎂 MgCl₂' }, { en: '33.07 ± 0.18', zh: '33.07 ± 0.18' }, { en: '**32.78 ± 0.16**', zh: '**32.78 ± 0.16**' }, { en: '32.44 ± 0.14', zh: '32.44 ± 0.14' }, { en: '31.60 ± 0.13', zh: '31.60 ± 0.13' },
+               { en: 'Use. The tightest uncertainty in the set.', zh: '可用。這組裡不確定度最小的。' }],
+              [{ en: 'Potassium carbonate', zh: '碳酸鉀 K₂CO₃' }, { en: '43.16 ± 0.33', zh: '43.16 ± 0.33' }, { en: '**43.16 ± 0.39**', zh: '**43.16 ± 0.39**' }, { en: '43.17 ± 0.50', zh: '43.17 ± 0.50' }, { en: '*no value*', zh: '*無數值*' },
+               { en: 'Use. **Flat from 0 to 30 °C** (43.13 → 43.17), so a room whose temperature wanders does not move this chamber. Fit stops at 30 °C.', zh: '可用。**從 0 到 30 °C 幾乎不變**（43.13→43.17），所以房間溫度飄動不會移動這個腔室。擬合到 30 °C 為止。' }],
+              [{ en: 'Sodium chloride', zh: '氯化鈉 NaCl' }, { en: '75.47 ± 0.14', zh: '75.47 ± 0.14' }, { en: '**75.29 ± 0.12**', zh: '**75.29 ± 0.12**' }, { en: '75.09 ± 0.11', zh: '75.09 ± 0.11' }, { en: '74.68 ± 0.13', zh: '74.68 ± 0.13' },
+               { en: 'Use. Table salt, and flat across 0–40 °C (75.51 → 74.68).', zh: '可用。就是食鹽，而且在 0–40 °C 幾乎不變（75.51→74.68）。' }],
+              [{ en: 'Potassium chloride', zh: '氯化鉀 KCl' }, { en: '85.11 ± 0.29', zh: '85.11 ± 0.29' }, { en: '**84.34 ± 0.26**', zh: '**84.34 ± 0.26**' }, { en: '83.62 ± 0.25', zh: '83.62 ± 0.25' }, { en: '82.32 ± 0.25', zh: '82.32 ± 0.25' },
+               { en: 'Use.', zh: '可用。' }],
+              [{ en: 'Potassium sulfate', zh: '硫酸鉀 K₂SO₄' }, { en: '97.59 ± 0.53', zh: '97.59 ± 0.53' }, { en: '**97.30 ± 0.45**', zh: '**97.30 ± 0.45**' }, { en: '97.00 ± 0.40', zh: '97.00 ± 0.40' }, { en: '96.41 ± 0.38', zh: '96.41 ± 0.38' },
+               { en: 'Use, as your "wet" extreme.', zh: '可用，當作你的「濕」端極值。' }],
+              [{ en: 'Lithium chloride', zh: '氯化鋰 LiCl' }, { en: '11.31 ± 0.31', zh: '11.31 ± 0.31' }, { en: '11.30 ± 0.27', zh: '11.30 ± 0.27' }, { en: '11.28 ± 0.24', zh: '11.28 ± 0.24' }, { en: '11.21 ± 0.21', zh: '11.21 ± 0.21' },
+               { en: '**Do not use.** It carries the hazard statement *"may damage fertility or the unborn child"* in several supplier classifications. The flattest salt in the set, and still not worth it.', zh: '**不要使用。**它在多個供應商分類中帶有*「可能對生育能力或胎兒造成傷害」*的危害說明。這組裡最平穩的鹽，但仍然不值得。' }],
+              [{ en: 'Sodium bromide', zh: '溴化鈉 NaBr' }, { en: '59.14 ± 0.44', zh: '59.14 ± 0.44' }, { en: '57.57 ± 0.40', zh: '57.57 ± 0.40' }, { en: '56.03 ± 0.38', zh: '56.03 ± 0.38' }, { en: '53.17 ± 0.41', zh: '53.17 ± 0.41' },
+               { en: '**Do not use.** Same reproductive hazard statement in about half the filed classifications — and it is the least stable in the set, moving six humidity points between 20 and 40 °C.', zh: '**不要使用。**在大約一半的分類申報中帶有同樣的生殖危害說明——而且它是這組裡最不穩定的，20 到 40 °C 之間移動六個濕度點。' }],
+              [{ en: 'Magnesium nitrate', zh: '硝酸鎂 Mg(NO₃)₂' }, { en: '54.38 ± 0.23', zh: '54.38 ± 0.23' }, { en: '52.89 ± 0.22', zh: '52.89 ± 0.22' }, { en: '51.40 ± 0.24', zh: '51.40 ± 0.24' }, { en: '48.42 ± 0.37', zh: '48.42 ± 0.37' },
+               { en: '**Do not use.** An oxidiser, shipped as a dangerous good. Sources disagree about its exact category, which is itself a reason to pick something else.', zh: '**不要使用。**它是氧化劑，以危險品運送。各來源對它確切的分類等級意見不一，而那本身就是選別的東西的理由。' }]
+            ],
+            min: 1040,
+            source: { en: 'Equilibrium relative humidity in per cent, over the saturated aqueous solution, read from **Greenspan 1977**, *Journal of Research of the National Bureau of Standards* 81A(1):89–96, Table 2 ([10.6028/jres.081A.011](https://doi.org/10.6028/jres.081A.011)). The ± figures are Greenspan\'s own, defined as three times the standard deviation of the predicted value, and they **exclude** uncertainty in the water-vapour-pressure and enhancement-factor equations. Greenspan prints to two decimals and says in the same paper that this "does not in any way imply an accuracy of 0.01 percent". Hazard statements are from supplier classifications collated by PubChem, which is why we quote the statement rather than a category. **ASTM E104-20 covers the same practice** (*Standard Practice for Maintaining Constant Relative Humidity by Means of Aqueous Solutions*, 0–50 °C, closed systems only, with its own corrosivity warning) but it is paywalled, we did not read its tables, and these numbers are Greenspan\'s — do not cite them as E104.', zh: '飽和水溶液上方的平衡相對濕度（百分比），讀自 **Greenspan 1977**，《Journal of Research of the National Bureau of Standards》81A(1):89–96，表 2（[10.6028/jres.081A.011](https://doi.org/10.6028/jres.081A.011)）。± 數值是 Greenspan 自己給的，定義為預測值標準差的三倍，並且**不包含**水蒸氣壓方程式與增強因子方程式的不確定度。Greenspan 印到小數兩位，並在同一篇論文裡說這「絕不意味著 0.01% 的準確度」。危害說明取自 PubChem 彙整的供應商分類，這也是我們引述說明文字而不是分類等級的原因。**ASTM E104-20 涵蓋同一套做法**（《以水溶液維持恆定相對濕度的標準做法》，0–50 °C，僅限封閉系統，附自己的腐蝕性警告），但它需付費取得、我們沒有讀過它的表格，而這些數值是 Greenspan 的——不要把它們當成 E104 來引用。' }
+          }) +
+          h.kv([
+            [{ en: 'The rule that makes the chamber valid', zh: '讓腔室有效的那條規則' },
+             { en: 'Keep visible undissolved crystals in the slurry at all times. Greenspan\'s own reasoning: *"At any temperature, the concentration of a saturated solution is fixed and does not have to be determined. By providing excess solute, the solution will remain saturated even in the presence of modest sources or sinks."* **Treat the disappearance of crystals as an invalidated chamber**, and write that into the protocol as a checkable weekly observation rather than an assumption.', zh: '泥漿裡要隨時保有看得見的未溶解晶體。Greenspan 自己的理由是：*「在任何溫度下，飽和溶液的濃度是固定的，不需要去測定。只要提供過量溶質，即使存在適度的來源或匯，溶液仍會保持飽和。」***把晶體消失視為腔室失效**，並把這件事寫成流程裡一個每週可核對的觀察項，而不是一個假設。' }],
+            [{ en: 'Your t = 0 is later than you think', zh: '你的第零天比你想的晚' },
+             { en: 'The box and the sample run on different clocks. A stirred headspace reaches the tabulated humidity in roughly half an hour and a sealed unstirred flask in about two days — but **a hygroscopic sample inside that flask takes around twelve days** to reach sorption equilibrium with the air. Your earliest time points therefore measure a sample whose water activity is still moving. Choose one of two fixes **before you start**: pre-equilibrate every aliquot at its target humidity before the clock starts, or pre-register that points inside the first fortnight are excluded from the kinetic fit. These equilibration figures come from abstract records in seed and food-powder systems, not from cell-free work, so treat them as orders of magnitude and verify against your own weights.', zh: '盒子與樣本走的是不同的時鐘。攪動的頂空大約半小時就達到表上的濕度，密封未攪動的燒瓶約兩天——但**那個燒瓶裡的吸濕樣本要大約十二天**才與空氣達到吸附平衡。所以你最早的幾個時間點，量到的是一個水活性還在移動的樣本。**在開始之前**選定兩種處理之一：讓每一個分裝在時鐘啟動前就先在目標濕度平衡，或事先登記前兩週內的點不納入動力學擬合。這些平衡時間取自種子與食品粉末系統的摘要紀錄，不是無細胞研究，所以請當成數量級來看，並以你自己的秤重去驗證。' }],
+            [{ en: 'Humidity is not a second acceleration axis', zh: '濕度不是第二條加速軸' },
+             { en: 'This is the design error the table invites. A lyophilised cake at 8 % moisture has been reported with a glass transition at **25 °C** — so your 75 % and 84 % chambers at 30 °C and 37 °C may put aliquots *above* their glass transition, where the published behaviour stops following Arrhenius and needs a different model with constants that do not transfer. **Pre-register separate models above and below your estimated transition** rather than fitting one surface across everything, and say which arms you expect to be on which side.', zh: '這是這張表會誘發的設計錯誤。有報告指出含水量 8% 的冷凍乾燥餅塊，其玻璃轉移溫度在 **25 °C**——所以你在 30 °C 與 37 °C 的 75% 與 84% 腔室，可能把分裝推到玻璃轉移**之上**，而在那裡已發表的行為不再遵循 Arrhenius，需要另一個模型，其常數也無法移植。**請事先為估計轉移點的上方與下方分別登記模型**，而不是用一個曲面擬合全部，並說明你預期哪些組落在哪一邊。' }],
+            [{ en: 'Measure the moisture, and check your balance first', zh: '把含水量量出來，而且先檢查你的天平' },
+             { en: 'Residual moisture should be a measured variable, not an assumption, and gravimetric loss-on-drying is within a school\'s reach — with a published precision floor you need to respect: relative standard deviations of about **4 to 9 % in the 1.1–4.4 % moisture range, but 17 to 47 % below 1 % moisture**, and metal weighing vessels roughly halving the scatter against glass. Run **sodium tartrate dihydrate, whose water content is 7.93 %**, as an accuracy check before you touch a sample. And do not aim for the driest achievable cake: a published degradation-rate *minimum* sits at **2 to 3 % water**, and over-dried material has been reported to aggregate faster than intermediate-moisture material.', zh: '殘餘含水量應該是一個被量測的變數，不是一個假設，而重量法乾燥減重在學校能力範圍內——但有一個你必須尊重的已發表精密度底線：在 1.1–4.4% 含水量區間，相對標準差約為 **4 到 9%，但在 1% 含水量以下是 17 到 47%**，而金屬秤重容器相對玻璃大約能把散佈減半。在你碰樣本之前，先跑**含水量為 7.93% 的二水合酒石酸鈉**作為準確度檢查。而且不要追求「能做到的最乾」：已發表的降解速率*極小值*落在**含水量 2 到 3%**，而過度乾燥的材料被報告比中等含水量的材料聚集得更快。' }]
+          ]) +
+          h.take({ en: 'What this costs', zh: '這要花多少' },
+            { en: 'Six airtight boxes, six supermarket or school-stock salts, a balance you already have, and one bottle of sodium tartrate dihydrate. **The humidity axis of this study is the cheapest part of it** — which is exactly why no iGEM team has published the curve: the barrier was never the equipment.', zh: '六個氣密盒、六種超市或學校庫房買得到的鹽、一台你已經有的天平，以及一瓶二水合酒石酸鈉。**這份研究的濕度軸是它最便宜的部分**——而這正是為什麼沒有任何 iGEM 隊伍公開過那條曲線：門檻從來不是設備。' })
       });
 
       /* ---------------- what ---------------- */
@@ -382,12 +439,12 @@
                { en: 'Cheap, and the single highest-value purchase in the project.', zh: '便宜，而且是這個專案裡價值最高的一筆採購。' }],
               [{ en: '**Sealed boxes and a humidity salt**', zh: '**密封盒與一種控濕鹽**' },
                { en: 'A saturated salt solution in a sealed box holds a known relative humidity. Fixing humidity is what separates a stability study from leaving tubes in a drawer — and the published moisture optimum means you should not simply dry as hard as possible.', zh: '密封盒裡的飽和鹽溶液能維持一個已知的相對濕度。把濕度固定下來，正是「一份穩定性研究」與「把試管丟在抽屜裡」的差別——而已發表的含水量最佳值，意味著你不該只是盡可能把東西弄乾。' },
-               { en: 'Almost free: airtight containers and a common salt. **Take the equilibrium humidity values from Greenspan\'s 1977 NBS tables or ASTM E104, not from memory and not from us** — we deliberately do not print them here.', zh: '幾乎免費：氣密容器加一種常見鹽類。**平衡濕度數值請取自 Greenspan 1977 年的 NBS 表或 ASTM E104，不要憑記憶、也不要取自我們**——我們刻意不在這裡印出那些數值。' }],
+               { en: 'Almost free: airtight containers and a common salt. **The six salts we would use, their humidities at four temperatures and the hazard reasons we dropped three of them are in [the humidity ladder](#dr-salt)** — read from Greenspan 1977, with his uncertainties.', zh: '幾乎免費：氣密容器加一種常見鹽類。**我們會用的六種鹽、它們在四個溫度下的濕度，以及我們捨棄另外三種的危害理由，都在[濕度階梯](#dr-salt)**——讀自 Greenspan 1977，並附上他的不確定度。' }],
               [{ en: '**One reagent lot for the season**', zh: '**整季一批試劑**' },
                { en: 'Substrate, buffer and plates bought once. A new lot in month five moves your blank, and a moving blank manufactures a decay curve that is not there.', zh: '底物、緩衝液與盤子一次買足。第五個月換一批新的會移動你的空白，而一個移動的空白會製造出一條原本不存在的衰退曲線。' },
                { en: 'Budget it in week one. The cheapest mistake on this page to avoid and the most expensive to discover late.', zh: '第一週就把它編進預算。這是本頁上最便宜就能避免、卻在晚期才發現時最貴的一個錯誤。' }],
               [{ en: '**A way to dry the material — not necessarily a freeze-dryer**', zh: '**一種把材料乾燥的方法——不一定是冷凍乾燥機**' },
-               { en: 'The finding that makes the project affordable. A published protocol dried a cell-free reaction **in open air with trehalose** and still reached a tenfold loss time of 40 days at 37 °C. A vacuum desiccator or a validated low-cost dryer is the next step up.', zh: '這是讓這個專案變得負擔得起的那個發現。有一份已發表的流程是**在常壓下加海藻糖風乾**一個無細胞反應，仍然達到「37 °C 下 40 天才掉十倍」。真空乾燥器或一台經驗證的低成本乾燥器是下一級。' },
+               { en: 'The finding that makes the project affordable, and it is stronger than "good enough". In one published head-to-head on the same formulation, **a vacuum desiccator with silica gel retained 50 % of activity at two weeks against 20 % for a laboratory freeze dryer**, with ice-crystal damage during pre-freezing given as the reason. A separate protocol air-dried a cell-free reaction with trehalose at 0.55 M and kept it usable for **136 days at 37 °C**, with a tenfold loss time of 40 days. So a desiccator is a cited method rather than a compromise — and if a freeze dryer does become available, it is worth a second arm, not a substitution.', zh: '這是讓這個專案變得負擔得起的那個發現，而且它比「夠用就好」更有力。在一份針對同一配方的已發表正面比較中，**配矽膠的真空乾燥器在兩週時保留 50% 活性，而實驗室冷凍乾燥機是 20%**，論文給的理由是預凍階段的冰晶損傷。另一份流程用 0.55 M 海藻糖把一個無細胞反應風乾，在 **37 °C 下維持可用 136 天**，十倍損失時間為 40 天。所以真空乾燥器是一個有文獻的方法，不是一個妥協——而如果真的弄到冷凍乾燥機，它值得做成第二組，不是拿來取代。' },
                { en: 'A 2026 High School team built a vacuum dryer for about **USD 80** in components and had it validated at two universities. Read that precedent before buying anything.', zh: '2026 年有一支高中部隊伍以約 **80 美元**的零件做出一台真空乾燥器，並在兩所大學完成驗證。在你買任何東西之前先讀那個先例。' }],
               [{ en: '**The same plate reader, all season**', zh: '**整季同一台微孔盤讀儀**' },
                { en: 'Not a better one. The same one, with the gain written into the protocol and a fresh blank on every plate.', zh: '不是更好的一台。是同一台，把增益寫進流程，而且每一盤都重測空白。' },

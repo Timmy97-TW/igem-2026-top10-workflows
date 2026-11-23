@@ -207,9 +207,9 @@
             ],
             source: { en: 'Read from the team\'s Results and Engineering pages.', zh: '讀自該隊 Results 與 Engineering 頁。' }
           }) +
-          h.take({ en: 'The rule that makes their numbers comparable', zh: '讓他們的數字可以互相比較的那條規則' }, {
-            en: 'Every turbidity curve is read against **BSA at matched molar concentration**, not matched mass. Turbidity scales with the number of scattering particles, so only a molarity-matched control lets the OD350 rise be attributed to the ELP transition — and the same instinct runs through the project: the EMSA carries a PRS-free RNA, the calcein assay carries no-peptide cells, and the sortase chemistry is proven on a fluorescent pair before it is trusted on the scFv.',
-            zh: '每一條濁度曲線都是對照**同莫耳濃度的 BSA** 讀出來的，不是同質量。濁度隨散射顆粒數變化，所以只有莫耳濃度對齊的對照，才能讓 OD350 的上升被歸因於 ELP 的相變——而同樣的直覺貫穿整個專案：EMSA 帶著一條不含 PRS 的 RNA、calcein 試驗帶著無胜肽的細胞，而 sortase 化學是先在一對螢光蛋白上被證明，才被信任用在 scFv 上。'
+          h.take({ en: 'Every turbidity curve is read against BSA at matched molar concentration, not matched mass', zh: '每一條濁度曲線對照的是同莫耳濃度的 BSA，不是同質量的 BSA' }, {
+            en: 'Turbidity scales with the number of scattering particles, so only a molarity-matched control lets the OD350 rise be attributed to the ELP transition — and the same instinct runs through the project: the EMSA carries a PRS-free RNA, the calcein assay carries no-peptide cells, and the sortase chemistry is proven on a fluorescent pair before it is trusted on the scFv.',
+            zh: '濁度隨散射顆粒數變化，所以只有莫耳濃度對齊的對照，才能讓 OD350 的上升被歸因於 ELP 的相變——而同樣的直覺貫穿整個專案：EMSA 帶著一條不含 PRS 的 RNA、calcein 試驗帶著無胜肽的細胞，而 sortase 化學是先在一對螢光蛋白上被證明，才被信任用在 scFv 上。'
           }) +
           h.note({
             en: 'One instrument limitation is stated outright and changes what can be claimed: **flow cytometry was impossible because the team had no instrument**, which is one of the three reasons the CCSP localisation question was closed rather than answered.',

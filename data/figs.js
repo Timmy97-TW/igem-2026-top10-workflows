@@ -261,7 +261,7 @@
         } },
       { file: 'ualberta-build.avif', page: 'Proof of concept', src: WIKI + 'ualberta/proof-of-concept',
         tag: { en: 'THEIR BUILD TABLE', zh: '他們的建構表' },
-        title: { en: 'Six constructs, their domain architecture, and what each was assayed on', zh: '六個構建體、它們的domain 架構，以及各自被測在什麼上面' },
+        title: { en: 'Six constructs, their domain architecture, and what each was assayed on', zh: '六個構建體、它們的 domain 架構，以及各自被測在什麼上面' },
         sub: { en: 'The last row — the therapeutic three-domain fusion — is marked **N/A** in the "assayed on" column.', zh: '最後一列，也就是治療用的三domain 融合蛋白，在「assayed on」那欄被標成 **N/A**。' },
         caption: {
           en: 'The therapeutic construct is in the table and the table says it was not assayed. That is the honest version of a proof-of-concept page: the reporter fusions carry the evidence, the therapeutic fusion carries the intent, and the column header forces the distinction into view. Most teams would simply have left the row out.',
