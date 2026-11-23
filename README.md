@@ -109,6 +109,13 @@ teams and villages APIs, read 2026-11-22.
 | One page per team | The design decision · a wet/dry swimlane diagram · the wet-lab pipeline step by step · the measurement discipline · the model and software stack · what failed · what we would copy |
 | Three tiers | All thirty wikis read against each other: field sizes and odds by section, country and village conversion, three currencies of proof, the one practice shared by all thirty, and what each tier should steal from the others |
 | 2027 roadmap | A project-selection guide built from the thirty: five gates a candidate topic must pass, six project shapes with their evidence cost, a scoring sheet, a season calendar read backwards from the wiki freeze, and six anti-patterns |
+| Five ideas | Five candidate 2027 topics of our own, each derived from an empty cell in one of the tables above, each put through the five gates, with the five we rejected and the gate that killed each one. Nothing on these pages has been run |
+| One page per idea | The argument · the prior art and how far it got · the key data with every figure cited · the five gates answered · a wet/dry swimlane · tools and a bill of materials · a month-by-month schedule · what kills it · what it ships and which awards it maps onto |
+
+Ideas 4 and 5 are built on the mechanisms Stanford-University and Aarhus-University used in 2026 —
+ADAR-read RNA sensing and microRNA-gated activation — recast so that a High School team confined to
+the iGEM White List can produce evidence for them. Sources for every official figure on those pages
+are in [`notes/2027-idea-sources.md`](notes/2027-idea-sources.md).
 
 Switch sections with the **Undergrad / Overgrad / High School / Across tiers** control at the left
 of the tab bar. The section is carried in the page id (`#og-…` Overgraduate, `#hs-…` High School,

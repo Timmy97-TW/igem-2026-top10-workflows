@@ -473,7 +473,13 @@
       head: { en: 'All three sections', zh: '三個組別' },
       tabs: [
         { id: 'x-tiers', label: { en: 'Three tiers', zh: '三層分析' } },
-        { id: 'x-roadmap', label: { en: '2027 roadmap', zh: '2027 選題指南' } }
+        { id: 'x-roadmap', label: { en: '2027 roadmap', zh: '2027 選題指南' } },
+        { id: 'x-ideas', label: { en: 'Five ideas', zh: '五個題目' } },
+        { id: 'x-control', label: { en: 'Idea 1 · NULLSET', zh: '題目一 · NULLSET' } },
+        { id: 'x-shelf', label: { en: 'Idea 2 · DRYRUN', zh: '題目二 · DRYRUN' } },
+        { id: 'x-assay', label: { en: 'Idea 3 · SPLITFISH', zh: '題目三 · SPLITFISH' } },
+        { id: 'x-reader', label: { en: 'Idea 4 · ENDOREAD', zh: '題目四 · ENDOREAD' } },
+        { id: 'x-seed', label: { en: 'Idea 5 · SEEDTEST', zh: '題目五 · SEEDTEST' } }
       ]
     }
   ];
@@ -491,7 +497,7 @@
 
   PD.meta = {
     siteTitle: { en: 'iGEM 2026 Top 10 Workflow Atlas', zh: 'iGEM 2026 前十名工作流程圖譜' },
-    updated: '2026-11-22',
+    updated: '2026-11-23',
     repo: 'https://github.com/Timmy97-TW/igem-2026-top10-workflows',
     tabs: PD.divisions[0].tabs,
     footer: {

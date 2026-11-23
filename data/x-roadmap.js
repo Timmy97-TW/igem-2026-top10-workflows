@@ -61,7 +61,11 @@
             { chips: [{ t: { en: 'the honest caveat', zh: '誠實的保留' }, k: 'a' }],
               h: { en: 'We read winners only', zh: '我們只讀了得名者' },
               p: { en: 'Everything here is distilled from thirty teams that placed. We did not read the 433 that did not, so we cannot tell you which of these practices actually distinguishes a winner from the field, and which is just what everybody does. Treat each gate as a hypothesis with a worked example, not a proven rule.', zh: '這裡的一切都是從三十支有名次的隊伍身上萃取出來的。我們沒有讀另外 433 支沒有名次的隊伍，所以我們無法告訴你這些做法裡哪一個真的把得名者和其他人分開，哪一個只是大家都在做的事。請把每一道關卡當成一個「附帶實例的假設」，而不是一條已被證明的規則。' } }
-          ])
+          ]) +
+          h.note({
+            en: 'If you would rather see the procedure applied than described, we put five candidate topics of our own through all five gates — with workflows, bills of materials, week-by-week schedules and the negative results written in advance — on **[Five ideas](#x-ideas)**. We have not run any of them, and the point of publishing them is that a plan specific enough to argue with is more useful than advice.',
+            zh: '如果你寧願看這套程序被「用出來」而不是被「講出來」，我們把自己的五個候選題目完整跑過了五道關卡——附流程、物料清單、逐週行程，以及事先寫好的負面結果——放在 **[五個題目](#x-ideas)**。這些我們都沒有做過；公開它們的用意是：一份具體到可以被反駁的計畫，比建議有用。'
+          })
       });
 
       /* ---------------- five gates ---------------- */
@@ -246,8 +250,8 @@
         kick: { en: 'Schedule', zh: '行程' },
         h2: { en: 'The season read backwards from the wiki freeze', zh: '從 wiki 凍結日往回推的賽季' },
         lede: {
-          en: 'Counted in weeks before the freeze rather than in calendar months, because the 2027 dates are not ours to state. Check the official calendar for the real ones.',
-          zh: '以「凍結日前幾週」計算，而不是用日曆月份，因為 2027 年的日期不是我們能宣告的。真正的日期請查官方行程。'
+          en: 'Counted in weeks before the freeze rather than in calendar months. **One 2027 date is published**: iGEM\'s own events API gives the Grand Jamboree as **18–21 October 2027**, three to four weeks earlier in the year than 2026\'s 13–16 November. The wiki freeze has fallen **19 to 23 days** before the Jamboree opened in each of the last four seasons, and it has been a **Wednesday four years running**; 18 October 2027 is a Monday, so the Wednesday nineteen days before it is **29 September 2027** — our arithmetic from four data points, not an iGEM announcement. No 2027 deadline of any kind has been published, so check the official calendar before you trust any week number here.',
+          zh: '以「凍結日前幾週」計算，而不是用日曆月份。**2027 年已經有一個日期公開了**：iGEM 自己的 events API 把 Grand Jamboree 列為 **2027 年 10 月 18 至 21 日**，比 2026 年的 11 月 13 至 16 日提前了三到四週。過去四個賽季，wiki 凍結日都落在 Jamboree 開幕前 **19 到 23 天**，而且**連續四年都是星期三**；2027 年 10 月 18 日是星期一，所以往前推十九天的那個星期三是 **2027 年 9 月 29 日**——這是我們用四個資料點做的算術，不是 iGEM 的公告。2027 年至今沒有公布任何一個期限，所以在你相信本頁任何一個週數之前，請先查官方行程。'
         },
         body:
           h.timeline([

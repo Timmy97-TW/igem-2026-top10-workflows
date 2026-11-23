@@ -347,6 +347,10 @@
           h.take({ en: 'And the one we are least comfortable with', zh: '以及我們最不自在的那一個' }, {
             en: 'All six of these make a project **legible to a jury**, and that is not the same as making it good. The practices reward work that fits inside nine months with a school budget — which is a constraint on the problems worth attempting, not a feature of them. If you have a reason to spend a season on something that will not finish, that is a legitimate choice and no list of practices should talk you out of it. The honest version of this page is: here is how the ten teams who finished made their evidence checkable. What to spend the evidence on is still yours.',
             zh: '這六件事都讓一個專案**在評審眼中變得可讀**，而那和讓它變好不是同一件事。這些做法獎勵的是「能裝進九個月與學校預算」的工作——而那是對「值得嘗試的問題」的一種限制，不是那些問題的特質。如果你有理由把一季花在一件不會完成的事情上，那是一個正當的選擇，不該有任何做法清單把你勸退。這一頁誠實的版本是：以下是那十支完成了的隊伍，怎麼讓自己的證據變得可被檢查。至於要把證據花在什麼上面，仍然是你的事。'
+          }) +
+          h.note({
+            en: 'If you are planning a 2027 season from this page, the six practices above are the procedure and [the 2027 roadmap](#x-roadmap) is the longer version of it — five gates, six project shapes, a scoring sheet and a season counted backwards from the wiki freeze. We also put five candidate topics of our own through those gates, with workflows, bills of materials and the negative results written in advance, on **[Five ideas](#x-ideas)**. Two of the five are built on the mechanisms Stanford-University and Aarhus-University used in 2026, recast so that a team confined to the iGEM White List can produce evidence for them. We have not run any of them.',
+            zh: '如果你正用這一頁來規劃 2027 賽季：上面那六件做法就是那套程序，而[2027 選題指南](#x-roadmap)是它的完整版——五道關卡、六種專案形狀、一張評分表，以及一份從 wiki 凍結日往回推的賽季行程。我們也把自己的五個候選題目跑過了那些關卡，附上流程、物料清單與事先寫好的負面結果，放在 **[五個題目](#x-ideas)**。其中兩個建立在 Stanford-University 與 Aarhus-University 於 2026 年所用的機制上，並改寫成「一支被限制在 iGEM 白名單內的隊伍也能為它產出證據」的版本。這些我們都沒有做過。'
           })
       });
 
